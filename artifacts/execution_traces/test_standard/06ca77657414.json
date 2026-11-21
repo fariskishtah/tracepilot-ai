@@ -1,0 +1,217 @@
+{
+ "request_id": "06ca77657414",
+ "question": "Compare standard deviation and standard error.",
+ "answer": "Standard deviation measures the spread of individual observations in a dataset, [S1] [S3] [S4]. The standard error, on the other hand, quantifies the spread of a statistic, such as the sample mean, across repeated samples, [S1] [S3]. illustrates this with a sample variance calculation, showing the sample variance is smaller than the population variance due to the division by n-1 instead of n [S4]. defines standard deviation as the square root of variance [S3]. also demonstrates the difference between sample and population variance, [S3] [S4].",
+ "abstained": false,
+ "stop_reason": "answered",
+ "plan": null,
+ "plan_source": "none",
+ "tool_sequence": [
+  "search_knowledge_base"
+ ],
+ "citations": [
+  {
+   "id": "S1",
+   "kind": "document",
+   "title": "Statistics Confusable Terms",
+   "text": "standard deviation vs standard error: the standard deviation describes the spread of individual observations; the standard error describes the spread of a statistic such as the sample mean across repeated samples. confidence level vs confidence interval: the level (for example 95%) is a property of the procedure; the interval is the computed range of values. significance level vs p-value: alpha is chosen before the test; the p-value is computed from the data. covariance vs correlation: covariance carries the units of x times the units of y; correlation is unitless and always between -1 and 1. precision of a measurement: how close repeated measurements are to each other. Precision in classification is a different concept (see the machine learning course). normal: the normal distribution is the bell curve. It does not mean \"typical\" or \"healthy\" values.",
+   "doc_id": "statistics_confusable_terms",
+   "course_id": "statistics",
+   "location": "-",
+   "chunk_id": "statistics_confusable_terms:0001",
+   "score": 0.5458,
+   "data": {
+    "file_type": "txt",
+    "page": null,
+    "section": null,
+    "filename": "statistics_confusable_terms.txt"
+   },
+   "derived_from": []
+  },
+  {
+   "id": "S3",
+   "kind": "document",
+   "title": "Statistics Exercise Guide",
+   "text": "Problem 1: Sample versus Population Variance\nQuestion. For the data 2, 4, 4, 4, 5, 5, 7, 9 compute the population variance and the sample variance.\nSolution. The mean is 40 / 8 = 5. The squared deviations are 9, 1, 1, 1, 0, 0, 4, 16, which sum to 32. The population variance is 32 / 8 = 4 and the population standard deviation is 2. Treated as a sample, the sample variance is 32 / 7, about 4.571, and the sample standard deviation is about 2.138. The sample version is larger because it divides by n - 1 instead of n.",
+   "doc_id": "statistics_exercise_guide",
+   "course_id": "statistics",
+   "location": "Problem 1: Sample versus Population Variance",
+   "chunk_id": "statistics_exercise_guide:0001",
+   "score": 0.5369,
+   "data": {
+    "file_type": "docx",
+    "page": null,
+    "section": "Problem 1: Sample versus Population Variance",
+    "filename": "statistics_exercise_guide.docx"
+   },
+   "derived_from": []
+  },
+  {
+   "id": "S4",
+   "kind": "document",
+   "title": "Statistics Reference Notes",
+   "text": "DESCRIPTIVE FORMULAS\nMean: x-bar = (sum of x) / n\nPopulation variance: sigma^2 = sum((x - mu)^2) / N\nSample variance: s^2 = sum((x - x-bar)^2) / (n - 1)\nStandard deviation: the square root of the variance.\nIQR = Q3 - Q1. Outlier fences: Q1 - 1.5*IQR and Q3 + 1.5*IQR.\nCoefficient of variation: CV = standard deviation / mean.",
+   "doc_id": "statistics_reference_notes",
+   "course_id": "statistics",
+   "location": "DESCRIPTIVE FORMULAS",
+   "chunk_id": "statistics_reference_notes:0001",
+   "score": 0.4835,
+   "data": {
+    "file_type": "txt",
+    "page": null,
+    "section": "DESCRIPTIVE FORMULAS",
+    "filename": "statistics_reference_notes.txt"
+   },
+   "derived_from": []
+  }
+ ],
+ "evidence": {
+  "S1": {
+   "id": "S1",
+   "kind": "document",
+   "title": "Statistics Confusable Terms",
+   "text": "standard deviation vs standard error: the standard deviation describes the spread of individual observations; the standard error describes the spread of a statistic such as the sample mean across repeated samples. confidence level vs confidence interval: the level (for example 95%) is a property of the procedure; the interval is the computed range of values. significance level vs p-value: alpha is chosen before the test; the p-value is computed from the data. covariance vs correlation: covariance carries the units of x times the units of y; correlation is unitless and always between -1 and 1. precision of a measurement: how close repeated measurements are to each other. Precision in classification is a different concept (see the machine learning course). normal: the normal distribution is the bell curve. It does not mean \"typical\" or \"healthy\" values.",
+   "doc_id": "statistics_confusable_terms",
+   "course_id": "statistics",
+   "location": "-",
+   "chunk_id": "statistics_confusable_terms:0001",
+   "score": 0.5458,
+   "data": {
+    "file_type": "txt",
+    "page": null,
+    "section": null,
+    "filename": "statistics_confusable_terms.txt"
+   },
+   "derived_from": []
+  },
+  "S2": {
+   "id": "S2",
+   "kind": "document",
+   "title": "Statistics Lecture Notes",
+   "text": "mu and standard deviation sigma. The empirical rule says about 68% of values lie within one standard deviation of the  mean, 95% within two and 99.7% within three. A z-score z = (x - mu) / sigma tells how many standard deviations a value is from the mean. The standard normal distribution has mean 0 and standard deviation 1.",
+   "doc_id": "statistics_lecture_notes",
+   "course_id": "statistics",
+   "location": "p.4",
+   "chunk_id": "statistics_lecture_notes:0006",
+   "score": 0.4994,
+   "data": {
+    "file_type": "pdf",
+    "page": 4,
+    "section": "3. Probability Distributions",
+    "filename": "statistics_lecture_notes.pdf"
+   },
+   "derived_from": []
+  },
+  "S3": {
+   "id": "S3",
+   "kind": "document",
+   "title": "Statistics Exercise Guide",
+   "text": "Problem 1: Sample versus Population Variance\nQuestion. For the data 2, 4, 4, 4, 5, 5, 7, 9 compute the population variance and the sample variance.\nSolution. The mean is 40 / 8 = 5. The squared deviations are 9, 1, 1, 1, 0, 0, 4, 16, which sum to 32. The population variance is 32 / 8 = 4 and the population standard deviation is 2. Treated as a sample, the sample variance is 32 / 7, about 4.571, and the sample standard deviation is about 2.138. The sample version is larger because it divides by n - 1 instead of n.",
+   "doc_id": "statistics_exercise_guide",
+   "course_id": "statistics",
+   "location": "Problem 1: Sample versus Population Variance",
+   "chunk_id": "statistics_exercise_guide:0001",
+   "score": 0.5369,
+   "data": {
+    "file_type": "docx",
+    "page": null,
+    "section": "Problem 1: Sample versus Population Variance",
+    "filename": "statistics_exercise_guide.docx"
+   },
+   "derived_from": []
+  },
+  "S4": {
+   "id": "S4",
+   "kind": "document",
+   "title": "Statistics Reference Notes",
+   "text": "DESCRIPTIVE FORMULAS\nMean: x-bar = (sum of x) / n\nPopulation variance: sigma^2 = sum((x - mu)^2) / N\nSample variance: s^2 = sum((x - x-bar)^2) / (n - 1)\nStandard deviation: the square root of the variance.\nIQR = Q3 - Q1. Outlier fences: Q1 - 1.5*IQR and Q3 + 1.5*IQR.\nCoefficient of variation: CV = standard deviation / mean.",
+   "doc_id": "statistics_reference_notes",
+   "course_id": "statistics",
+   "location": "DESCRIPTIVE FORMULAS",
+   "chunk_id": "statistics_reference_notes:0001",
+   "score": 0.4835,
+   "data": {
+    "file_type": "txt",
+    "page": null,
+    "section": "DESCRIPTIVE FORMULAS",
+    "filename": "statistics_reference_notes.txt"
+   },
+   "derived_from": []
+  },
+  "S5": {
+   "id": "S5",
+   "kind": "document",
+   "title": "Statistics Exercise Guide",
+   "text": "Problem 3: Confidence Interval for a Mean\nQuestion. A sample of n = 36 students has mean study time 12.4 hours per week. The population standard deviation is known to be 3 hours. Build a 95% confidence interval.\nSolution. The standard error is 3 / sqrt(36) = 0.5. The margin of error is 1.96 * 0.5 = 0.98. The interval is 12.4 plus or minus 0.98, that is (11.42, 13.38). Interpretation: the procedure captures the true mean in about 95% of repeated samples. If the sample size were four times larger (n = 144) the standard error would halve to 0.25 and the interval would become narrower.",
+   "doc_id": "statistics_exercise_guide",
+   "course_id": "statistics",
+   "location": "Problem 3: Confidence Interval for a Mean",
+   "chunk_id": "statistics_exercise_guide:0003",
+   "score": 0.4488,
+   "data": {
+    "file_type": "docx",
+    "page": null,
+    "section": "Problem 3: Confidence Interval for a Mean",
+    "filename": "statistics_exercise_guide.docx"
+   },
+   "derived_from": []
+  }
+ },
+ "trace": [
+  {
+   "seq": 1,
+   "t_ms": 1,
+   "type": "request_received",
+   "question": "Compare standard deviation and standard error.",
+   "scope": null,
+   "system": "standard_rag"
+  },
+  {
+   "seq": 2,
+   "t_ms": 47,
+   "type": "retrieval",
+   "query": "Compare standard deviation and standard error.",
+   "n": 5,
+   "sources": [
+    "S1",
+    "S2",
+    "S3",
+    "S4",
+    "S5"
+   ],
+   "best_score": 0.546
+  },
+  {
+   "seq": 3,
+   "t_ms": 9288,
+   "type": "answer",
+   "abstained": false,
+   "citations": [
+    "S1",
+    "S3",
+    "S4"
+   ]
+  }
+ ],
+ "validation": {
+  "n_cited_sentences": 2,
+  "n_supported": 2,
+  "support_rate": 1.0,
+  "invalid_ids": [],
+  "unsupported": [],
+  "uncited_numeric_sentences": []
+ },
+ "metrics": {
+  "latency_s": 9.29,
+  "llm_calls": 1,
+  "prompt_tokens": 1060,
+  "completion_tokens": 126,
+  "tool_calls": 1,
+  "replans": 0,
+  "steps": 1
+ },
+ "system": "standard_rag",
+ "config": {
+  "top_k": 5
+ }
+}

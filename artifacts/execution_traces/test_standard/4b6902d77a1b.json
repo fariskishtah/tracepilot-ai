@@ -1,0 +1,179 @@
+{
+ "request_id": "4b6902d77a1b",
+ "question": "Compare statistics.variance and statistics.pvariance in Python.",
+ "answer": "statistics.pvariance(data) returns the population variance, while statistics.variance(data) returns the sample variance [S1].",
+ "abstained": false,
+ "stop_reason": "answered",
+ "plan": null,
+ "plan_source": "none",
+ "tool_sequence": [
+  "search_knowledge_base"
+ ],
+ "citations": [
+  {
+   "id": "S1",
+   "kind": "document",
+   "title": "Python Faq Style Addendum",
+   "text": "Frequently Asked Questions\nWhich Python version does the course use? The course uses Python 3.12 in all examples and tests.\nWhich editor should I use? Any editor is allowed; VS Code is used in the demonstrations.\nIs the statistics module allowed in assignments? Yes. statistics.variance(data) returns the sample variance, while statistics.pvariance(data) returns the population variance. In the same way statistics.stdev is the sample standard deviation and statistics.pstdev is the population standard deviation.\nWhere do I ask questions? Post them on the course forum; answers are usually given within two working days.",
+   "doc_id": "python_faq_style_addendum",
+   "course_id": "python",
+   "location": "Frequently Asked Questions",
+   "chunk_id": "python_faq_style_addendum:0002",
+   "score": 0.5557,
+   "data": {
+    "file_type": "docx",
+    "page": null,
+    "section": "Frequently Asked Questions",
+    "filename": "python_faq_style_addendum.docx"
+   },
+   "derived_from": []
+  }
+ ],
+ "evidence": {
+  "S1": {
+   "id": "S1",
+   "kind": "document",
+   "title": "Python Faq Style Addendum",
+   "text": "Frequently Asked Questions\nWhich Python version does the course use? The course uses Python 3.12 in all examples and tests.\nWhich editor should I use? Any editor is allowed; VS Code is used in the demonstrations.\nIs the statistics module allowed in assignments? Yes. statistics.variance(data) returns the sample variance, while statistics.pvariance(data) returns the population variance. In the same way statistics.stdev is the sample standard deviation and statistics.pstdev is the population standard deviation.\nWhere do I ask questions? Post them on the course forum; answers are usually given within two working days.",
+   "doc_id": "python_faq_style_addendum",
+   "course_id": "python",
+   "location": "Frequently Asked Questions",
+   "chunk_id": "python_faq_style_addendum:0002",
+   "score": 0.5557,
+   "data": {
+    "file_type": "docx",
+    "page": null,
+    "section": "Frequently Asked Questions",
+    "filename": "python_faq_style_addendum.docx"
+   },
+   "derived_from": []
+  },
+  "S2": {
+   "id": "S2",
+   "kind": "document",
+   "title": "Python Library Cheatsheet",
+   "text": "row 1: entry_id=LIB001; identifier=math.isclose; module=math; returns=bool; min_python=3.5; note=Compares floats; the default rel_tol is 1e-09\nrow 2: entry_id=LIB002; identifier=math.prod; module=math; returns=number; min_python=3.8; note=Multiplies all items of an iterable\nrow 3: entry_id=LIB003; identifier=math.dist; module=math; returns=float; min_python=3.8; note=Euclidean distance between two points\nrow 4: entry_id=LIB004; identifier=statistics.fmean; module=statistics; returns=float; min_python=3.8; note=Fast floating-point arithmetic mean\nrow 5: entry_id=LIB005; identifier=statistics.correlation; module=statistics; returns=float; min_python=3.10; note=Pearson correlation of two inputs\nrow 6: entry_id=LIB006; identifier=functools.cache; module=functools; returns=decorator; min_python=3.9; note=Unbounded memoization; shortcut for lru_cache(maxsize=None)\nrow 7: entry_id=LIB007; identifier=str.removeprefix; module=builtins; returns=str; min_python=3.9; note=Returns the string without the given prefix if present\nrow 8: entry_id=LIB008; identifier=str.casefold; module=builtins; returns=str; min_python=3.3; note=Aggressive lowercase for caseless comparison",
+   "doc_id": "python_library_cheatsheet",
+   "course_id": "python",
+   "location": "rows 1-8",
+   "chunk_id": "python_library_cheatsheet:0001",
+   "score": 0.447,
+   "data": {
+    "file_type": "csv",
+    "page": null,
+    "section": "data rows",
+    "filename": "python_library_cheatsheet.csv"
+   },
+   "derived_from": []
+  },
+  "S3": {
+   "id": "S3",
+   "kind": "document",
+   "title": "Python Reference Notes",
+   "text": "PYTHON QUICK REFERENCE NOTES (original demo material, CC BY 4.0)\n===============================================================",
+   "doc_id": "python_reference_notes",
+   "course_id": "python",
+   "location": "-",
+   "chunk_id": "python_reference_notes:0000",
+   "score": 0.4172,
+   "data": {
+    "file_type": "txt",
+    "page": null,
+    "section": null,
+    "filename": "python_reference_notes.txt"
+   },
+   "derived_from": []
+  },
+  "S4": {
+   "id": "S4",
+   "kind": "document",
+   "title": "Python Lecture Notes",
+   "text": "Python Lecture Notes\nPython Programming - independently written demonstration notes. Not official university material.",
+   "doc_id": "python_lecture_notes",
+   "course_id": "python",
+   "location": "p.1",
+   "chunk_id": "python_lecture_notes:0000",
+   "score": 0.376,
+   "data": {
+    "file_type": "pdf",
+    "page": 1,
+    "section": null,
+    "filename": "python_lecture_notes.pdf"
+   },
+   "derived_from": []
+  },
+  "S5": {
+   "id": "S5",
+   "kind": "document",
+   "title": "Python Lecture Notes",
+   "text": "1. Variables and Data Types A variable is a name that refers to a value stored in memory. In Python you create a variable by assignment, for example age = 21. Python is dynamically typed: the type belongs to the value, not to the name, so the same name can later refer to a string. The core built-in types are int (whole numbers), float (decimal numbers), str (text), bool (True or False) and NoneType (the single value None, meaning \"no value\"). The function type(x) reports the type of x. Conversion functions such as int(\"42\"), float(\"3.5\") and str(10) create new values of another type; int(\"abc\") raises a ValueError. Strings are immutable sequences of characters. Indexing starts at zero, so \"python\"[0] is \"p\", and negative indexes count from the end, so \"python\"[-1] is \"n\". Slicing \"python\"[1:4] returns \"yth\" (start included, stop excluded).",
+   "doc_id": "python_lecture_notes",
+   "course_id": "python",
+   "location": "p.2",
+   "chunk_id": "python_lecture_notes:0001",
+   "score": 0.3533,
+   "data": {
+    "file_type": "pdf",
+    "page": 2,
+    "section": "1. Variables and Data Types",
+    "filename": "python_lecture_notes.pdf"
+   },
+   "derived_from": []
+  }
+ },
+ "trace": [
+  {
+   "seq": 1,
+   "t_ms": 1,
+   "type": "request_received",
+   "question": "Compare statistics.variance and statistics.pvariance in Python.",
+   "scope": null,
+   "system": "standard_rag"
+  },
+  {
+   "seq": 2,
+   "t_ms": 62,
+   "type": "retrieval",
+   "query": "Compare statistics.variance and statistics.pvariance in Python.",
+   "n": 5,
+   "sources": [
+    "S1",
+    "S2",
+    "S3",
+    "S4",
+    "S5"
+   ],
+   "best_score": 0.556
+  },
+  {
+   "seq": 3,
+   "t_ms": 6465,
+   "type": "answer",
+   "abstained": false,
+   "citations": [
+    "S1"
+   ]
+  }
+ ],
+ "validation": {
+  "n_cited_sentences": 1,
+  "n_supported": 1,
+  "support_rate": 1.0,
+  "invalid_ids": [],
+  "unsupported": [],
+  "uncited_numeric_sentences": []
+ },
+ "metrics": {
+  "latency_s": 6.46,
+  "llm_calls": 1,
+  "prompt_tokens": 937,
+  "completion_tokens": 30,
+  "tool_calls": 1,
+  "replans": 0,
+  "steps": 1
+ },
+ "system": "standard_rag",
+ "config": {
+  "top_k": 5
+ }
+}

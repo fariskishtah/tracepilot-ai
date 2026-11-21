@@ -116,3 +116,20 @@ def test_llm_budget_caps_optional_llm_steps(kb, retriever, monkeypatch):
                                   {"id": "t2", "tool": "summarize_evidence", "goal": "advantages", "depends_on": ["t1"]}])
     res = make_agent(kb, retriever, FakeLLM(plan=plan)).run("Summarize early stopping")
     assert "summarize_evidence" not in res.tool_sequence and any(e["type"] == "step_skipped" and e.get("reason") == "LLM call budget reached" for e in res.trace)
+
+
+def test_timeout_on_analysis_is_retried_not_repaired(kb, retriever):
+    plan = {"question_type": "data_analysis", "complexity": "simple", "requires_retrieval": False, "requires_calculation": False, "requires_data_analysis": True, "requires_comparison": False,
+            "subtasks": [{"id": "t1", "tool": "analyze_dataset", "goal": "max price", "dataset_id": "product_prices", "operation": "max", "column": "price_usd"}]}
+    a = make_agent(kb, retriever, FakeLLM(plan=plan))
+    orig, n = a.registry.execute, {"c": 0}
+
+    def flaky(name, raw, ctx, timeout=None):
+        if name == "analyze_dataset" and n["c"] == 0:
+            n["c"] += 1
+            return orig(name, raw, ctx, timeout=1e-9)
+        return orig(name, raw, ctx, timeout=timeout)
+    a.registry.execute = flaky
+    res = a.run("What is the maximum price_usd in the product prices dataset?")
+    assert any(e.get("error_type") == "timeout" for e in res.trace if e["type"] == "tool_result")
+    assert "546.13" in res.answer and res.metrics["replans"] == 1

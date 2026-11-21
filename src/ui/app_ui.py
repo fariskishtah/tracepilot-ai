@@ -34,7 +34,11 @@ def build_app(svc: Service | None = None) -> gr.Blocks:
 
     with gr.Blocks(title="TracePilot AI", css=CSS, theme=gr.themes.Base(primary_hue="blue", neutral_hue="slate").set(
             body_background_fill="#0b1020", block_background_fill="#111a33", block_border_color="#24305a",
-            input_background_fill="#0b1230", body_text_color="#eaf0ff", block_label_text_color="#9fb0d0")) as app:
+            input_background_fill="#0b1230", body_text_color="#eaf0ff", block_label_text_color="#9fb0d0",
+            checkbox_label_background_fill="#1b2652", checkbox_label_background_fill_hover="#24305a", checkbox_label_background_fill_selected="#2a3a7a",
+            checkbox_label_text_color="#eaf0ff", checkbox_label_text_color_selected="#ffffff", checkbox_label_border_color="#3b4a85",
+            table_even_background_fill="#111a33", table_odd_background_fill="#0d1530", table_border_color="#24305a", table_text_color="#eaf0ff",
+            table_row_focus="#1b2652", code_background_fill="#0b1230")) as app:
         gr.HTML("<div class='tp-hero'><h1>TracePilot AI</h1><p>Agentic RAG &amp; Intelligent Knowledge Orchestration</p>"
                 f"<span class='pill'>local LLM · {svc.llm.model}</span><span class='pill'>MiniLM embeddings · ChromaDB</span>"
                 "<span class='pill'>planner → tools → evidence → cited answer</span></div>")
@@ -46,8 +50,8 @@ def build_app(svc: Service | None = None) -> gr.Blocks:
                 with gr.Column(scale=3):
                     q = gr.Textbox(label="Your question", lines=3, placeholder="Ask a multi-step question about the course documents or datasets…")
                     with gr.Row():
-                        scope = gr.CheckboxGroup(courses, value=courses, label="Knowledge base (courses)")
-                        tools = gr.CheckboxGroup(tool_names, value=svc.agent().registry.names(), label="Enabled tools")
+                        scope = gr.CheckboxGroup(courses, value=courses, label="Knowledge base (courses)", elem_classes=["tp-col"])
+                        tools = gr.CheckboxGroup(tool_names, value=svc.agent().registry.names(), label="Enabled tools", elem_classes=["tp-col"])
                     ex = gr.Dataset(components=[q], samples=[[e] for e in EXAMPLES], label="Examples", type="values")
                     go = gr.Button("Run agent", variant="primary")
                 with gr.Column(scale=4):

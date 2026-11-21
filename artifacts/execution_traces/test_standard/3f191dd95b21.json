@@ -1,0 +1,181 @@
+{
+ "request_id": "3f191dd95b21",
+ "question": "Compare covariance and correlation.",
+ "answer": "Covariance carries the units of x times the units of y, while correlation is unitless and always between -1 and 1. [S4]",
+ "abstained": false,
+ "stop_reason": "answered",
+ "plan": null,
+ "plan_source": "none",
+ "tool_sequence": [
+  "search_knowledge_base"
+ ],
+ "citations": [
+  {
+   "id": "S4",
+   "kind": "document",
+   "title": "Statistics Confusable Terms",
+   "text": "standard deviation vs standard error: the standard deviation describes the spread of individual observations; the standard error describes the spread of a statistic such as the sample mean across repeated samples. confidence level vs confidence interval: the level (for example 95%) is a property of the procedure; the interval is the computed range of values. significance level vs p-value: alpha is chosen before the test; the p-value is computed from the data. covariance vs correlation: covariance carries the units of x times the units of y; correlation is unitless and always between -1 and 1. precision of a measurement: how close repeated measurements are to each other. Precision in classification is a different concept (see the machine learning course). normal: the normal distribution is the bell curve. It does not mean \"typical\" or \"healthy\" values.",
+   "doc_id": "statistics_confusable_terms",
+   "course_id": "statistics",
+   "location": "-",
+   "chunk_id": "statistics_confusable_terms:0001",
+   "score": 0.2796,
+   "data": {
+    "file_type": "txt",
+    "page": null,
+    "section": null,
+    "filename": "statistics_confusable_terms.txt"
+   },
+   "derived_from": []
+  }
+ ],
+ "evidence": {
+  "S1": {
+   "id": "S1",
+   "kind": "document",
+   "title": "Statistics Lecture Notes",
+   "text": "6. Correlation and Regression Correlation measures the strength and direction of a linear relationship between two variables. The Pearson correlation coefficient r ranges from -1 to +1. A value near +1 indicates a strong positive linear relationship, near -1 a strong negative one and near 0 no linear relationship. Correlation does not imply causation: a hidden confounding variable may drive both variables. Simple linear regression fits the line y-hat = b0 + b1 * x by least squares, which minimizes the sum of squared residuals. The slope b1 equals r * (s_y / s_x) and the intercept is b0 = y-bar - b1 * x-bar. The coefficient of determination R squared is the proportion of variance in y explained by the model; in simple regression it equals r squared. Residual plots should show no pattern; curved or funnel-shaped residuals indicate a violated assumption.",
+   "doc_id": "statistics_lecture_notes",
+   "course_id": "statistics",
+   "location": "p.7",
+   "chunk_id": "statistics_lecture_notes:0011",
+   "score": 0.4366,
+   "data": {
+    "file_type": "pdf",
+    "page": 7,
+    "section": "6. Correlation and Regression",
+    "filename": "statistics_lecture_notes.pdf"
+   },
+   "derived_from": []
+  },
+  "S2": {
+   "id": "S2",
+   "kind": "document",
+   "title": "Python Library Cheatsheet",
+   "text": "row 1: entry_id=LIB001; identifier=math.isclose; module=math; returns=bool; min_python=3.5; note=Compares floats; the default rel_tol is 1e-09\nrow 2: entry_id=LIB002; identifier=math.prod; module=math; returns=number; min_python=3.8; note=Multiplies all items of an iterable\nrow 3: entry_id=LIB003; identifier=math.dist; module=math; returns=float; min_python=3.8; note=Euclidean distance between two points\nrow 4: entry_id=LIB004; identifier=statistics.fmean; module=statistics; returns=float; min_python=3.8; note=Fast floating-point arithmetic mean\nrow 5: entry_id=LIB005; identifier=statistics.correlation; module=statistics; returns=float; min_python=3.10; note=Pearson correlation of two inputs\nrow 6: entry_id=LIB006; identifier=functools.cache; module=functools; returns=decorator; min_python=3.9; note=Unbounded memoization; shortcut for lru_cache(maxsize=None)\nrow 7: entry_id=LIB007; identifier=str.removeprefix; module=builtins; returns=str; min_python=3.9; note=Returns the string without the given prefix if present\nrow 8: entry_id=LIB008; identifier=str.casefold; module=builtins; returns=str; min_python=3.3; note=Aggressive lowercase for caseless comparison",
+   "doc_id": "python_library_cheatsheet",
+   "course_id": "python",
+   "location": "rows 1-8",
+   "chunk_id": "python_library_cheatsheet:0001",
+   "score": 0.3297,
+   "data": {
+    "file_type": "csv",
+    "page": null,
+    "section": "data rows",
+    "filename": "python_library_cheatsheet.csv"
+   },
+   "derived_from": []
+  },
+  "S3": {
+   "id": "S3",
+   "kind": "document",
+   "title": "Statistics Lab Report Guide",
+   "text": "Anscombe's Quartet\nAnscombe's quartet consists of four small datasets that have almost identical means, variances and correlation (about 0.816) but completely different shapes when plotted. The lesson is to always plot the data and not to rely on summary statistics alone.",
+   "doc_id": "statistics_lab_report_guide",
+   "course_id": "statistics",
+   "location": "Anscombe's Quartet",
+   "chunk_id": "statistics_lab_report_guide:0003",
+   "score": 0.3195,
+   "data": {
+    "file_type": "docx",
+    "page": null,
+    "section": "Anscombe's Quartet",
+    "filename": "statistics_lab_report_guide.docx"
+   },
+   "derived_from": []
+  },
+  "S4": {
+   "id": "S4",
+   "kind": "document",
+   "title": "Statistics Confusable Terms",
+   "text": "standard deviation vs standard error: the standard deviation describes the spread of individual observations; the standard error describes the spread of a statistic such as the sample mean across repeated samples. confidence level vs confidence interval: the level (for example 95%) is a property of the procedure; the interval is the computed range of values. significance level vs p-value: alpha is chosen before the test; the p-value is computed from the data. covariance vs correlation: covariance carries the units of x times the units of y; correlation is unitless and always between -1 and 1. precision of a measurement: how close repeated measurements are to each other. Precision in classification is a different concept (see the machine learning course). normal: the normal distribution is the bell curve. It does not mean \"typical\" or \"healthy\" values.",
+   "doc_id": "statistics_confusable_terms",
+   "course_id": "statistics",
+   "location": "-",
+   "chunk_id": "statistics_confusable_terms:0001",
+   "score": 0.2796,
+   "data": {
+    "file_type": "txt",
+    "page": null,
+    "section": null,
+    "filename": "statistics_confusable_terms.txt"
+   },
+   "derived_from": []
+  },
+  "S5": {
+   "id": "S5",
+   "kind": "document",
+   "title": "Statistics Confusable Terms",
+   "text": "STATISTICS CONFUSABLE TERMS (original course material, CC BY 4.0)\n==================================================================",
+   "doc_id": "statistics_confusable_terms",
+   "course_id": "statistics",
+   "location": "-",
+   "chunk_id": "statistics_confusable_terms:0000",
+   "score": 0.3243,
+   "data": {
+    "file_type": "txt",
+    "page": null,
+    "section": null,
+    "filename": "statistics_confusable_terms.txt"
+   },
+   "derived_from": []
+  }
+ },
+ "trace": [
+  {
+   "seq": 1,
+   "t_ms": 1,
+   "type": "request_received",
+   "question": "Compare covariance and correlation.",
+   "scope": null,
+   "system": "standard_rag"
+  },
+  {
+   "seq": 2,
+   "t_ms": 50,
+   "type": "retrieval",
+   "query": "Compare covariance and correlation.",
+   "n": 5,
+   "sources": [
+    "S1",
+    "S2",
+    "S3",
+    "S4",
+    "S5"
+   ],
+   "best_score": 0.437
+  },
+  {
+   "seq": 3,
+   "t_ms": 14331,
+   "type": "answer",
+   "abstained": false,
+   "citations": [
+    "S4"
+   ]
+  }
+ ],
+ "validation": {
+  "n_cited_sentences": 0,
+  "n_supported": 0,
+  "support_rate": 0.0,
+  "invalid_ids": [],
+  "unsupported": [],
+  "uncited_numeric_sentences": [
+   "Covariance carries the units of x times the units of y, while correlation is unitless and always between -1 and 1."
+  ]
+ },
+ "metrics": {
+  "latency_s": 14.33,
+  "llm_calls": 2,
+  "prompt_tokens": 2092,
+  "completion_tokens": 269,
+  "tool_calls": 1,
+  "replans": 0,
+  "steps": 1
+ },
+ "system": "standard_rag",
+ "config": {
+  "top_k": 5
+ }
+}

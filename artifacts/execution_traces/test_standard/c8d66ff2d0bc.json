@@ -1,0 +1,179 @@
+{
+ "request_id": "c8d66ff2d0bc",
+ "question": "Summarize what the Python debugging playbook says about scope errors.",
+ "answer": "The Python Debugging Playbook on scope errors states that UnboundLocalError occurs when a function assigns to a name and then reads it before the assignment runs. [S1] Fixes include passing the value as a parameter, using the global statement, or using the nonlocal statement to bind a name from the nearest enclosing function scope. [S1] The fix for the late-binding closure issue is to bind the value from the loop variable using nonlocal. [S1]",
+ "abstained": false,
+ "stop_reason": "answered",
+ "plan": null,
+ "plan_source": "none",
+ "tool_sequence": [
+  "search_knowledge_base"
+ ],
+ "citations": [
+  {
+   "id": "S1",
+   "kind": "document",
+   "title": "Python Debugging Playbook",
+   "text": "2. Scope Errors\nUnboundLocalError (message: local variable referenced before assignment) happens when a\nfunction assigns to a name anywhere in its body, which makes that name local for the entire\nfunction, and then reads the name before the assignment has run. The usual symptom is code that\nworks at module level but fails once it is moved inside a function.\nThree fixes exist. Pass the value in as a parameter, which is the cleanest option. Use the global\nstatement to bind a module-level name. Use the nonlocal statement to bind a name from the\nnearest enclosing function scope; nonlocal cannot reach module-level names.\nA related surprise is the late-binding closure: lambdas created in a loop all see the final value of the\nloop variable. The fix is to bind the current value through a default argument, for example lambda\ni=i: i.",
+   "doc_id": "python_debugging_playbook",
+   "course_id": "python",
+   "location": "p.2",
+   "chunk_id": "python_debugging_playbook:0001",
+   "score": 0.4819,
+   "data": {
+    "file_type": "pdf",
+    "page": 2,
+    "section": "2. Scope Errors",
+    "filename": "python_debugging_playbook.pdf"
+   },
+   "derived_from": []
+  }
+ ],
+ "evidence": {
+  "S1": {
+   "id": "S1",
+   "kind": "document",
+   "title": "Python Debugging Playbook",
+   "text": "2. Scope Errors\nUnboundLocalError (message: local variable referenced before assignment) happens when a\nfunction assigns to a name anywhere in its body, which makes that name local for the entire\nfunction, and then reads the name before the assignment has run. The usual symptom is code that\nworks at module level but fails once it is moved inside a function.\nThree fixes exist. Pass the value in as a parameter, which is the cleanest option. Use the global\nstatement to bind a module-level name. Use the nonlocal statement to bind a name from the\nnearest enclosing function scope; nonlocal cannot reach module-level names.\nA related surprise is the late-binding closure: lambdas created in a loop all see the final value of the\nloop variable. The fix is to bind the current value through a default argument, for example lambda\ni=i: i.",
+   "doc_id": "python_debugging_playbook",
+   "course_id": "python",
+   "location": "p.2",
+   "chunk_id": "python_debugging_playbook:0001",
+   "score": 0.4819,
+   "data": {
+    "file_type": "pdf",
+    "page": 2,
+    "section": "2. Scope Errors",
+    "filename": "python_debugging_playbook.pdf"
+   },
+   "derived_from": []
+  },
+  "S2": {
+   "id": "S2",
+   "kind": "document",
+   "title": "Python Debugging Playbook",
+   "text": "1. Reading a Traceback\nA traceback lists the chain of calls that led to an error. Read it from the bottom: the last line names\nthe exception type and its message, and the frames above it show the call chain with the most\nrecent call last. Start with the last frame inside your own code, because frames inside library code\nare rarely the cause.\nThe built-in breakpoint() pauses execution and opens the debugger pdb by default (since Python\n3.7). You can also start a script under the debugger with python -m pdb script.py. Inside pdb the\ncommand n runs the next line, s steps into a call, c continues until the next breakpoint, p expr prints\nan expression and q quits.\nPrint debugging still works: print(repr(value)) is more informative than print(value) because repr\nshows quotes, escape characters and trailing spaces.",
+   "doc_id": "python_debugging_playbook",
+   "course_id": "python",
+   "location": "p.1",
+   "chunk_id": "python_debugging_playbook:0000",
+   "score": 0.4792,
+   "data": {
+    "file_type": "pdf",
+    "page": 1,
+    "section": "1. Reading a Traceback",
+    "filename": "python_debugging_playbook.pdf"
+   },
+   "derived_from": []
+  },
+  "S3": {
+   "id": "S3",
+   "kind": "document",
+   "title": "Python Reference Notes",
+   "text": "COMMON ERRORS AND THEIR MEANING\nSyntaxError: the code is not valid Python, for example a missing colon after if.\nIndentationError: the indentation of a block is inconsistent.\nNameError: a variable or function name was used before it was defined.\nTypeError: an operation was applied to the wrong type, such as \"a\" + 1.\nValueError: the type is right but the value is not, such as int(\"abc\").\nKeyError: a dictionary key does not exist.\nIndexError: a list index is outside the valid range.\nZeroDivisionError: division or modulo by zero.\nFileNotFoundError: the file path does not exist.",
+   "doc_id": "python_reference_notes",
+   "course_id": "python",
+   "location": "COMMON ERRORS AND THEIR MEANING",
+   "chunk_id": "python_reference_notes:0002",
+   "score": 0.4343,
+   "data": {
+    "file_type": "txt",
+    "page": null,
+    "section": "COMMON ERRORS AND THEIR MEANING",
+    "filename": "python_reference_notes.txt"
+   },
+   "derived_from": []
+  },
+  "S4": {
+   "id": "S4",
+   "kind": "document",
+   "title": "Python Debugging Playbook",
+   "text": "3. Lookup Errors Compared\nKeyError is raised when a dictionary key is missing. IndexError is raised when a sequence index is\nout of range. AttributeError is raised when an object has no attribute of that name.\nThe message 'NoneType' object has no attribute 'append' almost always means a variable holds\nNone instead of a list. The classic cause is writing nums = nums.sort(), because list.sort() sorts in\nplace and returns None. Use nums.sort() on its own line or sorted(nums) when a new list is\nneeded.\ndict.get(key, default) avoids a KeyError, while collections.defaultdict(list) creates a missing key with\nan empty list the first time it is accessed, which makes grouping code shorter.",
+   "doc_id": "python_debugging_playbook",
+   "course_id": "python",
+   "location": "p.3",
+   "chunk_id": "python_debugging_playbook:0002",
+   "score": 0.3658,
+   "data": {
+    "file_type": "pdf",
+    "page": 3,
+    "section": "3. Lookup Errors Compared",
+    "filename": "python_debugging_playbook.pdf"
+   },
+   "derived_from": []
+  },
+  "S5": {
+   "id": "S5",
+   "kind": "document",
+   "title": "Python Lecture Notes",
+   "text": "Python Lecture Notes\nPython Programming - independently written demonstration notes. Not official university material.",
+   "doc_id": "python_lecture_notes",
+   "course_id": "python",
+   "location": "p.1",
+   "chunk_id": "python_lecture_notes:0000",
+   "score": 0.3055,
+   "data": {
+    "file_type": "pdf",
+    "page": 1,
+    "section": null,
+    "filename": "python_lecture_notes.pdf"
+   },
+   "derived_from": []
+  }
+ },
+ "trace": [
+  {
+   "seq": 1,
+   "t_ms": 1,
+   "type": "request_received",
+   "question": "Summarize what the Python debugging playbook says about scope errors.",
+   "scope": null,
+   "system": "standard_rag"
+  },
+  {
+   "seq": 2,
+   "t_ms": 61,
+   "type": "retrieval",
+   "query": "Summarize what the Python debugging playbook says about scope errors.",
+   "n": 5,
+   "sources": [
+    "S1",
+    "S2",
+    "S3",
+    "S4",
+    "S5"
+   ],
+   "best_score": 0.482
+  },
+  {
+   "seq": 3,
+   "t_ms": 21139,
+   "type": "answer",
+   "abstained": false,
+   "citations": [
+    "S1"
+   ]
+  }
+ ],
+ "validation": {
+  "n_cited_sentences": 2,
+  "n_supported": 2,
+  "support_rate": 1.0,
+  "invalid_ids": [],
+  "unsupported": [],
+  "uncited_numeric_sentences": []
+ },
+ "metrics": {
+  "latency_s": 21.14,
+  "llm_calls": 2,
+  "prompt_tokens": 2060,
+  "completion_tokens": 294,
+  "tool_calls": 1,
+  "replans": 0,
+  "steps": 1
+ },
+ "system": "standard_rag",
+ "config": {
+  "top_k": 5
+ }
+}

@@ -1,0 +1,217 @@
+{
+ "request_id": "2ec6aa7b4276",
+ "question": "Compute the standard error of the mean when sigma = 3 and n = 36.",
+ "answer": "The standard error of the mean is 0.5 [S1] [S3] [S5].",
+ "abstained": false,
+ "stop_reason": "answered",
+ "plan": null,
+ "plan_source": "none",
+ "tool_sequence": [
+  "search_knowledge_base"
+ ],
+ "citations": [
+  {
+   "id": "S1",
+   "kind": "document",
+   "title": "Statistics Exercise Guide",
+   "text": "Problem 3: Confidence Interval for a Mean\nQuestion. A sample of n = 36 students has mean study time 12.4 hours per week. The population standard deviation is known to be 3 hours. Build a 95% confidence interval.\nSolution. The standard error is 3 / sqrt(36) = 0.5. The margin of error is 1.96 * 0.5 = 0.98. The interval is 12.4 plus or minus 0.98, that is (11.42, 13.38). Interpretation: the procedure captures the true mean in about 95% of repeated samples. If the sample size were four times larger (n = 144) the standard error would halve to 0.25 and the interval would become narrower.",
+   "doc_id": "statistics_exercise_guide",
+   "course_id": "statistics",
+   "location": "Problem 3: Confidence Interval for a Mean",
+   "chunk_id": "statistics_exercise_guide:0003",
+   "score": 0.5438,
+   "data": {
+    "file_type": "docx",
+    "page": null,
+    "section": "Problem 3: Confidence Interval for a Mean",
+    "filename": "statistics_exercise_guide.docx"
+   },
+   "derived_from": []
+  },
+  {
+   "id": "S3",
+   "kind": "document",
+   "title": "Statistics Reference Notes",
+   "text": "DISTRIBUTIONS\nBinomial: P(X = k) = C(n, k) * p^k * (1 - p)^(n - k)\nPoisson: P(X = k) = e^(-lambda) * lambda^k / k!\nNormal z-score: z = (x - mu) / sigma\nEmpirical rule: 68% within 1 sigma, 95% within 2 sigma, 99.7% within 3 sigma.\nStandard error of the mean: SE = sigma / sqrt(n)",
+   "doc_id": "statistics_reference_notes",
+   "course_id": "statistics",
+   "location": "DISTRIBUTIONS",
+   "chunk_id": "statistics_reference_notes:0003",
+   "score": 0.4249,
+   "data": {
+    "file_type": "txt",
+    "page": null,
+    "section": "DISTRIBUTIONS",
+    "filename": "statistics_reference_notes.txt"
+   },
+   "derived_from": []
+  },
+  {
+   "id": "S5",
+   "kind": "document",
+   "title": "Statistics Estimators And Bias",
+   "text": "2. Variance of an Estimator\nThe variance of an estimator describes how much the estimate changes from one random sample\nto the next. For the sample mean it equals sigma squared divided by n, so the standard error of the\nmean is sigma divided by the square root of n.\nThis is not the same quantity as the variance of the data themselves, which describes the spread\nof individual observations around their mean. Quadrupling the sample size halves the standard\nerror but does not change the variance of the data.",
+   "doc_id": "statistics_estimators_and_bias",
+   "course_id": "statistics",
+   "location": "p.2",
+   "chunk_id": "statistics_estimators_and_bias:0001",
+   "score": 0.3842,
+   "data": {
+    "file_type": "pdf",
+    "page": 2,
+    "section": "2. Variance of an Estimator",
+    "filename": "statistics_estimators_and_bias.pdf"
+   },
+   "derived_from": []
+  }
+ ],
+ "evidence": {
+  "S1": {
+   "id": "S1",
+   "kind": "document",
+   "title": "Statistics Exercise Guide",
+   "text": "Problem 3: Confidence Interval for a Mean\nQuestion. A sample of n = 36 students has mean study time 12.4 hours per week. The population standard deviation is known to be 3 hours. Build a 95% confidence interval.\nSolution. The standard error is 3 / sqrt(36) = 0.5. The margin of error is 1.96 * 0.5 = 0.98. The interval is 12.4 plus or minus 0.98, that is (11.42, 13.38). Interpretation: the procedure captures the true mean in about 95% of repeated samples. If the sample size were four times larger (n = 144) the standard error would halve to 0.25 and the interval would become narrower.",
+   "doc_id": "statistics_exercise_guide",
+   "course_id": "statistics",
+   "location": "Problem 3: Confidence Interval for a Mean",
+   "chunk_id": "statistics_exercise_guide:0003",
+   "score": 0.5438,
+   "data": {
+    "file_type": "docx",
+    "page": null,
+    "section": "Problem 3: Confidence Interval for a Mean",
+    "filename": "statistics_exercise_guide.docx"
+   },
+   "derived_from": []
+  },
+  "S2": {
+   "id": "S2",
+   "kind": "document",
+   "title": "Statistics Worked Examples",
+   "text": "row 25: example_id=ST025; topic=Confidence interval; dataset_or_scenario=n = 36, mean 12.4, sigma 3: half-width of 95% CI; n=36; statistic=1.96 * sigma / sqrt(n); value=0.98; method_note=margin of error",
+   "doc_id": "statistics_worked_examples",
+   "course_id": "statistics",
+   "location": "rows 25-25",
+   "chunk_id": "statistics_worked_examples:0004",
+   "score": 0.4362,
+   "data": {
+    "file_type": "csv",
+    "page": null,
+    "section": "data rows",
+    "filename": "statistics_worked_examples.csv"
+   },
+   "derived_from": []
+  },
+  "S3": {
+   "id": "S3",
+   "kind": "document",
+   "title": "Statistics Reference Notes",
+   "text": "DISTRIBUTIONS\nBinomial: P(X = k) = C(n, k) * p^k * (1 - p)^(n - k)\nPoisson: P(X = k) = e^(-lambda) * lambda^k / k!\nNormal z-score: z = (x - mu) / sigma\nEmpirical rule: 68% within 1 sigma, 95% within 2 sigma, 99.7% within 3 sigma.\nStandard error of the mean: SE = sigma / sqrt(n)",
+   "doc_id": "statistics_reference_notes",
+   "course_id": "statistics",
+   "location": "DISTRIBUTIONS",
+   "chunk_id": "statistics_reference_notes:0003",
+   "score": 0.4249,
+   "data": {
+    "file_type": "txt",
+    "page": null,
+    "section": "DISTRIBUTIONS",
+    "filename": "statistics_reference_notes.txt"
+   },
+   "derived_from": []
+  },
+  "S4": {
+   "id": "S4",
+   "kind": "document",
+   "title": "Statistics Exercise Guide",
+   "text": "Problem 1: Sample versus Population Variance\nQuestion. For the data 2, 4, 4, 4, 5, 5, 7, 9 compute the population variance and the sample variance.\nSolution. The mean is 40 / 8 = 5. The squared deviations are 9, 1, 1, 1, 0, 0, 4, 16, which sum to 32. The population variance is 32 / 8 = 4 and the population standard deviation is 2. Treated as a sample, the sample variance is 32 / 7, about 4.571, and the sample standard deviation is about 2.138. The sample version is larger because it divides by n - 1 instead of n.",
+   "doc_id": "statistics_exercise_guide",
+   "course_id": "statistics",
+   "location": "Problem 1: Sample versus Population Variance",
+   "chunk_id": "statistics_exercise_guide:0001",
+   "score": 0.4466,
+   "data": {
+    "file_type": "docx",
+    "page": null,
+    "section": "Problem 1: Sample versus Population Variance",
+    "filename": "statistics_exercise_guide.docx"
+   },
+   "derived_from": []
+  },
+  "S5": {
+   "id": "S5",
+   "kind": "document",
+   "title": "Statistics Estimators And Bias",
+   "text": "2. Variance of an Estimator\nThe variance of an estimator describes how much the estimate changes from one random sample\nto the next. For the sample mean it equals sigma squared divided by n, so the standard error of the\nmean is sigma divided by the square root of n.\nThis is not the same quantity as the variance of the data themselves, which describes the spread\nof individual observations around their mean. Quadrupling the sample size halves the standard\nerror but does not change the variance of the data.",
+   "doc_id": "statistics_estimators_and_bias",
+   "course_id": "statistics",
+   "location": "p.2",
+   "chunk_id": "statistics_estimators_and_bias:0001",
+   "score": 0.3842,
+   "data": {
+    "file_type": "pdf",
+    "page": 2,
+    "section": "2. Variance of an Estimator",
+    "filename": "statistics_estimators_and_bias.pdf"
+   },
+   "derived_from": []
+  }
+ },
+ "trace": [
+  {
+   "seq": 1,
+   "t_ms": 1,
+   "type": "request_received",
+   "question": "Compute the standard error of the mean when sigma = 3 and n = 36.",
+   "scope": null,
+   "system": "standard_rag"
+  },
+  {
+   "seq": 2,
+   "t_ms": 94,
+   "type": "retrieval",
+   "query": "Compute the standard error of the mean when sigma = 3 and n = 36.",
+   "n": 5,
+   "sources": [
+    "S1",
+    "S2",
+    "S3",
+    "S4",
+    "S5"
+   ],
+   "best_score": 0.544
+  },
+  {
+   "seq": 3,
+   "t_ms": 6878,
+   "type": "answer",
+   "abstained": false,
+   "citations": [
+    "S1",
+    "S3",
+    "S5"
+   ]
+  }
+ ],
+ "validation": {
+  "n_cited_sentences": 1,
+  "n_supported": 1,
+  "support_rate": 1.0,
+  "invalid_ids": [],
+  "unsupported": [],
+  "uncited_numeric_sentences": []
+ },
+ "metrics": {
+  "latency_s": 6.88,
+  "llm_calls": 1,
+  "prompt_tokens": 1036,
+  "completion_tokens": 23,
+  "tool_calls": 1,
+  "replans": 0,
+  "steps": 1
+ },
+ "system": "standard_rag",
+ "config": {
+  "top_k": 5
+ }
+}

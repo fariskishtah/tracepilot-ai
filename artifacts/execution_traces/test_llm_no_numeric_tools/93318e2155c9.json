@@ -1,0 +1,794 @@
+{
+ "request_id": "93318e2155c9",
+ "question": "Explain overfitting, compare L2 regularization and early stopping, then summarize their advantages.",
+ "answer": "L2 regularization, also known as weight decay, penalizes the sum of squared weights, shrinking them towards zero without setting them exactly to zero. [S1] This method is smooth and works well with gradient-based optimizers, keeping all features. [S6] However, early stopping requires a held-out validation set, is sensitive to the patience value, and noisy validation curves can trigger a premature stop. [S1] Both methods are often combined, with early stopping being the cheaper and more reproducible option [S1] [S6] [S7].",
+ "abstained": false,
+ "stop_reason": "answered",
+ "plan": {
+  "question_type": "multi_step",
+  "complexity": "moderate",
+  "requires_retrieval": true,
+  "requires_calculation": false,
+  "requires_data_analysis": false,
+  "requires_comparison": true,
+  "subtasks": [
+   {
+    "id": "t1",
+    "tool": "search_knowledge_base",
+    "goal": "explanation of overfitting",
+    "query": "overfitting definition and explanation in machine learning",
+    "dataset_id": null,
+    "operation": null,
+    "column": null,
+    "group_by": null,
+    "agg": null,
+    "filters": null,
+    "expression": null,
+    "aspects": null,
+    "depends_on": []
+   },
+   {
+    "id": "t2",
+    "tool": "search_knowledge_base",
+    "goal": "explanation of L2 regularization",
+    "query": "L2 regularization definition and explanation in machine learning",
+    "dataset_id": null,
+    "operation": null,
+    "column": null,
+    "group_by": null,
+    "agg": null,
+    "filters": null,
+    "expression": null,
+    "aspects": null,
+    "depends_on": []
+   },
+   {
+    "id": "t3",
+    "tool": "search_knowledge_base",
+    "goal": "explanation of early stopping",
+    "query": "early stopping definition and explanation in machine learning",
+    "dataset_id": null,
+    "operation": null,
+    "column": null,
+    "group_by": null,
+    "agg": null,
+    "filters": null,
+    "expression": null,
+    "aspects": null,
+    "depends_on": []
+   },
+   {
+    "id": "t4",
+    "tool": "compare_evidence",
+    "goal": "compare overfitting, L2 regularization, and early stopping",
+    "query": null,
+    "dataset_id": null,
+    "operation": null,
+    "column": null,
+    "group_by": null,
+    "agg": null,
+    "filters": null,
+    "expression": null,
+    "aspects": null,
+    "depends_on": [
+     "t1",
+     "t2",
+     "t3"
+    ]
+   },
+   {
+    "id": "t5",
+    "tool": "summarize_evidence",
+    "goal": "summarize advantages of overfitting, L2 regularization, and early stopping",
+    "query": null,
+    "dataset_id": null,
+    "operation": null,
+    "column": null,
+    "group_by": null,
+    "agg": null,
+    "filters": null,
+    "expression": null,
+    "aspects": null,
+    "depends_on": [
+     "t1",
+     "t2",
+     "t3"
+    ]
+   }
+  ],
+  "rationale": "LLM plan: 5 step(s)"
+ },
+ "plan_source": "llm",
+ "tool_sequence": [
+  "search_knowledge_base",
+  "search_knowledge_base",
+  "search_knowledge_base",
+  "compare_evidence",
+  "summarize_evidence"
+ ],
+ "citations": [
+  {
+   "id": "S1",
+   "kind": "document",
+   "title": "Ml Overfitting Mitigation Guide",
+   "text": "Overfitting mitigation guide OVERFITTING MITIGATION GUIDE - TracePilot demo course pack (Machine Learning Fundamentals) Original educational material, CC BY 4.0, (c) Faris Mohamed Kishtah. 1. What overfitting means in practice A model overfits when its training accuracy is far higher than its validation accuracy. The gap between the two (train accuracy minus validation accuracy) is the simplest warning sign. 2. L2 regularization (weight decay) L2 regularization adds a penalty proportional to the sum of squared weights to the loss, which shrinks weights toward zero without usually making them exactly zero. Advantages: it is smooth, works with gradient-based optimizers, and keeps all features. Disadvantages: it introduces a strength hyperparameter (lambda or weight decay) that must be tuned with cross-validation, and it does not remove irrelevant features. It",
+   "doc_id": "ml_overfitting_mitigation_guide",
+   "course_id": "ml",
+   "location": "p.1",
+   "chunk_id": "ml_overfitting_mitigation_guide:0000",
+   "score": 0.5929,
+   "data": {
+    "file_type": "pdf",
+    "page": 1,
+    "section": null,
+    "filename": "ml_overfitting_mitigation_guide.pdf"
+   },
+   "derived_from": []
+  },
+  {
+   "id": "S6",
+   "kind": "document",
+   "title": "Ml Overfitting Mitigation Guide",
+   "text": "L2 regularization and early stopping\n3. Early stopping Early stopping monitors validation loss during training and stops when it has not\nimproved for a fixed number of epochs (the patience); the best checkpoint is restored. Advantages:\nit needs no change to the model, saves training compute, and the stopping epoch acts as an\nimplicit regularizer. Disadvantages: it requires a held-out validation set that is then not used for\ntraining, results are sensitive to the patience value, and noisy validation curves can trigger a\npremature stop. 4. Dropout Dropout randomly zeroes a fraction p of hidden units at each training\nstep so units cannot co-adapt. It is applied only during training. It is mainly used for neural\nnetworks.",
+   "doc_id": "ml_overfitting_mitigation_guide",
+   "course_id": "ml",
+   "location": "p.2",
+   "chunk_id": "ml_overfitting_mitigation_guide:0002",
+   "score": 0.5114,
+   "data": {
+    "file_type": "pdf",
+    "page": 2,
+    "section": null,
+    "filename": "ml_overfitting_mitigation_guide.pdf"
+   },
+   "derived_from": []
+  },
+  {
+   "id": "S7",
+   "kind": "document",
+   "title": "Ml Overfitting Mitigation Guide",
+   "text": "Dropout and choosing between methods\n5. Choosing between methods L2 and early stopping are complementary and are often combined.\nEarly stopping is cheapest; L2 gives a smoother, more reproducible solution. Compare methods by\nvalidation accuracy, never by training accuracy.",
+   "doc_id": "ml_overfitting_mitigation_guide",
+   "course_id": "ml",
+   "location": "p.3",
+   "chunk_id": "ml_overfitting_mitigation_guide:0003",
+   "score": 0.4589,
+   "data": {
+    "file_type": "pdf",
+    "page": 3,
+    "section": null,
+    "filename": "ml_overfitting_mitigation_guide.pdf"
+   },
+   "derived_from": []
+  }
+ ],
+ "evidence": {
+  "S1": {
+   "id": "S1",
+   "kind": "document",
+   "title": "Ml Overfitting Mitigation Guide",
+   "text": "Overfitting mitigation guide OVERFITTING MITIGATION GUIDE - TracePilot demo course pack (Machine Learning Fundamentals) Original educational material, CC BY 4.0, (c) Faris Mohamed Kishtah. 1. What overfitting means in practice A model overfits when its training accuracy is far higher than its validation accuracy. The gap between the two (train accuracy minus validation accuracy) is the simplest warning sign. 2. L2 regularization (weight decay) L2 regularization adds a penalty proportional to the sum of squared weights to the loss, which shrinks weights toward zero without usually making them exactly zero. Advantages: it is smooth, works with gradient-based optimizers, and keeps all features. Disadvantages: it introduces a strength hyperparameter (lambda or weight decay) that must be tuned with cross-validation, and it does not remove irrelevant features. It",
+   "doc_id": "ml_overfitting_mitigation_guide",
+   "course_id": "ml",
+   "location": "p.1",
+   "chunk_id": "ml_overfitting_mitigation_guide:0000",
+   "score": 0.5929,
+   "data": {
+    "file_type": "pdf",
+    "page": 1,
+    "section": null,
+    "filename": "ml_overfitting_mitigation_guide.pdf"
+   },
+   "derived_from": []
+  },
+  "S2": {
+   "id": "S2",
+   "kind": "document",
+   "title": "Ml Project Handbook",
+   "text": "Machine Learning Project Handbook (v2, current)",
+   "doc_id": "ml_project_handbook",
+   "course_id": "ml",
+   "location": "Machine Learning Project Handbook (v2, current)",
+   "chunk_id": "ml_project_handbook:0000",
+   "score": 0.4864389896392822,
+   "data": {
+    "file_type": "docx",
+    "page": null,
+    "section": "Machine Learning Project Handbook (v2, current)",
+    "filename": "ml_project_handbook.docx"
+   },
+   "derived_from": []
+  },
+  "S3": {
+   "id": "S3",
+   "kind": "document",
+   "title": "Ml Lecture Notes",
+   "text": "is bias squared plus variance plus irreducible noise. Increasing model complexity lowers bias but raises variance.  Ways to reduce overfitting include collecting more training data, simplifying the model, regularization (L1 and L2 penalties that shrink weights; L1 can drive weights to exactly zero), early stopping, dropout for neural networks, feature selection and cross-validation to choose hyperparameters. Learning curves, which plot error against training set size, help diagnose whether a model suffers from high bias or high variance.",
+   "doc_id": "ml_lecture_notes",
+   "course_id": "ml",
+   "location": "p.4",
+   "chunk_id": "ml_lecture_notes:0005",
+   "score": 0.5168,
+   "data": {
+    "file_type": "pdf",
+    "page": 4,
+    "section": "3. Generalization, Overfitting and the Bias-Variance",
+    "filename": "ml_lecture_notes.pdf"
+   },
+   "derived_from": []
+  },
+  "S4": {
+   "id": "S4",
+   "kind": "document",
+   "title": "Ml Lecture Notes",
+   "text": "Machine Learning Concept Guide\nMachine Learning Fundamentals - independently written demonstration notes. Not official university\nmaterial.",
+   "doc_id": "ml_lecture_notes",
+   "course_id": "ml",
+   "location": "p.1",
+   "chunk_id": "ml_lecture_notes:0000",
+   "score": 0.4266080856323242,
+   "data": {
+    "file_type": "pdf",
+    "page": 1,
+    "section": null,
+    "filename": "ml_lecture_notes.pdf"
+   },
+   "derived_from": []
+  },
+  "S5": {
+   "id": "S5",
+   "kind": "document",
+   "title": "Ml Model Diagnostics Handbook",
+   "text": "3. Regularization Strength in scikit-learn\nIn scikit-learn LogisticRegression the parameter C is the inverse of the regularization strength: a\nsmaller C means stronger regularization, and the default is C=1.0. For Ridge regression the\nparameter alpha works the opposite way: a larger alpha means stronger shrinkage.\nL2 regularization (ridge) shrinks all weights toward zero; L1 regularization (lasso) can set some\nweights exactly to zero and therefore performs feature selection.",
+   "doc_id": "ml_model_diagnostics_handbook",
+   "course_id": "ml",
+   "location": "p.3",
+   "chunk_id": "ml_model_diagnostics_handbook:0002",
+   "score": 0.5115,
+   "data": {
+    "file_type": "pdf",
+    "page": 3,
+    "section": "3. Regularization Strength in scikit-learn",
+    "filename": "ml_model_diagnostics_handbook.pdf"
+   },
+   "derived_from": []
+  },
+  "S6": {
+   "id": "S6",
+   "kind": "document",
+   "title": "Ml Overfitting Mitigation Guide",
+   "text": "L2 regularization and early stopping\n3. Early stopping Early stopping monitors validation loss during training and stops when it has not\nimproved for a fixed number of epochs (the patience); the best checkpoint is restored. Advantages:\nit needs no change to the model, saves training compute, and the stopping epoch acts as an\nimplicit regularizer. Disadvantages: it requires a held-out validation set that is then not used for\ntraining, results are sensitive to the patience value, and noisy validation curves can trigger a\npremature stop. 4. Dropout Dropout randomly zeroes a fraction p of hidden units at each training\nstep so units cannot co-adapt. It is applied only during training. It is mainly used for neural\nnetworks.",
+   "doc_id": "ml_overfitting_mitigation_guide",
+   "course_id": "ml",
+   "location": "p.2",
+   "chunk_id": "ml_overfitting_mitigation_guide:0002",
+   "score": 0.5114,
+   "data": {
+    "file_type": "pdf",
+    "page": 2,
+    "section": null,
+    "filename": "ml_overfitting_mitigation_guide.pdf"
+   },
+   "derived_from": []
+  },
+  "S7": {
+   "id": "S7",
+   "kind": "document",
+   "title": "Ml Overfitting Mitigation Guide",
+   "text": "Dropout and choosing between methods\n5. Choosing between methods L2 and early stopping are complementary and are often combined.\nEarly stopping is cheapest; L2 gives a smoother, more reproducible solution. Compare methods by\nvalidation accuracy, never by training accuracy.",
+   "doc_id": "ml_overfitting_mitigation_guide",
+   "course_id": "ml",
+   "location": "p.3",
+   "chunk_id": "ml_overfitting_mitigation_guide:0003",
+   "score": 0.4589,
+   "data": {
+    "file_type": "pdf",
+    "page": 3,
+    "section": null,
+    "filename": "ml_overfitting_mitigation_guide.pdf"
+   },
+   "derived_from": []
+  },
+  "G1": {
+   "id": "G1",
+   "kind": "summary",
+   "title": "Generated summary",
+   "text": "Overfitting occurs when training accuracy is much higher than validation accuracy. [S1] L2 regularization (ridge) shrinks all weights toward zero, while L1 regularization (lasso) can set some weights to zero. [S5] Early stopping monitors validation loss and stops training when it does not improve, offering a way to prevent overfitting. [S6]",
+   "doc_id": null,
+   "course_id": null,
+   "location": null,
+   "chunk_id": null,
+   "score": null,
+   "data": {},
+   "derived_from": [
+    "S1",
+    "S5",
+    "S6"
+   ]
+  }
+ },
+ "trace": [
+  {
+   "seq": 1,
+   "t_ms": 0,
+   "type": "request_received",
+   "question": "Explain overfitting, compare L2 regularization and early stopping, then summarize their advantages.",
+   "scope": null,
+   "tools": [
+    "search_knowledge_base",
+    "retrieve_source_context",
+    "summarize_evidence",
+    "compare_evidence",
+    "refine_search_query"
+   ],
+   "planner": "llm",
+   "replanning": false,
+   "llm": "qwen2.5:3b-instruct",
+   "registry_version": "1.0.0"
+  },
+  {
+   "seq": 2,
+   "t_ms": 5,
+   "type": "question_analysis",
+   "calc_cue": false,
+   "data_cue": false,
+   "compare_cue": true,
+   "summary_cue": true,
+   "multi_cue": true,
+   "named_datasets": [],
+   "length_words": 12,
+   "needs_data": false,
+   "explicit_dataset": false,
+   "literal_numbers": [],
+   "needs_calc": false,
+   "concept_cue": true
+  },
+  {
+   "seq": 3,
+   "t_ms": 8451,
+   "type": "plan_created",
+   "source": "llm",
+   "question_type": "multi_step",
+   "complexity": "moderate",
+   "requires": {
+    "retrieval": true,
+    "calculation": false,
+    "data_analysis": false,
+    "comparison": true
+   },
+   "summary": "LLM plan: 5 step(s)",
+   "adjustments": [],
+   "note": "",
+   "subtasks": [
+    {
+     "id": "t1",
+     "tool": "search_knowledge_base",
+     "goal": "explanation of overfitting",
+     "depends_on": []
+    },
+    {
+     "id": "t2",
+     "tool": "search_knowledge_base",
+     "goal": "explanation of L2 regularization",
+     "depends_on": []
+    },
+    {
+     "id": "t3",
+     "tool": "search_knowledge_base",
+     "goal": "explanation of early stopping",
+     "depends_on": []
+    },
+    {
+     "id": "t4",
+     "tool": "compare_evidence",
+     "goal": "compare overfitting, L2 regularization, and early stopping",
+     "depends_on": [
+      "t1",
+      "t2",
+      "t3"
+     ]
+    },
+    {
+     "id": "t5",
+     "tool": "summarize_evidence",
+     "goal": "summarize advantages of overfitting, L2 regularization, and early stopping",
+     "depends_on": [
+      "t1",
+      "t2",
+      "t3"
+     ]
+    }
+   ]
+  },
+  {
+   "seq": 4,
+   "t_ms": 8451,
+   "type": "tool_selected",
+   "step": "t1",
+   "tool": "search_knowledge_base",
+   "goal": "explanation of overfitting",
+   "attempt": 1,
+   "args": {
+    "query": "overfitting definition and explanation in machine learning",
+    "course_ids": null,
+    "top_k": 4
+   }
+  },
+  {
+   "seq": 5,
+   "t_ms": 8526,
+   "type": "tool_result",
+   "step": "t1",
+   "tool": "search_knowledge_base",
+   "ok": true,
+   "ms": 74.9,
+   "summary": "4 chunks, best cosine 0.59",
+   "evidence_ids": [
+    "S1",
+    "S2",
+    "S3",
+    "S4"
+   ],
+   "error": null,
+   "error_type": null,
+   "sufficient": true,
+   "relevance": {
+    "best_score": 0.593,
+    "keyword_coverage": 0.75,
+    "threshold": {
+     "min_best_score": 0.35,
+     "min_keyword_coverage": 0.35
+    }
+   },
+   "sources": [
+    {
+     "id": "S1",
+     "title": "Ml Overfitting Mitigation Guide",
+     "location": "p.1",
+     "score": 0.593
+    },
+    {
+     "id": "S2",
+     "title": "Ml Project Handbook",
+     "location": "Machine Learning Project Handbook (v2, current)",
+     "score": 0.432
+    },
+    {
+     "id": "S3",
+     "title": "Ml Lecture Notes",
+     "location": "p.4",
+     "score": 0.517
+    },
+    {
+     "id": "S4",
+     "title": "Ml Lecture Notes",
+     "location": "p.1",
+     "score": 0.399
+    }
+   ]
+  },
+  {
+   "seq": 6,
+   "t_ms": 8526,
+   "type": "tool_selected",
+   "step": "t2",
+   "tool": "search_knowledge_base",
+   "goal": "explanation of L2 regularization",
+   "attempt": 1,
+   "args": {
+    "query": "L2 regularization definition and explanation in machine learning",
+    "course_ids": null,
+    "top_k": 4
+   }
+  },
+  {
+   "seq": 7,
+   "t_ms": 8534,
+   "type": "tool_result",
+   "step": "t2",
+   "tool": "search_knowledge_base",
+   "ok": true,
+   "ms": 7.7,
+   "summary": "4 chunks, best cosine 0.53",
+   "evidence_ids": [
+    "S1",
+    "S5",
+    "S2",
+    "S4"
+   ],
+   "error": null,
+   "error_type": null,
+   "sufficient": true,
+   "relevance": {
+    "best_score": 0.526,
+    "keyword_coverage": 0.75,
+    "threshold": {
+     "min_best_score": 0.35,
+     "min_keyword_coverage": 0.35
+    }
+   },
+   "sources": [
+    {
+     "id": "S1",
+     "title": "Ml Overfitting Mitigation Guide",
+     "location": "p.1",
+     "score": 0.526
+    },
+    {
+     "id": "S5",
+     "title": "Ml Model Diagnostics Handbook",
+     "location": "p.3",
+     "score": 0.512
+    },
+    {
+     "id": "S2",
+     "title": "Ml Project Handbook",
+     "location": "Machine Learning Project Handbook (v2, current)",
+     "score": 0.486
+    },
+    {
+     "id": "S4",
+     "title": "Ml Lecture Notes",
+     "location": "p.1",
+     "score": 0.416
+    }
+   ]
+  },
+  {
+   "seq": 8,
+   "t_ms": 8534,
+   "type": "tool_selected",
+   "step": "t3",
+   "tool": "search_knowledge_base",
+   "goal": "explanation of early stopping",
+   "attempt": 1,
+   "args": {
+    "query": "early stopping definition and explanation in machine learning",
+    "course_ids": null,
+    "top_k": 4
+   }
+  },
+  {
+   "seq": 9,
+   "t_ms": 8544,
+   "type": "tool_result",
+   "step": "t3",
+   "tool": "search_knowledge_base",
+   "ok": true,
+   "ms": 9.7,
+   "summary": "4 chunks, best cosine 0.51",
+   "evidence_ids": [
+    "S6",
+    "S7",
+    "S2",
+    "S4"
+   ],
+   "error": null,
+   "error_type": null,
+   "sufficient": true,
+   "relevance": {
+    "best_score": 0.511,
+    "keyword_coverage": 0.8,
+    "threshold": {
+     "min_best_score": 0.35,
+     "min_keyword_coverage": 0.35
+    }
+   },
+   "sources": [
+    {
+     "id": "S6",
+     "title": "Ml Overfitting Mitigation Guide",
+     "location": "p.2",
+     "score": 0.511
+    },
+    {
+     "id": "S7",
+     "title": "Ml Overfitting Mitigation Guide",
+     "location": "p.3",
+     "score": 0.459
+    },
+    {
+     "id": "S2",
+     "title": "Ml Project Handbook",
+     "location": "Machine Learning Project Handbook (v2, current)",
+     "score": 0.45
+    },
+    {
+     "id": "S4",
+     "title": "Ml Lecture Notes",
+     "location": "p.1",
+     "score": 0.427
+    }
+   ]
+  },
+  {
+   "seq": 10,
+   "t_ms": 8544,
+   "type": "tool_selected",
+   "step": "t4",
+   "tool": "compare_evidence",
+   "goal": "compare overfitting, L2 regularization, and early stopping",
+   "attempt": 1,
+   "args": {
+    "source_ids": [
+     "S1",
+     "S2",
+     "S5",
+     "S6",
+     "S7"
+    ],
+    "aspects": [
+     "explanation of overfitting",
+     "explanation of L2 regularization",
+     "explanation of early stopping"
+    ]
+   }
+  },
+  {
+   "seq": 11,
+   "t_ms": 8615,
+   "type": "tool_result",
+   "step": "t4",
+   "tool": "compare_evidence",
+   "ok": true,
+   "ms": 70.8,
+   "summary": "3 aspects covered, 0 missing, 0 agreements, 0 conflicts",
+   "evidence_ids": [],
+   "error": null,
+   "error_type": null,
+   "conflicts": 0,
+   "missing_aspects": []
+  },
+  {
+   "seq": 12,
+   "t_ms": 8615,
+   "type": "tool_selected",
+   "step": "t5",
+   "tool": "summarize_evidence",
+   "goal": "summarize advantages of overfitting, L2 regularization, and early stopping",
+   "attempt": 1,
+   "args": {
+    "source_ids": [
+     "S1",
+     "S2",
+     "S5",
+     "S6",
+     "S7"
+    ],
+    "focus": "summarize advantages of overfitting, L2 regularization, and early stopping"
+   }
+  },
+  {
+   "seq": 13,
+   "t_ms": 14110,
+   "type": "tool_result",
+   "step": "t5",
+   "tool": "summarize_evidence",
+   "ok": true,
+   "ms": 5494.8,
+   "summary": "3 bullets (llm) from S1, S5, S6",
+   "evidence_ids": [
+    "G1"
+   ],
+   "error": null,
+   "error_type": null
+  },
+  {
+   "seq": 14,
+   "t_ms": 14110,
+   "type": "validation",
+   "sufficient": true,
+   "steps": {
+    "t1": {
+     "status": "done",
+     "sufficient": true
+    },
+    "t2": {
+     "status": "done",
+     "sufficient": true
+    },
+    "t3": {
+     "status": "done",
+     "sufficient": true
+    },
+    "t4": {
+     "status": "done",
+     "sufficient": null
+    },
+    "t5": {
+     "status": "done",
+     "sufficient": null
+    }
+   },
+   "problems": []
+  },
+  {
+   "seq": 15,
+   "t_ms": 14110,
+   "type": "synthesis_started",
+   "evidence": [
+    "S1",
+    "S3",
+    "S5",
+    "S6",
+    "S2",
+    "S7"
+   ],
+   "computed": [],
+   "gaps": []
+  },
+  {
+   "seq": 16,
+   "t_ms": 31265,
+   "type": "citation_check",
+   "n_cited_sentences": 3,
+   "n_supported": 3,
+   "support_rate": 1.0,
+   "invalid_ids": [],
+   "removed_unsupported": 8,
+   "regenerated": 0,
+   "injection_flags": [],
+   "fallback_extractive": false
+  },
+  {
+   "seq": 17,
+   "t_ms": 31265,
+   "type": "answer",
+   "abstained": false,
+   "citations": [
+    "S1",
+    "S6",
+    "S7"
+   ]
+  },
+  {
+   "seq": 18,
+   "t_ms": 31268,
+   "type": "completed",
+   "stop_reason": "answered",
+   "latency_s": 31.26
+  }
+ ],
+ "validation": {
+  "n_cited_sentences": 3,
+  "n_supported": 3,
+  "support_rate": 1.0,
+  "invalid_ids": [],
+  "unsupported": [],
+  "uncited_numeric_sentences": []
+ },
+ "metrics": {
+  "latency_s": 31.26,
+  "llm_calls": 3,
+  "prompt_tokens": 3364,
+  "completion_tokens": 636,
+  "tool_calls": 5,
+  "replans": 0,
+  "steps": 5,
+  "errors": [],
+  "step_status": {
+   "t1": "done",
+   "t2": "done",
+   "t3": "done",
+   "t4": "done",
+   "t5": "done"
+  },
+  "removed_unsupported": 8,
+  "injection_flags": []
+ },
+ "system": "agentic",
+ "config": {
+  "name": "llm_no_numeric_tools",
+  "planner": "llm",
+  "replan": false,
+  "tools": [
+   "search_knowledge_base",
+   "retrieve_source_context",
+   "summarize_evidence",
+   "compare_evidence",
+   "refine_search_query"
+  ],
+  "model": "qwen2.5:3b-instruct",
+  "registry_version": "1.0.0"
+ }
+}

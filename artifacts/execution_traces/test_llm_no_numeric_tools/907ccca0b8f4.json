@@ -1,0 +1,584 @@
+{
+ "request_id": "907ccca0b8f4",
+ "question": "What does the interquartile range measure and how are outlier fences defined?",
+ "answer": "Outlier fences are defined using the IQR: values below Q1 - 1.5 * IQR or above Q3 + 1.5 * IQR are flagged as outliers. [S1]",
+ "abstained": false,
+ "stop_reason": "answered",
+ "plan": {
+  "question_type": "multi_step",
+  "complexity": "moderate",
+  "requires_retrieval": true,
+  "requires_calculation": false,
+  "requires_data_analysis": false,
+  "requires_comparison": false,
+  "subtasks": [
+   {
+    "id": "t1",
+    "tool": "search_knowledge_base",
+    "goal": "definition of interquartile range",
+    "query": "interquartile range definition",
+    "dataset_id": null,
+    "operation": null,
+    "column": null,
+    "group_by": null,
+    "agg": null,
+    "filters": null,
+    "expression": null,
+    "aspects": null,
+    "depends_on": []
+   },
+   {
+    "id": "t2",
+    "tool": "search_knowledge_base",
+    "goal": "definition of outlier fences",
+    "query": "outlier fences definition",
+    "dataset_id": null,
+    "operation": null,
+    "column": null,
+    "group_by": null,
+    "agg": null,
+    "filters": null,
+    "expression": null,
+    "aspects": null,
+    "depends_on": []
+   }
+  ],
+  "rationale": "LLM plan: 2 step(s)"
+ },
+ "plan_source": "llm",
+ "tool_sequence": [
+  "search_knowledge_base",
+  "search_knowledge_base"
+ ],
+ "citations": [
+  {
+   "id": "S1",
+   "kind": "document",
+   "title": "Statistics Lecture Notes",
+   "text": "1. Descriptive Statistics Descriptive statistics summarize a dataset. Measures of central tendency are the mean (the sum of the values divided by the number of values), the median (the middle value of the sorted data) and the mode (the most frequent value). The mean is sensitive to outliers; the median is robust to them. For right-skewed data such as incomes the mean is usually larger than the median. Measures of spread describe variability. The range is maximum minus minimum. The variance averages squared deviations from the mean, and the standard deviation is the square root of the variance, so it has the same units as the data. The interquartile range (IQR) is Q3 minus Q1 and is used to flag outliers: a common rule marks values below Q1 - 1.5 * IQR or above Q3 + 1.5 * IQR. Population variance divides the sum of squared deviations by N, the population size. Sample",
+   "doc_id": "statistics_lecture_notes",
+   "course_id": "statistics",
+   "location": "p.2",
+   "chunk_id": "statistics_lecture_notes:0001",
+   "score": 0.4767,
+   "data": {
+    "file_type": "pdf",
+    "page": 2,
+    "section": "1. Descriptive Statistics",
+    "filename": "statistics_lecture_notes.pdf"
+   },
+   "derived_from": []
+  }
+ ],
+ "evidence": {
+  "S1": {
+   "id": "S1",
+   "kind": "document",
+   "title": "Statistics Lecture Notes",
+   "text": "1. Descriptive Statistics Descriptive statistics summarize a dataset. Measures of central tendency are the mean (the sum of the values divided by the number of values), the median (the middle value of the sorted data) and the mode (the most frequent value). The mean is sensitive to outliers; the median is robust to them. For right-skewed data such as incomes the mean is usually larger than the median. Measures of spread describe variability. The range is maximum minus minimum. The variance averages squared deviations from the mean, and the standard deviation is the square root of the variance, so it has the same units as the data. The interquartile range (IQR) is Q3 minus Q1 and is used to flag outliers: a common rule marks values below Q1 - 1.5 * IQR or above Q3 + 1.5 * IQR. Population variance divides the sum of squared deviations by N, the population size. Sample",
+   "doc_id": "statistics_lecture_notes",
+   "course_id": "statistics",
+   "location": "p.2",
+   "chunk_id": "statistics_lecture_notes:0001",
+   "score": 0.4767,
+   "data": {
+    "file_type": "pdf",
+    "page": 2,
+    "section": "1. Descriptive Statistics",
+    "filename": "statistics_lecture_notes.pdf"
+   },
+   "derived_from": []
+  },
+  "S2": {
+   "id": "S2",
+   "kind": "document",
+   "title": "Statistics Lecture Notes",
+   "text": "size grows. A confidence interval gives a range of plausible values for a parameter. A 95% confidence interval for  a mean with known sigma is x-bar plus or minus 1.96 * sigma / sqrt(n). When sigma is unknown and n is small, replace 1.96 with a critical value from the t distribution with n - 1 degrees of freedom. A 95% confidence level means that if the procedure were repeated many times, about 95% of the intervals would contain the true parameter; it does not mean there is a 95% probability that one specific computed interval contains it.",
+   "doc_id": "statistics_lecture_notes",
+   "course_id": "statistics",
+   "location": "p.5",
+   "chunk_id": "statistics_lecture_notes:0008",
+   "score": 0.2152,
+   "data": {
+    "file_type": "pdf",
+    "page": 5,
+    "section": "4. Sampling and Confidence Intervals",
+    "filename": "statistics_lecture_notes.pdf"
+   },
+   "derived_from": []
+  },
+  "S3": {
+   "id": "S3",
+   "kind": "document",
+   "title": "Statistics Lecture Notes",
+   "text": "r squared. Residual plots should show no pattern; curved or funnel-shaped residuals indicate a violated assumption.  Extrapolating beyond the observed range of x is risky.",
+   "doc_id": "statistics_lecture_notes",
+   "course_id": "statistics",
+   "location": "p.7",
+   "chunk_id": "statistics_lecture_notes:0012",
+   "score": 0.1823,
+   "data": {
+    "file_type": "pdf",
+    "page": 7,
+    "section": "6. Correlation and Regression",
+    "filename": "statistics_lecture_notes.pdf"
+   },
+   "derived_from": []
+  },
+  "S4": {
+   "id": "S4",
+   "kind": "document",
+   "title": "Python Reference Notes",
+   "text": "BUILT-IN FUNCTIONS\nlen(x) returns the number of items in x.\nsum(nums) adds the numbers in an iterable.\nmin(nums) and max(nums) return the smallest and largest items.\nsorted(items) returns a new sorted list; list.sort() sorts in place and returns None.\nenumerate(items) gives (index, item) pairs.\nzip(a, b) pairs items from two iterables and stops at the shortest.\nrange(stop) generates 0 .. stop-1; range(start, stop, step) supports steps.\nisinstance(x, int) tests whether x is an instance of a type.",
+   "doc_id": "python_reference_notes",
+   "course_id": "python",
+   "location": "BUILT-IN FUNCTIONS",
+   "chunk_id": "python_reference_notes:0001",
+   "score": 0.1467,
+   "data": {
+    "file_type": "txt",
+    "page": null,
+    "section": "BUILT-IN FUNCTIONS",
+    "filename": "python_reference_notes.txt"
+   },
+   "derived_from": []
+  },
+  "S5": {
+   "id": "S5",
+   "kind": "document",
+   "title": "Python Library Cheatsheet",
+   "text": "row 1: entry_id=LIB001; identifier=math.isclose; module=math; returns=bool; min_python=3.5; note=Compares floats; the default rel_tol is 1e-09\nrow 2: entry_id=LIB002; identifier=math.prod; module=math; returns=number; min_python=3.8; note=Multiplies all items of an iterable\nrow 3: entry_id=LIB003; identifier=math.dist; module=math; returns=float; min_python=3.8; note=Euclidean distance between two points\nrow 4: entry_id=LIB004; identifier=statistics.fmean; module=statistics; returns=float; min_python=3.8; note=Fast floating-point arithmetic mean\nrow 5: entry_id=LIB005; identifier=statistics.correlation; module=statistics; returns=float; min_python=3.10; note=Pearson correlation of two inputs\nrow 6: entry_id=LIB006; identifier=functools.cache; module=functools; returns=decorator; min_python=3.9; note=Unbounded memoization; shortcut for lru_cache(maxsize=None)\nrow 7: entry_id=LIB007; identifier=str.removeprefix; module=builtins; returns=str; min_python=3.9; note=Returns the string without the given prefix if present\nrow 8: entry_id=LIB008; identifier=str.casefold; module=builtins; returns=str; min_python=3.3; note=Aggressive lowercase for caseless comparison",
+   "doc_id": "python_library_cheatsheet",
+   "course_id": "python",
+   "location": "rows 1-8",
+   "chunk_id": "python_library_cheatsheet:0001",
+   "score": 0.2163,
+   "data": {
+    "file_type": "csv",
+    "page": null,
+    "section": "data rows",
+    "filename": "python_library_cheatsheet.csv"
+   },
+   "derived_from": []
+  },
+  "S6": {
+   "id": "S6",
+   "kind": "document",
+   "title": "Statistics Reference Notes",
+   "text": "DESCRIPTIVE FORMULAS\nMean: x-bar = (sum of x) / n\nPopulation variance: sigma^2 = sum((x - mu)^2) / N\nSample variance: s^2 = sum((x - x-bar)^2) / (n - 1)\nStandard deviation: the square root of the variance.\nIQR = Q3 - Q1. Outlier fences: Q1 - 1.5*IQR and Q3 + 1.5*IQR.\nCoefficient of variation: CV = standard deviation / mean.",
+   "doc_id": "statistics_reference_notes",
+   "course_id": "statistics",
+   "location": "DESCRIPTIVE FORMULAS",
+   "chunk_id": "statistics_reference_notes:0001",
+   "score": 0.2863,
+   "data": {
+    "file_type": "txt",
+    "page": null,
+    "section": "DESCRIPTIVE FORMULAS",
+    "filename": "statistics_reference_notes.txt"
+   },
+   "derived_from": []
+  },
+  "S7": {
+   "id": "S7",
+   "kind": "document",
+   "title": "Python Exercise Guide",
+   "text": "Exercise Set C: Files, Exceptions and Classes\nExercise C1. Read a text file and print the number of lines. Use a with block and sum(1 for _ in f). Handle FileNotFoundError by printing a friendly message.\nExercise C2. Write a safe_divide(a, b) function that returns None and prints a message when b is zero, using try and except ZeroDivisionError.\nExercise C3. Create a class Rectangle with width and height attributes and methods area() and perimeter(). Then create a Square subclass that calls super().__init__(side, side). A Rectangle of width 3 and height 4 has area 12 and perimeter 14.",
+   "doc_id": "python_exercise_guide",
+   "course_id": "python",
+   "location": "Exercise Set C: Files, Exceptions and Classes",
+   "chunk_id": "python_exercise_guide:0003",
+   "score": 0.2914,
+   "data": {
+    "file_type": "docx",
+    "page": null,
+    "section": "Exercise Set C: Files, Exceptions and Classes",
+    "filename": "python_exercise_guide.docx"
+   },
+   "derived_from": []
+  },
+  "S8": {
+   "id": "S8",
+   "kind": "document",
+   "title": "Python Lecture Notes",
+   "text": "FileNotFoundError, ValueError, KeyError, ZeroDivisionError or TypeError rather than a bare except, which hides bugs.  You raise an exception yourself with raise ValueError(\"age must be positive\"). Custom exceptions are created by subclassing Exception. Common error messages: IndentationError means inconsistent indentation, NameError means a name was used before assignment, and IndexError means a list index was out of range.",
+   "doc_id": "python_lecture_notes",
+   "course_id": "python",
+   "location": "p.6",
+   "chunk_id": "python_lecture_notes:0010",
+   "score": 0.2814,
+   "data": {
+    "file_type": "pdf",
+    "page": 6,
+    "section": "5. File Handling and Exceptions",
+    "filename": "python_lecture_notes.pdf"
+   },
+   "derived_from": []
+  },
+  "S9": {
+   "id": "S9",
+   "kind": "document",
+   "title": "Statistics Worked Examples",
+   "text": "row 1: example_id=ST001; topic=Descriptive statistics; dataset_or_scenario=Dataset A: 2,4,4,4,5,5,7,9; n=8; statistic=Mean; value=5; method_note=sum divided by n\nrow 2: example_id=ST002; topic=Descriptive statistics; dataset_or_scenario=Dataset A: 2,4,4,4,5,5,7,9; n=8; statistic=Median; value=4.5; method_note=middle value of sorted data\nrow 3: example_id=ST003; topic=Descriptive statistics; dataset_or_scenario=Dataset A: 2,4,4,4,5,5,7,9; n=8; statistic=Population variance; value=4; method_note=divide squared deviations by N\nrow 4: example_id=ST004; topic=Descriptive statistics; dataset_or_scenario=Dataset A: 2,4,4,4,5,5,7,9; n=8; statistic=Sample variance; value=4.5714; method_note=divide squared deviations by n - 1\nrow 5: example_id=ST005; topic=Descriptive statistics; dataset_or_scenario=Dataset A: 2,4,4,4,5,5,7,9; n=8; statistic=Population standard deviation; value=2.0; method_note=square root of population variance\nrow 6: example_id=ST006; topic=Descriptive statistics; dataset_or_scenario=Dataset A: 2,4,4,4,5,5,7,9; n=8; statistic=Sample standard deviation; value=2.1381; method_note=square root of sample variance\nrow 7: example_id=ST007; topic=Descriptive statistics; dataset_or_scenario=Dataset B: 10,12,23,23,16,23,21,16; n=8; statistic=Mean; value=18; method_note=sum divided by n\nrow 8: example_id=ST008; topic=Descriptive statistics; dataset_or_scenario=Dataset B: 10,12,23,23,16,23,21,16; n=8; statistic=Median; value=18.5; method_note=middle value of sorted data",
+   "doc_id": "statistics_worked_examples",
+   "course_id": "statistics",
+   "location": "rows 1-8",
+   "chunk_id": "statistics_worked_examples:0001",
+   "score": 0.2667,
+   "data": {
+    "file_type": "csv",
+    "page": null,
+    "section": "data rows",
+    "filename": "statistics_worked_examples.csv"
+   },
+   "derived_from": []
+  },
+  "S10": {
+   "id": "S10",
+   "kind": "document",
+   "title": "Statistics Robust Summaries",
+   "text": "The mean is the sum of the values divided by their count, so every value, including extreme ones,\npulls it. The median is the middle value of the sorted data and ignores how far the extremes lie.\nWhen a distribution is right-skewed (a long tail of a few very large values, as with prices or\nincomes) a few large values drag the mean upward while the median stays near the typical value, so\nthe mean exceeds the median. When the data are symmetric the two are close. A large gap between the\nmean and the median is therefore a quick diagnostic for skew or outliers. For skewed data, report\nthe median (or both) because it better describes a typical observation.",
+   "doc_id": "statistics_robust_summaries",
+   "course_id": "statistics",
+   "location": "ROBUST SUMMARIES: WHY THE MEAN AND THE MEDIAN DIFFER",
+   "chunk_id": "statistics_robust_summaries:0001",
+   "score": 0.2498,
+   "data": {
+    "file_type": "txt",
+    "page": null,
+    "section": "ROBUST SUMMARIES: WHY THE MEAN AND THE MEDIAN DIFFER",
+    "filename": "statistics_robust_summaries.txt"
+   },
+   "derived_from": []
+  }
+ },
+ "trace": [
+  {
+   "seq": 1,
+   "t_ms": 0,
+   "type": "request_received",
+   "question": "What does the interquartile range measure and how are outlier fences defined?",
+   "scope": null,
+   "tools": [
+    "search_knowledge_base",
+    "retrieve_source_context",
+    "summarize_evidence",
+    "compare_evidence",
+    "refine_search_query"
+   ],
+   "planner": "llm",
+   "replanning": false,
+   "llm": "qwen2.5:3b-instruct",
+   "registry_version": "1.0.0"
+  },
+  {
+   "seq": 2,
+   "t_ms": 1,
+   "type": "question_analysis",
+   "calc_cue": true,
+   "data_cue": false,
+   "compare_cue": false,
+   "summary_cue": false,
+   "multi_cue": false,
+   "named_datasets": [],
+   "length_words": 12,
+   "needs_data": false,
+   "explicit_dataset": false,
+   "literal_numbers": [],
+   "needs_calc": false,
+   "concept_cue": true
+  },
+  {
+   "seq": 3,
+   "t_ms": 3461,
+   "type": "plan_created",
+   "source": "llm",
+   "question_type": "multi_step",
+   "complexity": "moderate",
+   "requires": {
+    "retrieval": true,
+    "calculation": false,
+    "data_analysis": false,
+    "comparison": false
+   },
+   "summary": "LLM plan: 2 step(s)",
+   "adjustments": [],
+   "note": "",
+   "subtasks": [
+    {
+     "id": "t1",
+     "tool": "search_knowledge_base",
+     "goal": "definition of interquartile range",
+     "depends_on": []
+    },
+    {
+     "id": "t2",
+     "tool": "search_knowledge_base",
+     "goal": "definition of outlier fences",
+     "depends_on": []
+    }
+   ]
+  },
+  {
+   "seq": 4,
+   "t_ms": 3461,
+   "type": "tool_selected",
+   "step": "t1",
+   "tool": "search_knowledge_base",
+   "goal": "definition of interquartile range",
+   "attempt": 1,
+   "args": {
+    "query": "interquartile range definition",
+    "course_ids": null,
+    "top_k": 5
+   }
+  },
+  {
+   "seq": 5,
+   "t_ms": 3486,
+   "type": "tool_result",
+   "step": "t1",
+   "tool": "search_knowledge_base",
+   "ok": true,
+   "ms": 24.8,
+   "summary": "5 chunks, best cosine 0.48",
+   "evidence_ids": [
+    "S1",
+    "S2",
+    "S3",
+    "S4",
+    "S5"
+   ],
+   "error": null,
+   "error_type": null,
+   "sufficient": true,
+   "relevance": {
+    "best_score": 0.477,
+    "keyword_coverage": 1.0,
+    "threshold": {
+     "min_best_score": 0.35,
+     "min_keyword_coverage": 0.35
+    }
+   },
+   "sources": [
+    {
+     "id": "S1",
+     "title": "Statistics Lecture Notes",
+     "location": "p.2",
+     "score": 0.477
+    },
+    {
+     "id": "S2",
+     "title": "Statistics Lecture Notes",
+     "location": "p.5",
+     "score": 0.215
+    },
+    {
+     "id": "S3",
+     "title": "Statistics Lecture Notes",
+     "location": "p.7",
+     "score": 0.182
+    },
+    {
+     "id": "S4",
+     "title": "Python Reference Notes",
+     "location": "BUILT-IN FUNCTIONS",
+     "score": 0.147
+    },
+    {
+     "id": "S5",
+     "title": "Python Library Cheatsheet",
+     "location": "rows 1-8",
+     "score": 0.216
+    }
+   ]
+  },
+  {
+   "seq": 6,
+   "t_ms": 3486,
+   "type": "tool_selected",
+   "step": "t2",
+   "tool": "search_knowledge_base",
+   "goal": "definition of outlier fences",
+   "attempt": 1,
+   "args": {
+    "query": "outlier fences definition",
+    "course_ids": null,
+    "top_k": 5
+   }
+  },
+  {
+   "seq": 7,
+   "t_ms": 3496,
+   "type": "tool_result",
+   "step": "t2",
+   "tool": "search_knowledge_base",
+   "ok": true,
+   "ms": 9.6,
+   "summary": "5 chunks, best cosine 0.29",
+   "evidence_ids": [
+    "S6",
+    "S7",
+    "S8",
+    "S9",
+    "S10"
+   ],
+   "error": null,
+   "error_type": null,
+   "sufficient": false,
+   "relevance": {
+    "best_score": 0.291,
+    "keyword_coverage": 1.0,
+    "threshold": {
+     "min_best_score": 0.35,
+     "min_keyword_coverage": 0.35
+    }
+   },
+   "sources": [
+    {
+     "id": "S6",
+     "title": "Statistics Reference Notes",
+     "location": "DESCRIPTIVE FORMULAS",
+     "score": 0.286
+    },
+    {
+     "id": "S7",
+     "title": "Python Exercise Guide",
+     "location": "Exercise Set C: Files, Exceptions and Classes",
+     "score": 0.291
+    },
+    {
+     "id": "S8",
+     "title": "Python Lecture Notes",
+     "location": "p.6",
+     "score": 0.281
+    },
+    {
+     "id": "S9",
+     "title": "Statistics Worked Examples",
+     "location": "rows 1-8",
+     "score": 0.267
+    },
+    {
+     "id": "S10",
+     "title": "Statistics Robust Summaries",
+     "location": "ROBUST SUMMARIES: WHY THE MEAN AND THE MEDIAN DIFFER",
+     "score": 0.25
+    }
+   ]
+  },
+  {
+   "seq": 8,
+   "t_ms": 3496,
+   "type": "validation",
+   "sufficient": false,
+   "steps": {
+    "t1": {
+     "status": "done",
+     "sufficient": true
+    },
+    "t2": {
+     "status": "weak",
+     "sufficient": false
+    }
+   },
+   "problems": [
+    {
+     "step": "t2",
+     "kind": "weak_evidence"
+    }
+   ]
+  },
+  {
+   "seq": 9,
+   "t_ms": 3496,
+   "type": "replan_skipped",
+   "reason": "replanning disabled",
+   "unresolved": [
+    "t2"
+   ]
+  },
+  {
+   "seq": 10,
+   "t_ms": 3496,
+   "type": "synthesis_started",
+   "evidence": [
+    "S1"
+   ],
+   "computed": [],
+   "gaps": [
+    "definition of outlier fences"
+   ]
+  },
+  {
+   "seq": 11,
+   "t_ms": 9416,
+   "type": "citation_check",
+   "n_cited_sentences": 0,
+   "n_supported": 0,
+   "support_rate": 0.0,
+   "invalid_ids": [],
+   "removed_unsupported": 0,
+   "regenerated": 1,
+   "injection_flags": [],
+   "fallback_extractive": false
+  },
+  {
+   "seq": 12,
+   "t_ms": 9416,
+   "type": "answer",
+   "abstained": false,
+   "citations": [
+    "S1"
+   ]
+  },
+  {
+   "seq": 13,
+   "t_ms": 9416,
+   "type": "completed",
+   "stop_reason": "answered",
+   "latency_s": 9.42
+  }
+ ],
+ "validation": {
+  "n_cited_sentences": 0,
+  "n_supported": 0,
+  "support_rate": 0.0,
+  "invalid_ids": [],
+  "unsupported": [],
+  "uncited_numeric_sentences": [
+   "Outlier fences are defined using the IQR: values below Q1 - 1.5 * IQR or above Q3 + 1.5 * IQR are flagged as outliers."
+  ]
+ },
+ "metrics": {
+  "latency_s": 9.42,
+  "llm_calls": 3,
+  "prompt_tokens": 2439,
+  "completion_tokens": 227,
+  "tool_calls": 2,
+  "replans": 0,
+  "steps": 2,
+  "errors": [],
+  "step_status": {
+   "t1": "done",
+   "t2": "weak"
+  },
+  "removed_unsupported": 0,
+  "injection_flags": []
+ },
+ "system": "agentic",
+ "config": {
+  "name": "llm_no_numeric_tools",
+  "planner": "llm",
+  "replan": false,
+  "tools": [
+   "search_knowledge_base",
+   "retrieve_source_context",
+   "summarize_evidence",
+   "compare_evidence",
+   "refine_search_query"
+  ],
+  "model": "qwen2.5:3b-instruct",
+  "registry_version": "1.0.0"
+ }
+}

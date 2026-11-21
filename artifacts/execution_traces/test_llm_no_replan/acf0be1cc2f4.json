@@ -1,0 +1,100 @@
+{
+ "request_id": "acf0be1cc2f4",
+ "question": "By what percent does validation accuracy increase from 0.812 to 0.889?",
+ "answer": "The request could not be completed (ValidationError).",
+ "abstained": true,
+ "stop_reason": "error",
+ "plan": null,
+ "plan_source": "",
+ "tool_sequence": [],
+ "citations": [],
+ "evidence": {},
+ "trace": [
+  {
+   "seq": 1,
+   "t_ms": 0,
+   "type": "request_received",
+   "question": "By what percent does validation accuracy increase from 0.812 to 0.889?",
+   "scope": null,
+   "tools": [
+    "search_knowledge_base",
+    "retrieve_source_context",
+    "summarize_evidence",
+    "analyze_dataset",
+    "calculate_expression",
+    "compare_evidence",
+    "refine_search_query"
+   ],
+   "planner": "llm",
+   "replanning": false,
+   "llm": "qwen2.5:3b-instruct",
+   "registry_version": "1.0.0"
+  },
+  {
+   "seq": 2,
+   "t_ms": 1,
+   "type": "question_analysis",
+   "calc_cue": true,
+   "data_cue": true,
+   "compare_cue": false,
+   "summary_cue": false,
+   "multi_cue": false,
+   "named_datasets": [],
+   "length_words": 11,
+   "needs_data": false,
+   "explicit_dataset": false,
+   "literal_numbers": [
+    "0.812",
+    "0.889"
+   ],
+   "needs_calc": true,
+   "concept_cue": true
+  },
+  {
+   "seq": 3,
+   "t_ms": 6009,
+   "type": "error",
+   "error": "ValidationError: 1 validation error for QuestionPlan\nsubtasks\n  Value error, duplicate subtask ids [type=value_error, input_value=[{'id': 't1', 'tool': 'ca...None, 'depends_on':"
+  },
+  {
+   "seq": 4,
+   "t_ms": 6010,
+   "type": "completed",
+   "stop_reason": "error",
+   "latency_s": 6.01
+  }
+ ],
+ "validation": {},
+ "metrics": {
+  "latency_s": 6.01,
+  "llm_calls": 1,
+  "prompt_tokens": 1557,
+  "completion_tokens": 172,
+  "tool_calls": 0,
+  "replans": 0,
+  "steps": 0,
+  "errors": [
+   "ValidationError: 1 validation error for QuestionPlan\nsubtasks\n  Value error, duplicate subtask ids [type=value_error, input_value=[{'id': 't1', 'tool': 'ca...None, 'depends_on':"
+  ],
+  "step_status": {},
+  "removed_unsupported": 0,
+  "injection_flags": []
+ },
+ "system": "agentic",
+ "config": {
+  "name": "llm_no_replan",
+  "planner": "llm",
+  "replan": false,
+  "tools": [
+   "search_knowledge_base",
+   "retrieve_source_context",
+   "summarize_evidence",
+   "analyze_dataset",
+   "calculate_expression",
+   "compare_evidence",
+   "refine_search_query"
+  ],
+  "model": "qwen2.5:3b-instruct",
+  "registry_version": "1.0.0"
+ }
+}

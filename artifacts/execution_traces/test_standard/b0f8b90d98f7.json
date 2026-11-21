@@ -1,0 +1,179 @@
+{
+ "request_id": "b0f8b90d98f7",
+ "question": "How many rows does the product prices dataset have?",
+ "answer": "The product prices dataset has 40 rows [S1].",
+ "abstained": false,
+ "stop_reason": "answered",
+ "plan": null,
+ "plan_source": "none",
+ "tool_sequence": [
+  "search_knowledge_base"
+ ],
+ "citations": [
+  {
+   "id": "S1",
+   "kind": "document",
+   "title": "Product Prices",
+   "text": "Dataset product_prices: 40 rows, columns: product_id, category, product_name, price_usd, units_sold.",
+   "doc_id": "product_prices",
+   "course_id": "data",
+   "location": "dataset overview",
+   "chunk_id": "product_prices:0000",
+   "score": 0.7491,
+   "data": {
+    "file_type": "csv",
+    "page": null,
+    "section": "dataset overview",
+    "filename": "product_prices.csv"
+   },
+   "derived_from": []
+  }
+ ],
+ "evidence": {
+  "S1": {
+   "id": "S1",
+   "kind": "document",
+   "title": "Product Prices",
+   "text": "Dataset product_prices: 40 rows, columns: product_id, category, product_name, price_usd, units_sold.",
+   "doc_id": "product_prices",
+   "course_id": "data",
+   "location": "dataset overview",
+   "chunk_id": "product_prices:0000",
+   "score": 0.7491,
+   "data": {
+    "file_type": "csv",
+    "page": null,
+    "section": "dataset overview",
+    "filename": "product_prices.csv"
+   },
+   "derived_from": []
+  },
+  "S2": {
+   "id": "S2",
+   "kind": "document",
+   "title": "Ml Regularization Experiments",
+   "text": "Dataset ml_regularization_experiments: 9 rows, columns: run_id, model, dataset, technique, train_accuracy, val_accuracy, epochs, notes.",
+   "doc_id": "ml_regularization_experiments",
+   "course_id": "ml",
+   "location": "dataset overview",
+   "chunk_id": "ml_regularization_experiments:0000",
+   "score": 0.469,
+   "data": {
+    "file_type": "csv",
+    "page": null,
+    "section": "dataset overview",
+    "filename": "ml_regularization_experiments.csv"
+   },
+   "derived_from": []
+  },
+  "S3": {
+   "id": "S3",
+   "kind": "document",
+   "title": "Statistics Worked Examples",
+   "text": "Dataset statistics_worked_examples: 25 rows, columns: example_id, topic, dataset_or_scenario, n, statistic, value, method_note.",
+   "doc_id": "statistics_worked_examples",
+   "course_id": "statistics",
+   "location": "dataset overview",
+   "chunk_id": "statistics_worked_examples:0000",
+   "score": 0.4641,
+   "data": {
+    "file_type": "csv",
+    "page": null,
+    "section": "dataset overview",
+    "filename": "statistics_worked_examples.csv"
+   },
+   "derived_from": []
+  },
+  "S4": {
+   "id": "S4",
+   "kind": "document",
+   "title": "Ml Model Evaluation Runs",
+   "text": "Dataset ml_model_evaluation_runs: 10 rows, columns: run_id, model, task, train_accuracy, val_accuracy, precision, recall, f1, notes.",
+   "doc_id": "ml_model_evaluation_runs",
+   "course_id": "ml",
+   "location": "dataset overview",
+   "chunk_id": "ml_model_evaluation_runs:0000",
+   "score": 0.5076,
+   "data": {
+    "file_type": "csv",
+    "page": null,
+    "section": "dataset overview",
+    "filename": "ml_model_evaluation_runs.csv"
+   },
+   "derived_from": []
+  },
+  "S5": {
+   "id": "S5",
+   "kind": "document",
+   "title": "Python Library Cheatsheet",
+   "text": "Dataset python_library_cheatsheet: 16 rows, columns: entry_id, identifier, module, returns, min_python, note.",
+   "doc_id": "python_library_cheatsheet",
+   "course_id": "python",
+   "location": "dataset overview",
+   "chunk_id": "python_library_cheatsheet:0000",
+   "score": 0.4767,
+   "data": {
+    "file_type": "csv",
+    "page": null,
+    "section": "dataset overview",
+    "filename": "python_library_cheatsheet.csv"
+   },
+   "derived_from": []
+  }
+ },
+ "trace": [
+  {
+   "seq": 1,
+   "t_ms": 0,
+   "type": "request_received",
+   "question": "How many rows does the product prices dataset have?",
+   "scope": null,
+   "system": "standard_rag"
+  },
+  {
+   "seq": 2,
+   "t_ms": 59,
+   "type": "retrieval",
+   "query": "How many rows does the product prices dataset have?",
+   "n": 5,
+   "sources": [
+    "S1",
+    "S2",
+    "S3",
+    "S4",
+    "S5"
+   ],
+   "best_score": 0.749
+  },
+  {
+   "seq": 3,
+   "t_ms": 1804,
+   "type": "answer",
+   "abstained": false,
+   "citations": [
+    "S1"
+   ]
+  }
+ ],
+ "validation": {
+  "n_cited_sentences": 1,
+  "n_supported": 1,
+  "support_rate": 1.0,
+  "invalid_ids": [],
+  "unsupported": [],
+  "uncited_numeric_sentences": []
+ },
+ "metrics": {
+  "latency_s": 1.8,
+  "llm_calls": 1,
+  "prompt_tokens": 503,
+  "completion_tokens": 14,
+  "tool_calls": 1,
+  "replans": 0,
+  "steps": 1
+ },
+ "system": "standard_rag",
+ "config": {
+  "top_k": 5
+ }
+}

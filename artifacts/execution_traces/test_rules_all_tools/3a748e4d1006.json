@@ -1,0 +1,661 @@
+{
+ "request_id": "3a748e4d1006",
+ "question": "Compare covariance and correlation.",
+ "answer": "Covariance measures the direction and strength of a linear relationship between two variables, unlike correlation which ranges from -1 to +1, indicating strength and direction, but does not imply causation [S6] [S7].",
+ "abstained": false,
+ "stop_reason": "answered",
+ "plan": {
+  "question_type": "comparison",
+  "complexity": "moderate",
+  "requires_retrieval": true,
+  "requires_calculation": false,
+  "requires_data_analysis": false,
+  "requires_comparison": true,
+  "subtasks": [
+   {
+    "id": "t1",
+    "tool": "search_knowledge_base",
+    "goal": "find evidence: covariance",
+    "query": "covariance",
+    "dataset_id": null,
+    "operation": null,
+    "column": null,
+    "group_by": null,
+    "agg": null,
+    "filters": null,
+    "expression": null,
+    "aspects": null,
+    "depends_on": []
+   },
+   {
+    "id": "t2",
+    "tool": "search_knowledge_base",
+    "goal": "find evidence: correlation",
+    "query": "correlation",
+    "dataset_id": null,
+    "operation": null,
+    "column": null,
+    "group_by": null,
+    "agg": null,
+    "filters": null,
+    "expression": null,
+    "aspects": null,
+    "depends_on": []
+   },
+   {
+    "id": "t3",
+    "tool": "compare_evidence",
+    "goal": "compare retrieved evidence",
+    "query": null,
+    "dataset_id": null,
+    "operation": null,
+    "column": null,
+    "group_by": null,
+    "agg": null,
+    "filters": null,
+    "expression": null,
+    "aspects": [
+     "covariance",
+     "correlation"
+    ],
+    "depends_on": [
+     "t1",
+     "t2"
+    ]
+   }
+  ],
+  "rationale": "rule-based plan from question features"
+ },
+ "plan_source": "rules",
+ "tool_sequence": [
+  "search_knowledge_base",
+  "search_knowledge_base",
+  "compare_evidence"
+ ],
+ "citations": [
+  {
+   "id": "S6",
+   "kind": "document",
+   "title": "Statistics Lecture Notes",
+   "text": "6. Correlation and Regression Correlation measures the strength and direction of a linear relationship between two variables. The Pearson correlation coefficient r ranges from -1 to +1. A value near +1 indicates a strong positive linear relationship, near -1 a strong negative one and near 0 no linear relationship. Correlation does not imply causation: a hidden confounding variable may drive both variables. Simple linear regression fits the line y-hat = b0 + b1 * x by least squares, which minimizes the sum of squared residuals. The slope b1 equals r * (s_y / s_x) and the intercept is b0 = y-bar - b1 * x-bar. The coefficient of determination R squared is the proportion of variance in y explained by the model; in simple regression it equals r squared. Residual plots should show no pattern; curved or funnel-shaped residuals indicate a violated assumption.",
+   "doc_id": "statistics_lecture_notes",
+   "course_id": "statistics",
+   "location": "p.7",
+   "chunk_id": "statistics_lecture_notes:0011",
+   "score": 0.54,
+   "data": {
+    "file_type": "pdf",
+    "page": 7,
+    "section": "6. Correlation and Regression",
+    "filename": "statistics_lecture_notes.pdf"
+   },
+   "derived_from": []
+  },
+  {
+   "id": "S7",
+   "kind": "document",
+   "title": "Python Library Cheatsheet",
+   "text": "row 1: entry_id=LIB001; identifier=math.isclose; module=math; returns=bool; min_python=3.5; note=Compares floats; the default rel_tol is 1e-09\nrow 2: entry_id=LIB002; identifier=math.prod; module=math; returns=number; min_python=3.8; note=Multiplies all items of an iterable\nrow 3: entry_id=LIB003; identifier=math.dist; module=math; returns=float; min_python=3.8; note=Euclidean distance between two points\nrow 4: entry_id=LIB004; identifier=statistics.fmean; module=statistics; returns=float; min_python=3.8; note=Fast floating-point arithmetic mean\nrow 5: entry_id=LIB005; identifier=statistics.correlation; module=statistics; returns=float; min_python=3.10; note=Pearson correlation of two inputs\nrow 6: entry_id=LIB006; identifier=functools.cache; module=functools; returns=decorator; min_python=3.9; note=Unbounded memoization; shortcut for lru_cache(maxsize=None)\nrow 7: entry_id=LIB007; identifier=str.removeprefix; module=builtins; returns=str; min_python=3.9; note=Returns the string without the given prefix if present\nrow 8: entry_id=LIB008; identifier=str.casefold; module=builtins; returns=str; min_python=3.3; note=Aggressive lowercase for caseless comparison",
+   "doc_id": "python_library_cheatsheet",
+   "course_id": "python",
+   "location": "rows 1-8",
+   "chunk_id": "python_library_cheatsheet:0001",
+   "score": 0.4054,
+   "data": {
+    "file_type": "csv",
+    "page": null,
+    "section": "data rows",
+    "filename": "python_library_cheatsheet.csv"
+   },
+   "derived_from": []
+  }
+ ],
+ "evidence": {
+  "S1": {
+   "id": "S1",
+   "kind": "document",
+   "title": "Statistics Confusable Terms",
+   "text": "standard deviation vs standard error: the standard deviation describes the spread of individual observations; the standard error describes the spread of a statistic such as the sample mean across repeated samples. confidence level vs confidence interval: the level (for example 95%) is a property of the procedure; the interval is the computed range of values. significance level vs p-value: alpha is chosen before the test; the p-value is computed from the data. covariance vs correlation: covariance carries the units of x times the units of y; correlation is unitless and always between -1 and 1. precision of a measurement: how close repeated measurements are to each other. Precision in classification is a different concept (see the machine learning course). normal: the normal distribution is the bell curve. It does not mean \"typical\" or \"healthy\" values.",
+   "doc_id": "statistics_confusable_terms",
+   "course_id": "statistics",
+   "location": "-",
+   "chunk_id": "statistics_confusable_terms:0001",
+   "score": 0.1455,
+   "data": {
+    "file_type": "txt",
+    "page": null,
+    "section": null,
+    "filename": "statistics_confusable_terms.txt"
+   },
+   "derived_from": []
+  },
+  "S2": {
+   "id": "S2",
+   "kind": "document",
+   "title": "Statistics Exercise Guide",
+   "text": "Common Distribution Facts",
+   "doc_id": "statistics_exercise_guide",
+   "course_id": "statistics",
+   "location": "Common Distribution Facts",
+   "chunk_id": "statistics_exercise_guide:0005",
+   "score": 0.3106,
+   "data": {
+    "file_type": "docx",
+    "page": null,
+    "section": "Common Distribution Facts",
+    "filename": "statistics_exercise_guide.docx"
+   },
+   "derived_from": []
+  },
+  "S3": {
+   "id": "S3",
+   "kind": "document",
+   "title": "Ml Model Diagnostics Handbook",
+   "text": "2. Variance in Machine Learning\nIn machine learning the variance of a model is how much its predictions change when it is trained\non different training sets drawn from the same source. High-variance models such as deep\ndecision trees fit the quirks of one training set. This is a property of the learning algorithm, not the\nspread of a data column.\nThe spread of a feature column is a different matter. In scikit-learn VarianceThreshold removes\nfeatures whose variance is below a threshold; the default threshold is 0.0, which removes only\nconstant features.",
+   "doc_id": "ml_model_diagnostics_handbook",
+   "course_id": "ml",
+   "location": "p.2",
+   "chunk_id": "ml_model_diagnostics_handbook:0001",
+   "score": 0.268,
+   "data": {
+    "file_type": "pdf",
+    "page": 2,
+    "section": "2. Variance in Machine Learning",
+    "filename": "ml_model_diagnostics_handbook.pdf"
+   },
+   "derived_from": []
+  },
+  "S4": {
+   "id": "S4",
+   "kind": "document",
+   "title": "Statistics Lab Report Guide",
+   "text": "Anscombe's Quartet\nAnscombe's quartet consists of four small datasets that have almost identical means, variances and correlation (about 0.816) but completely different shapes when plotted. The lesson is to always plot the data and not to rely on summary statistics alone.",
+   "doc_id": "statistics_lab_report_guide",
+   "course_id": "statistics",
+   "location": "Anscombe's Quartet",
+   "chunk_id": "statistics_lab_report_guide:0003",
+   "score": 0.33133918046951294,
+   "data": {
+    "file_type": "docx",
+    "page": null,
+    "section": "Anscombe's Quartet",
+    "filename": "statistics_lab_report_guide.docx"
+   },
+   "derived_from": []
+  },
+  "S5": {
+   "id": "S5",
+   "kind": "document",
+   "title": "Statistics Estimators And Bias",
+   "text": "2. Variance of an Estimator\nThe variance of an estimator describes how much the estimate changes from one random sample\nto the next. For the sample mean it equals sigma squared divided by n, so the standard error of the\nmean is sigma divided by the square root of n.\nThis is not the same quantity as the variance of the data themselves, which describes the spread\nof individual observations around their mean. Quadrupling the sample size halves the standard\nerror but does not change the variance of the data.",
+   "doc_id": "statistics_estimators_and_bias",
+   "course_id": "statistics",
+   "location": "p.2",
+   "chunk_id": "statistics_estimators_and_bias:0001",
+   "score": 0.2474,
+   "data": {
+    "file_type": "pdf",
+    "page": 2,
+    "section": "2. Variance of an Estimator",
+    "filename": "statistics_estimators_and_bias.pdf"
+   },
+   "derived_from": []
+  },
+  "S6": {
+   "id": "S6",
+   "kind": "document",
+   "title": "Statistics Lecture Notes",
+   "text": "6. Correlation and Regression Correlation measures the strength and direction of a linear relationship between two variables. The Pearson correlation coefficient r ranges from -1 to +1. A value near +1 indicates a strong positive linear relationship, near -1 a strong negative one and near 0 no linear relationship. Correlation does not imply causation: a hidden confounding variable may drive both variables. Simple linear regression fits the line y-hat = b0 + b1 * x by least squares, which minimizes the sum of squared residuals. The slope b1 equals r * (s_y / s_x) and the intercept is b0 = y-bar - b1 * x-bar. The coefficient of determination R squared is the proportion of variance in y explained by the model; in simple regression it equals r squared. Residual plots should show no pattern; curved or funnel-shaped residuals indicate a violated assumption.",
+   "doc_id": "statistics_lecture_notes",
+   "course_id": "statistics",
+   "location": "p.7",
+   "chunk_id": "statistics_lecture_notes:0011",
+   "score": 0.54,
+   "data": {
+    "file_type": "pdf",
+    "page": 7,
+    "section": "6. Correlation and Regression",
+    "filename": "statistics_lecture_notes.pdf"
+   },
+   "derived_from": []
+  },
+  "S7": {
+   "id": "S7",
+   "kind": "document",
+   "title": "Python Library Cheatsheet",
+   "text": "row 1: entry_id=LIB001; identifier=math.isclose; module=math; returns=bool; min_python=3.5; note=Compares floats; the default rel_tol is 1e-09\nrow 2: entry_id=LIB002; identifier=math.prod; module=math; returns=number; min_python=3.8; note=Multiplies all items of an iterable\nrow 3: entry_id=LIB003; identifier=math.dist; module=math; returns=float; min_python=3.8; note=Euclidean distance between two points\nrow 4: entry_id=LIB004; identifier=statistics.fmean; module=statistics; returns=float; min_python=3.8; note=Fast floating-point arithmetic mean\nrow 5: entry_id=LIB005; identifier=statistics.correlation; module=statistics; returns=float; min_python=3.10; note=Pearson correlation of two inputs\nrow 6: entry_id=LIB006; identifier=functools.cache; module=functools; returns=decorator; min_python=3.9; note=Unbounded memoization; shortcut for lru_cache(maxsize=None)\nrow 7: entry_id=LIB007; identifier=str.removeprefix; module=builtins; returns=str; min_python=3.9; note=Returns the string without the given prefix if present\nrow 8: entry_id=LIB008; identifier=str.casefold; module=builtins; returns=str; min_python=3.3; note=Aggressive lowercase for caseless comparison",
+   "doc_id": "python_library_cheatsheet",
+   "course_id": "python",
+   "location": "rows 1-8",
+   "chunk_id": "python_library_cheatsheet:0001",
+   "score": 0.4054,
+   "data": {
+    "file_type": "csv",
+    "page": null,
+    "section": "data rows",
+    "filename": "python_library_cheatsheet.csv"
+   },
+   "derived_from": []
+  },
+  "S8": {
+   "id": "S8",
+   "kind": "document",
+   "title": "Statistics Confusable Terms",
+   "text": "STATISTICS CONFUSABLE TERMS (original course material, CC BY 4.0)\n==================================================================",
+   "doc_id": "statistics_confusable_terms",
+   "course_id": "statistics",
+   "location": "-",
+   "chunk_id": "statistics_confusable_terms:0000",
+   "score": 0.3529,
+   "data": {
+    "file_type": "txt",
+    "page": null,
+    "section": null,
+    "filename": "statistics_confusable_terms.txt"
+   },
+   "derived_from": []
+  },
+  "S9": {
+   "id": "S9",
+   "kind": "document",
+   "title": "Statistics Exercise Guide",
+   "text": "Statistics Problem Explanations\nIndependently written demonstration material (CC BY 4.0). Not official university material.",
+   "doc_id": "statistics_exercise_guide",
+   "course_id": "statistics",
+   "location": "Statistics Problem Explanations",
+   "chunk_id": "statistics_exercise_guide:0000",
+   "score": 0.3331,
+   "data": {
+    "file_type": "docx",
+    "page": null,
+    "section": "Statistics Problem Explanations",
+    "filename": "statistics_exercise_guide.docx"
+   },
+   "derived_from": []
+  }
+ },
+ "trace": [
+  {
+   "seq": 1,
+   "t_ms": 0,
+   "type": "request_received",
+   "question": "Compare covariance and correlation.",
+   "scope": null,
+   "tools": [
+    "search_knowledge_base",
+    "retrieve_source_context",
+    "summarize_evidence",
+    "analyze_dataset",
+    "calculate_expression",
+    "compare_evidence",
+    "refine_search_query"
+   ],
+   "planner": "rules",
+   "replanning": false,
+   "llm": "qwen2.5:3b-instruct",
+   "registry_version": "1.0.0"
+  },
+  {
+   "seq": 2,
+   "t_ms": 1,
+   "type": "question_analysis",
+   "calc_cue": true,
+   "data_cue": false,
+   "compare_cue": true,
+   "summary_cue": false,
+   "multi_cue": false,
+   "named_datasets": [],
+   "length_words": 4,
+   "needs_data": false,
+   "explicit_dataset": false,
+   "literal_numbers": [],
+   "needs_calc": false,
+   "concept_cue": true
+  },
+  {
+   "seq": 3,
+   "t_ms": 1,
+   "type": "plan_created",
+   "source": "rules",
+   "question_type": "comparison",
+   "complexity": "moderate",
+   "requires": {
+    "retrieval": true,
+    "calculation": false,
+    "data_analysis": false,
+    "comparison": true
+   },
+   "summary": "rule-based plan from question features",
+   "adjustments": [],
+   "note": "",
+   "subtasks": [
+    {
+     "id": "t1",
+     "tool": "search_knowledge_base",
+     "goal": "find evidence: covariance",
+     "depends_on": []
+    },
+    {
+     "id": "t2",
+     "tool": "search_knowledge_base",
+     "goal": "find evidence: correlation",
+     "depends_on": []
+    },
+    {
+     "id": "t3",
+     "tool": "compare_evidence",
+     "goal": "compare retrieved evidence",
+     "depends_on": [
+      "t1",
+      "t2"
+     ]
+    }
+   ]
+  },
+  {
+   "seq": 4,
+   "t_ms": 1,
+   "type": "tool_selected",
+   "step": "t1",
+   "tool": "search_knowledge_base",
+   "goal": "find evidence: covariance",
+   "attempt": 1,
+   "args": {
+    "query": "covariance",
+    "course_ids": null,
+    "top_k": 5
+   }
+  },
+  {
+   "seq": 5,
+   "t_ms": 9,
+   "type": "tool_result",
+   "step": "t1",
+   "tool": "search_knowledge_base",
+   "ok": true,
+   "ms": 7.8,
+   "summary": "5 chunks, best cosine 0.31",
+   "evidence_ids": [
+    "S1",
+    "S2",
+    "S3",
+    "S4",
+    "S5"
+   ],
+   "error": null,
+   "error_type": null,
+   "sufficient": false,
+   "relevance": {
+    "best_score": 0.311,
+    "keyword_coverage": 1.0,
+    "threshold": {
+     "min_best_score": 0.35,
+     "min_keyword_coverage": 0.35
+    }
+   },
+   "sources": [
+    {
+     "id": "S1",
+     "title": "Statistics Confusable Terms",
+     "location": "-",
+     "score": 0.146
+    },
+    {
+     "id": "S2",
+     "title": "Statistics Exercise Guide",
+     "location": "Common Distribution Facts",
+     "score": 0.311
+    },
+    {
+     "id": "S3",
+     "title": "Ml Model Diagnostics Handbook",
+     "location": "p.2",
+     "score": 0.268
+    },
+    {
+     "id": "S4",
+     "title": "Statistics Lab Report Guide",
+     "location": "Anscombe's Quartet",
+     "score": 0.251
+    },
+    {
+     "id": "S5",
+     "title": "Statistics Estimators And Bias",
+     "location": "p.2",
+     "score": 0.247
+    }
+   ]
+  },
+  {
+   "seq": 6,
+   "t_ms": 9,
+   "type": "tool_selected",
+   "step": "t2",
+   "tool": "search_knowledge_base",
+   "goal": "find evidence: correlation",
+   "attempt": 1,
+   "args": {
+    "query": "correlation",
+    "course_ids": null,
+    "top_k": 5
+   }
+  },
+  {
+   "seq": 7,
+   "t_ms": 17,
+   "type": "tool_result",
+   "step": "t2",
+   "tool": "search_knowledge_base",
+   "ok": true,
+   "ms": 8.5,
+   "summary": "5 chunks, best cosine 0.54",
+   "evidence_ids": [
+    "S6",
+    "S7",
+    "S4",
+    "S8",
+    "S9"
+   ],
+   "error": null,
+   "error_type": null,
+   "sufficient": true,
+   "relevance": {
+    "best_score": 0.54,
+    "keyword_coverage": 1.0,
+    "threshold": {
+     "min_best_score": 0.35,
+     "min_keyword_coverage": 0.35
+    }
+   },
+   "sources": [
+    {
+     "id": "S6",
+     "title": "Statistics Lecture Notes",
+     "location": "p.7",
+     "score": 0.54
+    },
+    {
+     "id": "S7",
+     "title": "Python Library Cheatsheet",
+     "location": "rows 1-8",
+     "score": 0.405
+    },
+    {
+     "id": "S4",
+     "title": "Statistics Lab Report Guide",
+     "location": "Anscombe's Quartet",
+     "score": 0.331
+    },
+    {
+     "id": "S8",
+     "title": "Statistics Confusable Terms",
+     "location": "-",
+     "score": 0.353
+    },
+    {
+     "id": "S9",
+     "title": "Statistics Exercise Guide",
+     "location": "Statistics Problem Explanations",
+     "score": 0.333
+    }
+   ]
+  },
+  {
+   "seq": 8,
+   "t_ms": 17,
+   "type": "tool_selected",
+   "step": "t3",
+   "tool": "compare_evidence",
+   "goal": "compare retrieved evidence",
+   "attempt": 1,
+   "args": {
+    "source_ids": [
+     "S6",
+     "S7"
+    ],
+    "aspects": [
+     "covariance",
+     "correlation"
+    ]
+   }
+  },
+  {
+   "seq": 9,
+   "t_ms": 88,
+   "type": "tool_result",
+   "step": "t3",
+   "tool": "compare_evidence",
+   "ok": true,
+   "ms": 70.2,
+   "summary": "1 aspects covered, 1 missing, 0 agreements, 0 conflicts",
+   "evidence_ids": [],
+   "error": null,
+   "error_type": null,
+   "conflicts": 0,
+   "missing_aspects": [
+    "covariance"
+   ]
+  },
+  {
+   "seq": 10,
+   "t_ms": 88,
+   "type": "validation",
+   "sufficient": false,
+   "steps": {
+    "t1": {
+     "status": "weak",
+     "sufficient": false
+    },
+    "t2": {
+     "status": "done",
+     "sufficient": true
+    },
+    "t3": {
+     "status": "done",
+     "sufficient": null
+    }
+   },
+   "problems": [
+    {
+     "step": "t1",
+     "kind": "weak_evidence"
+    }
+   ]
+  },
+  {
+   "seq": 11,
+   "t_ms": 88,
+   "type": "replan_skipped",
+   "reason": "replanning disabled",
+   "unresolved": [
+    "t1"
+   ]
+  },
+  {
+   "seq": 12,
+   "t_ms": 88,
+   "type": "synthesis_started",
+   "evidence": [
+    "S6",
+    "S7",
+    "S4"
+   ],
+   "computed": [],
+   "gaps": [
+    "covariance"
+   ]
+  },
+  {
+   "seq": 13,
+   "t_ms": 4448,
+   "type": "citation_check",
+   "n_cited_sentences": 1,
+   "n_supported": 1,
+   "support_rate": 1.0,
+   "invalid_ids": [],
+   "removed_unsupported": 0,
+   "regenerated": 0,
+   "injection_flags": [],
+   "fallback_extractive": false
+  },
+  {
+   "seq": 14,
+   "t_ms": 4448,
+   "type": "answer",
+   "abstained": false,
+   "citations": [
+    "S6",
+    "S7"
+   ]
+  },
+  {
+   "seq": 15,
+   "t_ms": 4449,
+   "type": "completed",
+   "stop_reason": "answered",
+   "latency_s": 4.45
+  }
+ ],
+ "validation": {
+  "n_cited_sentences": 1,
+  "n_supported": 1,
+  "support_rate": 1.0,
+  "invalid_ids": [],
+  "unsupported": [],
+  "uncited_numeric_sentences": []
+ },
+ "metrics": {
+  "latency_s": 4.45,
+  "llm_calls": 1,
+  "prompt_tokens": 927,
+  "completion_tokens": 48,
+  "tool_calls": 3,
+  "replans": 0,
+  "steps": 3,
+  "errors": [],
+  "step_status": {
+   "t1": "weak",
+   "t2": "done",
+   "t3": "done"
+  },
+  "removed_unsupported": 0,
+  "injection_flags": []
+ },
+ "system": "agentic",
+ "config": {
+  "name": "rules_all_tools",
+  "planner": "rules",
+  "replan": false,
+  "tools": [
+   "search_knowledge_base",
+   "retrieve_source_context",
+   "summarize_evidence",
+   "analyze_dataset",
+   "calculate_expression",
+   "compare_evidence",
+   "refine_search_query"
+  ],
+  "model": "qwen2.5:3b-instruct",
+  "registry_version": "1.0.0"
+ }
+}

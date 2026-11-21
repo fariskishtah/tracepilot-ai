@@ -1,0 +1,179 @@
+{
+ "request_id": "36cb4efdec94",
+ "question": "What does Python's statistics.pstdev compute?",
+ "answer": "Python's statistics.pstdev computes the population standard deviation, in contrast to statistics.stdev which computes the sample standard deviation [S1].",
+ "abstained": false,
+ "stop_reason": "answered",
+ "plan": null,
+ "plan_source": "none",
+ "tool_sequence": [
+  "search_knowledge_base"
+ ],
+ "citations": [
+  {
+   "id": "S1",
+   "kind": "document",
+   "title": "Python Faq Style Addendum",
+   "text": "Frequently Asked Questions\nWhich Python version does the course use? The course uses Python 3.12 in all examples and tests.\nWhich editor should I use? Any editor is allowed; VS Code is used in the demonstrations.\nIs the statistics module allowed in assignments? Yes. statistics.variance(data) returns the sample variance, while statistics.pvariance(data) returns the population variance. In the same way statistics.stdev is the sample standard deviation and statistics.pstdev is the population standard deviation.\nWhere do I ask questions? Post them on the course forum; answers are usually given within two working days.",
+   "doc_id": "python_faq_style_addendum",
+   "course_id": "python",
+   "location": "Frequently Asked Questions",
+   "chunk_id": "python_faq_style_addendum:0002",
+   "score": 0.4798,
+   "data": {
+    "file_type": "docx",
+    "page": null,
+    "section": "Frequently Asked Questions",
+    "filename": "python_faq_style_addendum.docx"
+   },
+   "derived_from": []
+  }
+ ],
+ "evidence": {
+  "S1": {
+   "id": "S1",
+   "kind": "document",
+   "title": "Python Faq Style Addendum",
+   "text": "Frequently Asked Questions\nWhich Python version does the course use? The course uses Python 3.12 in all examples and tests.\nWhich editor should I use? Any editor is allowed; VS Code is used in the demonstrations.\nIs the statistics module allowed in assignments? Yes. statistics.variance(data) returns the sample variance, while statistics.pvariance(data) returns the population variance. In the same way statistics.stdev is the sample standard deviation and statistics.pstdev is the population standard deviation.\nWhere do I ask questions? Post them on the course forum; answers are usually given within two working days.",
+   "doc_id": "python_faq_style_addendum",
+   "course_id": "python",
+   "location": "Frequently Asked Questions",
+   "chunk_id": "python_faq_style_addendum:0002",
+   "score": 0.4798,
+   "data": {
+    "file_type": "docx",
+    "page": null,
+    "section": "Frequently Asked Questions",
+    "filename": "python_faq_style_addendum.docx"
+   },
+   "derived_from": []
+  },
+  "S2": {
+   "id": "S2",
+   "kind": "document",
+   "title": "Ml Project Handbook",
+   "text": "Project Deliverables and Compute Policy\nEvery project delivers a model card, two baselines and an error analysis. Training must finish in under 30 minutes on a laptop CPU. Allowed libraries are scikit-learn, pandas, numpy and matplotlib.",
+   "doc_id": "ml_project_handbook",
+   "course_id": "ml",
+   "location": "Project Deliverables and Compute Policy",
+   "chunk_id": "ml_project_handbook:0002",
+   "score": 0.3179,
+   "data": {
+    "file_type": "docx",
+    "page": null,
+    "section": "Project Deliverables and Compute Policy",
+    "filename": "ml_project_handbook.docx"
+   },
+   "derived_from": []
+  },
+  "S3": {
+   "id": "S3",
+   "kind": "document",
+   "title": "Python Glossary Overloaded Terms",
+   "text": "class: in Python a class is a blueprint for creating objects. It is not a category label as in classification problems. function: a reusable block of code defined with def. It is not necessarily a mathematical function. mode: when opening a file the mode string such as \"r\", \"w\" or \"a\" says how the file is used. statistics.mode(data) is a different thing: it returns the most frequent value. sample: random.sample(population, k) draws k unique elements without replacement. It has nothing to do with a statistical sample unless you use it to build one. normal: random.gauss(mu, sigma) and random.normalvariate(mu, sigma) draw numbers from a normal distribution. seed: random.seed(n) makes the random sequence reproducible, so a program prints the same random numbers on every run. iterable: an object you can loop over, such as a list or string.",
+   "doc_id": "python_glossary_overloaded_terms",
+   "course_id": "python",
+   "location": "-",
+   "chunk_id": "python_glossary_overloaded_terms:0001",
+   "score": 0.4625,
+   "data": {
+    "file_type": "txt",
+    "page": null,
+    "section": null,
+    "filename": "python_glossary_overloaded_terms.txt"
+   },
+   "derived_from": []
+  },
+  "S4": {
+   "id": "S4",
+   "kind": "document",
+   "title": "Python Glossary Overloaded Terms",
+   "text": "program prints the same random numbers on every run. iterable: an object you can loop over, such as a list or string.  An iterator is the object that produces the values one at a time and is returned by iter(iterable). generator: a function that uses yield to produce values lazily, one at a time, instead of building a whole list in memory. decorator: a function that wraps another function; written with the @ syntax above a def line. mean: Python has no built-in mean. Use statistics.mean(data), or statistics.fmean(data) for a faster floating-point mean.",
+   "doc_id": "python_glossary_overloaded_terms",
+   "course_id": "python",
+   "location": "-",
+   "chunk_id": "python_glossary_overloaded_terms:0002",
+   "score": 0.4509,
+   "data": {
+    "file_type": "txt",
+    "page": null,
+    "section": null,
+    "filename": "python_glossary_overloaded_terms.txt"
+   },
+   "derived_from": []
+  },
+  "S5": {
+   "id": "S5",
+   "kind": "document",
+   "title": "Python Reference Notes",
+   "text": "PYTHON QUICK REFERENCE NOTES (original demo material, CC BY 4.0)\n===============================================================",
+   "doc_id": "python_reference_notes",
+   "course_id": "python",
+   "location": "-",
+   "chunk_id": "python_reference_notes:0000",
+   "score": 0.3965,
+   "data": {
+    "file_type": "txt",
+    "page": null,
+    "section": null,
+    "filename": "python_reference_notes.txt"
+   },
+   "derived_from": []
+  }
+ },
+ "trace": [
+  {
+   "seq": 1,
+   "t_ms": 0,
+   "type": "request_received",
+   "question": "What does Python's statistics.pstdev compute?",
+   "scope": null,
+   "system": "standard_rag"
+  },
+  {
+   "seq": 2,
+   "t_ms": 54,
+   "type": "retrieval",
+   "query": "What does Python's statistics.pstdev compute?",
+   "n": 5,
+   "sources": [
+    "S1",
+    "S2",
+    "S3",
+    "S4",
+    "S5"
+   ],
+   "best_score": 0.48
+  },
+  {
+   "seq": 3,
+   "t_ms": 4026,
+   "type": "answer",
+   "abstained": false,
+   "citations": [
+    "S1"
+   ]
+  }
+ ],
+ "validation": {
+  "n_cited_sentences": 1,
+  "n_supported": 1,
+  "support_rate": 1.0,
+  "invalid_ids": [],
+  "unsupported": [],
+  "uncited_numeric_sentences": []
+ },
+ "metrics": {
+  "latency_s": 4.03,
+  "llm_calls": 1,
+  "prompt_tokens": 835,
+  "completion_tokens": 30,
+  "tool_calls": 1,
+  "replans": 0,
+  "steps": 1
+ },
+ "system": "standard_rag",
+ "config": {
+  "top_k": 5
+ }
+}

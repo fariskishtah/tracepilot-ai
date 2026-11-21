@@ -1,0 +1,179 @@
+{
+ "request_id": "380e0303f110",
+ "question": "What does the Central Limit Theorem state?",
+ "answer": "The Central Limit Theorem states that for sufficiently large n, the distribution of the sample mean is approximately normal with mean mu and standard error sigma / sqrt(n), regardless of the shape of the original population [S1].",
+ "abstained": false,
+ "stop_reason": "answered",
+ "plan": null,
+ "plan_source": "none",
+ "tool_sequence": [
+  "search_knowledge_base"
+ ],
+ "citations": [
+  {
+   "id": "S1",
+   "kind": "document",
+   "title": "Statistics Lecture Notes",
+   "text": "4. Sampling and Confidence Intervals A population is the entire group of interest and a sample is a subset used to learn about it. Simple random sampling gives every member an equal chance of selection; stratified sampling samples within subgroups; convenience sampling is easy but prone to bias. Sampling bias occurs when the sample systematically differs from the population. The sampling distribution of the mean describes how sample means vary from sample to sample. The Central Limit Theorem states that for sufficiently large n the distribution of the sample mean is approximately normal with mean mu and standard error sigma / sqrt(n), regardless of the shape of the original population. The standard error shrinks as the sample size grows. A confidence interval gives a range of plausible values for a parameter. A 95% confidence interval for",
+   "doc_id": "statistics_lecture_notes",
+   "course_id": "statistics",
+   "location": "p.5",
+   "chunk_id": "statistics_lecture_notes:0007",
+   "score": 0.5413,
+   "data": {
+    "file_type": "pdf",
+    "page": 5,
+    "section": "4. Sampling and Confidence Intervals",
+    "filename": "statistics_lecture_notes.pdf"
+   },
+   "derived_from": []
+  }
+ ],
+ "evidence": {
+  "S1": {
+   "id": "S1",
+   "kind": "document",
+   "title": "Statistics Lecture Notes",
+   "text": "4. Sampling and Confidence Intervals A population is the entire group of interest and a sample is a subset used to learn about it. Simple random sampling gives every member an equal chance of selection; stratified sampling samples within subgroups; convenience sampling is easy but prone to bias. Sampling bias occurs when the sample systematically differs from the population. The sampling distribution of the mean describes how sample means vary from sample to sample. The Central Limit Theorem states that for sufficiently large n the distribution of the sample mean is approximately normal with mean mu and standard error sigma / sqrt(n), regardless of the shape of the original population. The standard error shrinks as the sample size grows. A confidence interval gives a range of plausible values for a parameter. A 95% confidence interval for",
+   "doc_id": "statistics_lecture_notes",
+   "course_id": "statistics",
+   "location": "p.5",
+   "chunk_id": "statistics_lecture_notes:0007",
+   "score": 0.5413,
+   "data": {
+    "file_type": "pdf",
+    "page": 5,
+    "section": "4. Sampling and Confidence Intervals",
+    "filename": "statistics_lecture_notes.pdf"
+   },
+   "derived_from": []
+  },
+  "S2": {
+   "id": "S2",
+   "kind": "document",
+   "title": "Statistics Lecture Notes",
+   "text": "1. Descriptive Statistics Descriptive statistics summarize a dataset. Measures of central tendency are the mean (the sum of the values divided by the number of values), the median (the middle value of the sorted data) and the mode (the most frequent value). The mean is sensitive to outliers; the median is robust to them. For right-skewed data such as incomes the mean is usually larger than the median. Measures of spread describe variability. The range is maximum minus minimum. The variance averages squared deviations from the mean, and the standard deviation is the square root of the variance, so it has the same units as the data. The interquartile range (IQR) is Q3 minus Q1 and is used to flag outliers: a common rule marks values below Q1 - 1.5 * IQR or above Q3 + 1.5 * IQR. Population variance divides the sum of squared deviations by N, the population size. Sample",
+   "doc_id": "statistics_lecture_notes",
+   "course_id": "statistics",
+   "location": "p.2",
+   "chunk_id": "statistics_lecture_notes:0001",
+   "score": 0.3587,
+   "data": {
+    "file_type": "pdf",
+    "page": 2,
+    "section": "1. Descriptive Statistics",
+    "filename": "statistics_lecture_notes.pdf"
+   },
+   "derived_from": []
+  },
+  "S3": {
+   "id": "S3",
+   "kind": "document",
+   "title": "Statistics Exercise Guide",
+   "text": "Common Distribution Facts",
+   "doc_id": "statistics_exercise_guide",
+   "course_id": "statistics",
+   "location": "Common Distribution Facts",
+   "chunk_id": "statistics_exercise_guide:0005",
+   "score": 0.4412,
+   "data": {
+    "file_type": "docx",
+    "page": null,
+    "section": "Common Distribution Facts",
+    "filename": "statistics_exercise_guide.docx"
+   },
+   "derived_from": []
+  },
+  "S4": {
+   "id": "S4",
+   "kind": "document",
+   "title": "Statistics Exercise Guide",
+   "text": "Statistics Problem Explanations\nIndependently written demonstration material (CC BY 4.0). Not official university material.",
+   "doc_id": "statistics_exercise_guide",
+   "course_id": "statistics",
+   "location": "Statistics Problem Explanations",
+   "chunk_id": "statistics_exercise_guide:0000",
+   "score": 0.378,
+   "data": {
+    "file_type": "docx",
+    "page": null,
+    "section": "Statistics Problem Explanations",
+    "filename": "statistics_exercise_guide.docx"
+   },
+   "derived_from": []
+  },
+  "S5": {
+   "id": "S5",
+   "kind": "document",
+   "title": "Statistics Lecture Notes",
+   "text": "3. Probability Distributions A random variable assigns a number to each outcome of a random process. A discrete random variable takes countable values; a continuous one takes values in an interval. A probability mass function (PMF) gives P(X = x) for discrete variables, while a probability density function (PDF) describes continuous variables, where probabilities are areas under the curve. The binomial distribution models the number of successes in n independent trials with success probability p. Its mean is n * p and its variance is n * p * (1 - p). The Poisson distribution models counts of events in a fixed interval with mean and variance both equal to lambda. The normal distribution is symmetric and bell-shaped, described by its mean mu and standard deviation sigma. The empirical rule says about 68% of values lie within one standard deviation of the",
+   "doc_id": "statistics_lecture_notes",
+   "course_id": "statistics",
+   "location": "p.4",
+   "chunk_id": "statistics_lecture_notes:0005",
+   "score": 0.377,
+   "data": {
+    "file_type": "pdf",
+    "page": 4,
+    "section": "3. Probability Distributions",
+    "filename": "statistics_lecture_notes.pdf"
+   },
+   "derived_from": []
+  }
+ },
+ "trace": [
+  {
+   "seq": 1,
+   "t_ms": 0,
+   "type": "request_received",
+   "question": "What does the Central Limit Theorem state?",
+   "scope": null,
+   "system": "standard_rag"
+  },
+  {
+   "seq": 2,
+   "t_ms": 10676,
+   "type": "retrieval",
+   "query": "What does the Central Limit Theorem state?",
+   "n": 5,
+   "sources": [
+    "S1",
+    "S2",
+    "S3",
+    "S4",
+    "S5"
+   ],
+   "best_score": 0.541
+  },
+  {
+   "seq": 3,
+   "t_ms": 14021,
+   "type": "answer",
+   "abstained": false,
+   "citations": [
+    "S1"
+   ]
+  }
+ ],
+ "validation": {
+  "n_cited_sentences": 1,
+  "n_supported": 1,
+  "support_rate": 1.0,
+  "invalid_ids": [],
+  "unsupported": [],
+  "uncited_numeric_sentences": []
+ },
+ "metrics": {
+  "latency_s": 14.02,
+  "llm_calls": 1,
+  "prompt_tokens": 836,
+  "completion_tokens": 46,
+  "tool_calls": 1,
+  "replans": 0,
+  "steps": 1
+ },
+ "system": "standard_rag",
+ "config": {
+  "top_k": 5
+ }
+}

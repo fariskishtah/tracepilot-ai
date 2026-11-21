@@ -1,0 +1,179 @@
+{
+ "request_id": "5b03bca74fb0",
+ "question": "What is Cohen's d and what are the conventional labels for small, medium and large effects?",
+ "answer": "Cohen's d is a measure of effect size, quantifying the difference between two group means in standard deviation units [S1]. Conventional labels for Cohen's d are: 0.2 for a small effect, 0.5 for a medium effect, and 0.8 for a large effect [S1].",
+ "abstained": false,
+ "stop_reason": "answered",
+ "plan": null,
+ "plan_source": "none",
+ "tool_sequence": [
+  "search_knowledge_base"
+ ],
+ "citations": [
+  {
+   "id": "S1",
+   "kind": "document",
+   "title": "Statistics Estimators And Bias",
+   "text": "4. Regression to the Mean and Effect Size\nRegression to the mean is the tendency of an extreme observation to be followed by a less\nextreme one when the two measurements are not perfectly correlated. A student with an unusually\nhigh first test score will on average score lower on the second test. The name has nothing to do\nwith fitting a regression model.\nCohen's d measures effect size as the difference between two group means divided by the pooled\nstandard deviation. Conventional labels are 0.2 for a small effect, 0.5 for a medium effect and 0.8\nfor a large effect. Unlike a p-value, an effect size does not grow just because the sample is larger.",
+   "doc_id": "statistics_estimators_and_bias",
+   "course_id": "statistics",
+   "location": "p.4",
+   "chunk_id": "statistics_estimators_and_bias:0003",
+   "score": 0.5734,
+   "data": {
+    "file_type": "pdf",
+    "page": 4,
+    "section": "4. Regression to the Mean and Effect Size",
+    "filename": "statistics_estimators_and_bias.pdf"
+   },
+   "derived_from": []
+  }
+ ],
+ "evidence": {
+  "S1": {
+   "id": "S1",
+   "kind": "document",
+   "title": "Statistics Estimators And Bias",
+   "text": "4. Regression to the Mean and Effect Size\nRegression to the mean is the tendency of an extreme observation to be followed by a less\nextreme one when the two measurements are not perfectly correlated. A student with an unusually\nhigh first test score will on average score lower on the second test. The name has nothing to do\nwith fitting a regression model.\nCohen's d measures effect size as the difference between two group means divided by the pooled\nstandard deviation. Conventional labels are 0.2 for a small effect, 0.5 for a medium effect and 0.8\nfor a large effect. Unlike a p-value, an effect size does not grow just because the sample is larger.",
+   "doc_id": "statistics_estimators_and_bias",
+   "course_id": "statistics",
+   "location": "p.4",
+   "chunk_id": "statistics_estimators_and_bias:0003",
+   "score": 0.5734,
+   "data": {
+    "file_type": "pdf",
+    "page": 4,
+    "section": "4. Regression to the Mean and Effect Size",
+    "filename": "statistics_estimators_and_bias.pdf"
+   },
+   "derived_from": []
+  },
+  "S2": {
+   "id": "S2",
+   "kind": "document",
+   "title": "Statistics Lecture Notes",
+   "text": "that the null hypothesis is true, and a small p-value does not measure the size or importance of an effect.  Common tests include the one-sample t-test for a mean, the two-sample t-test for comparing two means, the chi-square test for categorical data and ANOVA for comparing more than two means.",
+   "doc_id": "statistics_lecture_notes",
+   "course_id": "statistics",
+   "location": "p.6",
+   "chunk_id": "statistics_lecture_notes:0010",
+   "score": 0.2999,
+   "data": {
+    "file_type": "pdf",
+    "page": 6,
+    "section": "5. Hypothesis Testing",
+    "filename": "statistics_lecture_notes.pdf"
+   },
+   "derived_from": []
+  },
+  "S3": {
+   "id": "S3",
+   "kind": "document",
+   "title": "Statistics Lecture Notes",
+   "text": "5. Hypothesis Testing Hypothesis testing evaluates a claim about a population. The null hypothesis H0 states no effect or no difference; the alternative hypothesis H1 states the effect we are looking for. We compute a test statistic from the sample and a p-value, the probability of observing a result at least as extreme as the one found, assuming H0 is true. If the p-value is smaller than the significance level alpha, commonly 0.05, we reject H0. A Type I error means rejecting a true null hypothesis, and its probability is alpha. A Type II error means failing to reject a false null hypothesis, with probability beta. Power equals 1 - beta, the probability of detecting a real effect. Larger samples increase power. A p-value is not the probability that the null hypothesis is true, and a small p-value does not measure the size or importance of an effect.",
+   "doc_id": "statistics_lecture_notes",
+   "course_id": "statistics",
+   "location": "p.6",
+   "chunk_id": "statistics_lecture_notes:0009",
+   "score": 0.2408,
+   "data": {
+    "file_type": "pdf",
+    "page": 6,
+    "section": "5. Hypothesis Testing",
+    "filename": "statistics_lecture_notes.pdf"
+   },
+   "derived_from": []
+  },
+  "S4": {
+   "id": "S4",
+   "kind": "document",
+   "title": "Statistics Lab Report Guide",
+   "text": "Statistics Lab Report Guide",
+   "doc_id": "statistics_lab_report_guide",
+   "course_id": "statistics",
+   "location": "Statistics Lab Report Guide",
+   "chunk_id": "statistics_lab_report_guide:0000",
+   "score": 0.2766,
+   "data": {
+    "file_type": "docx",
+    "page": null,
+    "section": "Statistics Lab Report Guide",
+    "filename": "statistics_lab_report_guide.docx"
+   },
+   "derived_from": []
+  },
+  "S5": {
+   "id": "S5",
+   "kind": "document",
+   "title": "Statistics Lecture Notes",
+   "text": "affects 1% of people; a test detects it 95% of the time (sensitivity) and gives a false positive 5% of the time.  P(positive) = 0.95 * 0.01 + 0.05 * 0.99 = 0.059. So P(disease | positive) = 0.0095 / 0.059, about 0.161. Even after a positive test, the probability of disease is only about 16% because the disease is rare. This is the base rate effect.",
+   "doc_id": "statistics_lecture_notes",
+   "course_id": "statistics",
+   "location": "p.3",
+   "chunk_id": "statistics_lecture_notes:0004",
+   "score": 0.2749,
+   "data": {
+    "file_type": "pdf",
+    "page": 3,
+    "section": "2. Probability Fundamentals",
+    "filename": "statistics_lecture_notes.pdf"
+   },
+   "derived_from": []
+  }
+ },
+ "trace": [
+  {
+   "seq": 1,
+   "t_ms": 0,
+   "type": "request_received",
+   "question": "What is Cohen's d and what are the conventional labels for small, medium and large effects?",
+   "scope": null,
+   "system": "standard_rag"
+  },
+  {
+   "seq": 2,
+   "t_ms": 51,
+   "type": "retrieval",
+   "query": "What is Cohen's d and what are the conventional labels for small, medium and large effects?",
+   "n": 5,
+   "sources": [
+    "S1",
+    "S2",
+    "S3",
+    "S4",
+    "S5"
+   ],
+   "best_score": 0.573
+  },
+  {
+   "seq": 3,
+   "t_ms": 4704,
+   "type": "answer",
+   "abstained": false,
+   "citations": [
+    "S1"
+   ]
+  }
+ ],
+ "validation": {
+  "n_cited_sentences": 2,
+  "n_supported": 2,
+  "support_rate": 1.0,
+  "invalid_ids": [],
+  "unsupported": [],
+  "uncited_numeric_sentences": []
+ },
+ "metrics": {
+  "latency_s": 4.7,
+  "llm_calls": 1,
+  "prompt_tokens": 873,
+  "completion_tokens": 70,
+  "tool_calls": 1,
+  "replans": 0,
+  "steps": 1
+ },
+ "system": "standard_rag",
+ "config": {
+  "top_k": 5
+ }
+}

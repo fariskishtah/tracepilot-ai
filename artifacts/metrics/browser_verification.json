@@ -1,0 +1,110 @@
+{
+  "steps": [
+    {
+      "step": "page loads with title",
+      "ok": true,
+      "detail": "TracePilot AI"
+    },
+    {
+      "step": "mobile layout has no horizontal overflow",
+      "ok": true,
+      "detail": "scrollWidth=390"
+    },
+    {
+      "step": "multi-step agent run completes",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "step": "trace shows planned tools",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "step": "answer has citations",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "step": "tool sequence reported",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "step": "execution trace tab renders plan",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "step": "tool explorer runs calculator",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "step": "knowledge library lists indexed docs",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "step": "upload indexes a new document",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "step": "evidence inspector shows original passage with provenance",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "step": "workflow svg rendered from real run",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "step": "standard vs agentic comparison runs",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "step": "analytics computed from recorded traces",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "step": "server log has no tracebacks",
+      "ok": true,
+      "detail": "27.0.0.1:7871\n* To create a public link, set `share=True` in `launch()`.\n\nLoading weights:   0%|          | 0/103 [00:00<?, ?it/s]\nLoading weights: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 103/103 [00:00<00:00, 9832.12it/s]\n"
+    }
+  ],
+  "failures": [],
+  "console_errors": [
+    "Failed to load resource: the server responded with a status of 404 (Not Found)",
+    "Response"
+  ],
+  "failed_requests": [
+    "http://127.0.0.1:7871/gradio_api/queue/data?session_hash=wk0bmr2yfmc",
+    "http://127.0.0.1:7871/gradio_api/queue/data?session_hash=wk0bmr2yfmc",
+    "http://127.0.0.1:7871/gradio_api/queue/data?session_hash=wk0bmr2yfmc",
+    "http://127.0.0.1:7871/gradio_api/queue/data?session_hash=wk0bmr2yfmc",
+    "http://127.0.0.1:7871/gradio_api/queue/data?session_hash=wk0bmr2yfmc",
+    "http://127.0.0.1:7871/gradio_api/queue/data?session_hash=wk0bmr2yfmc",
+    "http://127.0.0.1:7871/gradio_api/queue/data?session_hash=wk0bmr2yfmc",
+    "http://127.0.0.1:7871/gradio_api/queue/data?session_hash=wk0bmr2yfmc",
+    "http://127.0.0.1:7871/gradio_api/queue/data?session_hash=wk0bmr2yfmc"
+  ],
+  "screenshots": [
+    "01_main_agentic_qa.png",
+    "12_mobile_layout.png",
+    "02_multistep_answer_and_live_trace.png",
+    "03_live_execution_trace.png",
+    "04_execution_trace_tab.png",
+    "05_tool_explorer_calculator.png",
+    "06_knowledge_library_upload.png",
+    "07_evidence_inspector.png",
+    "08_agent_workflow.png",
+    "09_standard_vs_agentic.png",
+    "10_analytics_dashboard.png",
+    "11_failure_analysis.png"
+  ],
+  "server_log_tail": "W1121 04:28:21.995000 4268 .venv/lib/python3.12/site-packages/torch/distributed/elastic/multiprocessing/redirects.py:35] NOTE: Redirects are currently not supported in MacOs.\n* Running on local URL:  http://127.0.0.1:7871\n* To create a public link, set `share=True` in `launch()`.\n\nLoading weights:   0%|          | 0/103 [00:00<?, ?it/s]\nLoading weights: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 103/103 [00:00<00:00, 9832.12it/s]\n"
+}

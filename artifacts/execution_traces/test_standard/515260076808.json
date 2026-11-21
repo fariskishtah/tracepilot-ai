@@ -1,0 +1,179 @@
+{
+ "request_id": "515260076808",
+ "question": "What is the sample size formula for estimating a proportion, and what sample size results for margin of error 0.05 and p = 0.5 at 95% confidence?",
+ "answer": "The sample size formula for estimating a proportion is n = z squared * p * (1 - p) / E squared. [S1] When no prior estimate of p exists, use p = 0.5, which gives the largest required sample. [S1] For a margin of error E = 0.05 and 95% confidence, the sample size is 385 respondents [S1].",
+ "abstained": false,
+ "stop_reason": "answered",
+ "plan": null,
+ "plan_source": "none",
+ "tool_sequence": [
+  "search_knowledge_base"
+ ],
+ "citations": [
+  {
+   "id": "S1",
+   "kind": "document",
+   "title": "Statistics Lab Report Guide",
+   "text": "Sample Size for a Proportion\nTo estimate a proportion with margin of error E at 95% confidence use n = z squared * p * (1 - p) / E squared. When no prior estimate of p exists use p = 0.5, which gives the largest required sample. With z = 1.96, p = 0.5 and E = 0.05 the result is 384.16, so round up to a sample of 385 respondents.",
+   "doc_id": "statistics_lab_report_guide",
+   "course_id": "statistics",
+   "location": "Sample Size for a Proportion",
+   "chunk_id": "statistics_lab_report_guide:0002",
+   "score": 0.7957,
+   "data": {
+    "file_type": "docx",
+    "page": null,
+    "section": "Sample Size for a Proportion",
+    "filename": "statistics_lab_report_guide.docx"
+   },
+   "derived_from": []
+  }
+ ],
+ "evidence": {
+  "S1": {
+   "id": "S1",
+   "kind": "document",
+   "title": "Statistics Lab Report Guide",
+   "text": "Sample Size for a Proportion\nTo estimate a proportion with margin of error E at 95% confidence use n = z squared * p * (1 - p) / E squared. When no prior estimate of p exists use p = 0.5, which gives the largest required sample. With z = 1.96, p = 0.5 and E = 0.05 the result is 384.16, so round up to a sample of 385 respondents.",
+   "doc_id": "statistics_lab_report_guide",
+   "course_id": "statistics",
+   "location": "Sample Size for a Proportion",
+   "chunk_id": "statistics_lab_report_guide:0002",
+   "score": 0.7957,
+   "data": {
+    "file_type": "docx",
+    "page": null,
+    "section": "Sample Size for a Proportion",
+    "filename": "statistics_lab_report_guide.docx"
+   },
+   "derived_from": []
+  },
+  "S2": {
+   "id": "S2",
+   "kind": "document",
+   "title": "Statistics Exercise Guide",
+   "text": "Problem 3: Confidence Interval for a Mean\nQuestion. A sample of n = 36 students has mean study time 12.4 hours per week. The population standard deviation is known to be 3 hours. Build a 95% confidence interval.\nSolution. The standard error is 3 / sqrt(36) = 0.5. The margin of error is 1.96 * 0.5 = 0.98. The interval is 12.4 plus or minus 0.98, that is (11.42, 13.38). Interpretation: the procedure captures the true mean in about 95% of repeated samples. If the sample size were four times larger (n = 144) the standard error would halve to 0.25 and the interval would become narrower.",
+   "doc_id": "statistics_exercise_guide",
+   "course_id": "statistics",
+   "location": "Problem 3: Confidence Interval for a Mean",
+   "chunk_id": "statistics_exercise_guide:0003",
+   "score": 0.5016,
+   "data": {
+    "file_type": "docx",
+    "page": null,
+    "section": "Problem 3: Confidence Interval for a Mean",
+    "filename": "statistics_exercise_guide.docx"
+   },
+   "derived_from": []
+  },
+  "S3": {
+   "id": "S3",
+   "kind": "document",
+   "title": "Statistics Lab Report Guide",
+   "text": "Lab Report Checklist\nEvery lab report states the sample size n, the sample mean, the sample standard deviation and a 95% confidence interval. Use alpha = 0.05 unless the lab sheet states otherwise. Always report the exact p-value rather than only writing p < 0.05.\nWhen several hypotheses are tested on the same data, apply a Bonferroni correction: divide alpha by the number of tests m. With 5 tests and alpha = 0.05 each individual test is judged against 0.01.",
+   "doc_id": "statistics_lab_report_guide",
+   "course_id": "statistics",
+   "location": "Lab Report Checklist",
+   "chunk_id": "statistics_lab_report_guide:0001",
+   "score": 0.496,
+   "data": {
+    "file_type": "docx",
+    "page": null,
+    "section": "Lab Report Checklist",
+    "filename": "statistics_lab_report_guide.docx"
+   },
+   "derived_from": []
+  },
+  "S4": {
+   "id": "S4",
+   "kind": "document",
+   "title": "Statistics Worked Examples",
+   "text": "row 25: example_id=ST025; topic=Confidence interval; dataset_or_scenario=n = 36, mean 12.4, sigma 3: half-width of 95% CI; n=36; statistic=1.96 * sigma / sqrt(n); value=0.98; method_note=margin of error",
+   "doc_id": "statistics_worked_examples",
+   "course_id": "statistics",
+   "location": "rows 25-25",
+   "chunk_id": "statistics_worked_examples:0004",
+   "score": 0.4818,
+   "data": {
+    "file_type": "csv",
+    "page": null,
+    "section": "data rows",
+    "filename": "statistics_worked_examples.csv"
+   },
+   "derived_from": []
+  },
+  "S5": {
+   "id": "S5",
+   "kind": "document",
+   "title": "Statistics Lecture Notes",
+   "text": "4. Sampling and Confidence Intervals A population is the entire group of interest and a sample is a subset used to learn about it. Simple random sampling gives every member an equal chance of selection; stratified sampling samples within subgroups; convenience sampling is easy but prone to bias. Sampling bias occurs when the sample systematically differs from the population. The sampling distribution of the mean describes how sample means vary from sample to sample. The Central Limit Theorem states that for sufficiently large n the distribution of the sample mean is approximately normal with mean mu and standard error sigma / sqrt(n), regardless of the shape of the original population. The standard error shrinks as the sample size grows. A confidence interval gives a range of plausible values for a parameter. A 95% confidence interval for",
+   "doc_id": "statistics_lecture_notes",
+   "course_id": "statistics",
+   "location": "p.5",
+   "chunk_id": "statistics_lecture_notes:0007",
+   "score": 0.439,
+   "data": {
+    "file_type": "pdf",
+    "page": 5,
+    "section": "4. Sampling and Confidence Intervals",
+    "filename": "statistics_lecture_notes.pdf"
+   },
+   "derived_from": []
+  }
+ },
+ "trace": [
+  {
+   "seq": 1,
+   "t_ms": 1,
+   "type": "request_received",
+   "question": "What is the sample size formula for estimating a proportion, and what sample size results for margin of error 0.05 and p = 0.5 at 95% confidence?",
+   "scope": null,
+   "system": "standard_rag"
+  },
+  {
+   "seq": 2,
+   "t_ms": 66,
+   "type": "retrieval",
+   "query": "What is the sample size formula for estimating a proportion, and what sample size results for margin of error 0.05 and p = 0.5 at 95% confidence?",
+   "n": 5,
+   "sources": [
+    "S1",
+    "S2",
+    "S3",
+    "S4",
+    "S5"
+   ],
+   "best_score": 0.796
+  },
+  {
+   "seq": 3,
+   "t_ms": 8647,
+   "type": "answer",
+   "abstained": false,
+   "citations": [
+    "S1"
+   ]
+  }
+ ],
+ "validation": {
+  "n_cited_sentences": 2,
+  "n_supported": 2,
+  "support_rate": 1.0,
+  "invalid_ids": [],
+  "unsupported": [],
+  "uncited_numeric_sentences": []
+ },
+ "metrics": {
+  "latency_s": 8.65,
+  "llm_calls": 1,
+  "prompt_tokens": 1018,
+  "completion_tokens": 82,
+  "tool_calls": 1,
+  "replans": 0,
+  "steps": 1
+ },
+ "system": "standard_rag",
+ "config": {
+  "top_k": 5
+ }
+}

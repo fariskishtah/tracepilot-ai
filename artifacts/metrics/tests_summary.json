@@ -1,0 +1,20 @@
+{
+  "unit": {
+    "passed": 103,
+    "failed": 0,
+    "skipped": 0,
+    "total": 103
+  },
+  "integration": {
+    "passed": 16,
+    "failed": 0,
+    "skipped": 0,
+    "total": 16
+  },
+  "browser": {
+    "passed": 1,
+    "failed": 0,
+    "skipped": 0,
+    "total": 1
+  }
+}

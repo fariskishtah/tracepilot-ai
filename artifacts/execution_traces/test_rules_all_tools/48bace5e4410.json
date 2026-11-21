@@ -1,0 +1,535 @@
+{
+ "request_id": "48bace5e4410",
+ "question": "What is Cohen's d and what are the conventional labels for small, medium and large effects?",
+ "answer": "Cohen's d is a measure of effect size, defined as the difference between two group means divided by the pooled standard deviation [S1]. Conventional labels for Cohen's d are: 0.2 for a small effect, 0.5 for a medium effect, and 0.8 for a large effect [S1].",
+ "abstained": false,
+ "stop_reason": "answered",
+ "plan": {
+  "question_type": "factual",
+  "complexity": "moderate",
+  "requires_retrieval": true,
+  "requires_calculation": false,
+  "requires_data_analysis": false,
+  "requires_comparison": false,
+  "subtasks": [
+   {
+    "id": "t1",
+    "tool": "search_knowledge_base",
+    "goal": "find evidence: Cohen's d and what are the conventional labels for small",
+    "query": "Cohen's d and what are the conventional labels for small",
+    "dataset_id": null,
+    "operation": null,
+    "column": null,
+    "group_by": null,
+    "agg": null,
+    "filters": null,
+    "expression": null,
+    "aspects": null,
+    "depends_on": []
+   },
+   {
+    "id": "t2",
+    "tool": "search_knowledge_base",
+    "goal": "find evidence: medium and large effects",
+    "query": "medium and large effects",
+    "dataset_id": null,
+    "operation": null,
+    "column": null,
+    "group_by": null,
+    "agg": null,
+    "filters": null,
+    "expression": null,
+    "aspects": null,
+    "depends_on": []
+   }
+  ],
+  "rationale": "rule-based plan from question features"
+ },
+ "plan_source": "rules",
+ "tool_sequence": [
+  "search_knowledge_base",
+  "search_knowledge_base"
+ ],
+ "citations": [
+  {
+   "id": "S1",
+   "kind": "document",
+   "title": "Statistics Estimators And Bias",
+   "text": "4. Regression to the Mean and Effect Size\nRegression to the mean is the tendency of an extreme observation to be followed by a less\nextreme one when the two measurements are not perfectly correlated. A student with an unusually\nhigh first test score will on average score lower on the second test. The name has nothing to do\nwith fitting a regression model.\nCohen's d measures effect size as the difference between two group means divided by the pooled\nstandard deviation. Conventional labels are 0.2 for a small effect, 0.5 for a medium effect and 0.8\nfor a large effect. Unlike a p-value, an effect size does not grow just because the sample is larger.",
+   "doc_id": "statistics_estimators_and_bias",
+   "course_id": "statistics",
+   "location": "p.4",
+   "chunk_id": "statistics_estimators_and_bias:0003",
+   "score": 0.5188,
+   "data": {
+    "file_type": "pdf",
+    "page": 4,
+    "section": "4. Regression to the Mean and Effect Size",
+    "filename": "statistics_estimators_and_bias.pdf"
+   },
+   "derived_from": []
+  }
+ ],
+ "evidence": {
+  "S1": {
+   "id": "S1",
+   "kind": "document",
+   "title": "Statistics Estimators And Bias",
+   "text": "4. Regression to the Mean and Effect Size\nRegression to the mean is the tendency of an extreme observation to be followed by a less\nextreme one when the two measurements are not perfectly correlated. A student with an unusually\nhigh first test score will on average score lower on the second test. The name has nothing to do\nwith fitting a regression model.\nCohen's d measures effect size as the difference between two group means divided by the pooled\nstandard deviation. Conventional labels are 0.2 for a small effect, 0.5 for a medium effect and 0.8\nfor a large effect. Unlike a p-value, an effect size does not grow just because the sample is larger.",
+   "doc_id": "statistics_estimators_and_bias",
+   "course_id": "statistics",
+   "location": "p.4",
+   "chunk_id": "statistics_estimators_and_bias:0003",
+   "score": 0.5188,
+   "data": {
+    "file_type": "pdf",
+    "page": 4,
+    "section": "4. Regression to the Mean and Effect Size",
+    "filename": "statistics_estimators_and_bias.pdf"
+   },
+   "derived_from": []
+  },
+  "S2": {
+   "id": "S2",
+   "kind": "document",
+   "title": "Statistics Lecture Notes",
+   "text": "that the null hypothesis is true, and a small p-value does not measure the size or importance of an effect.  Common tests include the one-sample t-test for a mean, the two-sample t-test for comparing two means, the chi-square test for categorical data and ANOVA for comparing more than two means.",
+   "doc_id": "statistics_lecture_notes",
+   "course_id": "statistics",
+   "location": "p.6",
+   "chunk_id": "statistics_lecture_notes:0010",
+   "score": 0.32659924030303955,
+   "data": {
+    "file_type": "pdf",
+    "page": 6,
+    "section": "5. Hypothesis Testing",
+    "filename": "statistics_lecture_notes.pdf"
+   },
+   "derived_from": []
+  },
+  "S3": {
+   "id": "S3",
+   "kind": "document",
+   "title": "Ml Notation Abbreviations",
+   "text": "MACHINE LEARNING NOTATION AND ABBREVIATIONS (original course material, CC BY 4.0)\n====================================================================================",
+   "doc_id": "ml_notation_abbreviations",
+   "course_id": "ml",
+   "location": "-",
+   "chunk_id": "ml_notation_abbreviations:0000",
+   "score": 0.2891,
+   "data": {
+    "file_type": "txt",
+    "page": null,
+    "section": null,
+    "filename": "ml_notation_abbreviations.txt"
+   },
+   "derived_from": []
+  },
+  "S4": {
+   "id": "S4",
+   "kind": "document",
+   "title": "Ml Lecture Notes",
+   "text": "the false positive rate across thresholds, and AUC summarizes it: 0.5 is random guessing and 1.0 is perfect ranking.  For regression, common metrics are mean absolute error (MAE), mean squared error (MSE), root mean squared error (RMSE) and R squared.",
+   "doc_id": "ml_lecture_notes",
+   "course_id": "ml",
+   "location": "p.5",
+   "chunk_id": "ml_lecture_notes:0007",
+   "score": 0.24,
+   "data": {
+    "file_type": "pdf",
+    "page": 5,
+    "section": "4. Evaluation Metrics for Classification",
+    "filename": "ml_lecture_notes.pdf"
+   },
+   "derived_from": []
+  },
+  "S5": {
+   "id": "S5",
+   "kind": "document",
+   "title": "Statistics Confusable Terms",
+   "text": "STATISTICS CONFUSABLE TERMS (original course material, CC BY 4.0)\n==================================================================",
+   "doc_id": "statistics_confusable_terms",
+   "course_id": "statistics",
+   "location": "-",
+   "chunk_id": "statistics_confusable_terms:0000",
+   "score": 0.2331,
+   "data": {
+    "file_type": "txt",
+    "page": null,
+    "section": null,
+    "filename": "statistics_confusable_terms.txt"
+   },
+   "derived_from": []
+  },
+  "S6": {
+   "id": "S6",
+   "kind": "document",
+   "title": "Ml Model Diagnostics Handbook",
+   "text": "1. Reading Learning Curves\nA learning curve plots training error and validation error against the training set size. In a high-bias\nmodel both errors are high and they converge close to each other; adding more data barely helps\nbecause the model is too simple. In a high-variance model the training error is low and a large gap\nseparates it from the validation error; the validation error keeps falling as more data is added, so\ncollecting more data helps.\nWhen a model is overfitting the first actions to try are a simpler model, stronger regularization,\nmore training data or early stopping.",
+   "doc_id": "ml_model_diagnostics_handbook",
+   "course_id": "ml",
+   "location": "p.1",
+   "chunk_id": "ml_model_diagnostics_handbook:0000",
+   "score": 0.1601,
+   "data": {
+    "file_type": "pdf",
+    "page": 1,
+    "section": "1. Reading Learning Curves",
+    "filename": "ml_model_diagnostics_handbook.pdf"
+   },
+   "derived_from": []
+  },
+  "S7": {
+   "id": "S7",
+   "kind": "document",
+   "title": "Statistics Lecture Notes",
+   "text": "5. Hypothesis Testing Hypothesis testing evaluates a claim about a population. The null hypothesis H0 states no effect or no difference; the alternative hypothesis H1 states the effect we are looking for. We compute a test statistic from the sample and a p-value, the probability of observing a result at least as extreme as the one found, assuming H0 is true. If the p-value is smaller than the significance level alpha, commonly 0.05, we reject H0. A Type I error means rejecting a true null hypothesis, and its probability is alpha. A Type II error means failing to reject a false null hypothesis, with probability beta. Power equals 1 - beta, the probability of detecting a real effect. Larger samples increase power. A p-value is not the probability that the null hypothesis is true, and a small p-value does not measure the size or importance of an effect.",
+   "doc_id": "statistics_lecture_notes",
+   "course_id": "statistics",
+   "location": "p.6",
+   "chunk_id": "statistics_lecture_notes:0009",
+   "score": 0.2226,
+   "data": {
+    "file_type": "pdf",
+    "page": 6,
+    "section": "5. Hypothesis Testing",
+    "filename": "statistics_lecture_notes.pdf"
+   },
+   "derived_from": []
+  },
+  "S8": {
+   "id": "S8",
+   "kind": "document",
+   "title": "Statistics Lecture Notes",
+   "text": "affects 1% of people; a test detects it 95% of the time (sensitivity) and gives a false positive 5% of the time.  P(positive) = 0.95 * 0.01 + 0.05 * 0.99 = 0.059. So P(disease | positive) = 0.0095 / 0.059, about 0.161. Even after a positive test, the probability of disease is only about 16% because the disease is rare. This is the base rate effect.",
+   "doc_id": "statistics_lecture_notes",
+   "course_id": "statistics",
+   "location": "p.3",
+   "chunk_id": "statistics_lecture_notes:0004",
+   "score": 0.2144,
+   "data": {
+    "file_type": "pdf",
+    "page": 3,
+    "section": "2. Probability Fundamentals",
+    "filename": "statistics_lecture_notes.pdf"
+   },
+   "derived_from": []
+  }
+ },
+ "trace": [
+  {
+   "seq": 1,
+   "t_ms": 0,
+   "type": "request_received",
+   "question": "What is Cohen's d and what are the conventional labels for small, medium and large effects?",
+   "scope": null,
+   "tools": [
+    "search_knowledge_base",
+    "retrieve_source_context",
+    "summarize_evidence",
+    "analyze_dataset",
+    "calculate_expression",
+    "compare_evidence",
+    "refine_search_query"
+   ],
+   "planner": "rules",
+   "replanning": false,
+   "llm": "qwen2.5:3b-instruct",
+   "registry_version": "1.0.0"
+  },
+  {
+   "seq": 2,
+   "t_ms": 3,
+   "type": "question_analysis",
+   "calc_cue": false,
+   "data_cue": false,
+   "compare_cue": false,
+   "summary_cue": false,
+   "multi_cue": false,
+   "named_datasets": [],
+   "length_words": 16,
+   "needs_data": false,
+   "explicit_dataset": false,
+   "literal_numbers": [],
+   "needs_calc": false,
+   "concept_cue": true
+  },
+  {
+   "seq": 3,
+   "t_ms": 5,
+   "type": "plan_created",
+   "source": "rules",
+   "question_type": "factual",
+   "complexity": "moderate",
+   "requires": {
+    "retrieval": true,
+    "calculation": false,
+    "data_analysis": false,
+    "comparison": false
+   },
+   "summary": "rule-based plan from question features",
+   "adjustments": [],
+   "note": "",
+   "subtasks": [
+    {
+     "id": "t1",
+     "tool": "search_knowledge_base",
+     "goal": "find evidence: Cohen's d and what are the conventional labels for small",
+     "depends_on": []
+    },
+    {
+     "id": "t2",
+     "tool": "search_knowledge_base",
+     "goal": "find evidence: medium and large effects",
+     "depends_on": []
+    }
+   ]
+  },
+  {
+   "seq": 4,
+   "t_ms": 5,
+   "type": "tool_selected",
+   "step": "t1",
+   "tool": "search_knowledge_base",
+   "goal": "find evidence: Cohen's d and what are the conventional labels for small",
+   "attempt": 1,
+   "args": {
+    "query": "Cohen's d and what are the conventional labels for small",
+    "course_ids": null,
+    "top_k": 5
+   }
+  },
+  {
+   "seq": 5,
+   "t_ms": 51,
+   "type": "tool_result",
+   "step": "t1",
+   "tool": "search_knowledge_base",
+   "ok": true,
+   "ms": 45.5,
+   "summary": "5 chunks, best cosine 0.52",
+   "evidence_ids": [
+    "S1",
+    "S2",
+    "S3",
+    "S4",
+    "S5"
+   ],
+   "error": null,
+   "error_type": null,
+   "sufficient": true,
+   "relevance": {
+    "best_score": 0.519,
+    "keyword_coverage": 1.0,
+    "threshold": {
+     "min_best_score": 0.35,
+     "min_keyword_coverage": 0.35
+    }
+   },
+   "sources": [
+    {
+     "id": "S1",
+     "title": "Statistics Estimators And Bias",
+     "location": "p.4",
+     "score": 0.519
+    },
+    {
+     "id": "S2",
+     "title": "Statistics Lecture Notes",
+     "location": "p.6",
+     "score": 0.31
+    },
+    {
+     "id": "S3",
+     "title": "Ml Notation Abbreviations",
+     "location": "-",
+     "score": 0.289
+    },
+    {
+     "id": "S4",
+     "title": "Ml Lecture Notes",
+     "location": "p.5",
+     "score": 0.24
+    },
+    {
+     "id": "S5",
+     "title": "Statistics Confusable Terms",
+     "location": "-",
+     "score": 0.233
+    }
+   ]
+  },
+  {
+   "seq": 6,
+   "t_ms": 51,
+   "type": "tool_selected",
+   "step": "t2",
+   "tool": "search_knowledge_base",
+   "goal": "find evidence: medium and large effects",
+   "attempt": 1,
+   "args": {
+    "query": "medium and large effects",
+    "course_ids": null,
+    "top_k": 5
+   }
+  },
+  {
+   "seq": 7,
+   "t_ms": 59,
+   "type": "tool_result",
+   "step": "t2",
+   "tool": "search_knowledge_base",
+   "ok": true,
+   "ms": 8.0,
+   "summary": "5 chunks, best cosine 0.44",
+   "evidence_ids": [
+    "S1",
+    "S6",
+    "S2",
+    "S7",
+    "S8"
+   ],
+   "error": null,
+   "error_type": null,
+   "sufficient": true,
+   "relevance": {
+    "best_score": 0.438,
+    "keyword_coverage": 1.0,
+    "threshold": {
+     "min_best_score": 0.35,
+     "min_keyword_coverage": 0.35
+    }
+   },
+   "sources": [
+    {
+     "id": "S1",
+     "title": "Statistics Estimators And Bias",
+     "location": "p.4",
+     "score": 0.438
+    },
+    {
+     "id": "S6",
+     "title": "Ml Model Diagnostics Handbook",
+     "location": "p.1",
+     "score": 0.16
+    },
+    {
+     "id": "S2",
+     "title": "Statistics Lecture Notes",
+     "location": "p.6",
+     "score": 0.327
+    },
+    {
+     "id": "S7",
+     "title": "Statistics Lecture Notes",
+     "location": "p.6",
+     "score": 0.223
+    },
+    {
+     "id": "S8",
+     "title": "Statistics Lecture Notes",
+     "location": "p.3",
+     "score": 0.214
+    }
+   ]
+  },
+  {
+   "seq": 8,
+   "t_ms": 59,
+   "type": "validation",
+   "sufficient": true,
+   "steps": {
+    "t1": {
+     "status": "done",
+     "sufficient": true
+    },
+    "t2": {
+     "status": "done",
+     "sufficient": true
+    }
+   },
+   "problems": []
+  },
+  {
+   "seq": 9,
+   "t_ms": 59,
+   "type": "synthesis_started",
+   "evidence": [
+    "S1",
+    "S2"
+   ],
+   "computed": [],
+   "gaps": []
+  },
+  {
+   "seq": 10,
+   "t_ms": 3635,
+   "type": "citation_check",
+   "n_cited_sentences": 2,
+   "n_supported": 2,
+   "support_rate": 1.0,
+   "invalid_ids": [],
+   "removed_unsupported": 0,
+   "regenerated": 0,
+   "injection_flags": [],
+   "fallback_extractive": false
+  },
+  {
+   "seq": 11,
+   "t_ms": 3635,
+   "type": "answer",
+   "abstained": false,
+   "citations": [
+    "S1"
+   ]
+  },
+  {
+   "seq": 12,
+   "t_ms": 3635,
+   "type": "completed",
+   "stop_reason": "answered",
+   "latency_s": 3.63
+  }
+ ],
+ "validation": {
+  "n_cited_sentences": 2,
+  "n_supported": 2,
+  "support_rate": 1.0,
+  "invalid_ids": [],
+  "unsupported": [],
+  "uncited_numeric_sentences": []
+ },
+ "metrics": {
+  "latency_s": 3.63,
+  "llm_calls": 1,
+  "prompt_tokens": 534,
+  "completion_tokens": 70,
+  "tool_calls": 2,
+  "replans": 0,
+  "steps": 2,
+  "errors": [],
+  "step_status": {
+   "t1": "done",
+   "t2": "done"
+  },
+  "removed_unsupported": 0,
+  "injection_flags": []
+ },
+ "system": "agentic",
+ "config": {
+  "name": "rules_all_tools",
+  "planner": "rules",
+  "replan": false,
+  "tools": [
+   "search_knowledge_base",
+   "retrieve_source_context",
+   "summarize_evidence",
+   "analyze_dataset",
+   "calculate_expression",
+   "compare_evidence",
+   "refine_search_query"
+  ],
+  "model": "qwen2.5:3b-instruct",
+  "registry_version": "1.0.0"
+ }
+}

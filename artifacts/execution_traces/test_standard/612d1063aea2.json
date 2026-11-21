@@ -1,0 +1,198 @@
+{
+ "request_id": "612d1063aea2",
+ "question": "What does the interquartile range measure and how are outlier fences defined?",
+ "answer": "Outlier fences are defined as Q1 - 1.5 * IQR and Q3 + 1.5 * IQR [S1] [S2].",
+ "abstained": false,
+ "stop_reason": "answered",
+ "plan": null,
+ "plan_source": "none",
+ "tool_sequence": [
+  "search_knowledge_base"
+ ],
+ "citations": [
+  {
+   "id": "S1",
+   "kind": "document",
+   "title": "Statistics Lecture Notes",
+   "text": "1. Descriptive Statistics Descriptive statistics summarize a dataset. Measures of central tendency are the mean (the sum of the values divided by the number of values), the median (the middle value of the sorted data) and the mode (the most frequent value). The mean is sensitive to outliers; the median is robust to them. For right-skewed data such as incomes the mean is usually larger than the median. Measures of spread describe variability. The range is maximum minus minimum. The variance averages squared deviations from the mean, and the standard deviation is the square root of the variance, so it has the same units as the data. The interquartile range (IQR) is Q3 minus Q1 and is used to flag outliers: a common rule marks values below Q1 - 1.5 * IQR or above Q3 + 1.5 * IQR. Population variance divides the sum of squared deviations by N, the population size. Sample",
+   "doc_id": "statistics_lecture_notes",
+   "course_id": "statistics",
+   "location": "p.2",
+   "chunk_id": "statistics_lecture_notes:0001",
+   "score": 0.5556,
+   "data": {
+    "file_type": "pdf",
+    "page": 2,
+    "section": "1. Descriptive Statistics",
+    "filename": "statistics_lecture_notes.pdf"
+   },
+   "derived_from": []
+  },
+  {
+   "id": "S2",
+   "kind": "document",
+   "title": "Statistics Reference Notes",
+   "text": "DESCRIPTIVE FORMULAS\nMean: x-bar = (sum of x) / n\nPopulation variance: sigma^2 = sum((x - mu)^2) / N\nSample variance: s^2 = sum((x - x-bar)^2) / (n - 1)\nStandard deviation: the square root of the variance.\nIQR = Q3 - Q1. Outlier fences: Q1 - 1.5*IQR and Q3 + 1.5*IQR.\nCoefficient of variation: CV = standard deviation / mean.",
+   "doc_id": "statistics_reference_notes",
+   "course_id": "statistics",
+   "location": "DESCRIPTIVE FORMULAS",
+   "chunk_id": "statistics_reference_notes:0001",
+   "score": 0.3784,
+   "data": {
+    "file_type": "txt",
+    "page": null,
+    "section": "DESCRIPTIVE FORMULAS",
+    "filename": "statistics_reference_notes.txt"
+   },
+   "derived_from": []
+  }
+ ],
+ "evidence": {
+  "S1": {
+   "id": "S1",
+   "kind": "document",
+   "title": "Statistics Lecture Notes",
+   "text": "1. Descriptive Statistics Descriptive statistics summarize a dataset. Measures of central tendency are the mean (the sum of the values divided by the number of values), the median (the middle value of the sorted data) and the mode (the most frequent value). The mean is sensitive to outliers; the median is robust to them. For right-skewed data such as incomes the mean is usually larger than the median. Measures of spread describe variability. The range is maximum minus minimum. The variance averages squared deviations from the mean, and the standard deviation is the square root of the variance, so it has the same units as the data. The interquartile range (IQR) is Q3 minus Q1 and is used to flag outliers: a common rule marks values below Q1 - 1.5 * IQR or above Q3 + 1.5 * IQR. Population variance divides the sum of squared deviations by N, the population size. Sample",
+   "doc_id": "statistics_lecture_notes",
+   "course_id": "statistics",
+   "location": "p.2",
+   "chunk_id": "statistics_lecture_notes:0001",
+   "score": 0.5556,
+   "data": {
+    "file_type": "pdf",
+    "page": 2,
+    "section": "1. Descriptive Statistics",
+    "filename": "statistics_lecture_notes.pdf"
+   },
+   "derived_from": []
+  },
+  "S2": {
+   "id": "S2",
+   "kind": "document",
+   "title": "Statistics Reference Notes",
+   "text": "DESCRIPTIVE FORMULAS\nMean: x-bar = (sum of x) / n\nPopulation variance: sigma^2 = sum((x - mu)^2) / N\nSample variance: s^2 = sum((x - x-bar)^2) / (n - 1)\nStandard deviation: the square root of the variance.\nIQR = Q3 - Q1. Outlier fences: Q1 - 1.5*IQR and Q3 + 1.5*IQR.\nCoefficient of variation: CV = standard deviation / mean.",
+   "doc_id": "statistics_reference_notes",
+   "course_id": "statistics",
+   "location": "DESCRIPTIVE FORMULAS",
+   "chunk_id": "statistics_reference_notes:0001",
+   "score": 0.3784,
+   "data": {
+    "file_type": "txt",
+    "page": null,
+    "section": "DESCRIPTIVE FORMULAS",
+    "filename": "statistics_reference_notes.txt"
+   },
+   "derived_from": []
+  },
+  "S3": {
+   "id": "S3",
+   "kind": "document",
+   "title": "Statistics Lecture Notes",
+   "text": "r squared. Residual plots should show no pattern; curved or funnel-shaped residuals indicate a violated assumption.  Extrapolating beyond the observed range of x is risky.",
+   "doc_id": "statistics_lecture_notes",
+   "course_id": "statistics",
+   "location": "p.7",
+   "chunk_id": "statistics_lecture_notes:0012",
+   "score": 0.2635,
+   "data": {
+    "file_type": "pdf",
+    "page": 7,
+    "section": "6. Correlation and Regression",
+    "filename": "statistics_lecture_notes.pdf"
+   },
+   "derived_from": []
+  },
+  "S4": {
+   "id": "S4",
+   "kind": "document",
+   "title": "Statistics Lecture Notes",
+   "text": "size grows. A confidence interval gives a range of plausible values for a parameter. A 95% confidence interval for  a mean with known sigma is x-bar plus or minus 1.96 * sigma / sqrt(n). When sigma is unknown and n is small, replace 1.96 with a critical value from the t distribution with n - 1 degrees of freedom. A 95% confidence level means that if the procedure were repeated many times, about 95% of the intervals would contain the true parameter; it does not mean there is a 95% probability that one specific computed interval contains it.",
+   "doc_id": "statistics_lecture_notes",
+   "course_id": "statistics",
+   "location": "p.5",
+   "chunk_id": "statistics_lecture_notes:0008",
+   "score": 0.2186,
+   "data": {
+    "file_type": "pdf",
+    "page": 5,
+    "section": "4. Sampling and Confidence Intervals",
+    "filename": "statistics_lecture_notes.pdf"
+   },
+   "derived_from": []
+  },
+  "S5": {
+   "id": "S5",
+   "kind": "document",
+   "title": "Statistics Confusable Terms",
+   "text": "standard deviation vs standard error: the standard deviation describes the spread of individual observations; the standard error describes the spread of a statistic such as the sample mean across repeated samples. confidence level vs confidence interval: the level (for example 95%) is a property of the procedure; the interval is the computed range of values. significance level vs p-value: alpha is chosen before the test; the p-value is computed from the data. covariance vs correlation: covariance carries the units of x times the units of y; correlation is unitless and always between -1 and 1. precision of a measurement: how close repeated measurements are to each other. Precision in classification is a different concept (see the machine learning course). normal: the normal distribution is the bell curve. It does not mean \"typical\" or \"healthy\" values.",
+   "doc_id": "statistics_confusable_terms",
+   "course_id": "statistics",
+   "location": "-",
+   "chunk_id": "statistics_confusable_terms:0001",
+   "score": 0.2221,
+   "data": {
+    "file_type": "txt",
+    "page": null,
+    "section": null,
+    "filename": "statistics_confusable_terms.txt"
+   },
+   "derived_from": []
+  }
+ },
+ "trace": [
+  {
+   "seq": 1,
+   "t_ms": 1,
+   "type": "request_received",
+   "question": "What does the interquartile range measure and how are outlier fences defined?",
+   "scope": null,
+   "system": "standard_rag"
+  },
+  {
+   "seq": 2,
+   "t_ms": 11,
+   "type": "retrieval",
+   "query": "What does the interquartile range measure and how are outlier fences defined?",
+   "n": 5,
+   "sources": [
+    "S1",
+    "S2",
+    "S3",
+    "S4",
+    "S5"
+   ],
+   "best_score": 0.556
+  },
+  {
+   "seq": 3,
+   "t_ms": 10342,
+   "type": "answer",
+   "abstained": false,
+   "citations": [
+    "S1",
+    "S2"
+   ]
+  }
+ ],
+ "validation": {
+  "n_cited_sentences": 1,
+  "n_supported": 1,
+  "support_rate": 1.0,
+  "invalid_ids": [],
+  "unsupported": [],
+  "uncited_numeric_sentences": []
+ },
+ "metrics": {
+  "latency_s": 10.34,
+  "llm_calls": 2,
+  "prompt_tokens": 1958,
+  "completion_tokens": 175,
+  "tool_calls": 1,
+  "replans": 0,
+  "steps": 1
+ },
+ "system": "standard_rag",
+ "config": {
+  "top_k": 5
+ }
+}

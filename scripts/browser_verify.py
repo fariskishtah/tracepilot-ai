@@ -58,9 +58,22 @@ def run(port=7871, shots: Path | None = None, headless=True, start_server=True) 
             page = ctx.new_page()
             page.on("console", lambda m: rep["console_errors"].append(m.text[:200]) if m.type == "error" else None)
             page.on("requestfailed", lambda r: rep["failed_requests"].append(r.url[:120]))
-            page.goto(url, wait_until="networkidle", timeout=60000)
+            page.goto(url, wait_until="domcontentloaded", timeout=60000)
+            page.get_by_text("Agentic RAG & Intelligent Knowledge Orchestration").first.wait_for(timeout=60000)
+            time.sleep(1.5)
             step("page loads with title", "TracePilot" in page.title() or page.get_by_text("TracePilot AI").first.is_visible(), page.title())
             shot(page, "01_main_agentic_qa")
+
+            # ---- mobile
+            m = b.new_context(viewport={"width": 390, "height": 844}, device_scale_factor=2, is_mobile=True)
+            mp = m.new_page()
+            mp.goto(url, wait_until="domcontentloaded", timeout=60000)
+            mp.get_by_text("Agentic RAG & Intelligent Knowledge Orchestration").first.wait_for(timeout=60000)
+            time.sleep(1.5)
+            sw = mp.evaluate("document.documentElement.scrollWidth")
+            step("mobile layout has no horizontal overflow", sw <= 392, f"scrollWidth={sw}")
+            mp.screenshot(path=str(shots / "12_mobile_layout.png"))
+            rep["screenshots"].append("12_mobile_layout.png")
 
             # ---- multi-step run with live trace
             page.get_by_label("Your question").fill(MULTI)
@@ -106,17 +119,20 @@ def run(port=7871, shots: Path | None = None, headless=True, start_server=True) 
             step("knowledge library lists indexed docs", "ml_lecture_notes" in body and "product_prices" in body)
             up = Path(tempfile.mkdtemp()) / "browser_upload.txt"
             up.write_text("Gradient clipping limits the norm of gradients to stabilise recurrent network training. " * 4)
-            page.locator("input[type=file]").first.set_input_files(str(up))
-            time.sleep(1)
+            with page.expect_file_chooser() as fc:
+                page.get_by_text("Click to Upload").first.click()
+            fc.value.set_files(str(up))
+            time.sleep(1.5)
             page.get_by_role("button", name="Upload & index").click()
             time.sleep(6)
-            step("upload indexes a new document", "browser_upload" in page.locator("body").inner_text(), "")
+            body = page.locator("body").inner_text()
+            step("upload indexes a new document", "browser_upload" in body and "chunks)" in body, "")
             shot(page, "06_knowledge_library_upload")
 
             tab("Evidence Inspector")
             page.get_by_role("button", name="Load evidence of last request").click()
             time.sleep(1.5)
-            step("evidence inspector loaded", "evidence items" in page.locator("body").inner_text())
+            step("evidence inspector shows original passage with provenance", "Original document passage" in page.locator("body").inner_text() or "Deterministic" in page.locator("body").inner_text())
             shot(page, "07_evidence_inspector")
 
             tab("Agent Workflow")
@@ -145,14 +161,6 @@ def run(port=7871, shots: Path | None = None, headless=True, start_server=True) 
             time.sleep(0.5)
             shot(page, "11_failure_analysis")
 
-            # ---- mobile
-            m = b.new_context(viewport={"width": 390, "height": 844}, device_scale_factor=2, is_mobile=True)
-            mp = m.new_page()
-            mp.goto(url, wait_until="networkidle", timeout=60000)
-            sw = mp.evaluate("document.documentElement.scrollWidth")
-            step("mobile layout has no horizontal overflow", sw <= 392, f"scrollWidth={sw}")
-            mp.screenshot(path=str(shots / "12_mobile_layout.png"))
-            rep["screenshots"].append("12_mobile_layout.png")
             b.close()
         # a real error is an error in the app's own JS; ignore benign third-party/network noise but report everything
         rep["server_log_tail"] = log.read_text()[-1200:] if log.exists() else ""

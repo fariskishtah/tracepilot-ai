@@ -1,0 +1,179 @@
+{
+ "request_id": "bc634e45a398",
+ "question": "Compare the meaning of 'sample' in statistics and in machine learning.",
+ "answer": "It is not the same as measurement precision in statistics. sample: in machine learning a sample usually means one row of data (one example). [S5] In statistics a sample is a subset of a population. bias: the error from wrong assumptions of a model. [S5]",
+ "abstained": false,
+ "stop_reason": "answered",
+ "plan": null,
+ "plan_source": "none",
+ "tool_sequence": [
+  "search_knowledge_base"
+ ],
+ "citations": [
+  {
+   "id": "S5",
+   "kind": "document",
+   "title": "Ml Notation Abbreviations",
+   "text": "OOB: out-of-bag. In a random forest each tree is trained on a bootstrap sample, and the rows left out of that sample are the out-of-bag rows; about 36.8% (1/e) of the rows are out-of-bag for each tree. They provide a free validation estimate. MAE: mean absolute error. RMSE: root mean squared error. SGD: stochastic gradient descent. k-NN: k-nearest neighbors. PR AUC: area under the precision-recall curve; preferred over ROC AUC for strongly imbalanced classes. i.i.d.: independent and identically distributed. precision: in classification, TP / (TP + FP). It is not the same as measurement precision in statistics. sample: in machine learning a sample usually means one row of data (one example). In statistics a sample is a subset of a population. bias: the error from wrong assumptions of a model. The bias term (intercept) of a linear model is a different thing.",
+   "doc_id": "ml_notation_abbreviations",
+   "course_id": "ml",
+   "location": "-",
+   "chunk_id": "ml_notation_abbreviations:0001",
+   "score": 0.3629,
+   "data": {
+    "file_type": "txt",
+    "page": null,
+    "section": null,
+    "filename": "ml_notation_abbreviations.txt"
+   },
+   "derived_from": []
+  }
+ ],
+ "evidence": {
+  "S1": {
+   "id": "S1",
+   "kind": "document",
+   "title": "Ml Reference Notes",
+   "text": "MACHINE LEARNING TERMINOLOGY REFERENCE (original demo material, CC BY 4.0)\n==========================================================================",
+   "doc_id": "ml_reference_notes",
+   "course_id": "ml",
+   "location": "-",
+   "chunk_id": "ml_reference_notes:0000",
+   "score": 0.473,
+   "data": {
+    "file_type": "txt",
+    "page": null,
+    "section": null,
+    "filename": "ml_reference_notes.txt"
+   },
+   "derived_from": []
+  },
+  "S2": {
+   "id": "S2",
+   "kind": "document",
+   "title": "Ml Lecture Notes",
+   "text": "Machine Learning Concept Guide\nMachine Learning Fundamentals - independently written demonstration notes. Not official university\nmaterial.",
+   "doc_id": "ml_lecture_notes",
+   "course_id": "ml",
+   "location": "p.1",
+   "chunk_id": "ml_lecture_notes:0000",
+   "score": 0.3842,
+   "data": {
+    "file_type": "pdf",
+    "page": 1,
+    "section": null,
+    "filename": "ml_lecture_notes.pdf"
+   },
+   "derived_from": []
+  },
+  "S3": {
+   "id": "S3",
+   "kind": "document",
+   "title": "Statistics Estimators And Bias",
+   "text": "3. The Bootstrap\nThe bootstrap estimates the uncertainty of a statistic by resampling. Draw n observations with\nreplacement from the original sample of size n, compute the statistic, and repeat this B times, for\nexample B = 1000. The spread of the B statistics approximates the sampling variability.\nA bootstrap percentile interval for 95% confidence uses the 2.5th and the 97.5th percentiles of the\nB bootstrap statistics. The bootstrap needs no formula for the standard error, which makes it useful\nfor medians and other awkward statistics.",
+   "doc_id": "statistics_estimators_and_bias",
+   "course_id": "statistics",
+   "location": "p.3",
+   "chunk_id": "statistics_estimators_and_bias:0002",
+   "score": 0.4341,
+   "data": {
+    "file_type": "pdf",
+    "page": 3,
+    "section": "3. The Bootstrap",
+    "filename": "statistics_estimators_and_bias.pdf"
+   },
+   "derived_from": []
+  },
+  "S4": {
+   "id": "S4",
+   "kind": "document",
+   "title": "Ml Exercise Guide",
+   "text": "Machine Learning Assignment Notes\nIndependently written demonstration material (CC BY 4.0). Not official university material.",
+   "doc_id": "ml_exercise_guide",
+   "course_id": "ml",
+   "location": "Machine Learning Assignment Notes",
+   "chunk_id": "ml_exercise_guide:0000",
+   "score": 0.3995,
+   "data": {
+    "file_type": "docx",
+    "page": null,
+    "section": "Machine Learning Assignment Notes",
+    "filename": "ml_exercise_guide.docx"
+   },
+   "derived_from": []
+  },
+  "S5": {
+   "id": "S5",
+   "kind": "document",
+   "title": "Ml Notation Abbreviations",
+   "text": "OOB: out-of-bag. In a random forest each tree is trained on a bootstrap sample, and the rows left out of that sample are the out-of-bag rows; about 36.8% (1/e) of the rows are out-of-bag for each tree. They provide a free validation estimate. MAE: mean absolute error. RMSE: root mean squared error. SGD: stochastic gradient descent. k-NN: k-nearest neighbors. PR AUC: area under the precision-recall curve; preferred over ROC AUC for strongly imbalanced classes. i.i.d.: independent and identically distributed. precision: in classification, TP / (TP + FP). It is not the same as measurement precision in statistics. sample: in machine learning a sample usually means one row of data (one example). In statistics a sample is a subset of a population. bias: the error from wrong assumptions of a model. The bias term (intercept) of a linear model is a different thing.",
+   "doc_id": "ml_notation_abbreviations",
+   "course_id": "ml",
+   "location": "-",
+   "chunk_id": "ml_notation_abbreviations:0001",
+   "score": 0.3629,
+   "data": {
+    "file_type": "txt",
+    "page": null,
+    "section": null,
+    "filename": "ml_notation_abbreviations.txt"
+   },
+   "derived_from": []
+  }
+ },
+ "trace": [
+  {
+   "seq": 1,
+   "t_ms": 1,
+   "type": "request_received",
+   "question": "Compare the meaning of 'sample' in statistics and in machine learning.",
+   "scope": null,
+   "system": "standard_rag"
+  },
+  {
+   "seq": 2,
+   "t_ms": 62,
+   "type": "retrieval",
+   "query": "Compare the meaning of 'sample' in statistics and in machine learning.",
+   "n": 5,
+   "sources": [
+    "S1",
+    "S2",
+    "S3",
+    "S4",
+    "S5"
+   ],
+   "best_score": 0.473
+  },
+  {
+   "seq": 3,
+   "t_ms": 7713,
+   "type": "answer",
+   "abstained": false,
+   "citations": [
+    "S5"
+   ]
+  }
+ ],
+ "validation": {
+  "n_cited_sentences": 1,
+  "n_supported": 1,
+  "support_rate": 1.0,
+  "invalid_ids": [],
+  "unsupported": [],
+  "uncited_numeric_sentences": []
+ },
+ "metrics": {
+  "latency_s": 7.71,
+  "llm_calls": 2,
+  "prompt_tokens": 1531,
+  "completion_tokens": 88,
+  "tool_calls": 1,
+  "replans": 0,
+  "steps": 1
+ },
+ "system": "standard_rag",
+ "config": {
+  "top_k": 5
+ }
+}

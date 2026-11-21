@@ -1,0 +1,179 @@
+{
+ "request_id": "52a4c1ddbf84",
+ "question": "How many rows does the data_orders dataset contain?",
+ "answer": "The data_orders dataset contains 30 rows [S1].",
+ "abstained": false,
+ "stop_reason": "answered",
+ "plan": null,
+ "plan_source": "none",
+ "tool_sequence": [
+  "search_knowledge_base"
+ ],
+ "citations": [
+  {
+   "id": "S1",
+   "kind": "document",
+   "title": "Data Orders",
+   "text": "Dataset data_orders: 30 rows, columns: order_id, customer_id, region, amount, status.",
+   "doc_id": "data_orders",
+   "course_id": "data",
+   "location": "dataset overview",
+   "chunk_id": "data_orders:0000",
+   "score": 0.7704,
+   "data": {
+    "file_type": "csv",
+    "page": null,
+    "section": "dataset overview",
+    "filename": "data_orders.csv"
+   },
+   "derived_from": []
+  }
+ ],
+ "evidence": {
+  "S1": {
+   "id": "S1",
+   "kind": "document",
+   "title": "Data Orders",
+   "text": "Dataset data_orders: 30 rows, columns: order_id, customer_id, region, amount, status.",
+   "doc_id": "data_orders",
+   "course_id": "data",
+   "location": "dataset overview",
+   "chunk_id": "data_orders:0000",
+   "score": 0.7704,
+   "data": {
+    "file_type": "csv",
+    "page": null,
+    "section": "dataset overview",
+    "filename": "data_orders.csv"
+   },
+   "derived_from": []
+  },
+  "S2": {
+   "id": "S2",
+   "kind": "document",
+   "title": "Python Library Cheatsheet",
+   "text": "Dataset python_library_cheatsheet: 16 rows, columns: entry_id, identifier, module, returns, min_python, note.",
+   "doc_id": "python_library_cheatsheet",
+   "course_id": "python",
+   "location": "dataset overview",
+   "chunk_id": "python_library_cheatsheet:0000",
+   "score": 0.5235,
+   "data": {
+    "file_type": "csv",
+    "page": null,
+    "section": "dataset overview",
+    "filename": "python_library_cheatsheet.csv"
+   },
+   "derived_from": []
+  },
+  "S3": {
+   "id": "S3",
+   "kind": "document",
+   "title": "Product Prices",
+   "text": "Dataset product_prices: 40 rows, columns: product_id, category, product_name, price_usd, units_sold.",
+   "doc_id": "product_prices",
+   "course_id": "data",
+   "location": "dataset overview",
+   "chunk_id": "product_prices:0000",
+   "score": 0.4977,
+   "data": {
+    "file_type": "csv",
+    "page": null,
+    "section": "dataset overview",
+    "filename": "product_prices.csv"
+   },
+   "derived_from": []
+  },
+  "S4": {
+   "id": "S4",
+   "kind": "document",
+   "title": "Ml Regularization Experiments",
+   "text": "Dataset ml_regularization_experiments: 9 rows, columns: run_id, model, dataset, technique, train_accuracy, val_accuracy, epochs, notes.",
+   "doc_id": "ml_regularization_experiments",
+   "course_id": "ml",
+   "location": "dataset overview",
+   "chunk_id": "ml_regularization_experiments:0000",
+   "score": 0.4615,
+   "data": {
+    "file_type": "csv",
+    "page": null,
+    "section": "dataset overview",
+    "filename": "ml_regularization_experiments.csv"
+   },
+   "derived_from": []
+  },
+  "S5": {
+   "id": "S5",
+   "kind": "document",
+   "title": "Data Lab Guide",
+   "text": "Lab Rules\nLab datasets may contain at most 50,000 rows. Submit a notebook and a one-page summary. Use LEFT JOIN when every customer must be kept.",
+   "doc_id": "data_lab_guide",
+   "course_id": "data",
+   "location": "Lab Rules",
+   "chunk_id": "data_lab_guide:0001",
+   "score": 0.441,
+   "data": {
+    "file_type": "docx",
+    "page": null,
+    "section": "Lab Rules",
+    "filename": "data_lab_guide.docx"
+   },
+   "derived_from": []
+  }
+ },
+ "trace": [
+  {
+   "seq": 1,
+   "t_ms": 1,
+   "type": "request_received",
+   "question": "How many rows does the data_orders dataset contain?",
+   "scope": null,
+   "system": "standard_rag"
+  },
+  {
+   "seq": 2,
+   "t_ms": 63,
+   "type": "retrieval",
+   "query": "How many rows does the data_orders dataset contain?",
+   "n": 5,
+   "sources": [
+    "S1",
+    "S2",
+    "S3",
+    "S4",
+    "S5"
+   ],
+   "best_score": 0.77
+  },
+  {
+   "seq": 3,
+   "t_ms": 1546,
+   "type": "answer",
+   "abstained": false,
+   "citations": [
+    "S1"
+   ]
+  }
+ ],
+ "validation": {
+  "n_cited_sentences": 1,
+  "n_supported": 1,
+  "support_rate": 1.0,
+  "invalid_ids": [],
+  "unsupported": [],
+  "uncited_numeric_sentences": []
+ },
+ "metrics": {
+  "latency_s": 1.55,
+  "llm_calls": 1,
+  "prompt_tokens": 493,
+  "completion_tokens": 14,
+  "tool_calls": 1,
+  "replans": 0,
+  "steps": 1
+ },
+ "system": "standard_rag",
+ "config": {
+  "top_k": 5
+ }
+}

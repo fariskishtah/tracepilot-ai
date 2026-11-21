@@ -1,0 +1,390 @@
+{
+  "wrong_or_missing_tool": {
+    "count": 3,
+    "of": 72,
+    "examples": [
+      {
+        "id": "CALC006",
+        "category": "calculation",
+        "question": "By what percent does validation accuracy increase from 0.812 to 0.889?",
+        "gold": "9.48",
+        "answer": "The request could not be completed (ValidationError).",
+        "tools": [],
+        "stop_reason": "error",
+        "correct": false
+      },
+      {
+        "id": "UNA006",
+        "category": "unanswerable",
+        "question": "What is the price_usd of product P999 in the product prices dataset?",
+        "gold": "Must abstain: not supported by the knowledge base.",
+        "answer": "I could not find sufficiently supported evidence in the selected knowledge base to answer this question.",
+        "tools": [
+          "analyze_dataset"
+        ],
+        "stop_reason": "insufficient_evidence",
+        "correct": true
+      },
+      {
+        "id": "UNA009",
+        "category": "unanswerable",
+        "question": "What is the profit margin of the products in the product prices dataset?",
+        "gold": "Must abstain: not supported by the knowledge base.",
+        "answer": "I could not find sufficiently supported evidence in the selected knowledge base to answer this question. Missing: average price and units sold (column 'product_id' is not numeric (dtype object)); average price (column 'product_id' is not numeric (dtype object)).",
+        "tools": [
+          "analyze_dataset",
+          "analyze_dataset"
+        ],
+        "stop_reason": "insufficient_evidence",
+        "correct": true
+      }
+    ]
+  },
+  "unnecessary_tool_calls": {
+    "count": 12,
+    "of": 72,
+    "examples": [
+      {
+        "id": "SF020",
+        "category": "simple_factual",
+        "question": "In SQL, what is the difference between WHERE and HAVING?",
+        "gold": "WHERE filters rows before grouping; HAVING filters groups after aggregation.",
+        "answer": "In SQL, the WHERE clause filters individual rows before any grouping occurs, as stated in [S1] and [S1]. On the other hand, the HAVING clause filters whole groups after aggregation, as defined in [S1] and [S1] [S2]. provides information about NULL in SQL, unrelated to WHERE and HAVING.",
+        "tools": [
+          "search_knowledge_base",
+          "search_knowledge_base",
+          "compare_evidence"
+        ],
+        "stop_reason": "answered",
+        "correct": true
+      },
+      {
+        "id": "CSV012",
+        "category": "csv_analysis",
+        "question": "What is the sample variance of val_accuracy for the fraud detection runs in the ML model evaluation runs dataset?",
+        "gold": "0.000323",
+        "answer": "The sample variance of val_accuracy for the fraud detection runs in the ML model evaluation runs dataset is not directly calculable from the provided data. [D1]",
+        "tools": [
+          "search_knowledge_base",
+          "analyze_dataset"
+        ],
+        "stop_reason": "answered",
+        "correct": false
+      },
+      {
+        "id": "CALC002",
+        "category": "calculation",
+        "question": "Compute the standard error of the mean when sigma = 3 and n = 36.",
+        "gold": "0.5",
+        "answer": "The standard error of the mean is 0.5 [S1] [S2] [C1].",
+        "tools": [
+          "search_knowledge_base",
+          "calculate_expression"
+        ],
+        "stop_reason": "answered",
+        "correct": true
+      }
+    ]
+  },
+  "failed_retrieval": {
+    "count": 2,
+    "of": 72,
+    "examples": [
+      {
+        "id": "CSV009",
+        "category": "csv_analysis",
+        "question": "What is the Pearson correlation between hours_studied and exam_score in the statistics exam scores dataset?",
+        "gold": "0.9879",
+        "answer": "I could not find sufficiently supported evidence in the selected knowledge base to answer this question.",
+        "tools": [
+          "analyze_dataset"
+        ],
+        "stop_reason": "insufficient_evidence",
+        "correct": false
+      },
+      {
+        "id": "AMB002",
+        "category": "ambiguous",
+        "question": "What is a sample?",
+        "gold": "Statistics: subset of population; ML: one row.",
+        "answer": "A sample is a subset used to learn about a population, as stated in [S2].",
+        "tools": [
+          "search_knowledge_base"
+        ],
+        "stop_reason": "answered",
+        "correct": false
+      }
+    ]
+  },
+  "incomplete_multistep": {
+    "count": 9,
+    "of": 72,
+    "examples": [
+      {
+        "id": "CMP003",
+        "category": "comparison",
+        "question": "Compare precision and recall.",
+        "gold": "Precision=TP/(TP+FP); recall=TP/(TP+FN).",
+        "answer": "Precision is TP / (TP + FP) and Precision in classification is a different concept (S1). [S1] Precision is evaluated alongside recall and F1 (S2). [S1]",
+        "tools": [
+          "search_knowledge_base",
+          "search_knowledge_base",
+          "compare_evidence"
+        ],
+        "stop_reason": "answered",
+        "correct": false
+      },
+      {
+        "id": "CMP006",
+        "category": "comparison",
+        "question": "Compare covariance and correlation.",
+        "gold": "Covariance has units; correlation is unitless in [-1,1].",
+        "answer": "Covariance measures the direction and strength of a linear relationship between two variables, without indicating causation. [S4] It does not imply causation and can be used to identify patterns in Anscombe's quartet [S4] [S6].",
+        "tools": [
+          "search_knowledge_base",
+          "search_knowledge_base",
+          "search_knowledge_base",
+          "search_knowledge_base",
+          "compare_evidence"
+        ],
+        "stop_reason": "answered",
+        "correct": false
+      },
+      {
+        "id": "CMP009",
+        "category": "comparison",
+        "question": "Compare the meaning of 'sample' in statistics and in machine learning.",
+        "gold": "Statistics: subset of a population; ML: a single row/example.",
+        "answer": "The meaning of 'sample' in statistics is a subset used to learn about the population, as described in [S2].",
+        "tools": [
+          "search_knowledge_base",
+          "search_knowledge_base",
+          "compare_evidence"
+        ],
+        "stop_reason": "answered",
+        "correct": false
+      }
+    ]
+  },
+  "unsupported_or_uncited_claims": {
+    "count": 4,
+    "of": 72,
+    "examples": [
+      {
+        "id": "SF008",
+        "category": "simple_factual",
+        "question": "How is a bootstrap percentile interval for 95% confidence computed?",
+        "gold": "2.5th and 97.5th percentiles of the bootstrap statistics.",
+        "answer": "A bootstrap percentile interval for 95% confidence is computed by using the 2.5th and 97.5th percentiles of the B bootstrap statistics. [S1] This method does not require a formula for the standard error, making it useful for medians and other awkward statistics [S1].",
+        "tools": [
+          "search_knowledge_base",
+          "search_knowledge_base"
+        ],
+        "stop_reason": "answered",
+        "correct": true
+      },
+      {
+        "id": "SF023",
+        "category": "simple_factual",
+        "question": "What does the interquartile range measure and how are outlier fences defined?",
+        "gold": "IQR=Q3-Q1; fences Q1-1.5IQR and Q3+1.5IQR.",
+        "answer": "Outlier fences are defined as Q1 - 1.5*IQR and Q3 + 1.5*IQR. [S6]",
+        "tools": [
+          "search_knowledge_base",
+          "search_knowledge_base",
+          "search_knowledge_base"
+        ],
+        "stop_reason": "answered",
+        "correct": true
+      },
+      {
+        "id": "CALC008",
+        "category": "calculation",
+        "question": "What is the arithmetic mean of 10, 12, 23, 23, 16, 23, 21, 16?",
+        "gold": "18",
+        "answer": "The core built-in types are int (whole numbers), float (decimal numbers), str (text), bool (True or False) and NoneType (the single value None, meaning \"no value\"). [S1] Write a function average(numbers) that returns the arithmetic mean of a list. [S2]\n\n**Computed results:** sum([10, 12, 23, 23, 16, 23, 21, 16]) / 8 = 18 [C1]",
+        "tools": [
+          "search_knowledge_base",
+          "calculate_expression"
+        ],
+        "stop_reason": "answered",
+        "correct": true
+      }
+    ]
+  },
+  "numerical_error": {
+    "count": 6,
+    "of": 72,
+    "examples": [
+      {
+        "id": "CSV009",
+        "category": "csv_analysis",
+        "question": "What is the Pearson correlation between hours_studied and exam_score in the statistics exam scores dataset?",
+        "gold": "0.9879",
+        "answer": "I could not find sufficiently supported evidence in the selected knowledge base to answer this question.",
+        "tools": [
+          "analyze_dataset"
+        ],
+        "stop_reason": "insufficient_evidence",
+        "correct": false
+      },
+      {
+        "id": "CSV011",
+        "category": "csv_analysis",
+        "question": "What is the highest val_accuracy among the spam classification runs in the ML model evaluation runs dataset?",
+        "gold": "0.95",
+        "answer": "The highest val_accuracy in the ML model evaluation runs dataset is 0.99 [D1].",
+        "tools": [
+          "analyze_dataset"
+        ],
+        "stop_reason": "answered",
+        "correct": false
+      },
+      {
+        "id": "CSV012",
+        "category": "csv_analysis",
+        "question": "What is the sample variance of val_accuracy for the fraud detection runs in the ML model evaluation runs dataset?",
+        "gold": "0.000323",
+        "answer": "The sample variance of val_accuracy for the fraud detection runs in the ML model evaluation runs dataset is not directly calculable from the provided data. [D1]",
+        "tools": [
+          "search_knowledge_base",
+          "analyze_dataset"
+        ],
+        "stop_reason": "answered",
+        "correct": false
+      }
+    ]
+  },
+  "false_abstention": {
+    "count": 6,
+    "of": 72,
+    "examples": [
+      {
+        "id": "SF017",
+        "category": "simple_factual",
+        "question": "What is the default maxsize of functools.lru_cache?",
+        "gold": "128.",
+        "answer": "The default maxsize of functools.lru_cache is not provided in the given evidence.",
+        "tools": [
+          "search_knowledge_base"
+        ],
+        "stop_reason": "insufficient_evidence",
+        "correct": false
+      },
+      {
+        "id": "CSV009",
+        "category": "csv_analysis",
+        "question": "What is the Pearson correlation between hours_studied and exam_score in the statistics exam scores dataset?",
+        "gold": "0.9879",
+        "answer": "I could not find sufficiently supported evidence in the selected knowledge base to answer this question.",
+        "tools": [
+          "analyze_dataset"
+        ],
+        "stop_reason": "insufficient_evidence",
+        "correct": false
+      },
+      {
+        "id": "CALC006",
+        "category": "calculation",
+        "question": "By what percent does validation accuracy increase from 0.812 to 0.889?",
+        "gold": "9.48",
+        "answer": "The request could not be completed (ValidationError).",
+        "tools": [],
+        "stop_reason": "error",
+        "correct": false
+      }
+    ]
+  },
+  "answered_unanswerable": {
+    "count": 0,
+    "of": 72,
+    "examples": []
+  },
+  "injection_followed": {
+    "count": 0,
+    "of": 72,
+    "examples": []
+  },
+  "stale_source_used": {
+    "count": 0,
+    "of": 72,
+    "examples": []
+  },
+  "limit_exceeded": {
+    "count": 1,
+    "of": 72,
+    "examples": [
+      {
+        "id": "MS011",
+        "category": "multi_step",
+        "question": "Which model has the highest f1 among the fraud detection runs in the ML model evaluation runs dataset, and why is accuracy misleading for fraud detection?",
+        "gold": "Gradient Boosting (f1 0.7734); accuracy misleading on rare class.",
+        "answer": "The model with the highest F1 score for fraud detection runs is Gradient Boosting, with an F1 score of 0.7734. [S3] Precision answers \"of the examples predicted positive, how many are truly positive?\", and recall (sensitivity) answers \"of the truly positive examples, how many did we find?\". [S3] The F1 score is the harmonic mean of precision and recall, balancing both. [S3]\n\n**Computed results:** [ml_model_evaluation",
+        "tools": [
+          "analyze_dataset",
+          "analyze_dataset",
+          "analyze_dataset",
+          "analyze_dataset",
+          "analyze_dataset",
+          "analyze_dataset",
+          "analyze_dataset",
+          "analyze_dataset",
+          "search_knowledge_base"
+        ],
+        "stop_reason": "tool_budget_exhausted",
+        "correct": false
+      }
+    ]
+  },
+  "planner_fallback": {
+    "count": 0,
+    "of": 72,
+    "examples": []
+  },
+  "wrong_answer_other": {
+    "count": 14,
+    "of": 72,
+    "examples": [
+      {
+        "id": "SF006",
+        "category": "simple_factual",
+        "question": "What is the Bonferroni correction and what per-test threshold results from 5 tests at alpha 0.05?",
+        "gold": "Divide alpha by number of tests: 0.01.",
+        "answer": "The Bonferroni correction per-test threshold for 5 tests at alpha 0.05 is 0.01 [S1].",
+        "tools": [
+          "search_knowledge_base",
+          "search_knowledge_base"
+        ],
+        "stop_reason": "answered",
+        "correct": false
+      },
+      {
+        "id": "SF015",
+        "category": "simple_factual",
+        "question": "What is the late-binding closure problem with lambdas created in a loop and how is it fixed?",
+        "gold": "All lambdas see the final loop value; bind with a default argument (lambda i=i: i).",
+        "answer": "Late-binding closure problem with lambdas created in a loop occurs because each lambda captures the final value of the loop variable, not the value at the time of its creation. [S1] This is fixed by initializing the bucket inside the lambda, ensuring each lambda has its own scope for the loop variable [S1].",
+        "tools": [
+          "search_knowledge_base",
+          "search_knowledge_base"
+        ],
+        "stop_reason": "answered",
+        "correct": false
+      },
+      {
+        "id": "CMP003",
+        "category": "comparison",
+        "question": "Compare precision and recall.",
+        "gold": "Precision=TP/(TP+FP); recall=TP/(TP+FN).",
+        "answer": "Precision is TP / (TP + FP) and Precision in classification is a different concept (S1). [S1] Precision is evaluated alongside recall and F1 (S2). [S1]",
+        "tools": [
+          "search_knowledge_base",
+          "search_knowledge_base",
+          "compare_evidence"
+        ],
+        "stop_reason": "answered",
+        "correct": false
+      }
+    ]
+  }
+}

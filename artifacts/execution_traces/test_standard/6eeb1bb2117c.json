@@ -1,0 +1,255 @@
+{
+ "request_id": "6eeb1bb2117c",
+ "question": "Summarize the statistics lab report checklist.",
+ "answer": "The Statistics Lab Report Guide provides a statistics lab report checklist. [S1] Statistics Theory Notes contain statistics and probability theory notes [S1]. , [S2], [S3], and [S4] are not directly relevant to the lab report checklist [S5]. contains statistics confusable terms [S1] [S2] [S3] [S4] [S5].",
+ "abstained": false,
+ "stop_reason": "answered",
+ "plan": null,
+ "plan_source": "none",
+ "tool_sequence": [
+  "search_knowledge_base"
+ ],
+ "citations": [
+  {
+   "id": "S1",
+   "kind": "document",
+   "title": "Statistics Lab Report Guide",
+   "text": "Statistics Lab Report Guide",
+   "doc_id": "statistics_lab_report_guide",
+   "course_id": "statistics",
+   "location": "Statistics Lab Report Guide",
+   "chunk_id": "statistics_lab_report_guide:0000",
+   "score": 0.8633,
+   "data": {
+    "file_type": "docx",
+    "page": null,
+    "section": "Statistics Lab Report Guide",
+    "filename": "statistics_lab_report_guide.docx"
+   },
+   "derived_from": []
+  },
+  {
+   "id": "S2",
+   "kind": "document",
+   "title": "Data Lab Guide",
+   "text": "Data Wrangling Lab Guide (v2, 2025)",
+   "doc_id": "data_lab_guide",
+   "course_id": "data",
+   "location": "Data Wrangling Lab Guide (v2, 2025)",
+   "chunk_id": "data_lab_guide:0000",
+   "score": 0.562,
+   "data": {
+    "file_type": "docx",
+    "page": null,
+    "section": "Data Wrangling Lab Guide (v2, 2025)",
+    "filename": "data_lab_guide.docx"
+   },
+   "derived_from": []
+  },
+  {
+   "id": "S3",
+   "kind": "document",
+   "title": "Data Legacy Lab Notes 2021",
+   "text": "DATA WRANGLING LAB NOTES (2021 edition)\n=======================================",
+   "doc_id": "data_legacy_lab_notes_2021",
+   "course_id": "data",
+   "location": "-",
+   "chunk_id": "data_legacy_lab_notes_2021:0000",
+   "score": 0.5334,
+   "data": {
+    "file_type": "txt",
+    "page": null,
+    "section": null,
+    "filename": "data_legacy_lab_notes_2021.txt"
+   },
+   "derived_from": []
+  },
+  {
+   "id": "S4",
+   "kind": "document",
+   "title": "Statistics Confusable Terms",
+   "text": "STATISTICS CONFUSABLE TERMS (original course material, CC BY 4.0)\n==================================================================",
+   "doc_id": "statistics_confusable_terms",
+   "course_id": "statistics",
+   "location": "-",
+   "chunk_id": "statistics_confusable_terms:0000",
+   "score": 0.5101,
+   "data": {
+    "file_type": "txt",
+    "page": null,
+    "section": null,
+    "filename": "statistics_confusable_terms.txt"
+   },
+   "derived_from": []
+  },
+  {
+   "id": "S5",
+   "kind": "document",
+   "title": "Statistics Lecture Notes",
+   "text": "Statistics Theory Notes\nStatistics & Probability - independently written demonstration notes. Not official university material.",
+   "doc_id": "statistics_lecture_notes",
+   "course_id": "statistics",
+   "location": "p.1",
+   "chunk_id": "statistics_lecture_notes:0000",
+   "score": 0.4755,
+   "data": {
+    "file_type": "pdf",
+    "page": 1,
+    "section": null,
+    "filename": "statistics_lecture_notes.pdf"
+   },
+   "derived_from": []
+  }
+ ],
+ "evidence": {
+  "S1": {
+   "id": "S1",
+   "kind": "document",
+   "title": "Statistics Lab Report Guide",
+   "text": "Statistics Lab Report Guide",
+   "doc_id": "statistics_lab_report_guide",
+   "course_id": "statistics",
+   "location": "Statistics Lab Report Guide",
+   "chunk_id": "statistics_lab_report_guide:0000",
+   "score": 0.8633,
+   "data": {
+    "file_type": "docx",
+    "page": null,
+    "section": "Statistics Lab Report Guide",
+    "filename": "statistics_lab_report_guide.docx"
+   },
+   "derived_from": []
+  },
+  "S2": {
+   "id": "S2",
+   "kind": "document",
+   "title": "Data Lab Guide",
+   "text": "Data Wrangling Lab Guide (v2, 2025)",
+   "doc_id": "data_lab_guide",
+   "course_id": "data",
+   "location": "Data Wrangling Lab Guide (v2, 2025)",
+   "chunk_id": "data_lab_guide:0000",
+   "score": 0.562,
+   "data": {
+    "file_type": "docx",
+    "page": null,
+    "section": "Data Wrangling Lab Guide (v2, 2025)",
+    "filename": "data_lab_guide.docx"
+   },
+   "derived_from": []
+  },
+  "S3": {
+   "id": "S3",
+   "kind": "document",
+   "title": "Data Legacy Lab Notes 2021",
+   "text": "DATA WRANGLING LAB NOTES (2021 edition)\n=======================================",
+   "doc_id": "data_legacy_lab_notes_2021",
+   "course_id": "data",
+   "location": "-",
+   "chunk_id": "data_legacy_lab_notes_2021:0000",
+   "score": 0.5334,
+   "data": {
+    "file_type": "txt",
+    "page": null,
+    "section": null,
+    "filename": "data_legacy_lab_notes_2021.txt"
+   },
+   "derived_from": []
+  },
+  "S4": {
+   "id": "S4",
+   "kind": "document",
+   "title": "Statistics Confusable Terms",
+   "text": "STATISTICS CONFUSABLE TERMS (original course material, CC BY 4.0)\n==================================================================",
+   "doc_id": "statistics_confusable_terms",
+   "course_id": "statistics",
+   "location": "-",
+   "chunk_id": "statistics_confusable_terms:0000",
+   "score": 0.5101,
+   "data": {
+    "file_type": "txt",
+    "page": null,
+    "section": null,
+    "filename": "statistics_confusable_terms.txt"
+   },
+   "derived_from": []
+  },
+  "S5": {
+   "id": "S5",
+   "kind": "document",
+   "title": "Statistics Lecture Notes",
+   "text": "Statistics Theory Notes\nStatistics & Probability - independently written demonstration notes. Not official university material.",
+   "doc_id": "statistics_lecture_notes",
+   "course_id": "statistics",
+   "location": "p.1",
+   "chunk_id": "statistics_lecture_notes:0000",
+   "score": 0.4755,
+   "data": {
+    "file_type": "pdf",
+    "page": 1,
+    "section": null,
+    "filename": "statistics_lecture_notes.pdf"
+   },
+   "derived_from": []
+  }
+ },
+ "trace": [
+  {
+   "seq": 1,
+   "t_ms": 1,
+   "type": "request_received",
+   "question": "Summarize the statistics lab report checklist.",
+   "scope": null,
+   "system": "standard_rag"
+  },
+  {
+   "seq": 2,
+   "t_ms": 48,
+   "type": "retrieval",
+   "query": "Summarize the statistics lab report checklist.",
+   "n": 5,
+   "sources": [
+    "S1",
+    "S2",
+    "S3",
+    "S4",
+    "S5"
+   ],
+   "best_score": 0.863
+  },
+  {
+   "seq": 3,
+   "t_ms": 26090,
+   "type": "answer",
+   "abstained": false,
+   "citations": [
+    "S1",
+    "S2",
+    "S3",
+    "S4",
+    "S5"
+   ]
+  }
+ ],
+ "validation": {
+  "n_cited_sentences": 1,
+  "n_supported": 1,
+  "support_rate": 1.0,
+  "invalid_ids": [],
+  "unsupported": [],
+  "uncited_numeric_sentences": []
+ },
+ "metrics": {
+  "latency_s": 26.09,
+  "llm_calls": 2,
+  "prompt_tokens": 953,
+  "completion_tokens": 562,
+  "tool_calls": 1,
+  "replans": 0,
+  "steps": 1
+ },
+ "system": "standard_rag",
+ "config": {
+  "top_k": 5
+ }
+}

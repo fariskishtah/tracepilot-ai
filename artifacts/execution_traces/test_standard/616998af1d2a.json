@@ -1,0 +1,255 @@
+{
+ "request_id": "616998af1d2a",
+ "question": "Which terms related to overfitting and variance are defined in the machine learning terminology reference?",
+ "answer": "Overfitting is explained in [S3] and [S4], where it is stated that overfitting happens when a model memorizes noise and idiosyncrasies of the training set, leading to high training error and low validation error. Variance is defined in [S3] and [S4], where it is described as the sensitivity of a model to the particular training sample, leading to high-variance models overfitting [S2]. does not define terms related to overfitting or variance [S1]. defines variance but not overfitting [S5]. defines overfitting but not variance. //",
+ "abstained": false,
+ "stop_reason": "answered",
+ "plan": null,
+ "plan_source": "none",
+ "tool_sequence": [
+  "search_knowledge_base"
+ ],
+ "citations": [
+  {
+   "id": "S3",
+   "kind": "document",
+   "title": "Ml Lecture Notes",
+   "text": "is bias squared plus variance plus irreducible noise. Increasing model complexity lowers bias but raises variance.  Ways to reduce overfitting include collecting more training data, simplifying the model, regularization (L1 and L2 penalties that shrink weights; L1 can drive weights to exactly zero), early stopping, dropout for neural networks, feature selection and cross-validation to choose hyperparameters. Learning curves, which plot error against training set size, help diagnose whether a model suffers from high bias or high variance.",
+   "doc_id": "ml_lecture_notes",
+   "course_id": "ml",
+   "location": "p.4",
+   "chunk_id": "ml_lecture_notes:0005",
+   "score": 0.5311,
+   "data": {
+    "file_type": "pdf",
+    "page": 4,
+    "section": "3. Generalization, Overfitting and the Bias-Variance",
+    "filename": "ml_lecture_notes.pdf"
+   },
+   "derived_from": []
+  },
+  {
+   "id": "S4",
+   "kind": "document",
+   "title": "Ml Lecture Notes",
+   "text": "3. Generalization, Overfitting and the Bias-Variance Tradeoff A model generalizes when it performs well on new data, not just on the data used for training. Overfitting happens when a model memorizes noise and idiosyncrasies of the training set: training error is very low but validation or test error is much higher. Underfitting happens when the model is too simple to capture the pattern, so both training and validation error are high. The bias-variance tradeoff explains this. Bias is the error caused by overly simple assumptions; high-bias models underfit. Variance is the sensitivity of a model to the particular training sample; high-variance models overfit. Total expected error is bias squared plus variance plus irreducible noise. Increasing model complexity lowers bias but raises variance.",
+   "doc_id": "ml_lecture_notes",
+   "course_id": "ml",
+   "location": "p.4",
+   "chunk_id": "ml_lecture_notes:0004",
+   "score": 0.6088,
+   "data": {
+    "file_type": "pdf",
+    "page": 4,
+    "section": "3. Generalization, Overfitting and the Bias-Variance",
+    "filename": "ml_lecture_notes.pdf"
+   },
+   "derived_from": []
+  },
+  {
+   "id": "S2",
+   "kind": "document",
+   "title": "Ml Reference Notes",
+   "text": "MACHINE LEARNING TERMINOLOGY REFERENCE (original demo material, CC BY 4.0)\n==========================================================================",
+   "doc_id": "ml_reference_notes",
+   "course_id": "ml",
+   "location": "-",
+   "chunk_id": "ml_reference_notes:0000",
+   "score": 0.5108,
+   "data": {
+    "file_type": "txt",
+    "page": null,
+    "section": null,
+    "filename": "ml_reference_notes.txt"
+   },
+   "derived_from": []
+  },
+  {
+   "id": "S1",
+   "kind": "document",
+   "title": "Ml Model Diagnostics Handbook",
+   "text": "2. Variance in Machine Learning\nIn machine learning the variance of a model is how much its predictions change when it is trained\non different training sets drawn from the same source. High-variance models such as deep\ndecision trees fit the quirks of one training set. This is a property of the learning algorithm, not the\nspread of a data column.\nThe spread of a feature column is a different matter. In scikit-learn VarianceThreshold removes\nfeatures whose variance is below a threshold; the default threshold is 0.0, which removes only\nconstant features.",
+   "doc_id": "ml_model_diagnostics_handbook",
+   "course_id": "ml",
+   "location": "p.2",
+   "chunk_id": "ml_model_diagnostics_handbook:0001",
+   "score": 0.5662,
+   "data": {
+    "file_type": "pdf",
+    "page": 2,
+    "section": "2. Variance in Machine Learning",
+    "filename": "ml_model_diagnostics_handbook.pdf"
+   },
+   "derived_from": []
+  },
+  {
+   "id": "S5",
+   "kind": "document",
+   "title": "Ml Overfitting Mitigation Guide",
+   "text": "Overfitting mitigation guide OVERFITTING MITIGATION GUIDE - TracePilot demo course pack (Machine Learning Fundamentals) Original educational material, CC BY 4.0, (c) Faris Mohamed Kishtah. 1. What overfitting means in practice A model overfits when its training accuracy is far higher than its validation accuracy. The gap between the two (train accuracy minus validation accuracy) is the simplest warning sign. 2. L2 regularization (weight decay) L2 regularization adds a penalty proportional to the sum of squared weights to the loss, which shrinks weights toward zero without usually making them exactly zero. Advantages: it is smooth, works with gradient-based optimizers, and keeps all features. Disadvantages: it introduces a strength hyperparameter (lambda or weight decay) that must be tuned with cross-validation, and it does not remove irrelevant features. It",
+   "doc_id": "ml_overfitting_mitigation_guide",
+   "course_id": "ml",
+   "location": "p.1",
+   "chunk_id": "ml_overfitting_mitigation_guide:0000",
+   "score": 0.4608,
+   "data": {
+    "file_type": "pdf",
+    "page": 1,
+    "section": null,
+    "filename": "ml_overfitting_mitigation_guide.pdf"
+   },
+   "derived_from": []
+  }
+ ],
+ "evidence": {
+  "S1": {
+   "id": "S1",
+   "kind": "document",
+   "title": "Ml Model Diagnostics Handbook",
+   "text": "2. Variance in Machine Learning\nIn machine learning the variance of a model is how much its predictions change when it is trained\non different training sets drawn from the same source. High-variance models such as deep\ndecision trees fit the quirks of one training set. This is a property of the learning algorithm, not the\nspread of a data column.\nThe spread of a feature column is a different matter. In scikit-learn VarianceThreshold removes\nfeatures whose variance is below a threshold; the default threshold is 0.0, which removes only\nconstant features.",
+   "doc_id": "ml_model_diagnostics_handbook",
+   "course_id": "ml",
+   "location": "p.2",
+   "chunk_id": "ml_model_diagnostics_handbook:0001",
+   "score": 0.5662,
+   "data": {
+    "file_type": "pdf",
+    "page": 2,
+    "section": "2. Variance in Machine Learning",
+    "filename": "ml_model_diagnostics_handbook.pdf"
+   },
+   "derived_from": []
+  },
+  "S2": {
+   "id": "S2",
+   "kind": "document",
+   "title": "Ml Reference Notes",
+   "text": "MACHINE LEARNING TERMINOLOGY REFERENCE (original demo material, CC BY 4.0)\n==========================================================================",
+   "doc_id": "ml_reference_notes",
+   "course_id": "ml",
+   "location": "-",
+   "chunk_id": "ml_reference_notes:0000",
+   "score": 0.5108,
+   "data": {
+    "file_type": "txt",
+    "page": null,
+    "section": null,
+    "filename": "ml_reference_notes.txt"
+   },
+   "derived_from": []
+  },
+  "S3": {
+   "id": "S3",
+   "kind": "document",
+   "title": "Ml Lecture Notes",
+   "text": "is bias squared plus variance plus irreducible noise. Increasing model complexity lowers bias but raises variance.  Ways to reduce overfitting include collecting more training data, simplifying the model, regularization (L1 and L2 penalties that shrink weights; L1 can drive weights to exactly zero), early stopping, dropout for neural networks, feature selection and cross-validation to choose hyperparameters. Learning curves, which plot error against training set size, help diagnose whether a model suffers from high bias or high variance.",
+   "doc_id": "ml_lecture_notes",
+   "course_id": "ml",
+   "location": "p.4",
+   "chunk_id": "ml_lecture_notes:0005",
+   "score": 0.5311,
+   "data": {
+    "file_type": "pdf",
+    "page": 4,
+    "section": "3. Generalization, Overfitting and the Bias-Variance",
+    "filename": "ml_lecture_notes.pdf"
+   },
+   "derived_from": []
+  },
+  "S4": {
+   "id": "S4",
+   "kind": "document",
+   "title": "Ml Lecture Notes",
+   "text": "3. Generalization, Overfitting and the Bias-Variance Tradeoff A model generalizes when it performs well on new data, not just on the data used for training. Overfitting happens when a model memorizes noise and idiosyncrasies of the training set: training error is very low but validation or test error is much higher. Underfitting happens when the model is too simple to capture the pattern, so both training and validation error are high. The bias-variance tradeoff explains this. Bias is the error caused by overly simple assumptions; high-bias models underfit. Variance is the sensitivity of a model to the particular training sample; high-variance models overfit. Total expected error is bias squared plus variance plus irreducible noise. Increasing model complexity lowers bias but raises variance.",
+   "doc_id": "ml_lecture_notes",
+   "course_id": "ml",
+   "location": "p.4",
+   "chunk_id": "ml_lecture_notes:0004",
+   "score": 0.6088,
+   "data": {
+    "file_type": "pdf",
+    "page": 4,
+    "section": "3. Generalization, Overfitting and the Bias-Variance",
+    "filename": "ml_lecture_notes.pdf"
+   },
+   "derived_from": []
+  },
+  "S5": {
+   "id": "S5",
+   "kind": "document",
+   "title": "Ml Overfitting Mitigation Guide",
+   "text": "Overfitting mitigation guide OVERFITTING MITIGATION GUIDE - TracePilot demo course pack (Machine Learning Fundamentals) Original educational material, CC BY 4.0, (c) Faris Mohamed Kishtah. 1. What overfitting means in practice A model overfits when its training accuracy is far higher than its validation accuracy. The gap between the two (train accuracy minus validation accuracy) is the simplest warning sign. 2. L2 regularization (weight decay) L2 regularization adds a penalty proportional to the sum of squared weights to the loss, which shrinks weights toward zero without usually making them exactly zero. Advantages: it is smooth, works with gradient-based optimizers, and keeps all features. Disadvantages: it introduces a strength hyperparameter (lambda or weight decay) that must be tuned with cross-validation, and it does not remove irrelevant features. It",
+   "doc_id": "ml_overfitting_mitigation_guide",
+   "course_id": "ml",
+   "location": "p.1",
+   "chunk_id": "ml_overfitting_mitigation_guide:0000",
+   "score": 0.4608,
+   "data": {
+    "file_type": "pdf",
+    "page": 1,
+    "section": null,
+    "filename": "ml_overfitting_mitigation_guide.pdf"
+   },
+   "derived_from": []
+  }
+ },
+ "trace": [
+  {
+   "seq": 1,
+   "t_ms": 1,
+   "type": "request_received",
+   "question": "Which terms related to overfitting and variance are defined in the machine learning terminology reference?",
+   "scope": null,
+   "system": "standard_rag"
+  },
+  {
+   "seq": 2,
+   "t_ms": 58,
+   "type": "retrieval",
+   "query": "Which terms related to overfitting and variance are defined in the machine learning terminology reference?",
+   "n": 5,
+   "sources": [
+    "S1",
+    "S2",
+    "S3",
+    "S4",
+    "S5"
+   ],
+   "best_score": 0.609
+  },
+  {
+   "seq": 3,
+   "t_ms": 11872,
+   "type": "answer",
+   "abstained": false,
+   "citations": [
+    "S3",
+    "S4",
+    "S2",
+    "S1",
+    "S5"
+   ]
+  }
+ ],
+ "validation": {
+  "n_cited_sentences": 2,
+  "n_supported": 2,
+  "support_rate": 1.0,
+  "invalid_ids": [],
+  "unsupported": [],
+  "uncited_numeric_sentences": []
+ },
+ "metrics": {
+  "latency_s": 11.87,
+  "llm_calls": 1,
+  "prompt_tokens": 929,
+  "completion_tokens": 162,
+  "tool_calls": 1,
+  "replans": 0,
+  "steps": 1
+ },
+ "system": "standard_rag",
+ "config": {
+  "top_k": 5
+ }
+}

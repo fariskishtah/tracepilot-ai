@@ -300,10 +300,10 @@ class TracePilotAgent:
             r = state.steps[sid]
             if r.status == "weak" and r.attempts < state.budgets.max_attempts_per_subtask:
                 probs.append({"step": sid, "kind": "weak_evidence"})
+            elif r.status == "failed" and r.result and r.result.error_type == "timeout" and r.attempts < 2:
+                probs.append({"step": sid, "kind": "timeout"})          # checked before analysis_error: a timeout is retried, not "repaired"
             elif r.status == "failed" and r.subtask.tool == "analyze_dataset" and r.attempts < 3:
                 probs.append({"step": sid, "kind": "analysis_error"})
-            elif r.status == "failed" and r.result and r.result.error_type == "timeout" and r.attempts < 2:
-                probs.append({"step": sid, "kind": "timeout"})
         f = state.features
         succeeded_analysis = any(r.subtask.tool == "analyze_dataset" and r.status == "done" for r in state.steps.values())
         if f.get("needs_data") and "analyze_dataset" in self.registry.names() and not succeeded_analysis \

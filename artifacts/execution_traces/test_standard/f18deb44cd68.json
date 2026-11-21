@@ -1,0 +1,217 @@
+{
+ "request_id": "f18deb44cd68",
+ "question": "Compare the average and median price_usd in the product prices dataset, then explain why they differ.",
+ "answer": "The median, being the middle value, is less affected by outliers. [S4] For right-skewed data like prices, the mean is typically larger than the median, as seen in the dataset where the mean price_usd is and the median price_usd is. [S4] The median remains closer to the typical value, hence the mean exceeds the median [S2] [S1].",
+ "abstained": false,
+ "stop_reason": "answered",
+ "plan": null,
+ "plan_source": "none",
+ "tool_sequence": [
+  "search_knowledge_base"
+ ],
+ "citations": [
+  {
+   "id": "S4",
+   "kind": "document",
+   "title": "Statistics Lecture Notes",
+   "text": "1. Descriptive Statistics Descriptive statistics summarize a dataset. Measures of central tendency are the mean (the sum of the values divided by the number of values), the median (the middle value of the sorted data) and the mode (the most frequent value). The mean is sensitive to outliers; the median is robust to them. For right-skewed data such as incomes the mean is usually larger than the median. Measures of spread describe variability. The range is maximum minus minimum. The variance averages squared deviations from the mean, and the standard deviation is the square root of the variance, so it has the same units as the data. The interquartile range (IQR) is Q3 minus Q1 and is used to flag outliers: a common rule marks values below Q1 - 1.5 * IQR or above Q3 + 1.5 * IQR. Population variance divides the sum of squared deviations by N, the population size. Sample",
+   "doc_id": "statistics_lecture_notes",
+   "course_id": "statistics",
+   "location": "p.2",
+   "chunk_id": "statistics_lecture_notes:0001",
+   "score": 0.3838,
+   "data": {
+    "file_type": "pdf",
+    "page": 2,
+    "section": "1. Descriptive Statistics",
+    "filename": "statistics_lecture_notes.pdf"
+   },
+   "derived_from": []
+  },
+  {
+   "id": "S2",
+   "kind": "document",
+   "title": "Statistics Robust Summaries",
+   "text": "The mean is the sum of the values divided by their count, so every value, including extreme ones,\npulls it. The median is the middle value of the sorted data and ignores how far the extremes lie.\nWhen a distribution is right-skewed (a long tail of a few very large values, as with prices or\nincomes) a few large values drag the mean upward while the median stays near the typical value, so\nthe mean exceeds the median. When the data are symmetric the two are close. A large gap between the\nmean and the median is therefore a quick diagnostic for skew or outliers. For skewed data, report\nthe median (or both) because it better describes a typical observation.",
+   "doc_id": "statistics_robust_summaries",
+   "course_id": "statistics",
+   "location": "ROBUST SUMMARIES: WHY THE MEAN AND THE MEDIAN DIFFER",
+   "chunk_id": "statistics_robust_summaries:0001",
+   "score": 0.4727,
+   "data": {
+    "file_type": "txt",
+    "page": null,
+    "section": "ROBUST SUMMARIES: WHY THE MEAN AND THE MEDIAN DIFFER",
+    "filename": "statistics_robust_summaries.txt"
+   },
+   "derived_from": []
+  },
+  {
+   "id": "S1",
+   "kind": "document",
+   "title": "Product Prices",
+   "text": "Dataset product_prices: 40 rows, columns: product_id, category, product_name, price_usd, units_sold.",
+   "doc_id": "product_prices",
+   "course_id": "data",
+   "location": "dataset overview",
+   "chunk_id": "product_prices:0000",
+   "score": 0.4836,
+   "data": {
+    "file_type": "csv",
+    "page": null,
+    "section": "dataset overview",
+    "filename": "product_prices.csv"
+   },
+   "derived_from": []
+  }
+ ],
+ "evidence": {
+  "S1": {
+   "id": "S1",
+   "kind": "document",
+   "title": "Product Prices",
+   "text": "Dataset product_prices: 40 rows, columns: product_id, category, product_name, price_usd, units_sold.",
+   "doc_id": "product_prices",
+   "course_id": "data",
+   "location": "dataset overview",
+   "chunk_id": "product_prices:0000",
+   "score": 0.4836,
+   "data": {
+    "file_type": "csv",
+    "page": null,
+    "section": "dataset overview",
+    "filename": "product_prices.csv"
+   },
+   "derived_from": []
+  },
+  "S2": {
+   "id": "S2",
+   "kind": "document",
+   "title": "Statistics Robust Summaries",
+   "text": "The mean is the sum of the values divided by their count, so every value, including extreme ones,\npulls it. The median is the middle value of the sorted data and ignores how far the extremes lie.\nWhen a distribution is right-skewed (a long tail of a few very large values, as with prices or\nincomes) a few large values drag the mean upward while the median stays near the typical value, so\nthe mean exceeds the median. When the data are symmetric the two are close. A large gap between the\nmean and the median is therefore a quick diagnostic for skew or outliers. For skewed data, report\nthe median (or both) because it better describes a typical observation.",
+   "doc_id": "statistics_robust_summaries",
+   "course_id": "statistics",
+   "location": "ROBUST SUMMARIES: WHY THE MEAN AND THE MEDIAN DIFFER",
+   "chunk_id": "statistics_robust_summaries:0001",
+   "score": 0.4727,
+   "data": {
+    "file_type": "txt",
+    "page": null,
+    "section": "ROBUST SUMMARIES: WHY THE MEAN AND THE MEDIAN DIFFER",
+    "filename": "statistics_robust_summaries.txt"
+   },
+   "derived_from": []
+  },
+  "S3": {
+   "id": "S3",
+   "kind": "document",
+   "title": "Statistics Robust Summaries",
+   "text": "ROBUST SUMMARIES: WHY THE MEAN AND THE MEDIAN DIFFER\nOriginal educational material, CC BY 4.0, (c) Faris Mohamed Kishtah. TracePilot demo course pack.",
+   "doc_id": "statistics_robust_summaries",
+   "course_id": "statistics",
+   "location": "ROBUST SUMMARIES: WHY THE MEAN AND THE MEDIAN DIFFER",
+   "chunk_id": "statistics_robust_summaries:0000",
+   "score": 0.4251,
+   "data": {
+    "file_type": "txt",
+    "page": null,
+    "section": "ROBUST SUMMARIES: WHY THE MEAN AND THE MEDIAN DIFFER",
+    "filename": "statistics_robust_summaries.txt"
+   },
+   "derived_from": []
+  },
+  "S4": {
+   "id": "S4",
+   "kind": "document",
+   "title": "Statistics Lecture Notes",
+   "text": "1. Descriptive Statistics Descriptive statistics summarize a dataset. Measures of central tendency are the mean (the sum of the values divided by the number of values), the median (the middle value of the sorted data) and the mode (the most frequent value). The mean is sensitive to outliers; the median is robust to them. For right-skewed data such as incomes the mean is usually larger than the median. Measures of spread describe variability. The range is maximum minus minimum. The variance averages squared deviations from the mean, and the standard deviation is the square root of the variance, so it has the same units as the data. The interquartile range (IQR) is Q3 minus Q1 and is used to flag outliers: a common rule marks values below Q1 - 1.5 * IQR or above Q3 + 1.5 * IQR. Population variance divides the sum of squared deviations by N, the population size. Sample",
+   "doc_id": "statistics_lecture_notes",
+   "course_id": "statistics",
+   "location": "p.2",
+   "chunk_id": "statistics_lecture_notes:0001",
+   "score": 0.3838,
+   "data": {
+    "file_type": "pdf",
+    "page": 2,
+    "section": "1. Descriptive Statistics",
+    "filename": "statistics_lecture_notes.pdf"
+   },
+   "derived_from": []
+  },
+  "S5": {
+   "id": "S5",
+   "kind": "document",
+   "title": "Statistics Confusable Terms",
+   "text": "learning course). normal: the normal distribution is the bell curve. It does not mean \"typical\" or \"healthy\" values.  standardization: in this course standardization means converting values to z-scores with mean 0 and standard deviation 1. adjusted R squared: adjusted R2 = 1 - (1 - R2) * (n - 1) / (n - p - 1) where p is the number of predictors. Plain R2 never decreases when a predictor is added to the model, so adjusted R2 is used to compare models of different sizes. sample: in statistics a sample is a subset drawn from a population. In machine learning courses a sample often means a single row of data.",
+   "doc_id": "statistics_confusable_terms",
+   "course_id": "statistics",
+   "location": "-",
+   "chunk_id": "statistics_confusable_terms:0002",
+   "score": 0.2623,
+   "data": {
+    "file_type": "txt",
+    "page": null,
+    "section": null,
+    "filename": "statistics_confusable_terms.txt"
+   },
+   "derived_from": []
+  }
+ },
+ "trace": [
+  {
+   "seq": 1,
+   "t_ms": 1,
+   "type": "request_received",
+   "question": "Compare the average and median price_usd in the product prices dataset, then explain why they differ.",
+   "scope": null,
+   "system": "standard_rag"
+  },
+  {
+   "seq": 2,
+   "t_ms": 61,
+   "type": "retrieval",
+   "query": "Compare the average and median price_usd in the product prices dataset, then explain why they differ.",
+   "n": 5,
+   "sources": [
+    "S1",
+    "S2",
+    "S3",
+    "S4",
+    "S5"
+   ],
+   "best_score": 0.484
+  },
+  {
+   "seq": 3,
+   "t_ms": 12481,
+   "type": "answer",
+   "abstained": false,
+   "citations": [
+    "S4",
+    "S2",
+    "S1"
+   ]
+  }
+ ],
+ "validation": {
+  "n_cited_sentences": 2,
+  "n_supported": 2,
+  "support_rate": 1.0,
+  "invalid_ids": [],
+  "unsupported": [],
+  "uncited_numeric_sentences": []
+ },
+ "metrics": {
+  "latency_s": 12.48,
+  "llm_calls": 1,
+  "prompt_tokens": 920,
+  "completion_tokens": 143,
+  "tool_calls": 1,
+  "replans": 0,
+  "steps": 1
+ },
+ "system": "standard_rag",
+ "config": {
+  "top_k": 5
+ }
+}

@@ -38,7 +38,7 @@ def architecture():
         arr(x1, 3.1, x2, 3.1)
     tools = [("search_knowledge_base", 5.1), ("analyze_dataset", 4.45), ("calculate_expression", 3.8), ("compare, summarize, context", 1.45), ("refine_search_query", 0.8)]
     for t, y in tools:
-        box(8.6, y, 2.2, 0.5, t, "#134e4a", fs=7.5)
+        box(8.6, y, 2.2, 0.5, t, "#134e4a", fs=6.3 if len(t) > 22 else 7.5)
         arr(8.0, 3.1, 8.6, y + 0.25)
     box(6.1, 0.9, 1.9, 0.9, "Evidence store\nS# D# C# G# ids", "#334155")
     arr(8.6, 2.0, 8.0, 1.4); arr(7.05, 2.6, 7.05, 1.8)

@@ -1,0 +1,198 @@
+{
+ "request_id": "3f0720c849b5",
+ "question": "What does the machine learning terminology reference say about regularization?",
+ "answer": "It also mentions that L2 regularization adds a penalty proportional to the sum of squared weights, which shrinks weights toward zero without usually making them exactly zero. [S5] L1 regularization, on the other hand, can set some weights exactly to zero, performing feature selection [S3]. provides specific details about regularization in scikit-learn, explaining how the parameter C in LogisticRegression and alpha in Ridge regression affect the strength of regularization.",
+ "abstained": false,
+ "stop_reason": "answered",
+ "plan": null,
+ "plan_source": "none",
+ "tool_sequence": [
+  "search_knowledge_base"
+ ],
+ "citations": [
+  {
+   "id": "S5",
+   "kind": "document",
+   "title": "Ml Overfitting Mitigation Guide",
+   "text": "Overfitting mitigation guide OVERFITTING MITIGATION GUIDE - TracePilot demo course pack (Machine Learning Fundamentals) Original educational material, CC BY 4.0, (c) Faris Mohamed Kishtah. 1. What overfitting means in practice A model overfits when its training accuracy is far higher than its validation accuracy. The gap between the two (train accuracy minus validation accuracy) is the simplest warning sign. 2. L2 regularization (weight decay) L2 regularization adds a penalty proportional to the sum of squared weights to the loss, which shrinks weights toward zero without usually making them exactly zero. Advantages: it is smooth, works with gradient-based optimizers, and keeps all features. Disadvantages: it introduces a strength hyperparameter (lambda or weight decay) that must be tuned with cross-validation, and it does not remove irrelevant features. It",
+   "doc_id": "ml_overfitting_mitigation_guide",
+   "course_id": "ml",
+   "location": "p.1",
+   "chunk_id": "ml_overfitting_mitigation_guide:0000",
+   "score": 0.3866,
+   "data": {
+    "file_type": "pdf",
+    "page": 1,
+    "section": null,
+    "filename": "ml_overfitting_mitigation_guide.pdf"
+   },
+   "derived_from": []
+  },
+  {
+   "id": "S3",
+   "kind": "document",
+   "title": "Ml Model Diagnostics Handbook",
+   "text": "3. Regularization Strength in scikit-learn\nIn scikit-learn LogisticRegression the parameter C is the inverse of the regularization strength: a\nsmaller C means stronger regularization, and the default is C=1.0. For Ridge regression the\nparameter alpha works the opposite way: a larger alpha means stronger shrinkage.\nL2 regularization (ridge) shrinks all weights toward zero; L1 regularization (lasso) can set some\nweights exactly to zero and therefore performs feature selection.",
+   "doc_id": "ml_model_diagnostics_handbook",
+   "course_id": "ml",
+   "location": "p.3",
+   "chunk_id": "ml_model_diagnostics_handbook:0002",
+   "score": 0.4936,
+   "data": {
+    "file_type": "pdf",
+    "page": 3,
+    "section": "3. Regularization Strength in scikit-learn",
+    "filename": "ml_model_diagnostics_handbook.pdf"
+   },
+   "derived_from": []
+  }
+ ],
+ "evidence": {
+  "S1": {
+   "id": "S1",
+   "kind": "document",
+   "title": "Ml Reference Notes",
+   "text": "MACHINE LEARNING TERMINOLOGY REFERENCE (original demo material, CC BY 4.0)\n==========================================================================",
+   "doc_id": "ml_reference_notes",
+   "course_id": "ml",
+   "location": "-",
+   "chunk_id": "ml_reference_notes:0000",
+   "score": 0.5723,
+   "data": {
+    "file_type": "txt",
+    "page": null,
+    "section": null,
+    "filename": "ml_reference_notes.txt"
+   },
+   "derived_from": []
+  },
+  "S2": {
+   "id": "S2",
+   "kind": "document",
+   "title": "Ml Lecture Notes",
+   "text": "Machine Learning Concept Guide\nMachine Learning Fundamentals - independently written demonstration notes. Not official university\nmaterial.",
+   "doc_id": "ml_lecture_notes",
+   "course_id": "ml",
+   "location": "p.1",
+   "chunk_id": "ml_lecture_notes:0000",
+   "score": 0.4304,
+   "data": {
+    "file_type": "pdf",
+    "page": 1,
+    "section": null,
+    "filename": "ml_lecture_notes.pdf"
+   },
+   "derived_from": []
+  },
+  "S3": {
+   "id": "S3",
+   "kind": "document",
+   "title": "Ml Model Diagnostics Handbook",
+   "text": "3. Regularization Strength in scikit-learn\nIn scikit-learn LogisticRegression the parameter C is the inverse of the regularization strength: a\nsmaller C means stronger regularization, and the default is C=1.0. For Ridge regression the\nparameter alpha works the opposite way: a larger alpha means stronger shrinkage.\nL2 regularization (ridge) shrinks all weights toward zero; L1 regularization (lasso) can set some\nweights exactly to zero and therefore performs feature selection.",
+   "doc_id": "ml_model_diagnostics_handbook",
+   "course_id": "ml",
+   "location": "p.3",
+   "chunk_id": "ml_model_diagnostics_handbook:0002",
+   "score": 0.4936,
+   "data": {
+    "file_type": "pdf",
+    "page": 3,
+    "section": "3. Regularization Strength in scikit-learn",
+    "filename": "ml_model_diagnostics_handbook.pdf"
+   },
+   "derived_from": []
+  },
+  "S4": {
+   "id": "S4",
+   "kind": "document",
+   "title": "Ml Project Handbook",
+   "text": "Machine Learning Project Handbook (v2, current)",
+   "doc_id": "ml_project_handbook",
+   "course_id": "ml",
+   "location": "Machine Learning Project Handbook (v2, current)",
+   "chunk_id": "ml_project_handbook:0000",
+   "score": 0.4152,
+   "data": {
+    "file_type": "docx",
+    "page": null,
+    "section": "Machine Learning Project Handbook (v2, current)",
+    "filename": "ml_project_handbook.docx"
+   },
+   "derived_from": []
+  },
+  "S5": {
+   "id": "S5",
+   "kind": "document",
+   "title": "Ml Overfitting Mitigation Guide",
+   "text": "Overfitting mitigation guide OVERFITTING MITIGATION GUIDE - TracePilot demo course pack (Machine Learning Fundamentals) Original educational material, CC BY 4.0, (c) Faris Mohamed Kishtah. 1. What overfitting means in practice A model overfits when its training accuracy is far higher than its validation accuracy. The gap between the two (train accuracy minus validation accuracy) is the simplest warning sign. 2. L2 regularization (weight decay) L2 regularization adds a penalty proportional to the sum of squared weights to the loss, which shrinks weights toward zero without usually making them exactly zero. Advantages: it is smooth, works with gradient-based optimizers, and keeps all features. Disadvantages: it introduces a strength hyperparameter (lambda or weight decay) that must be tuned with cross-validation, and it does not remove irrelevant features. It",
+   "doc_id": "ml_overfitting_mitigation_guide",
+   "course_id": "ml",
+   "location": "p.1",
+   "chunk_id": "ml_overfitting_mitigation_guide:0000",
+   "score": 0.3866,
+   "data": {
+    "file_type": "pdf",
+    "page": 1,
+    "section": null,
+    "filename": "ml_overfitting_mitigation_guide.pdf"
+   },
+   "derived_from": []
+  }
+ },
+ "trace": [
+  {
+   "seq": 1,
+   "t_ms": 0,
+   "type": "request_received",
+   "question": "What does the machine learning terminology reference say about regularization?",
+   "scope": null,
+   "system": "standard_rag"
+  },
+  {
+   "seq": 2,
+   "t_ms": 60,
+   "type": "retrieval",
+   "query": "What does the machine learning terminology reference say about regularization?",
+   "n": 5,
+   "sources": [
+    "S1",
+    "S2",
+    "S3",
+    "S4",
+    "S5"
+   ],
+   "best_score": 0.572
+  },
+  {
+   "seq": 3,
+   "t_ms": 16246,
+   "type": "answer",
+   "abstained": false,
+   "citations": [
+    "S5",
+    "S3"
+   ]
+  }
+ ],
+ "validation": {
+  "n_cited_sentences": 1,
+  "n_supported": 1,
+  "support_rate": 1.0,
+  "invalid_ids": [],
+  "unsupported": [],
+  "uncited_numeric_sentences": []
+ },
+ "metrics": {
+  "latency_s": 16.25,
+  "llm_calls": 2,
+  "prompt_tokens": 1423,
+  "completion_tokens": 292,
+  "tool_calls": 1,
+  "replans": 0,
+  "steps": 1
+ },
+ "system": "standard_rag",
+ "config": {
+  "top_k": 5
+ }
+}

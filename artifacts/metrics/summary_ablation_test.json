@@ -1,0 +1,148 @@
+{
+  "split": "test",
+  "n_common": 72,
+  "rows": {
+    "standard": {
+      "label": "A  Standard RAG",
+      "n": 72,
+      "correct": [
+        42,
+        72
+      ],
+      "numeric": [
+        7,
+        28
+      ],
+      "multi": [
+        14,
+        22
+      ],
+      "lat": 9.914027777777777,
+      "calls": 1.0,
+      "llm_calls": 1.25
+    },
+    "llm_no_numeric_tools": {
+      "label": "B  LLM planner, retrieval tools only (no calc/data), no replan",
+      "n": 72,
+      "correct": [
+        37,
+        72
+      ],
+      "numeric": [
+        6,
+        28
+      ],
+      "multi": [
+        11,
+        22
+      ],
+      "lat": 9.341666666666667,
+      "calls": 1.6527777777777777,
+      "llm_calls": 2.3194444444444446
+    },
+    "rules_all_tools": {
+      "label": "C  rule planner, all tools, no replan",
+      "n": 72,
+      "correct": [
+        38,
+        72
+      ],
+      "numeric": [
+        12,
+        28
+      ],
+      "multi": [
+        9,
+        22
+      ],
+      "lat": 4.673472222222222,
+      "calls": 1.5277777777777777,
+      "llm_calls": 1.2222222222222223
+    },
+    "llm_no_replan": {
+      "label": "D/E  LLM planner, all tools, no replan",
+      "n": 72,
+      "correct": [
+        51,
+        72
+      ],
+      "numeric": [
+        20,
+        28
+      ],
+      "multi": [
+        12,
+        22
+      ],
+      "lat": 9.000833333333333,
+      "calls": 1.9166666666666667,
+      "llm_calls": 2.2083333333333335
+    },
+    "full": {
+      "label": "F  full: LLM planner + bounded replanning",
+      "n": 72,
+      "correct": [
+        53,
+        72
+      ],
+      "numeric": [
+        22,
+        28
+      ],
+      "multi": [
+        13,
+        22
+      ],
+      "lat": 10.288611111111111,
+      "calls": 2.1944444444444446,
+      "llm_calls": 2.25
+    }
+  },
+  "paired_vs_full": {
+    "standard": {
+      "n": 72,
+      "mean_diff": 0.1527777777777778,
+      "ci95": [
+        0.041666666666666664,
+        0.2638888888888889
+      ],
+      "b_only": 15,
+      "a_only": 4,
+      "significant": true
+    },
+    "llm_no_numeric_tools": {
+      "n": 72,
+      "mean_diff": 0.2222222222222222,
+      "ci95": [
+        0.1111111111111111,
+        0.3333333333333333
+      ],
+      "b_only": 18,
+      "a_only": 2,
+      "significant": true
+    },
+    "rules_all_tools": {
+      "n": 72,
+      "mean_diff": 0.20833333333333334,
+      "ci95": [
+        0.1111111111111111,
+        0.3055555555555556
+      ],
+      "b_only": 16,
+      "a_only": 1,
+      "significant": true
+    },
+    "llm_no_replan": {
+      "n": 72,
+      "mean_diff": 0.027777777777777776,
+      "ci95": [
+        0.0,
+        0.06944444444444445
+      ],
+      "b_only": 2,
+      "a_only": 0,
+      "significant": false
+    }
+  },
+  "note": "Paired bootstrap of (full \u2212 system) in correctness: vs standard: +15.3 pp, 95% CI [+4.2, +26.4]; vs llm_no_numeric_tools: +22.2 pp, 95% CI [+11.1, +33.3]; vs rules_all_tools: +20.8 pp, 95% CI [+11.1, +30.6]; vs llm_no_replan: +2.8 pp, 95% CI [+0.0, +6.9]. Experiments D and E coincide (an LLM planner without replanning); intervals that include zero mean the component's contribution is not confirmed on this benchmark."
+}

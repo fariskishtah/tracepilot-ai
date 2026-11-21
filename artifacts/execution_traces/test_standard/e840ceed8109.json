@@ -1,0 +1,207 @@
+{
+ "request_id": "e840ceed8109",
+ "question": "What is the arithmetic mean of 10, 12, 23, 23, 16, 23, 21, 16?",
+ "answer": "Write a function average(numbers) that returns the arithmetic mean of a list. [S2] sum(nums) adds the numbers in an iterable. [S5]",
+ "abstained": false,
+ "stop_reason": "answered",
+ "plan": null,
+ "plan_source": "none",
+ "tool_sequence": [
+  "search_knowledge_base"
+ ],
+ "citations": [
+  {
+   "id": "S2",
+   "kind": "document",
+   "title": "Python Exercise Guide",
+   "text": "Exercise Set B: Functions and Collections\nExercise B1. Write a function average(numbers) that returns the arithmetic mean of a list. Handle an empty list by returning None instead of dividing by zero.\nExercise B2. Count word frequency. Given a sentence, build a dictionary mapping each lowercase word to its count. Use counts[word] = counts.get(word, 0) + 1. Alternative: collections.Counter.\nExercise B3. Remove duplicates from a list while preserving order. Converting to a set removes duplicates but loses ordering; use a seen set and an output list, or dict.fromkeys(items).\nExercise B4. Explain why the following function is buggy: def add_item(item, items=[]): items.append(item); return items. Answer: the default list is created once and shared between calls, so items accumulate across calls. The fix is to use None as the default.",
+   "doc_id": "python_exercise_guide",
+   "course_id": "python",
+   "location": "Exercise Set B: Functions and Collections",
+   "chunk_id": "python_exercise_guide:0002",
+   "score": 0.3347,
+   "data": {
+    "file_type": "docx",
+    "page": null,
+    "section": "Exercise Set B: Functions and Collections",
+    "filename": "python_exercise_guide.docx"
+   },
+   "derived_from": []
+  },
+  {
+   "id": "S5",
+   "kind": "document",
+   "title": "Python Reference Notes",
+   "text": "BUILT-IN FUNCTIONS\nlen(x) returns the number of items in x.\nsum(nums) adds the numbers in an iterable.\nmin(nums) and max(nums) return the smallest and largest items.\nsorted(items) returns a new sorted list; list.sort() sorts in place and returns None.\nenumerate(items) gives (index, item) pairs.\nzip(a, b) pairs items from two iterables and stops at the shortest.\nrange(stop) generates 0 .. stop-1; range(start, stop, step) supports steps.\nisinstance(x, int) tests whether x is an instance of a type.",
+   "doc_id": "python_reference_notes",
+   "course_id": "python",
+   "location": "BUILT-IN FUNCTIONS",
+   "chunk_id": "python_reference_notes:0001",
+   "score": 0.359,
+   "data": {
+    "file_type": "txt",
+    "page": null,
+    "section": "BUILT-IN FUNCTIONS",
+    "filename": "python_reference_notes.txt"
+   },
+   "derived_from": []
+  }
+ ],
+ "evidence": {
+  "S1": {
+   "id": "S1",
+   "kind": "document",
+   "title": "Python Lecture Notes",
+   "text": "1. Variables and Data Types A variable is a name that refers to a value stored in memory. In Python you create a variable by assignment, for example age = 21. Python is dynamically typed: the type belongs to the value, not to the name, so the same name can later refer to a string. The core built-in types are int (whole numbers), float (decimal numbers), str (text), bool (True or False) and NoneType (the single value None, meaning \"no value\"). The function type(x) reports the type of x. Conversion functions such as int(\"42\"), float(\"3.5\") and str(10) create new values of another type; int(\"abc\") raises a ValueError. Strings are immutable sequences of characters. Indexing starts at zero, so \"python\"[0] is \"p\", and negative indexes count from the end, so \"python\"[-1] is \"n\". Slicing \"python\"[1:4] returns \"yth\" (start included, stop excluded).",
+   "doc_id": "python_lecture_notes",
+   "course_id": "python",
+   "location": "p.2",
+   "chunk_id": "python_lecture_notes:0001",
+   "score": 0.3461,
+   "data": {
+    "file_type": "pdf",
+    "page": 2,
+    "section": "1. Variables and Data Types",
+    "filename": "python_lecture_notes.pdf"
+   },
+   "derived_from": []
+  },
+  "S2": {
+   "id": "S2",
+   "kind": "document",
+   "title": "Python Exercise Guide",
+   "text": "Exercise Set B: Functions and Collections\nExercise B1. Write a function average(numbers) that returns the arithmetic mean of a list. Handle an empty list by returning None instead of dividing by zero.\nExercise B2. Count word frequency. Given a sentence, build a dictionary mapping each lowercase word to its count. Use counts[word] = counts.get(word, 0) + 1. Alternative: collections.Counter.\nExercise B3. Remove duplicates from a list while preserving order. Converting to a set removes duplicates but loses ordering; use a seen set and an output list, or dict.fromkeys(items).\nExercise B4. Explain why the following function is buggy: def add_item(item, items=[]): items.append(item); return items. Answer: the default list is created once and shared between calls, so items accumulate across calls. The fix is to use None as the default.",
+   "doc_id": "python_exercise_guide",
+   "course_id": "python",
+   "location": "Exercise Set B: Functions and Collections",
+   "chunk_id": "python_exercise_guide:0002",
+   "score": 0.3347,
+   "data": {
+    "file_type": "docx",
+    "page": null,
+    "section": "Exercise Set B: Functions and Collections",
+    "filename": "python_exercise_guide.docx"
+   },
+   "derived_from": []
+  },
+  "S3": {
+   "id": "S3",
+   "kind": "document",
+   "title": "Python Library Cheatsheet",
+   "text": "row 1: entry_id=LIB001; identifier=math.isclose; module=math; returns=bool; min_python=3.5; note=Compares floats; the default rel_tol is 1e-09\nrow 2: entry_id=LIB002; identifier=math.prod; module=math; returns=number; min_python=3.8; note=Multiplies all items of an iterable\nrow 3: entry_id=LIB003; identifier=math.dist; module=math; returns=float; min_python=3.8; note=Euclidean distance between two points\nrow 4: entry_id=LIB004; identifier=statistics.fmean; module=statistics; returns=float; min_python=3.8; note=Fast floating-point arithmetic mean\nrow 5: entry_id=LIB005; identifier=statistics.correlation; module=statistics; returns=float; min_python=3.10; note=Pearson correlation of two inputs\nrow 6: entry_id=LIB006; identifier=functools.cache; module=functools; returns=decorator; min_python=3.9; note=Unbounded memoization; shortcut for lru_cache(maxsize=None)\nrow 7: entry_id=LIB007; identifier=str.removeprefix; module=builtins; returns=str; min_python=3.9; note=Returns the string without the given prefix if present\nrow 8: entry_id=LIB008; identifier=str.casefold; module=builtins; returns=str; min_python=3.3; note=Aggressive lowercase for caseless comparison",
+   "doc_id": "python_library_cheatsheet",
+   "course_id": "python",
+   "location": "rows 1-8",
+   "chunk_id": "python_library_cheatsheet:0001",
+   "score": 0.2816,
+   "data": {
+    "file_type": "csv",
+    "page": null,
+    "section": "data rows",
+    "filename": "python_library_cheatsheet.csv"
+   },
+   "derived_from": []
+  },
+  "S4": {
+   "id": "S4",
+   "kind": "document",
+   "title": "Python Glossary Overloaded Terms",
+   "text": "program prints the same random numbers on every run. iterable: an object you can loop over, such as a list or string.  An iterator is the object that produces the values one at a time and is returned by iter(iterable). generator: a function that uses yield to produce values lazily, one at a time, instead of building a whole list in memory. decorator: a function that wraps another function; written with the @ syntax above a def line. mean: Python has no built-in mean. Use statistics.mean(data), or statistics.fmean(data) for a faster floating-point mean.",
+   "doc_id": "python_glossary_overloaded_terms",
+   "course_id": "python",
+   "location": "-",
+   "chunk_id": "python_glossary_overloaded_terms:0002",
+   "score": 0.3639,
+   "data": {
+    "file_type": "txt",
+    "page": null,
+    "section": null,
+    "filename": "python_glossary_overloaded_terms.txt"
+   },
+   "derived_from": []
+  },
+  "S5": {
+   "id": "S5",
+   "kind": "document",
+   "title": "Python Reference Notes",
+   "text": "BUILT-IN FUNCTIONS\nlen(x) returns the number of items in x.\nsum(nums) adds the numbers in an iterable.\nmin(nums) and max(nums) return the smallest and largest items.\nsorted(items) returns a new sorted list; list.sort() sorts in place and returns None.\nenumerate(items) gives (index, item) pairs.\nzip(a, b) pairs items from two iterables and stops at the shortest.\nrange(stop) generates 0 .. stop-1; range(start, stop, step) supports steps.\nisinstance(x, int) tests whether x is an instance of a type.",
+   "doc_id": "python_reference_notes",
+   "course_id": "python",
+   "location": "BUILT-IN FUNCTIONS",
+   "chunk_id": "python_reference_notes:0001",
+   "score": 0.359,
+   "data": {
+    "file_type": "txt",
+    "page": null,
+    "section": "BUILT-IN FUNCTIONS",
+    "filename": "python_reference_notes.txt"
+   },
+   "derived_from": []
+  }
+ },
+ "trace": [
+  {
+   "seq": 1,
+   "t_ms": 1,
+   "type": "request_received",
+   "question": "What is the arithmetic mean of 10, 12, 23, 23, 16, 23, 21, 16?",
+   "scope": null,
+   "system": "standard_rag"
+  },
+  {
+   "seq": 2,
+   "t_ms": 276,
+   "type": "retrieval",
+   "query": "What is the arithmetic mean of 10, 12, 23, 23, 16, 23, 21, 16?",
+   "n": 5,
+   "sources": [
+    "S1",
+    "S2",
+    "S3",
+    "S4",
+    "S5"
+   ],
+   "best_score": 0.364
+  },
+  {
+   "seq": 3,
+   "t_ms": 10009,
+   "type": "answer",
+   "abstained": false,
+   "citations": [
+    "S2",
+    "S5"
+   ]
+  }
+ ],
+ "validation": {
+  "n_cited_sentences": 1,
+  "n_supported": 0,
+  "support_rate": 0.0,
+  "invalid_ids": [],
+  "unsupported": [
+   {
+    "sentence": "[S2] sum(nums) adds the numbers in an iterable.",
+    "cited": [
+     "S2"
+    ],
+    "reason": "low support (cosine 0.46, word recall 0.20)",
+    "sim": 0.46
+   }
+  ],
+  "uncited_numeric_sentences": []
+ },
+ "metrics": {
+  "latency_s": 10.01,
+  "llm_calls": 2,
+  "prompt_tokens": 2473,
+  "completion_tokens": 78,
+  "tool_calls": 1,
+  "replans": 0,
+  "steps": 1
+ },
+ "system": "standard_rag",
+ "config": {
+  "top_k": 5
+ }
+}

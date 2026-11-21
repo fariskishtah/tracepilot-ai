@@ -1,0 +1,363 @@
+{
+ "request_id": "46155eb02d9d",
+ "question": "What is the default maxsize of functools.lru_cache?",
+ "answer": "The default maxsize of functools.lru_cache is not provided in the given evidence.",
+ "abstained": true,
+ "stop_reason": "insufficient_evidence",
+ "plan": {
+  "question_type": "calculation",
+  "complexity": "simple",
+  "requires_retrieval": true,
+  "requires_calculation": false,
+  "requires_data_analysis": false,
+  "requires_comparison": false,
+  "subtasks": [
+   {
+    "id": "t1",
+    "tool": "search_knowledge_base",
+    "goal": "explain: What is the default maxsize of functools.lru_cache",
+    "query": "What is the default maxsize of functools.lru_cache default maxsize functools.lru_cache",
+    "dataset_id": null,
+    "operation": null,
+    "column": null,
+    "group_by": null,
+    "agg": null,
+    "filters": null,
+    "expression": null,
+    "aspects": null,
+    "depends_on": []
+   }
+  ],
+  "rationale": "LLM plan: 1 step(s)"
+ },
+ "plan_source": "llm",
+ "tool_sequence": [
+  "search_knowledge_base"
+ ],
+ "citations": [],
+ "evidence": {
+  "S1": {
+   "id": "S1",
+   "kind": "document",
+   "title": "Python Debugging Playbook",
+   "text": "4. Performance Pitfalls\nfunctools.lru_cache(maxsize=128) caches the results of a function for repeated arguments; the\ndefault maxsize is 128 and maxsize=None removes the limit. Arguments must be hashable.\nBuilding a long string with += inside a loop copies the string repeatedly; collect the pieces in a list\nand call \"\".join(parts) once. A membership test with in is a linear scan for a list but an average\nconstant-time lookup for a set or dict, so convert a list to a set when you test membership many\ntimes.\ncollections.Counter(words).most_common(3) returns the three most frequent items as (item, count)\npairs. Sorting with sorted(items, key=len) is faster and clearer than writing a comparison function.",
+   "doc_id": "python_debugging_playbook",
+   "course_id": "python",
+   "location": "p.4",
+   "chunk_id": "python_debugging_playbook:0003",
+   "score": 0.4755,
+   "data": {
+    "file_type": "pdf",
+    "page": 4,
+    "section": "4. Performance Pitfalls",
+    "filename": "python_debugging_playbook.pdf"
+   },
+   "derived_from": []
+  },
+  "S2": {
+   "id": "S2",
+   "kind": "document",
+   "title": "Pandas Function Defaults",
+   "text": "Dataset pandas_function_defaults: 13 rows, columns: ref_id, function, parameter, default_value, note.",
+   "doc_id": "pandas_function_defaults",
+   "course_id": "data",
+   "location": "dataset overview",
+   "chunk_id": "pandas_function_defaults:0000",
+   "score": 0.3569,
+   "data": {
+    "file_type": "csv",
+    "page": null,
+    "section": "dataset overview",
+    "filename": "pandas_function_defaults.csv"
+   },
+   "derived_from": []
+  },
+  "S3": {
+   "id": "S3",
+   "kind": "document",
+   "title": "Ml Hyperparameter Reference",
+   "text": "Dataset ml_hyperparameter_reference: 14 rows, columns: ref_id, estimator, hyperparameter, default_value, effect_of_increasing.",
+   "doc_id": "ml_hyperparameter_reference",
+   "course_id": "ml",
+   "location": "dataset overview",
+   "chunk_id": "ml_hyperparameter_reference:0000",
+   "score": 0.3204,
+   "data": {
+    "file_type": "csv",
+    "page": null,
+    "section": "dataset overview",
+    "filename": "ml_hyperparameter_reference.csv"
+   },
+   "derived_from": []
+  },
+  "S4": {
+   "id": "S4",
+   "kind": "document",
+   "title": "Python Lecture Notes",
+   "text": "3. Functions A function is a reusable block of code defined with def. Parameters are the names in the definition; arguments are the values supplied in a call. A function returns a value with return; if no return statement runs, the function returns None. Default parameter values, as in def greet(name, greeting=\"Hello\"), let callers omit an argument. Keyword arguments, as in greet(greeting=\"Hi\", name=\"Sara\"), make calls explicit. *args collects extra positional arguments into a tuple, and **kwargs collects extra keyword arguments into a dictionary. Never use a mutable object such as a list as a default value. The default is created once when the function is defined, so def add(x, bucket=[]) shares one list across all calls. The safe pattern is bucket=None followed by if bucket is None: bucket = []. Variables created inside a function are local to it.",
+   "doc_id": "python_lecture_notes",
+   "course_id": "python",
+   "location": "p.4",
+   "chunk_id": "python_lecture_notes:0005",
+   "score": 0.2299,
+   "data": {
+    "file_type": "pdf",
+    "page": 4,
+    "section": "3. Functions",
+    "filename": "python_lecture_notes.pdf"
+   },
+   "derived_from": []
+  },
+  "S5": {
+   "id": "S5",
+   "kind": "document",
+   "title": "Python Debugging Playbook",
+   "text": "2. Scope Errors\nUnboundLocalError (message: local variable referenced before assignment) happens when a\nfunction assigns to a name anywhere in its body, which makes that name local for the entire\nfunction, and then reads the name before the assignment has run. The usual symptom is code that\nworks at module level but fails once it is moved inside a function.\nThree fixes exist. Pass the value in as a parameter, which is the cleanest option. Use the global\nstatement to bind a module-level name. Use the nonlocal statement to bind a name from the\nnearest enclosing function scope; nonlocal cannot reach module-level names.\nA related surprise is the late-binding closure: lambdas created in a loop all see the final value of the\nloop variable. The fix is to bind the current value through a default argument, for example lambda\ni=i: i.",
+   "doc_id": "python_debugging_playbook",
+   "course_id": "python",
+   "location": "p.2",
+   "chunk_id": "python_debugging_playbook:0001",
+   "score": 0.2494,
+   "data": {
+    "file_type": "pdf",
+    "page": 2,
+    "section": "2. Scope Errors",
+    "filename": "python_debugging_playbook.pdf"
+   },
+   "derived_from": []
+  }
+ },
+ "trace": [
+  {
+   "seq": 1,
+   "t_ms": 0,
+   "type": "request_received",
+   "question": "What is the default maxsize of functools.lru_cache?",
+   "scope": null,
+   "tools": [
+    "search_knowledge_base",
+    "retrieve_source_context",
+    "summarize_evidence",
+    "analyze_dataset",
+    "calculate_expression",
+    "compare_evidence",
+    "refine_search_query"
+   ],
+   "planner": "llm",
+   "replanning": true,
+   "llm": "qwen2.5:3b-instruct",
+   "registry_version": "1.0.0"
+  },
+  {
+   "seq": 2,
+   "t_ms": 1,
+   "type": "question_analysis",
+   "calc_cue": false,
+   "data_cue": false,
+   "compare_cue": false,
+   "summary_cue": false,
+   "multi_cue": false,
+   "named_datasets": [],
+   "length_words": 7,
+   "needs_data": false,
+   "explicit_dataset": false,
+   "literal_numbers": [],
+   "needs_calc": false,
+   "concept_cue": true
+  },
+  {
+   "seq": 3,
+   "t_ms": 4379,
+   "type": "plan_created",
+   "source": "llm",
+   "question_type": "calculation",
+   "complexity": "simple",
+   "requires": {
+    "retrieval": true,
+    "calculation": false,
+    "data_analysis": false,
+    "comparison": false
+   },
+   "summary": "LLM plan: 1 step(s)",
+   "adjustments": [
+    "removed t1: question does not refer to a dataset",
+    "added t1: question asks for an explanation that the plan did not retrieve"
+   ],
+   "note": "",
+   "subtasks": [
+    {
+     "id": "t1",
+     "tool": "search_knowledge_base",
+     "goal": "explain: What is the default maxsize of functools.lru_cache",
+     "depends_on": []
+    }
+   ]
+  },
+  {
+   "seq": 4,
+   "t_ms": 4379,
+   "type": "tool_selected",
+   "step": "t1",
+   "tool": "search_knowledge_base",
+   "goal": "explain: What is the default maxsize of functools.lru_cache",
+   "attempt": 1,
+   "args": {
+    "query": "What is the default maxsize of functools.lru_cache default maxsize functools.lru_cache",
+    "course_ids": null,
+    "top_k": 5
+   }
+  },
+  {
+   "seq": 5,
+   "t_ms": 4633,
+   "type": "tool_result",
+   "step": "t1",
+   "tool": "search_knowledge_base",
+   "ok": true,
+   "ms": 252.7,
+   "summary": "5 chunks, best cosine 0.48",
+   "evidence_ids": [
+    "S1",
+    "S2",
+    "S3",
+    "S4",
+    "S5"
+   ],
+   "error": null,
+   "error_type": null,
+   "sufficient": true,
+   "relevance": {
+    "best_score": 0.476,
+    "keyword_coverage": 1.0,
+    "threshold": {
+     "min_best_score": 0.35,
+     "min_keyword_coverage": 0.35
+    }
+   },
+   "sources": [
+    {
+     "id": "S1",
+     "title": "Python Debugging Playbook",
+     "location": "p.4",
+     "score": 0.476
+    },
+    {
+     "id": "S2",
+     "title": "Pandas Function Defaults",
+     "location": "dataset overview",
+     "score": 0.357
+    },
+    {
+     "id": "S3",
+     "title": "Ml Hyperparameter Reference",
+     "location": "dataset overview",
+     "score": 0.32
+    },
+    {
+     "id": "S4",
+     "title": "Python Lecture Notes",
+     "location": "p.4",
+     "score": 0.23
+    },
+    {
+     "id": "S5",
+     "title": "Python Debugging Playbook",
+     "location": "p.2",
+     "score": 0.249
+    }
+   ]
+  },
+  {
+   "seq": 6,
+   "t_ms": 4633,
+   "type": "validation",
+   "sufficient": true,
+   "steps": {
+    "t1": {
+     "status": "done",
+     "sufficient": true
+    }
+   },
+   "problems": []
+  },
+  {
+   "seq": 7,
+   "t_ms": 4633,
+   "type": "synthesis_started",
+   "evidence": [
+    "S1",
+    "S2",
+    "S3"
+   ],
+   "computed": [],
+   "gaps": []
+  },
+  {
+   "seq": 8,
+   "t_ms": 6672,
+   "type": "citation_check",
+   "n_cited_sentences": 0,
+   "n_supported": 0,
+   "support_rate": 0.0,
+   "invalid_ids": [],
+   "removed_unsupported": 0,
+   "regenerated": 0,
+   "injection_flags": [],
+   "fallback_extractive": false
+  },
+  {
+   "seq": 9,
+   "t_ms": 6672,
+   "type": "answer",
+   "abstained": true,
+   "citations": []
+  },
+  {
+   "seq": 10,
+   "t_ms": 6672,
+   "type": "completed",
+   "stop_reason": "insufficient_evidence",
+   "latency_s": 6.67
+  }
+ ],
+ "validation": {
+  "n_cited_sentences": 0,
+  "n_supported": 0,
+  "support_rate": 0.0,
+  "invalid_ids": [],
+  "unsupported": [],
+  "uncited_numeric_sentences": []
+ },
+ "metrics": {
+  "latency_s": 6.67,
+  "llm_calls": 2,
+  "prompt_tokens": 2094,
+  "completion_tokens": 122,
+  "tool_calls": 1,
+  "replans": 0,
+  "steps": 1,
+  "errors": [],
+  "step_status": {
+   "t1": "done"
+  },
+  "removed_unsupported": 0,
+  "injection_flags": []
+ },
+ "system": "agentic",
+ "config": {
+  "name": "full",
+  "planner": "llm",
+  "replan": true,
+  "tools": [
+   "search_knowledge_base",
+   "retrieve_source_context",
+   "summarize_evidence",
+   "analyze_dataset",
+   "calculate_expression",
+   "compare_evidence",
+   "refine_search_query"
+  ],
+  "model": "qwen2.5:3b-instruct",
+  "registry_version": "1.0.0"
+ }
+}

@@ -1,0 +1,14 @@
+{
+  "frozen_at": "2026-11-21 03:07:34",
+  "test_questions": 72,
+  "test_questions_sha256": "191e7e1d11a1cf89cb3e857fcbeadab29505d20fd56ac9096ef63565fcabff86",
+  "all_questions_sha256": "eaf9705874f4a4e59cd5df7debbdf23d63d350759d7cafd98b584891f0469ad1",
+  "corpus_manifest_sha256": "4d1680f2a9de2183175c3227a9a8c2ba64fd4101dd113edab5abd0b4de27b426",
+  "configs_sha256": "66e084e1e4345a8b4a7a3a6ae39a560ad9855ac79a890175970fa22ff3afd9a8",
+  "source_sha256": "ee2774901f46fb59ca447474bb13a9cf69d430859db7ff017e056ec2b4d80b4f",
+  "llm": "qwen2.5:3b-instruct",
+  "embedding": "sentence-transformers/all-MiniLM-L6-v2",
+  "registry_version": "1.0.0",
+  "policy": "No agent code, config, rubric or test question may change after this record. Runs made after a change are labelled post-hoc.",
+  "git_commit": "eb6d2411666593642dcc688af0139a52b2ce4014"
+}

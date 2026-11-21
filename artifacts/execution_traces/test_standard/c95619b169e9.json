@@ -1,0 +1,179 @@
+{
+ "request_id": "c95619b169e9",
+ "question": "What is a Type II error and what is statistical power?",
+ "answer": "A Type II error is failing to reject a false null hypothesis, with probability beta [S1]/ [S1]. Statistical power is the probability of detecting a real effect, which equals 1 - beta [S1]/ [S1].",
+ "abstained": false,
+ "stop_reason": "answered",
+ "plan": null,
+ "plan_source": "none",
+ "tool_sequence": [
+  "search_knowledge_base"
+ ],
+ "citations": [
+  {
+   "id": "S1",
+   "kind": "document",
+   "title": "Statistics Lecture Notes",
+   "text": "5. Hypothesis Testing Hypothesis testing evaluates a claim about a population. The null hypothesis H0 states no effect or no difference; the alternative hypothesis H1 states the effect we are looking for. We compute a test statistic from the sample and a p-value, the probability of observing a result at least as extreme as the one found, assuming H0 is true. If the p-value is smaller than the significance level alpha, commonly 0.05, we reject H0. A Type I error means rejecting a true null hypothesis, and its probability is alpha. A Type II error means failing to reject a false null hypothesis, with probability beta. Power equals 1 - beta, the probability of detecting a real effect. Larger samples increase power. A p-value is not the probability that the null hypothesis is true, and a small p-value does not measure the size or importance of an effect.",
+   "doc_id": "statistics_lecture_notes",
+   "course_id": "statistics",
+   "location": "p.6",
+   "chunk_id": "statistics_lecture_notes:0009",
+   "score": 0.6043,
+   "data": {
+    "file_type": "pdf",
+    "page": 6,
+    "section": "5. Hypothesis Testing",
+    "filename": "statistics_lecture_notes.pdf"
+   },
+   "derived_from": []
+  }
+ ],
+ "evidence": {
+  "S1": {
+   "id": "S1",
+   "kind": "document",
+   "title": "Statistics Lecture Notes",
+   "text": "5. Hypothesis Testing Hypothesis testing evaluates a claim about a population. The null hypothesis H0 states no effect or no difference; the alternative hypothesis H1 states the effect we are looking for. We compute a test statistic from the sample and a p-value, the probability of observing a result at least as extreme as the one found, assuming H0 is true. If the p-value is smaller than the significance level alpha, commonly 0.05, we reject H0. A Type I error means rejecting a true null hypothesis, and its probability is alpha. A Type II error means failing to reject a false null hypothesis, with probability beta. Power equals 1 - beta, the probability of detecting a real effect. Larger samples increase power. A p-value is not the probability that the null hypothesis is true, and a small p-value does not measure the size or importance of an effect.",
+   "doc_id": "statistics_lecture_notes",
+   "course_id": "statistics",
+   "location": "p.6",
+   "chunk_id": "statistics_lecture_notes:0009",
+   "score": 0.6043,
+   "data": {
+    "file_type": "pdf",
+    "page": 6,
+    "section": "5. Hypothesis Testing",
+    "filename": "statistics_lecture_notes.pdf"
+   },
+   "derived_from": []
+  },
+  "S2": {
+   "id": "S2",
+   "kind": "document",
+   "title": "Statistics Reference Notes",
+   "text": "INFERENCE\n95% confidence interval for a mean (sigma known): x-bar +/- 1.96 * sigma / sqrt(n)\nt statistic: t = (x-bar - mu0) / (s / sqrt(n)), with n - 1 degrees of freedom\nType I error rate = alpha. Power = 1 - beta.\nChi-square statistic: sum((observed - expected)^2 / expected)",
+   "doc_id": "statistics_reference_notes",
+   "course_id": "statistics",
+   "location": "INFERENCE",
+   "chunk_id": "statistics_reference_notes:0004",
+   "score": 0.3541,
+   "data": {
+    "file_type": "txt",
+    "page": null,
+    "section": "INFERENCE",
+    "filename": "statistics_reference_notes.txt"
+   },
+   "derived_from": []
+  },
+  "S3": {
+   "id": "S3",
+   "kind": "document",
+   "title": "Statistics Estimators And Bias",
+   "text": "2. Variance of an Estimator\nThe variance of an estimator describes how much the estimate changes from one random sample\nto the next. For the sample mean it equals sigma squared divided by n, so the standard error of the\nmean is sigma divided by the square root of n.\nThis is not the same quantity as the variance of the data themselves, which describes the spread\nof individual observations around their mean. Quadrupling the sample size halves the standard\nerror but does not change the variance of the data.",
+   "doc_id": "statistics_estimators_and_bias",
+   "course_id": "statistics",
+   "location": "p.2",
+   "chunk_id": "statistics_estimators_and_bias:0001",
+   "score": 0.3695,
+   "data": {
+    "file_type": "pdf",
+    "page": 2,
+    "section": "2. Variance of an Estimator",
+    "filename": "statistics_estimators_and_bias.pdf"
+   },
+   "derived_from": []
+  },
+  "S4": {
+   "id": "S4",
+   "kind": "document",
+   "title": "Statistics Exercise Guide",
+   "text": "Problem 4: One-Sample Hypothesis Test\nQuestion. A factory claims bulbs last 1000 hours on average. A sample of 25 bulbs has mean 980 and sample standard deviation 50. Test H0: mu = 1000 against H1: mu is not 1000 at alpha = 0.05.\nSolution. The t statistic is (980 - 1000) / (50 / sqrt(25)) = -20 / 10 = -2.0 with 24 degrees of freedom. The two-sided critical value is about 2.064. Because the absolute value 2.0 is smaller than 2.064 we fail to reject H0 at the 5% level. Failing to reject does not prove the claim is true; the sample may simply lack the power to detect a 20 hour difference.",
+   "doc_id": "statistics_exercise_guide",
+   "course_id": "statistics",
+   "location": "Problem 4: One-Sample Hypothesis Test",
+   "chunk_id": "statistics_exercise_guide:0004",
+   "score": 0.3139,
+   "data": {
+    "file_type": "docx",
+    "page": null,
+    "section": "Problem 4: One-Sample Hypothesis Test",
+    "filename": "statistics_exercise_guide.docx"
+   },
+   "derived_from": []
+  },
+  "S5": {
+   "id": "S5",
+   "kind": "document",
+   "title": "Python Lecture Notes",
+   "text": "1. Variables and Data Types A variable is a name that refers to a value stored in memory. In Python you create a variable by assignment, for example age = 21. Python is dynamically typed: the type belongs to the value, not to the name, so the same name can later refer to a string. The core built-in types are int (whole numbers), float (decimal numbers), str (text), bool (True or False) and NoneType (the single value None, meaning \"no value\"). The function type(x) reports the type of x. Conversion functions such as int(\"42\"), float(\"3.5\") and str(10) create new values of another type; int(\"abc\") raises a ValueError. Strings are immutable sequences of characters. Indexing starts at zero, so \"python\"[0] is \"p\", and negative indexes count from the end, so \"python\"[-1] is \"n\". Slicing \"python\"[1:4] returns \"yth\" (start included, stop excluded).",
+   "doc_id": "python_lecture_notes",
+   "course_id": "python",
+   "location": "p.2",
+   "chunk_id": "python_lecture_notes:0001",
+   "score": 0.2859,
+   "data": {
+    "file_type": "pdf",
+    "page": 2,
+    "section": "1. Variables and Data Types",
+    "filename": "python_lecture_notes.pdf"
+   },
+   "derived_from": []
+  }
+ },
+ "trace": [
+  {
+   "seq": 1,
+   "t_ms": 0,
+   "type": "request_received",
+   "question": "What is a Type II error and what is statistical power?",
+   "scope": null,
+   "system": "standard_rag"
+  },
+  {
+   "seq": 2,
+   "t_ms": 61,
+   "type": "retrieval",
+   "query": "What is a Type II error and what is statistical power?",
+   "n": 5,
+   "sources": [
+    "S1",
+    "S2",
+    "S3",
+    "S4",
+    "S5"
+   ],
+   "best_score": 0.604
+  },
+  {
+   "seq": 3,
+   "t_ms": 4504,
+   "type": "answer",
+   "abstained": false,
+   "citations": [
+    "S1"
+   ]
+  }
+ ],
+ "validation": {
+  "n_cited_sentences": 2,
+  "n_supported": 2,
+  "support_rate": 1.0,
+  "invalid_ids": [],
+  "unsupported": [],
+  "uncited_numeric_sentences": []
+ },
+ "metrics": {
+  "latency_s": 4.5,
+  "llm_calls": 1,
+  "prompt_tokens": 1104,
+  "completion_tokens": 50,
+  "tool_calls": 1,
+  "replans": 0,
+  "steps": 1
+ },
+ "system": "standard_rag",
+ "config": {
+  "top_k": 5
+ }
+}

@@ -1,0 +1,217 @@
+{
+ "request_id": "62674c6c76ba",
+ "question": "What is the default value of the 'how' parameter of pandas dropna?",
+ "answer": "The default value of the 'how' parameter of pandas dropna is any [S1] [S2] [S3]",
+ "abstained": false,
+ "stop_reason": "answered",
+ "plan": null,
+ "plan_source": "none",
+ "tool_sequence": [
+  "search_knowledge_base"
+ ],
+ "citations": [
+  {
+   "id": "S1",
+   "kind": "document",
+   "title": "Pandas Function Defaults",
+   "text": "Dataset pandas_function_defaults: 13 rows, columns: ref_id, function, parameter, default_value, note.",
+   "doc_id": "pandas_function_defaults",
+   "course_id": "data",
+   "location": "dataset overview",
+   "chunk_id": "pandas_function_defaults:0000",
+   "score": 0.5535,
+   "data": {
+    "file_type": "csv",
+    "page": null,
+    "section": "dataset overview",
+    "filename": "pandas_function_defaults.csv"
+   },
+   "derived_from": []
+  },
+  {
+   "id": "S2",
+   "kind": "document",
+   "title": "Data Wrangling Handbook",
+   "text": "2. Missing Values\npandas represents missing numbers as NaN. isna() flags them, dropna() removes rows with any\nmissing value by default, and fillna(value) replaces them. NaN is not equal to itself, so a\ncomparison such as x == np.nan is never true; use isna() instead.\nIn SQL the missing marker is NULL, and a comparison with NULL is unknown, so use IS NULL\nrather than = NULL. Aggregations such as AVG ignore NULL values; the pandas mean() skips\nNaN by default (skipna=True).",
+   "doc_id": "data_wrangling_handbook",
+   "course_id": "data",
+   "location": "p.2",
+   "chunk_id": "data_wrangling_handbook:0001",
+   "score": 0.4947,
+   "data": {
+    "file_type": "pdf",
+    "page": 2,
+    "section": "2. Missing Values",
+    "filename": "data_wrangling_handbook.pdf"
+   },
+   "derived_from": []
+  },
+  {
+   "id": "S3",
+   "kind": "document",
+   "title": "Pandas Function Defaults",
+   "text": "row 1: ref_id=PD001; function=pandas.DataFrame.dropna; parameter=how; default_value=any; note=drop a row if any value is missing\nrow 2: ref_id=PD002; function=pandas.merge; parameter=how; default_value=inner; note=keep only keys present in both tables\nrow 3: ref_id=PD003; function=pandas.read_csv; parameter=sep; default_value=,; note=comma separated values\nrow 4: ref_id=PD004; function=pandas.DataFrame.sort_values; parameter=ascending; default_value=True; note=sort from small to large\nrow 5: ref_id=PD005; function=pandas.DataFrame.drop_duplicates; parameter=keep; default_value=first; note=keep the first occurrence of a duplicated row\nrow 6: ref_id=PD006; function=pandas.DataFrame.head; parameter=n; default_value=5; note=number of rows returned\nrow 7: ref_id=PD007; function=pandas.DataFrame.to_csv; parameter=index; default_value=True; note=writes the row index as a column\nrow 8: ref_id=PD008; function=pandas.concat; parameter=axis; default_value=0; note=stack vertically",
+   "doc_id": "pandas_function_defaults",
+   "course_id": "data",
+   "location": "rows 1-8",
+   "chunk_id": "pandas_function_defaults:0001",
+   "score": 0.393,
+   "data": {
+    "file_type": "csv",
+    "page": null,
+    "section": "data rows",
+    "filename": "pandas_function_defaults.csv"
+   },
+   "derived_from": []
+  }
+ ],
+ "evidence": {
+  "S1": {
+   "id": "S1",
+   "kind": "document",
+   "title": "Pandas Function Defaults",
+   "text": "Dataset pandas_function_defaults: 13 rows, columns: ref_id, function, parameter, default_value, note.",
+   "doc_id": "pandas_function_defaults",
+   "course_id": "data",
+   "location": "dataset overview",
+   "chunk_id": "pandas_function_defaults:0000",
+   "score": 0.5535,
+   "data": {
+    "file_type": "csv",
+    "page": null,
+    "section": "dataset overview",
+    "filename": "pandas_function_defaults.csv"
+   },
+   "derived_from": []
+  },
+  "S2": {
+   "id": "S2",
+   "kind": "document",
+   "title": "Data Wrangling Handbook",
+   "text": "2. Missing Values\npandas represents missing numbers as NaN. isna() flags them, dropna() removes rows with any\nmissing value by default, and fillna(value) replaces them. NaN is not equal to itself, so a\ncomparison such as x == np.nan is never true; use isna() instead.\nIn SQL the missing marker is NULL, and a comparison with NULL is unknown, so use IS NULL\nrather than = NULL. Aggregations such as AVG ignore NULL values; the pandas mean() skips\nNaN by default (skipna=True).",
+   "doc_id": "data_wrangling_handbook",
+   "course_id": "data",
+   "location": "p.2",
+   "chunk_id": "data_wrangling_handbook:0001",
+   "score": 0.4947,
+   "data": {
+    "file_type": "pdf",
+    "page": 2,
+    "section": "2. Missing Values",
+    "filename": "data_wrangling_handbook.pdf"
+   },
+   "derived_from": []
+  },
+  "S3": {
+   "id": "S3",
+   "kind": "document",
+   "title": "Pandas Function Defaults",
+   "text": "row 1: ref_id=PD001; function=pandas.DataFrame.dropna; parameter=how; default_value=any; note=drop a row if any value is missing\nrow 2: ref_id=PD002; function=pandas.merge; parameter=how; default_value=inner; note=keep only keys present in both tables\nrow 3: ref_id=PD003; function=pandas.read_csv; parameter=sep; default_value=,; note=comma separated values\nrow 4: ref_id=PD004; function=pandas.DataFrame.sort_values; parameter=ascending; default_value=True; note=sort from small to large\nrow 5: ref_id=PD005; function=pandas.DataFrame.drop_duplicates; parameter=keep; default_value=first; note=keep the first occurrence of a duplicated row\nrow 6: ref_id=PD006; function=pandas.DataFrame.head; parameter=n; default_value=5; note=number of rows returned\nrow 7: ref_id=PD007; function=pandas.DataFrame.to_csv; parameter=index; default_value=True; note=writes the row index as a column\nrow 8: ref_id=PD008; function=pandas.concat; parameter=axis; default_value=0; note=stack vertically",
+   "doc_id": "pandas_function_defaults",
+   "course_id": "data",
+   "location": "rows 1-8",
+   "chunk_id": "pandas_function_defaults:0001",
+   "score": 0.393,
+   "data": {
+    "file_type": "csv",
+    "page": null,
+    "section": "data rows",
+    "filename": "pandas_function_defaults.csv"
+   },
+   "derived_from": []
+  },
+  "S4": {
+   "id": "S4",
+   "kind": "document",
+   "title": "Data Glossary",
+   "text": "NULL: the SQL marker for a missing value.\nNaN: floating-point not-a-number used by pandas for missing numeric data.\nNone: Python's null object; pandas also treats None as missing in object columns.\nkey: the column or columns used to match rows when joining two tables.\nschema: the names and data types of the columns of a table.\nsample: DataFrame.sample(n=3) returns 3 random rows. It is a row draw, not a statistical sample design.\nmerge versus join: pd.merge joins on columns by default, whereas DataFrame.join joins on the index by default.\nindex: depends on context - database index, pandas Index or list position.",
+   "doc_id": "data_glossary",
+   "course_id": "data",
+   "location": "-",
+   "chunk_id": "data_glossary:0001",
+   "score": 0.4344,
+   "data": {
+    "file_type": "txt",
+    "page": null,
+    "section": null,
+    "filename": "data_glossary.txt"
+   },
+   "derived_from": []
+  },
+  "S5": {
+   "id": "S5",
+   "kind": "document",
+   "title": "Pandas Function Defaults",
+   "text": "row 9: ref_id=PD009; function=pandas.pivot_table; parameter=aggfunc; default_value=mean; note=aggregation used for each cell\nrow 10: ref_id=PD010; function=pandas.DataFrame.groupby; parameter=sort; default_value=True; note=sort the group keys\nrow 11: ref_id=PD011; function=pandas.Series.value_counts; parameter=normalize; default_value=False; note=return counts rather than fractions\nrow 12: ref_id=PD012; function=pandas.DataFrame.fillna; parameter=inplace; default_value=False; note=returns a new object unless inplace=True\nrow 13: ref_id=PD013; function=pandas.DataFrame.describe; parameter=percentiles; default_value=None; note=shows the 25%, 50% and 75% percentiles",
+   "doc_id": "pandas_function_defaults",
+   "course_id": "data",
+   "location": "rows 9-13",
+   "chunk_id": "pandas_function_defaults:0002",
+   "score": 0.308,
+   "data": {
+    "file_type": "csv",
+    "page": null,
+    "section": "data rows",
+    "filename": "pandas_function_defaults.csv"
+   },
+   "derived_from": []
+  }
+ },
+ "trace": [
+  {
+   "seq": 1,
+   "t_ms": 0,
+   "type": "request_received",
+   "question": "What is the default value of the 'how' parameter of pandas dropna?",
+   "scope": null,
+   "system": "standard_rag"
+  },
+  {
+   "seq": 2,
+   "t_ms": 12,
+   "type": "retrieval",
+   "query": "What is the default value of the 'how' parameter of pandas dropna?",
+   "n": 5,
+   "sources": [
+    "S1",
+    "S2",
+    "S3",
+    "S4",
+    "S5"
+   ],
+   "best_score": 0.553
+  },
+  {
+   "seq": 3,
+   "t_ms": 4653,
+   "type": "answer",
+   "abstained": false,
+   "citations": [
+    "S1",
+    "S2",
+    "S3"
+   ]
+  }
+ ],
+ "validation": {
+  "n_cited_sentences": 1,
+  "n_supported": 1,
+  "support_rate": 1.0,
+  "invalid_ids": [],
+  "unsupported": [],
+  "uncited_numeric_sentences": []
+ },
+ "metrics": {
+  "latency_s": 4.65,
+  "llm_calls": 1,
+  "prompt_tokens": 1049,
+  "completion_tokens": 26,
+  "tool_calls": 1,
+  "replans": 0,
+  "steps": 1
+ },
+ "system": "standard_rag",
+ "config": {
+  "top_k": 5
+ }
+}

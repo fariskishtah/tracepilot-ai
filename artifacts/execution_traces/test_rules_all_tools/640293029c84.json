@@ -1,0 +1,215 @@
+{
+ "request_id": "640293029c84",
+ "question": "How many orders in the data_orders dataset have the status refunded?",
+ "answer": "I could not find sufficiently supported evidence in the selected knowledge base to answer this question.",
+ "abstained": true,
+ "stop_reason": "insufficient_evidence",
+ "plan": {
+  "question_type": "data_analysis",
+  "complexity": "simple",
+  "requires_retrieval": false,
+  "requires_calculation": false,
+  "requires_data_analysis": true,
+  "requires_comparison": false,
+  "subtasks": [
+   {
+    "id": "t1",
+    "tool": "analyze_dataset",
+    "goal": "mean of status",
+    "query": null,
+    "dataset_id": "data_orders",
+    "operation": "mean",
+    "column": "status",
+    "group_by": null,
+    "agg": null,
+    "filters": null,
+    "expression": null,
+    "aspects": null,
+    "depends_on": []
+   }
+  ],
+  "rationale": "rule-based plan from question features"
+ },
+ "plan_source": "rules",
+ "tool_sequence": [
+  "analyze_dataset"
+ ],
+ "citations": [],
+ "evidence": {},
+ "trace": [
+  {
+   "seq": 1,
+   "t_ms": 0,
+   "type": "request_received",
+   "question": "How many orders in the data_orders dataset have the status refunded?",
+   "scope": null,
+   "tools": [
+    "search_knowledge_base",
+    "retrieve_source_context",
+    "summarize_evidence",
+    "analyze_dataset",
+    "calculate_expression",
+    "compare_evidence",
+    "refine_search_query"
+   ],
+   "planner": "rules",
+   "replanning": false,
+   "llm": "qwen2.5:3b-instruct",
+   "registry_version": "1.0.0"
+  },
+  {
+   "seq": 2,
+   "t_ms": 0,
+   "type": "question_analysis",
+   "calc_cue": true,
+   "data_cue": true,
+   "compare_cue": false,
+   "summary_cue": false,
+   "multi_cue": false,
+   "named_datasets": [
+    "data_orders"
+   ],
+   "length_words": 11,
+   "needs_data": true,
+   "explicit_dataset": true,
+   "literal_numbers": [],
+   "needs_calc": false,
+   "concept_cue": true
+  },
+  {
+   "seq": 3,
+   "t_ms": 4,
+   "type": "plan_created",
+   "source": "rules",
+   "question_type": "data_analysis",
+   "complexity": "simple",
+   "requires": {
+    "retrieval": false,
+    "calculation": false,
+    "data_analysis": true,
+    "comparison": false
+   },
+   "summary": "rule-based plan from question features",
+   "adjustments": [],
+   "note": "",
+   "subtasks": [
+    {
+     "id": "t1",
+     "tool": "analyze_dataset",
+     "goal": "mean of status",
+     "depends_on": []
+    }
+   ]
+  },
+  {
+   "seq": 4,
+   "t_ms": 4,
+   "type": "tool_selected",
+   "step": "t1",
+   "tool": "analyze_dataset",
+   "goal": "mean of status",
+   "attempt": 1,
+   "args": {
+    "dataset_id": "data_orders",
+    "operation": "mean",
+    "column": "status"
+   }
+  },
+  {
+   "seq": 5,
+   "t_ms": 5,
+   "type": "tool_result",
+   "step": "t1",
+   "tool": "analyze_dataset",
+   "ok": false,
+   "ms": 1.3,
+   "summary": "",
+   "evidence_ids": [],
+   "error": "column 'status' is not numeric (dtype object)",
+   "error_type": "tool_error"
+  },
+  {
+   "seq": 6,
+   "t_ms": 5,
+   "type": "validation",
+   "sufficient": false,
+   "steps": {
+    "t1": {
+     "status": "failed",
+     "sufficient": null
+    }
+   },
+   "problems": [
+    {
+     "step": "t1",
+     "kind": "analysis_error"
+    }
+   ]
+  },
+  {
+   "seq": 7,
+   "t_ms": 5,
+   "type": "replan_skipped",
+   "reason": "replanning disabled",
+   "unresolved": [
+    "t1"
+   ]
+  },
+  {
+   "seq": 8,
+   "t_ms": 5,
+   "type": "abstain",
+   "reason": "no step produced sufficiently relevant evidence",
+   "searched": []
+  },
+  {
+   "seq": 9,
+   "t_ms": 5,
+   "type": "answer",
+   "abstained": true,
+   "citations": []
+  },
+  {
+   "seq": 10,
+   "t_ms": 5,
+   "type": "completed",
+   "stop_reason": "insufficient_evidence",
+   "latency_s": 0.0
+  }
+ ],
+ "validation": {},
+ "metrics": {
+  "latency_s": 0.0,
+  "llm_calls": 0,
+  "prompt_tokens": 0,
+  "completion_tokens": 0,
+  "tool_calls": 1,
+  "replans": 0,
+  "steps": 1,
+  "errors": [
+   "t1:analyze_dataset:tool_error"
+  ],
+  "step_status": {
+   "t1": "failed"
+  },
+  "removed_unsupported": 0,
+  "injection_flags": []
+ },
+ "system": "agentic",
+ "config": {
+  "name": "rules_all_tools",
+  "planner": "rules",
+  "replan": false,
+  "tools": [
+   "search_knowledge_base",
+   "retrieve_source_context",
+   "summarize_evidence",
+   "analyze_dataset",
+   "calculate_expression",
+   "compare_evidence",
+   "refine_search_query"
+  ],
+  "model": "qwen2.5:3b-instruct",
+  "registry_version": "1.0.0"
+ }
+}

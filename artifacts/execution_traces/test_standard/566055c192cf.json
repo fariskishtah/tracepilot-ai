@@ -1,0 +1,198 @@
+{
+ "request_id": "566055c192cf",
+ "question": "According to the Python quick reference notes, what does PEP 8 recommend for indentation and naming?",
+ "answer": "PEP 8 recommends four spaces per indentation level [S1] and snake_case for functions and variables [S1] [S2].",
+ "abstained": false,
+ "stop_reason": "answered",
+ "plan": null,
+ "plan_source": "none",
+ "tool_sequence": [
+  "search_knowledge_base"
+ ],
+ "citations": [
+  {
+   "id": "S1",
+   "kind": "document",
+   "title": "Python Reference Notes",
+   "text": "STYLE\nPEP 8 recommends four spaces per indentation level, snake_case for functions and variables, CapWords for class names, and lines under 79 characters.",
+   "doc_id": "python_reference_notes",
+   "course_id": "python",
+   "location": "STYLE",
+   "chunk_id": "python_reference_notes:0005",
+   "score": 0.6789,
+   "data": {
+    "file_type": "txt",
+    "page": null,
+    "section": "STYLE",
+    "filename": "python_reference_notes.txt"
+   },
+   "derived_from": []
+  },
+  {
+   "id": "S2",
+   "kind": "document",
+   "title": "Python Reference Notes",
+   "text": "PYTHON QUICK REFERENCE NOTES (original demo material, CC BY 4.0)\n===============================================================",
+   "doc_id": "python_reference_notes",
+   "course_id": "python",
+   "location": "-",
+   "chunk_id": "python_reference_notes:0000",
+   "score": 0.4612,
+   "data": {
+    "file_type": "txt",
+    "page": null,
+    "section": null,
+    "filename": "python_reference_notes.txt"
+   },
+   "derived_from": []
+  }
+ ],
+ "evidence": {
+  "S1": {
+   "id": "S1",
+   "kind": "document",
+   "title": "Python Reference Notes",
+   "text": "STYLE\nPEP 8 recommends four spaces per indentation level, snake_case for functions and variables, CapWords for class names, and lines under 79 characters.",
+   "doc_id": "python_reference_notes",
+   "course_id": "python",
+   "location": "STYLE",
+   "chunk_id": "python_reference_notes:0005",
+   "score": 0.6789,
+   "data": {
+    "file_type": "txt",
+    "page": null,
+    "section": "STYLE",
+    "filename": "python_reference_notes.txt"
+   },
+   "derived_from": []
+  },
+  "S2": {
+   "id": "S2",
+   "kind": "document",
+   "title": "Python Reference Notes",
+   "text": "PYTHON QUICK REFERENCE NOTES (original demo material, CC BY 4.0)\n===============================================================",
+   "doc_id": "python_reference_notes",
+   "course_id": "python",
+   "location": "-",
+   "chunk_id": "python_reference_notes:0000",
+   "score": 0.4612,
+   "data": {
+    "file_type": "txt",
+    "page": null,
+    "section": null,
+    "filename": "python_reference_notes.txt"
+   },
+   "derived_from": []
+  },
+  "S3": {
+   "id": "S3",
+   "kind": "document",
+   "title": "Python Lecture Notes",
+   "text": "Python Lecture Notes\nPython Programming - independently written demonstration notes. Not official university material.",
+   "doc_id": "python_lecture_notes",
+   "course_id": "python",
+   "location": "p.1",
+   "chunk_id": "python_lecture_notes:0000",
+   "score": 0.4171,
+   "data": {
+    "file_type": "pdf",
+    "page": 1,
+    "section": null,
+    "filename": "python_lecture_notes.pdf"
+   },
+   "derived_from": []
+  },
+  "S4": {
+   "id": "S4",
+   "kind": "document",
+   "title": "Python Reference Notes",
+   "text": "COMMON ERRORS AND THEIR MEANING\nSyntaxError: the code is not valid Python, for example a missing colon after if.\nIndentationError: the indentation of a block is inconsistent.\nNameError: a variable or function name was used before it was defined.\nTypeError: an operation was applied to the wrong type, such as \"a\" + 1.\nValueError: the type is right but the value is not, such as int(\"abc\").\nKeyError: a dictionary key does not exist.\nIndexError: a list index is outside the valid range.\nZeroDivisionError: division or modulo by zero.\nFileNotFoundError: the file path does not exist.",
+   "doc_id": "python_reference_notes",
+   "course_id": "python",
+   "location": "COMMON ERRORS AND THEIR MEANING",
+   "chunk_id": "python_reference_notes:0002",
+   "score": 0.3963,
+   "data": {
+    "file_type": "txt",
+    "page": null,
+    "section": "COMMON ERRORS AND THEIR MEANING",
+    "filename": "python_reference_notes.txt"
+   },
+   "derived_from": []
+  },
+  "S5": {
+   "id": "S5",
+   "kind": "document",
+   "title": "Python Lecture Notes",
+   "text": "2. Conditionals and Loops Conditionals use if, elif and else. Python uses indentation, normally four spaces, to define blocks; there are no braces. Only the first branch whose condition is true runs. Comparison operators are ==, !=, <, >, <= and >=; logical operators are and, or and not. Values such as 0, 0.0, \"\", [] and None are falsy; almost everything else is truthy. A for loop iterates over any iterable: for ch in \"abc\" visits each character, and for i in range(5) visits 0, 1, 2, 3, 4. range(start, stop, step) never includes stop. A while loop repeats as long as its condition is true, so the loop body must change something that eventually makes the condition false; otherwise you create an infinite loop. break leaves the nearest loop immediately. continue skips to the next iteration. A loop can have an else clause that runs only when the loop finished without hitting break.",
+   "doc_id": "python_lecture_notes",
+   "course_id": "python",
+   "location": "p.3",
+   "chunk_id": "python_lecture_notes:0003",
+   "score": 0.3055,
+   "data": {
+    "file_type": "pdf",
+    "page": 3,
+    "section": "2. Conditionals and Loops",
+    "filename": "python_lecture_notes.pdf"
+   },
+   "derived_from": []
+  }
+ },
+ "trace": [
+  {
+   "seq": 1,
+   "t_ms": 0,
+   "type": "request_received",
+   "question": "According to the Python quick reference notes, what does PEP 8 recommend for indentation and naming?",
+   "scope": null,
+   "system": "standard_rag"
+  },
+  {
+   "seq": 2,
+   "t_ms": 73,
+   "type": "retrieval",
+   "query": "According to the Python quick reference notes, what does PEP 8 recommend for indentation and naming?",
+   "n": 5,
+   "sources": [
+    "S1",
+    "S2",
+    "S3",
+    "S4",
+    "S5"
+   ],
+   "best_score": 0.679
+  },
+  {
+   "seq": 3,
+   "t_ms": 3725,
+   "type": "answer",
+   "abstained": false,
+   "citations": [
+    "S1",
+    "S2"
+   ]
+  }
+ ],
+ "validation": {
+  "n_cited_sentences": 1,
+  "n_supported": 1,
+  "support_rate": 1.0,
+  "invalid_ids": [],
+  "unsupported": [],
+  "uncited_numeric_sentences": []
+ },
+ "metrics": {
+  "latency_s": 3.73,
+  "llm_calls": 1,
+  "prompt_tokens": 755,
+  "completion_tokens": 30,
+  "tool_calls": 1,
+  "replans": 0,
+  "steps": 1
+ },
+ "system": "standard_rag",
+ "config": {
+  "top_k": 5
+ }
+}

@@ -1,0 +1,198 @@
+{
+ "request_id": "b42195faf9a9",
+ "question": "Which Python version introduced itertools.batched?",
+ "answer": "row 10: entry_id=LIB010; identifier=itertools.batched; module=itertools; returns=iterator; min_python=3.12; note=Yields tuples of a fixed length n [S2] Which Python version does the course use? [S4]",
+ "abstained": false,
+ "stop_reason": "answered",
+ "plan": null,
+ "plan_source": "none",
+ "tool_sequence": [
+  "search_knowledge_base"
+ ],
+ "citations": [
+  {
+   "id": "S2",
+   "kind": "document",
+   "title": "Python Library Cheatsheet",
+   "text": "row 9: entry_id=LIB009; identifier=itertools.pairwise; module=itertools; returns=iterator; min_python=3.10; note=Yields overlapping pairs: (a, b), (b, c), ...\nrow 10: entry_id=LIB010; identifier=itertools.batched; module=itertools; returns=iterator; min_python=3.12; note=Yields tuples of a fixed length n\nrow 11: entry_id=LIB011; identifier=zip(strict=True); module=builtins; returns=iterator; min_python=3.10; note=Raises ValueError if the iterables have different lengths\nrow 12: entry_id=LIB012; identifier=tomllib; module=tomllib; returns=module; min_python=3.11; note=Reads TOML files; read-only, no writing\nrow 13: entry_id=LIB013; identifier=except*; module=syntax; returns=n/a; min_python=3.11; note=Handles an ExceptionGroup\nrow 14: entry_id=LIB014; identifier=match statement; module=syntax; returns=n/a; min_python=3.10; note=Structural pattern matching\nrow 15: entry_id=LIB015; identifier=dict | dict; module=syntax; returns=dict; min_python=3.9; note=Merge operator returning a new dictionary\nrow 16: entry_id=LIB016; identifier=pathlib.Path.read_text; module=pathlib; returns=str; min_python=3.5; note=Reads a whole text file in one call",
+   "doc_id": "python_library_cheatsheet",
+   "course_id": "python",
+   "location": "rows 9-16",
+   "chunk_id": "python_library_cheatsheet:0002",
+   "score": 0.3403,
+   "data": {
+    "file_type": "csv",
+    "page": null,
+    "section": "data rows",
+    "filename": "python_library_cheatsheet.csv"
+   },
+   "derived_from": []
+  },
+  {
+   "id": "S4",
+   "kind": "document",
+   "title": "Python Faq Style Addendum",
+   "text": "Frequently Asked Questions\nWhich Python version does the course use? The course uses Python 3.12 in all examples and tests.\nWhich editor should I use? Any editor is allowed; VS Code is used in the demonstrations.\nIs the statistics module allowed in assignments? Yes. statistics.variance(data) returns the sample variance, while statistics.pvariance(data) returns the population variance. In the same way statistics.stdev is the sample standard deviation and statistics.pstdev is the population standard deviation.\nWhere do I ask questions? Post them on the course forum; answers are usually given within two working days.",
+   "doc_id": "python_faq_style_addendum",
+   "course_id": "python",
+   "location": "Frequently Asked Questions",
+   "chunk_id": "python_faq_style_addendum:0002",
+   "score": 0.2821,
+   "data": {
+    "file_type": "docx",
+    "page": null,
+    "section": "Frequently Asked Questions",
+    "filename": "python_faq_style_addendum.docx"
+   },
+   "derived_from": []
+  }
+ ],
+ "evidence": {
+  "S1": {
+   "id": "S1",
+   "kind": "document",
+   "title": "Python Lecture Notes",
+   "text": "Python Lecture Notes\nPython Programming - independently written demonstration notes. Not official university material.",
+   "doc_id": "python_lecture_notes",
+   "course_id": "python",
+   "location": "p.1",
+   "chunk_id": "python_lecture_notes:0000",
+   "score": 0.4179,
+   "data": {
+    "file_type": "pdf",
+    "page": 1,
+    "section": null,
+    "filename": "python_lecture_notes.pdf"
+   },
+   "derived_from": []
+  },
+  "S2": {
+   "id": "S2",
+   "kind": "document",
+   "title": "Python Library Cheatsheet",
+   "text": "row 9: entry_id=LIB009; identifier=itertools.pairwise; module=itertools; returns=iterator; min_python=3.10; note=Yields overlapping pairs: (a, b), (b, c), ...\nrow 10: entry_id=LIB010; identifier=itertools.batched; module=itertools; returns=iterator; min_python=3.12; note=Yields tuples of a fixed length n\nrow 11: entry_id=LIB011; identifier=zip(strict=True); module=builtins; returns=iterator; min_python=3.10; note=Raises ValueError if the iterables have different lengths\nrow 12: entry_id=LIB012; identifier=tomllib; module=tomllib; returns=module; min_python=3.11; note=Reads TOML files; read-only, no writing\nrow 13: entry_id=LIB013; identifier=except*; module=syntax; returns=n/a; min_python=3.11; note=Handles an ExceptionGroup\nrow 14: entry_id=LIB014; identifier=match statement; module=syntax; returns=n/a; min_python=3.10; note=Structural pattern matching\nrow 15: entry_id=LIB015; identifier=dict | dict; module=syntax; returns=dict; min_python=3.9; note=Merge operator returning a new dictionary\nrow 16: entry_id=LIB016; identifier=pathlib.Path.read_text; module=pathlib; returns=str; min_python=3.5; note=Reads a whole text file in one call",
+   "doc_id": "python_library_cheatsheet",
+   "course_id": "python",
+   "location": "rows 9-16",
+   "chunk_id": "python_library_cheatsheet:0002",
+   "score": 0.3403,
+   "data": {
+    "file_type": "csv",
+    "page": null,
+    "section": "data rows",
+    "filename": "python_library_cheatsheet.csv"
+   },
+   "derived_from": []
+  },
+  "S3": {
+   "id": "S3",
+   "kind": "document",
+   "title": "Python Reference Notes",
+   "text": "PYTHON QUICK REFERENCE NOTES (original demo material, CC BY 4.0)\n===============================================================",
+   "doc_id": "python_reference_notes",
+   "course_id": "python",
+   "location": "-",
+   "chunk_id": "python_reference_notes:0000",
+   "score": 0.3755,
+   "data": {
+    "file_type": "txt",
+    "page": null,
+    "section": null,
+    "filename": "python_reference_notes.txt"
+   },
+   "derived_from": []
+  },
+  "S4": {
+   "id": "S4",
+   "kind": "document",
+   "title": "Python Faq Style Addendum",
+   "text": "Frequently Asked Questions\nWhich Python version does the course use? The course uses Python 3.12 in all examples and tests.\nWhich editor should I use? Any editor is allowed; VS Code is used in the demonstrations.\nIs the statistics module allowed in assignments? Yes. statistics.variance(data) returns the sample variance, while statistics.pvariance(data) returns the population variance. In the same way statistics.stdev is the sample standard deviation and statistics.pstdev is the population standard deviation.\nWhere do I ask questions? Post them on the course forum; answers are usually given within two working days.",
+   "doc_id": "python_faq_style_addendum",
+   "course_id": "python",
+   "location": "Frequently Asked Questions",
+   "chunk_id": "python_faq_style_addendum:0002",
+   "score": 0.2821,
+   "data": {
+    "file_type": "docx",
+    "page": null,
+    "section": "Frequently Asked Questions",
+    "filename": "python_faq_style_addendum.docx"
+   },
+   "derived_from": []
+  },
+  "S5": {
+   "id": "S5",
+   "kind": "document",
+   "title": "Python Exercise Guide",
+   "text": "Python Exercise Guide\nIndependently written demonstration material (CC BY 4.0). Not official university material.",
+   "doc_id": "python_exercise_guide",
+   "course_id": "python",
+   "location": "Python Exercise Guide",
+   "chunk_id": "python_exercise_guide:0000",
+   "score": 0.3219,
+   "data": {
+    "file_type": "docx",
+    "page": null,
+    "section": "Python Exercise Guide",
+    "filename": "python_exercise_guide.docx"
+   },
+   "derived_from": []
+  }
+ },
+ "trace": [
+  {
+   "seq": 1,
+   "t_ms": 0,
+   "type": "request_received",
+   "question": "Which Python version introduced itertools.batched?",
+   "scope": null,
+   "system": "standard_rag"
+  },
+  {
+   "seq": 2,
+   "t_ms": 19,
+   "type": "retrieval",
+   "query": "Which Python version introduced itertools.batched?",
+   "n": 5,
+   "sources": [
+    "S1",
+    "S2",
+    "S3",
+    "S4",
+    "S5"
+   ],
+   "best_score": 0.418
+  },
+  {
+   "seq": 3,
+   "t_ms": 5332,
+   "type": "answer",
+   "abstained": false,
+   "citations": [
+    "S2",
+    "S4"
+   ]
+  }
+ ],
+ "validation": {
+  "n_cited_sentences": 1,
+  "n_supported": 1,
+  "support_rate": 1.0,
+  "invalid_ids": [],
+  "unsupported": [],
+  "uncited_numeric_sentences": []
+ },
+ "metrics": {
+  "latency_s": 5.33,
+  "llm_calls": 2,
+  "prompt_tokens": 1632,
+  "completion_tokens": 60,
+  "tool_calls": 1,
+  "replans": 0,
+  "steps": 1
+ },
+ "system": "standard_rag",
+ "config": {
+  "top_k": 5
+ }
+}

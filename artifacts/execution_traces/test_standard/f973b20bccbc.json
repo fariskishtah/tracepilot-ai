@@ -1,0 +1,198 @@
+{
+ "request_id": "f973b20bccbc",
+ "question": "Compare precision and recall.",
+ "answer": "Precision and recall are different metrics, precision focusing on correctly identifying positive examples (S1). [S1] Recall, on the other hand, measures how many of the actual positive examples are correctly identified (S1). [S2]",
+ "abstained": false,
+ "stop_reason": "answered",
+ "plan": null,
+ "plan_source": "none",
+ "tool_sequence": [
+  "search_knowledge_base"
+ ],
+ "citations": [
+  {
+   "id": "S1",
+   "kind": "document",
+   "title": "Ml Lecture Notes",
+   "text": "4. Evaluation Metrics for Classification A confusion matrix counts true positives (TP), false positives (FP), true negatives (TN) and false negatives (FN). Accuracy is (TP + TN) divided by all examples. Accuracy is misleading on imbalanced data: a model that always predicts the majority class can reach 99% accuracy while detecting nothing. Precision = TP / (TP + FP) answers \"of the examples predicted positive, how many are truly positive?\". Recall (sensitivity) = TP / (TP + FN) answers \"of the truly positive examples, how many did we find?\". The F1 score is the harmonic mean of precision and recall: 2 * precision * recall / (precision + recall). Raising the decision threshold usually increases precision and lowers recall. The ROC curve plots the true positive rate against the false positive rate across thresholds, and AUC summarizes it: 0.5 is random guessing and 1.0 is perfect ranking.",
+   "doc_id": "ml_lecture_notes",
+   "course_id": "ml",
+   "location": "p.5",
+   "chunk_id": "ml_lecture_notes:0006",
+   "score": 0.6036,
+   "data": {
+    "file_type": "pdf",
+    "page": 5,
+    "section": "4. Evaluation Metrics for Classification",
+    "filename": "ml_lecture_notes.pdf"
+   },
+   "derived_from": []
+  },
+  {
+   "id": "S2",
+   "kind": "document",
+   "title": "Ml Exercise Guide",
+   "text": "Assignment 2: Choosing a Metric\nTask. A fraud detection dataset has 1% fraudulent transactions. A teammate reports 99% accuracy. Decide whether the model is good.\nExpected answer. Accuracy is not informative here because a model that predicts \"not fraud\" for everything also reaches 99%. Evaluate precision, recall, F1 and the precision-recall curve. In fraud detection, missing a fraud (a false negative) is usually costly, so recall is emphasized, while precision controls how many legitimate customers are inconvenienced.",
+   "doc_id": "ml_exercise_guide",
+   "course_id": "ml",
+   "location": "Assignment 2: Choosing a Metric",
+   "chunk_id": "ml_exercise_guide:0002",
+   "score": 0.5788,
+   "data": {
+    "file_type": "docx",
+    "page": null,
+    "section": "Assignment 2: Choosing a Metric",
+    "filename": "ml_exercise_guide.docx"
+   },
+   "derived_from": []
+  }
+ ],
+ "evidence": {
+  "S1": {
+   "id": "S1",
+   "kind": "document",
+   "title": "Ml Lecture Notes",
+   "text": "4. Evaluation Metrics for Classification A confusion matrix counts true positives (TP), false positives (FP), true negatives (TN) and false negatives (FN). Accuracy is (TP + TN) divided by all examples. Accuracy is misleading on imbalanced data: a model that always predicts the majority class can reach 99% accuracy while detecting nothing. Precision = TP / (TP + FP) answers \"of the examples predicted positive, how many are truly positive?\". Recall (sensitivity) = TP / (TP + FN) answers \"of the truly positive examples, how many did we find?\". The F1 score is the harmonic mean of precision and recall: 2 * precision * recall / (precision + recall). Raising the decision threshold usually increases precision and lowers recall. The ROC curve plots the true positive rate against the false positive rate across thresholds, and AUC summarizes it: 0.5 is random guessing and 1.0 is perfect ranking.",
+   "doc_id": "ml_lecture_notes",
+   "course_id": "ml",
+   "location": "p.5",
+   "chunk_id": "ml_lecture_notes:0006",
+   "score": 0.6036,
+   "data": {
+    "file_type": "pdf",
+    "page": 5,
+    "section": "4. Evaluation Metrics for Classification",
+    "filename": "ml_lecture_notes.pdf"
+   },
+   "derived_from": []
+  },
+  "S2": {
+   "id": "S2",
+   "kind": "document",
+   "title": "Ml Exercise Guide",
+   "text": "Assignment 2: Choosing a Metric\nTask. A fraud detection dataset has 1% fraudulent transactions. A teammate reports 99% accuracy. Decide whether the model is good.\nExpected answer. Accuracy is not informative here because a model that predicts \"not fraud\" for everything also reaches 99%. Evaluate precision, recall, F1 and the precision-recall curve. In fraud detection, missing a fraud (a false negative) is usually costly, so recall is emphasized, while precision controls how many legitimate customers are inconvenienced.",
+   "doc_id": "ml_exercise_guide",
+   "course_id": "ml",
+   "location": "Assignment 2: Choosing a Metric",
+   "chunk_id": "ml_exercise_guide:0002",
+   "score": 0.5788,
+   "data": {
+    "file_type": "docx",
+    "page": null,
+    "section": "Assignment 2: Choosing a Metric",
+    "filename": "ml_exercise_guide.docx"
+   },
+   "derived_from": []
+  },
+  "S3": {
+   "id": "S3",
+   "kind": "document",
+   "title": "Ml Reference Notes",
+   "text": "training and validation data because the model is too simple. Bias: error from wrong or overly simple assumptions.  Variance: error from sensitivity to the specific training sample. Cross-validation: repeated training on different train/validation splits to estimate performance reliably. Data leakage: using information during training that would not be available at prediction time. Confusion matrix: a table of TP, FP, TN and FN counts. Precision: TP / (TP + FP). Recall: TP / (TP + FN). F1: harmonic mean of precision and recall. ROC AUC: area under the receiver operating characteristic curve; 0.5 means random ranking. Imbalanced data: classes occur with very different frequencies. One-hot encoding: representing a category as a binary vector with a single 1. Standardization: rescaling to mean 0 and standard deviation 1.",
+   "doc_id": "ml_reference_notes",
+   "course_id": "ml",
+   "location": "-",
+   "chunk_id": "ml_reference_notes:0002",
+   "score": 0.4409,
+   "data": {
+    "file_type": "txt",
+    "page": null,
+    "section": null,
+    "filename": "ml_reference_notes.txt"
+   },
+   "derived_from": []
+  },
+  "S4": {
+   "id": "S4",
+   "kind": "document",
+   "title": "Ml Model Evaluation Runs",
+   "text": "row 9: run_id=ML009; model=Gradient Boosting; task=fraud detection; train_accuracy=0.99; val_accuracy=0.985; precision=0.81; recall=0.74; f1=0.7734; notes=Highest F1 among fraud runs\nrow 10: run_id=ML010; model=Logistic Regression + class weights; task=fraud detection; train_accuracy=0.96; val_accuracy=0.95; precision=0.48; recall=0.83; f1=0.6082; notes=Recall up, precision down",
+   "doc_id": "ml_model_evaluation_runs",
+   "course_id": "ml",
+   "location": "rows 9-10",
+   "chunk_id": "ml_model_evaluation_runs:0002",
+   "score": 0.3893,
+   "data": {
+    "file_type": "csv",
+    "page": null,
+    "section": "data rows",
+    "filename": "ml_model_evaluation_runs.csv"
+   },
+   "derived_from": []
+  },
+  "S5": {
+   "id": "S5",
+   "kind": "document",
+   "title": "Statistics Confusable Terms",
+   "text": "standard deviation vs standard error: the standard deviation describes the spread of individual observations; the standard error describes the spread of a statistic such as the sample mean across repeated samples. confidence level vs confidence interval: the level (for example 95%) is a property of the procedure; the interval is the computed range of values. significance level vs p-value: alpha is chosen before the test; the p-value is computed from the data. covariance vs correlation: covariance carries the units of x times the units of y; correlation is unitless and always between -1 and 1. precision of a measurement: how close repeated measurements are to each other. Precision in classification is a different concept (see the machine learning course). normal: the normal distribution is the bell curve. It does not mean \"typical\" or \"healthy\" values.",
+   "doc_id": "statistics_confusable_terms",
+   "course_id": "statistics",
+   "location": "-",
+   "chunk_id": "statistics_confusable_terms:0001",
+   "score": 0.4404,
+   "data": {
+    "file_type": "txt",
+    "page": null,
+    "section": null,
+    "filename": "statistics_confusable_terms.txt"
+   },
+   "derived_from": []
+  }
+ },
+ "trace": [
+  {
+   "seq": 1,
+   "t_ms": 0,
+   "type": "request_received",
+   "question": "Compare precision and recall.",
+   "scope": null,
+   "system": "standard_rag"
+  },
+  {
+   "seq": 2,
+   "t_ms": 10,
+   "type": "retrieval",
+   "query": "Compare precision and recall.",
+   "n": 5,
+   "sources": [
+    "S1",
+    "S2",
+    "S3",
+    "S4",
+    "S5"
+   ],
+   "best_score": 0.604
+  },
+  {
+   "seq": 3,
+   "t_ms": 35400,
+   "type": "answer",
+   "abstained": false,
+   "citations": [
+    "S1",
+    "S2"
+   ]
+  }
+ ],
+ "validation": {
+  "n_cited_sentences": 1,
+  "n_supported": 1,
+  "support_rate": 1.0,
+  "invalid_ids": [],
+  "unsupported": [],
+  "uncited_numeric_sentences": []
+ },
+ "metrics": {
+  "latency_s": 35.4,
+  "llm_calls": 2,
+  "prompt_tokens": 2210,
+  "completion_tokens": 530,
+  "tool_calls": 1,
+  "replans": 0,
+  "steps": 1
+ },
+ "system": "standard_rag",
+ "config": {
+  "top_k": 5
+ }
+}

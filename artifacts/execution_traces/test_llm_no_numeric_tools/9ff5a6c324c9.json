@@ -1,0 +1,412 @@
+{
+ "request_id": "9ff5a6c324c9",
+ "question": "What is the median price_usd in the product prices dataset?",
+ "answer": "Dataset product_prices: 40 rows, columns: product_id, category, product_name, price_usd, units_sold. [S1] The median is the middle value of the sorted data and ignores how far the extremes lie. [S2]",
+ "abstained": false,
+ "stop_reason": "answered",
+ "plan": {
+  "question_type": "calculation",
+  "complexity": "moderate",
+  "requires_retrieval": true,
+  "requires_calculation": false,
+  "requires_data_analysis": false,
+  "requires_comparison": false,
+  "subtasks": [
+   {
+    "id": "t1",
+    "tool": "search_knowledge_base",
+    "goal": "find evidence",
+    "query": "What is the median price_usd in the product prices dataset?",
+    "dataset_id": null,
+    "operation": null,
+    "column": null,
+    "group_by": null,
+    "agg": null,
+    "filters": null,
+    "expression": null,
+    "aspects": null,
+    "depends_on": []
+   }
+  ],
+  "rationale": "LLM plan: 1 step(s)"
+ },
+ "plan_source": "llm",
+ "tool_sequence": [
+  "search_knowledge_base"
+ ],
+ "citations": [
+  {
+   "id": "S1",
+   "kind": "document",
+   "title": "Product Prices",
+   "text": "Dataset product_prices: 40 rows, columns: product_id, category, product_name, price_usd, units_sold.",
+   "doc_id": "product_prices",
+   "course_id": "data",
+   "location": "dataset overview",
+   "chunk_id": "product_prices:0000",
+   "score": 0.6763,
+   "data": {
+    "file_type": "csv",
+    "page": null,
+    "section": "dataset overview",
+    "filename": "product_prices.csv"
+   },
+   "derived_from": []
+  },
+  {
+   "id": "S2",
+   "kind": "document",
+   "title": "Statistics Robust Summaries",
+   "text": "The mean is the sum of the values divided by their count, so every value, including extreme ones,\npulls it. The median is the middle value of the sorted data and ignores how far the extremes lie.\nWhen a distribution is right-skewed (a long tail of a few very large values, as with prices or\nincomes) a few large values drag the mean upward while the median stays near the typical value, so\nthe mean exceeds the median. When the data are symmetric the two are close. A large gap between the\nmean and the median is therefore a quick diagnostic for skew or outliers. For skewed data, report\nthe median (or both) because it better describes a typical observation.",
+   "doc_id": "statistics_robust_summaries",
+   "course_id": "statistics",
+   "location": "ROBUST SUMMARIES: WHY THE MEAN AND THE MEDIAN DIFFER",
+   "chunk_id": "statistics_robust_summaries:0001",
+   "score": 0.3662,
+   "data": {
+    "file_type": "txt",
+    "page": null,
+    "section": "ROBUST SUMMARIES: WHY THE MEAN AND THE MEDIAN DIFFER",
+    "filename": "statistics_robust_summaries.txt"
+   },
+   "derived_from": []
+  }
+ ],
+ "evidence": {
+  "S1": {
+   "id": "S1",
+   "kind": "document",
+   "title": "Product Prices",
+   "text": "Dataset product_prices: 40 rows, columns: product_id, category, product_name, price_usd, units_sold.",
+   "doc_id": "product_prices",
+   "course_id": "data",
+   "location": "dataset overview",
+   "chunk_id": "product_prices:0000",
+   "score": 0.6763,
+   "data": {
+    "file_type": "csv",
+    "page": null,
+    "section": "dataset overview",
+    "filename": "product_prices.csv"
+   },
+   "derived_from": []
+  },
+  "S2": {
+   "id": "S2",
+   "kind": "document",
+   "title": "Statistics Robust Summaries",
+   "text": "The mean is the sum of the values divided by their count, so every value, including extreme ones,\npulls it. The median is the middle value of the sorted data and ignores how far the extremes lie.\nWhen a distribution is right-skewed (a long tail of a few very large values, as with prices or\nincomes) a few large values drag the mean upward while the median stays near the typical value, so\nthe mean exceeds the median. When the data are symmetric the two are close. A large gap between the\nmean and the median is therefore a quick diagnostic for skew or outliers. For skewed data, report\nthe median (or both) because it better describes a typical observation.",
+   "doc_id": "statistics_robust_summaries",
+   "course_id": "statistics",
+   "location": "ROBUST SUMMARIES: WHY THE MEAN AND THE MEDIAN DIFFER",
+   "chunk_id": "statistics_robust_summaries:0001",
+   "score": 0.3662,
+   "data": {
+    "file_type": "txt",
+    "page": null,
+    "section": "ROBUST SUMMARIES: WHY THE MEAN AND THE MEDIAN DIFFER",
+    "filename": "statistics_robust_summaries.txt"
+   },
+   "derived_from": []
+  },
+  "S3": {
+   "id": "S3",
+   "kind": "document",
+   "title": "Data Orders",
+   "text": "Dataset data_orders: 30 rows, columns: order_id, customer_id, region, amount, status.",
+   "doc_id": "data_orders",
+   "course_id": "data",
+   "location": "dataset overview",
+   "chunk_id": "data_orders:0000",
+   "score": 0.3927,
+   "data": {
+    "file_type": "csv",
+    "page": null,
+    "section": "dataset overview",
+    "filename": "data_orders.csv"
+   },
+   "derived_from": []
+  },
+  "S4": {
+   "id": "S4",
+   "kind": "document",
+   "title": "Product Prices",
+   "text": "row 1: product_id=P001; category=Accessories; product_name=Accessories item 1; price_usd=21.28; units_sold=80\nrow 2: product_id=P002; category=Audio; product_name=Audio item 2; price_usd=90.66; units_sold=55\nrow 3: product_id=P003; category=Computing; product_name=Computing item 3; price_usd=402.6; units_sold=28\nrow 4: product_id=P004; category=Home; product_name=Home item 4; price_usd=21.99; units_sold=15\nrow 5: product_id=P005; category=Accessories; product_name=Accessories item 5; price_usd=19.31; units_sold=87\nrow 6: product_id=P006; category=Audio; product_name=Audio item 6; price_usd=59.45; units_sold=95\nrow 7: product_id=P007; category=Computing; product_name=Computing item 7; price_usd=150.12; units_sold=62\nrow 8: product_id=P008; category=Home; product_name=Home item 8; price_usd=69.02; units_sold=47",
+   "doc_id": "product_prices",
+   "course_id": "data",
+   "location": "rows 1-8",
+   "chunk_id": "product_prices:0001",
+   "score": 0.3018,
+   "data": {
+    "file_type": "csv",
+    "page": null,
+    "section": "data rows",
+    "filename": "product_prices.csv"
+   },
+   "derived_from": []
+  },
+  "S5": {
+   "id": "S5",
+   "kind": "document",
+   "title": "Product Prices",
+   "text": "row 9: product_id=P009; category=Accessories; product_name=Accessories item 9; price_usd=18.67; units_sold=51\nrow 10: product_id=P010; category=Audio; product_name=Audio item 10; price_usd=77.59; units_sold=99\nrow 11: product_id=P011; category=Computing; product_name=Computing item 11; price_usd=149.61; units_sold=15\nrow 12: product_id=P012; category=Home; product_name=Home item 12; price_usd=26.56; units_sold=68\nrow 13: product_id=P013; category=Accessories; product_name=Accessories item 13; price_usd=29.18; units_sold=36\nrow 14: product_id=P014; category=Audio; product_name=Audio item 14; price_usd=54.2; units_sold=77\nrow 15: product_id=P015; category=Computing; product_name=Computing item 15; price_usd=165.03; units_sold=12\nrow 16: product_id=P016; category=Home; product_name=Home item 16; price_usd=41.33; units_sold=116",
+   "doc_id": "product_prices",
+   "course_id": "data",
+   "location": "rows 9-16",
+   "chunk_id": "product_prices:0002",
+   "score": 0.3011,
+   "data": {
+    "file_type": "csv",
+    "page": null,
+    "section": "data rows",
+    "filename": "product_prices.csv"
+   },
+   "derived_from": []
+  }
+ },
+ "trace": [
+  {
+   "seq": 1,
+   "t_ms": 0,
+   "type": "request_received",
+   "question": "What is the median price_usd in the product prices dataset?",
+   "scope": null,
+   "tools": [
+    "search_knowledge_base",
+    "retrieve_source_context",
+    "summarize_evidence",
+    "compare_evidence",
+    "refine_search_query"
+   ],
+   "planner": "llm",
+   "replanning": false,
+   "llm": "qwen2.5:3b-instruct",
+   "registry_version": "1.0.0"
+  },
+  {
+   "seq": 2,
+   "t_ms": 4,
+   "type": "question_analysis",
+   "calc_cue": true,
+   "data_cue": true,
+   "compare_cue": false,
+   "summary_cue": false,
+   "multi_cue": false,
+   "named_datasets": [
+    "product_prices"
+   ],
+   "length_words": 10,
+   "needs_data": true,
+   "explicit_dataset": true,
+   "literal_numbers": [],
+   "needs_calc": false,
+   "concept_cue": true
+  },
+  {
+   "seq": 3,
+   "t_ms": 2871,
+   "type": "plan_created",
+   "source": "llm",
+   "question_type": "calculation",
+   "complexity": "moderate",
+   "requires": {
+    "retrieval": true,
+    "calculation": false,
+    "data_analysis": false,
+    "comparison": false
+   },
+   "summary": "LLM plan: 1 step(s)",
+   "adjustments": [
+    "removed t1: tool 'analyze_dataset' unavailable",
+    "added search (plan had no evidence-gathering step)"
+   ],
+   "note": "",
+   "subtasks": [
+    {
+     "id": "t1",
+     "tool": "search_knowledge_base",
+     "goal": "find evidence",
+     "depends_on": []
+    }
+   ]
+  },
+  {
+   "seq": 4,
+   "t_ms": 2871,
+   "type": "tool_selected",
+   "step": "t1",
+   "tool": "search_knowledge_base",
+   "goal": "find evidence",
+   "attempt": 1,
+   "args": {
+    "query": "What is the median price_usd in the product prices dataset?",
+    "course_ids": null,
+    "top_k": 5
+   }
+  },
+  {
+   "seq": 5,
+   "t_ms": 2919,
+   "type": "tool_result",
+   "step": "t1",
+   "tool": "search_knowledge_base",
+   "ok": true,
+   "ms": 47.0,
+   "summary": "5 chunks, best cosine 0.68",
+   "evidence_ids": [
+    "S1",
+    "S2",
+    "S3",
+    "S4",
+    "S5"
+   ],
+   "error": null,
+   "error_type": null,
+   "sufficient": true,
+   "relevance": {
+    "best_score": 0.676,
+    "keyword_coverage": 1.0,
+    "threshold": {
+     "min_best_score": 0.35,
+     "min_keyword_coverage": 0.35
+    }
+   },
+   "sources": [
+    {
+     "id": "S1",
+     "title": "Product Prices",
+     "location": "dataset overview",
+     "score": 0.676
+    },
+    {
+     "id": "S2",
+     "title": "Statistics Robust Summaries",
+     "location": "ROBUST SUMMARIES: WHY THE MEAN AND THE MEDIAN DIFFER",
+     "score": 0.366
+    },
+    {
+     "id": "S3",
+     "title": "Data Orders",
+     "location": "dataset overview",
+     "score": 0.393
+    },
+    {
+     "id": "S4",
+     "title": "Product Prices",
+     "location": "rows 1-8",
+     "score": 0.302
+    },
+    {
+     "id": "S5",
+     "title": "Product Prices",
+     "location": "rows 9-16",
+     "score": 0.301
+    }
+   ]
+  },
+  {
+   "seq": 6,
+   "t_ms": 2919,
+   "type": "validation",
+   "sufficient": true,
+   "steps": {
+    "t1": {
+     "status": "done",
+     "sufficient": true
+    }
+   },
+   "problems": []
+  },
+  {
+   "seq": 7,
+   "t_ms": 2919,
+   "type": "synthesis_started",
+   "evidence": [
+    "S1",
+    "S3",
+    "S2"
+   ],
+   "computed": [],
+   "gaps": []
+  },
+  {
+   "seq": 8,
+   "t_ms": 7339,
+   "type": "citation_check",
+   "n_cited_sentences": 1,
+   "n_supported": 0,
+   "support_rate": 0.0,
+   "invalid_ids": [],
+   "removed_unsupported": 1,
+   "regenerated": 1,
+   "injection_flags": [],
+   "fallback_extractive": true
+  },
+  {
+   "seq": 9,
+   "t_ms": 7339,
+   "type": "answer",
+   "abstained": false,
+   "citations": [
+    "S1",
+    "S2"
+   ]
+  },
+  {
+   "seq": 10,
+   "t_ms": 7339,
+   "type": "completed",
+   "stop_reason": "answered",
+   "latency_s": 7.34
+  }
+ ],
+ "validation": {
+  "n_cited_sentences": 1,
+  "n_supported": 0,
+  "support_rate": 0.0,
+  "invalid_ids": [],
+  "unsupported": [
+   {
+    "sentence": "[S1] The median is the middle value of the sorted data and ignores how far the extremes lie.",
+    "cited": [
+     "S1"
+    ],
+    "reason": "low support (cosine 0.15, word recall 0.00)",
+    "sim": 0.15
+   }
+  ],
+  "uncited_numeric_sentences": [
+   "Dataset product_prices: 40 rows, columns: product_id, category, product_name, price_usd, units_sold."
+  ]
+ },
+ "metrics": {
+  "latency_s": 7.34,
+  "llm_calls": 3,
+  "prompt_tokens": 2523,
+  "completion_tokens": 162,
+  "tool_calls": 1,
+  "replans": 0,
+  "steps": 1,
+  "errors": [],
+  "step_status": {
+   "t1": "done"
+  },
+  "removed_unsupported": 1,
+  "injection_flags": []
+ },
+ "system": "agentic",
+ "config": {
+  "name": "llm_no_numeric_tools",
+  "planner": "llm",
+  "replan": false,
+  "tools": [
+   "search_knowledge_base",
+   "retrieve_source_context",
+   "summarize_evidence",
+   "compare_evidence",
+   "refine_search_query"
+  ],
+  "model": "qwen2.5:3b-instruct",
+  "registry_version": "1.0.0"
+ }
+}

@@ -1,0 +1,158 @@
+{
+ "request_id": "87122a722111",
+ "question": "Who is the instructor of the machine learning course?",
+ "answer": "The provided documents do not contain information about the instructor of the machine learning course.",
+ "abstained": true,
+ "stop_reason": "insufficient_evidence",
+ "plan": null,
+ "plan_source": "none",
+ "tool_sequence": [
+  "search_knowledge_base"
+ ],
+ "citations": [],
+ "evidence": {
+  "S1": {
+   "id": "S1",
+   "kind": "document",
+   "title": "Ml Notation Abbreviations",
+   "text": "MACHINE LEARNING NOTATION AND ABBREVIATIONS (original course material, CC BY 4.0)\n====================================================================================",
+   "doc_id": "ml_notation_abbreviations",
+   "course_id": "ml",
+   "location": "-",
+   "chunk_id": "ml_notation_abbreviations:0000",
+   "score": 0.5263,
+   "data": {
+    "file_type": "txt",
+    "page": null,
+    "section": null,
+    "filename": "ml_notation_abbreviations.txt"
+   },
+   "derived_from": []
+  },
+  "S2": {
+   "id": "S2",
+   "kind": "document",
+   "title": "Ml Lecture Notes",
+   "text": "Machine Learning Concept Guide\nMachine Learning Fundamentals - independently written demonstration notes. Not official university\nmaterial.",
+   "doc_id": "ml_lecture_notes",
+   "course_id": "ml",
+   "location": "p.1",
+   "chunk_id": "ml_lecture_notes:0000",
+   "score": 0.5238,
+   "data": {
+    "file_type": "pdf",
+    "page": 1,
+    "section": null,
+    "filename": "ml_lecture_notes.pdf"
+   },
+   "derived_from": []
+  },
+  "S3": {
+   "id": "S3",
+   "kind": "document",
+   "title": "Ml Exercise Guide",
+   "text": "Machine Learning Assignment Notes\nIndependently written demonstration material (CC BY 4.0). Not official university material.",
+   "doc_id": "ml_exercise_guide",
+   "course_id": "ml",
+   "location": "Machine Learning Assignment Notes",
+   "chunk_id": "ml_exercise_guide:0000",
+   "score": 0.5716,
+   "data": {
+    "file_type": "docx",
+    "page": null,
+    "section": "Machine Learning Assignment Notes",
+    "filename": "ml_exercise_guide.docx"
+   },
+   "derived_from": []
+  },
+  "S4": {
+   "id": "S4",
+   "kind": "document",
+   "title": "Ml Project Handbook",
+   "text": "Machine Learning Project Handbook (v2, current)",
+   "doc_id": "ml_project_handbook",
+   "course_id": "ml",
+   "location": "Machine Learning Project Handbook (v2, current)",
+   "chunk_id": "ml_project_handbook:0000",
+   "score": 0.5169,
+   "data": {
+    "file_type": "docx",
+    "page": null,
+    "section": "Machine Learning Project Handbook (v2, current)",
+    "filename": "ml_project_handbook.docx"
+   },
+   "derived_from": []
+  },
+  "S5": {
+   "id": "S5",
+   "kind": "document",
+   "title": "Ml Evaluation Protocol V1",
+   "text": "MACHINE LEARNING EVALUATION PROTOCOL v1 (2023 edition, SUPERSEDED)\n==================================================================",
+   "doc_id": "ml_evaluation_protocol_v1",
+   "course_id": "ml",
+   "location": "-",
+   "chunk_id": "ml_evaluation_protocol_v1:0000",
+   "score": 0.5045,
+   "data": {
+    "file_type": "txt",
+    "page": null,
+    "section": null,
+    "filename": "ml_evaluation_protocol_v1.txt"
+   },
+   "derived_from": []
+  }
+ },
+ "trace": [
+  {
+   "seq": 1,
+   "t_ms": 0,
+   "type": "request_received",
+   "question": "Who is the instructor of the machine learning course?",
+   "scope": null,
+   "system": "standard_rag"
+  },
+  {
+   "seq": 2,
+   "t_ms": 28,
+   "type": "retrieval",
+   "query": "Who is the instructor of the machine learning course?",
+   "n": 5,
+   "sources": [
+    "S1",
+    "S2",
+    "S3",
+    "S4",
+    "S5"
+   ],
+   "best_score": 0.572
+  },
+  {
+   "seq": 3,
+   "t_ms": 1733,
+   "type": "answer",
+   "abstained": true,
+   "citations": []
+  }
+ ],
+ "validation": {
+  "n_cited_sentences": 0,
+  "n_supported": 0,
+  "support_rate": 0.0,
+  "invalid_ids": [],
+  "unsupported": [],
+  "uncited_numeric_sentences": []
+ },
+ "metrics": {
+  "latency_s": 1.73,
+  "llm_calls": 1,
+  "prompt_tokens": 465,
+  "completion_tokens": 24,
+  "tool_calls": 1,
+  "replans": 0,
+  "steps": 1
+ },
+ "system": "standard_rag",
+ "config": {
+  "top_k": 5
+ }
+}

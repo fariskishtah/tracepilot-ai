@@ -1,0 +1,400 @@
+{
+ "request_id": "1042670f8d06",
+ "question": "What does the machine learning terminology reference say about regularization?",
+ "answer": "MACHINE LEARNING TERMINOLOGY REFERENCE (original demo material, CC BY 4.0) [S1] Machine Learning Project Handbook (v2, current) [S3]",
+ "abstained": false,
+ "stop_reason": "answered",
+ "plan": {
+  "question_type": "factual",
+  "complexity": "simple",
+  "requires_retrieval": true,
+  "requires_calculation": false,
+  "requires_data_analysis": false,
+  "requires_comparison": false,
+  "subtasks": [
+   {
+    "id": "t1",
+    "tool": "search_knowledge_base",
+    "goal": "find evidence: What does the machine learning terminology reference say about regularization",
+    "query": "What does the machine learning terminology reference say about regularization",
+    "dataset_id": null,
+    "operation": null,
+    "column": null,
+    "group_by": null,
+    "agg": null,
+    "filters": null,
+    "expression": null,
+    "aspects": null,
+    "depends_on": []
+   }
+  ],
+  "rationale": "rule-based plan from question features"
+ },
+ "plan_source": "rules",
+ "tool_sequence": [
+  "search_knowledge_base"
+ ],
+ "citations": [
+  {
+   "id": "S1",
+   "kind": "document",
+   "title": "Ml Reference Notes",
+   "text": "MACHINE LEARNING TERMINOLOGY REFERENCE (original demo material, CC BY 4.0)\n==========================================================================",
+   "doc_id": "ml_reference_notes",
+   "course_id": "ml",
+   "location": "-",
+   "chunk_id": "ml_reference_notes:0000",
+   "score": 0.5833,
+   "data": {
+    "file_type": "txt",
+    "page": null,
+    "section": null,
+    "filename": "ml_reference_notes.txt"
+   },
+   "derived_from": []
+  },
+  {
+   "id": "S3",
+   "kind": "document",
+   "title": "Ml Project Handbook",
+   "text": "Machine Learning Project Handbook (v2, current)",
+   "doc_id": "ml_project_handbook",
+   "course_id": "ml",
+   "location": "Machine Learning Project Handbook (v2, current)",
+   "chunk_id": "ml_project_handbook:0000",
+   "score": 0.4397,
+   "data": {
+    "file_type": "docx",
+    "page": null,
+    "section": "Machine Learning Project Handbook (v2, current)",
+    "filename": "ml_project_handbook.docx"
+   },
+   "derived_from": []
+  }
+ ],
+ "evidence": {
+  "S1": {
+   "id": "S1",
+   "kind": "document",
+   "title": "Ml Reference Notes",
+   "text": "MACHINE LEARNING TERMINOLOGY REFERENCE (original demo material, CC BY 4.0)\n==========================================================================",
+   "doc_id": "ml_reference_notes",
+   "course_id": "ml",
+   "location": "-",
+   "chunk_id": "ml_reference_notes:0000",
+   "score": 0.5833,
+   "data": {
+    "file_type": "txt",
+    "page": null,
+    "section": null,
+    "filename": "ml_reference_notes.txt"
+   },
+   "derived_from": []
+  },
+  "S2": {
+   "id": "S2",
+   "kind": "document",
+   "title": "Ml Lecture Notes",
+   "text": "Machine Learning Concept Guide\nMachine Learning Fundamentals - independently written demonstration notes. Not official university\nmaterial.",
+   "doc_id": "ml_lecture_notes",
+   "course_id": "ml",
+   "location": "p.1",
+   "chunk_id": "ml_lecture_notes:0000",
+   "score": 0.4449,
+   "data": {
+    "file_type": "pdf",
+    "page": 1,
+    "section": null,
+    "filename": "ml_lecture_notes.pdf"
+   },
+   "derived_from": []
+  },
+  "S3": {
+   "id": "S3",
+   "kind": "document",
+   "title": "Ml Project Handbook",
+   "text": "Machine Learning Project Handbook (v2, current)",
+   "doc_id": "ml_project_handbook",
+   "course_id": "ml",
+   "location": "Machine Learning Project Handbook (v2, current)",
+   "chunk_id": "ml_project_handbook:0000",
+   "score": 0.4397,
+   "data": {
+    "file_type": "docx",
+    "page": null,
+    "section": "Machine Learning Project Handbook (v2, current)",
+    "filename": "ml_project_handbook.docx"
+   },
+   "derived_from": []
+  },
+  "S4": {
+   "id": "S4",
+   "kind": "document",
+   "title": "Ml Model Diagnostics Handbook",
+   "text": "3. Regularization Strength in scikit-learn\nIn scikit-learn LogisticRegression the parameter C is the inverse of the regularization strength: a\nsmaller C means stronger regularization, and the default is C=1.0. For Ridge regression the\nparameter alpha works the opposite way: a larger alpha means stronger shrinkage.\nL2 regularization (ridge) shrinks all weights toward zero; L1 regularization (lasso) can set some\nweights exactly to zero and therefore performs feature selection.",
+   "doc_id": "ml_model_diagnostics_handbook",
+   "course_id": "ml",
+   "location": "p.3",
+   "chunk_id": "ml_model_diagnostics_handbook:0002",
+   "score": 0.5007,
+   "data": {
+    "file_type": "pdf",
+    "page": 3,
+    "section": "3. Regularization Strength in scikit-learn",
+    "filename": "ml_model_diagnostics_handbook.pdf"
+   },
+   "derived_from": []
+  },
+  "S5": {
+   "id": "S5",
+   "kind": "document",
+   "title": "Ml Overfitting Mitigation Guide",
+   "text": "Overfitting mitigation guide OVERFITTING MITIGATION GUIDE - TracePilot demo course pack (Machine Learning Fundamentals) Original educational material, CC BY 4.0, (c) Faris Mohamed Kishtah. 1. What overfitting means in practice A model overfits when its training accuracy is far higher than its validation accuracy. The gap between the two (train accuracy minus validation accuracy) is the simplest warning sign. 2. L2 regularization (weight decay) L2 regularization adds a penalty proportional to the sum of squared weights to the loss, which shrinks weights toward zero without usually making them exactly zero. Advantages: it is smooth, works with gradient-based optimizers, and keeps all features. Disadvantages: it introduces a strength hyperparameter (lambda or weight decay) that must be tuned with cross-validation, and it does not remove irrelevant features. It",
+   "doc_id": "ml_overfitting_mitigation_guide",
+   "course_id": "ml",
+   "location": "p.1",
+   "chunk_id": "ml_overfitting_mitigation_guide:0000",
+   "score": 0.3939,
+   "data": {
+    "file_type": "pdf",
+    "page": 1,
+    "section": null,
+    "filename": "ml_overfitting_mitigation_guide.pdf"
+   },
+   "derived_from": []
+  }
+ },
+ "trace": [
+  {
+   "seq": 1,
+   "t_ms": 0,
+   "type": "request_received",
+   "question": "What does the machine learning terminology reference say about regularization?",
+   "scope": null,
+   "tools": [
+    "search_knowledge_base",
+    "retrieve_source_context",
+    "summarize_evidence",
+    "analyze_dataset",
+    "calculate_expression",
+    "compare_evidence",
+    "refine_search_query"
+   ],
+   "planner": "rules",
+   "replanning": false,
+   "llm": "qwen2.5:3b-instruct",
+   "registry_version": "1.0.0"
+  },
+  {
+   "seq": 2,
+   "t_ms": 0,
+   "type": "question_analysis",
+   "calc_cue": false,
+   "data_cue": false,
+   "compare_cue": false,
+   "summary_cue": false,
+   "multi_cue": false,
+   "named_datasets": [],
+   "length_words": 10,
+   "needs_data": false,
+   "explicit_dataset": false,
+   "literal_numbers": [],
+   "needs_calc": false,
+   "concept_cue": true
+  },
+  {
+   "seq": 3,
+   "t_ms": 0,
+   "type": "plan_created",
+   "source": "rules",
+   "question_type": "factual",
+   "complexity": "simple",
+   "requires": {
+    "retrieval": true,
+    "calculation": false,
+    "data_analysis": false,
+    "comparison": false
+   },
+   "summary": "rule-based plan from question features",
+   "adjustments": [],
+   "note": "",
+   "subtasks": [
+    {
+     "id": "t1",
+     "tool": "search_knowledge_base",
+     "goal": "find evidence: What does the machine learning terminology reference say about regularization",
+     "depends_on": []
+    }
+   ]
+  },
+  {
+   "seq": 4,
+   "t_ms": 0,
+   "type": "tool_selected",
+   "step": "t1",
+   "tool": "search_knowledge_base",
+   "goal": "find evidence: What does the machine learning terminology reference say about regularization",
+   "attempt": 1,
+   "args": {
+    "query": "What does the machine learning terminology reference say about regularization",
+    "course_ids": null,
+    "top_k": 5
+   }
+  },
+  {
+   "seq": 5,
+   "t_ms": 8,
+   "type": "tool_result",
+   "step": "t1",
+   "tool": "search_knowledge_base",
+   "ok": true,
+   "ms": 7.2,
+   "summary": "5 chunks, best cosine 0.58",
+   "evidence_ids": [
+    "S1",
+    "S2",
+    "S3",
+    "S4",
+    "S5"
+   ],
+   "error": null,
+   "error_type": null,
+   "sufficient": true,
+   "relevance": {
+    "best_score": 0.583,
+    "keyword_coverage": 0.67,
+    "threshold": {
+     "min_best_score": 0.35,
+     "min_keyword_coverage": 0.35
+    }
+   },
+   "sources": [
+    {
+     "id": "S1",
+     "title": "Ml Reference Notes",
+     "location": "-",
+     "score": 0.583
+    },
+    {
+     "id": "S2",
+     "title": "Ml Lecture Notes",
+     "location": "p.1",
+     "score": 0.445
+    },
+    {
+     "id": "S3",
+     "title": "Ml Project Handbook",
+     "location": "Machine Learning Project Handbook (v2, current)",
+     "score": 0.44
+    },
+    {
+     "id": "S4",
+     "title": "Ml Model Diagnostics Handbook",
+     "location": "p.3",
+     "score": 0.501
+    },
+    {
+     "id": "S5",
+     "title": "Ml Overfitting Mitigation Guide",
+     "location": "p.1",
+     "score": 0.394
+    }
+   ]
+  },
+  {
+   "seq": 6,
+   "t_ms": 8,
+   "type": "validation",
+   "sufficient": true,
+   "steps": {
+    "t1": {
+     "status": "done",
+     "sufficient": true
+    }
+   },
+   "problems": []
+  },
+  {
+   "seq": 7,
+   "t_ms": 8,
+   "type": "synthesis_started",
+   "evidence": [
+    "S1",
+    "S2",
+    "S3"
+   ],
+   "computed": [],
+   "gaps": []
+  },
+  {
+   "seq": 8,
+   "t_ms": 5056,
+   "type": "citation_check",
+   "n_cited_sentences": 1,
+   "n_supported": 1,
+   "support_rate": 1.0,
+   "invalid_ids": [],
+   "removed_unsupported": 2,
+   "regenerated": 1,
+   "injection_flags": [],
+   "fallback_extractive": true
+  },
+  {
+   "seq": 9,
+   "t_ms": 5056,
+   "type": "answer",
+   "abstained": false,
+   "citations": [
+    "S1",
+    "S3"
+   ]
+  },
+  {
+   "seq": 10,
+   "t_ms": 5056,
+   "type": "completed",
+   "stop_reason": "answered",
+   "latency_s": 5.06
+  }
+ ],
+ "validation": {
+  "n_cited_sentences": 1,
+  "n_supported": 1,
+  "support_rate": 1.0,
+  "invalid_ids": [],
+  "unsupported": [],
+  "uncited_numeric_sentences": []
+ },
+ "metrics": {
+  "latency_s": 5.06,
+  "llm_calls": 2,
+  "prompt_tokens": 831,
+  "completion_tokens": 118,
+  "tool_calls": 1,
+  "replans": 0,
+  "steps": 1,
+  "errors": [],
+  "step_status": {
+   "t1": "done"
+  },
+  "removed_unsupported": 2,
+  "injection_flags": []
+ },
+ "system": "agentic",
+ "config": {
+  "name": "rules_all_tools",
+  "planner": "rules",
+  "replan": false,
+  "tools": [
+   "search_knowledge_base",
+   "retrieve_source_context",
+   "summarize_evidence",
+   "analyze_dataset",
+   "calculate_expression",
+   "compare_evidence",
+   "refine_search_query"
+  ],
+  "model": "qwen2.5:3b-instruct",
+  "registry_version": "1.0.0"
+ }
+}

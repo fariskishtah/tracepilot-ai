@@ -1,0 +1,383 @@
+{
+ "request_id": "beac4867b7fa",
+ "question": "A model has training accuracy 0.998 and validation accuracy 0.812. What is the gap between them?",
+ "answer": "This is seen in the example of a Decision Tree (depth=None) run where training accuracy is 1.0 and validation accuracy is 0.86 [S2].",
+ "abstained": false,
+ "stop_reason": "answered",
+ "plan": {
+  "question_type": "calculation",
+  "complexity": "simple",
+  "requires_retrieval": true,
+  "requires_calculation": false,
+  "requires_data_analysis": false,
+  "requires_comparison": false,
+  "subtasks": [
+   {
+    "id": "t1",
+    "tool": "search_knowledge_base",
+    "goal": "find evidence",
+    "query": "A model has training accuracy 0.998 and validation accuracy 0.812. What is the gap between them?",
+    "dataset_id": null,
+    "operation": null,
+    "column": null,
+    "group_by": null,
+    "agg": null,
+    "filters": null,
+    "expression": null,
+    "aspects": null,
+    "depends_on": []
+   }
+  ],
+  "rationale": "LLM plan: 1 step(s)"
+ },
+ "plan_source": "llm",
+ "tool_sequence": [
+  "search_knowledge_base"
+ ],
+ "citations": [
+  {
+   "id": "S2",
+   "kind": "document",
+   "title": "Ml Model Evaluation Runs",
+   "text": "row 1: run_id=ML001; model=Logistic Regression; task=spam classification; train_accuracy=0.94; val_accuracy=0.93; precision=0.91; recall=0.89; f1=0.8999; notes=Good baseline, small gap\nrow 2: run_id=ML002; model=Decision Tree (depth=None); task=spam classification; train_accuracy=1.0; val_accuracy=0.86; precision=0.84; recall=0.83; f1=0.835; notes=Overfits: perfect training accuracy\nrow 3: run_id=ML003; model=Decision Tree (depth=4); task=spam classification; train_accuracy=0.92; val_accuracy=0.9; precision=0.88; recall=0.86; f1=0.8699; notes=Depth limit reduces overfitting\nrow 4: run_id=ML004; model=Random Forest (100 trees); task=spam classification; train_accuracy=0.99; val_accuracy=0.95; precision=0.94; recall=0.93; f1=0.935; notes=Best validation accuracy of spam runs\nrow 5: run_id=ML005; model=k-NN (k=1); task=spam classification; train_accuracy=1.0; val_accuracy=0.88; precision=0.86; recall=0.85; f1=0.855; notes=k=1 memorizes training data\nrow 6: run_id=ML006; model=k-NN (k=15); task=spam classification; train_accuracy=0.91; val_accuracy=0.91; precision=0.9; recall=0.87; f1=0.8847; notes=Smoother decision boundary\nrow 7: run_id=ML007; model=Always predict majority; task=fraud detection; train_accuracy=0.99; val_accuracy=0.99; precision=0.0; recall=0.0; f1=0.0; notes=Accuracy 0.99 but recall 0: useless on rare class\nrow 8: run_id=ML008; model=Logistic Regression; task=fraud detection; train_accuracy=0.98; val_accuracy=0.98; precision=0.62; recall=0.55; f1=0.5829; notes=Moderate recall on rare class",
+   "doc_id": "ml_model_evaluation_runs",
+   "course_id": "ml",
+   "location": "rows 1-8",
+   "chunk_id": "ml_model_evaluation_runs:0001",
+   "score": 0.4141,
+   "data": {
+    "file_type": "csv",
+    "page": null,
+    "section": "data rows",
+    "filename": "ml_model_evaluation_runs.csv"
+   },
+   "derived_from": []
+  }
+ ],
+ "evidence": {
+  "S1": {
+   "id": "S1",
+   "kind": "document",
+   "title": "Ml Exercise Guide",
+   "text": "Assignment 1: Diagnosing a Model\nTask. You trained a decision tree classifier and obtained 99% training accuracy but 71% validation accuracy. Explain what is happening and propose two fixes.\nExpected answer. The large gap between training and validation accuracy is the signature of overfitting (high variance). Fixes include limiting the maximum depth of the tree, requiring a minimum number of samples per leaf, pruning, switching to a random forest, or collecting more data. Report validation performance using cross-validation rather than a single split.",
+   "doc_id": "ml_exercise_guide",
+   "course_id": "ml",
+   "location": "Assignment 1: Diagnosing a Model",
+   "chunk_id": "ml_exercise_guide:0001",
+   "score": 0.6156,
+   "data": {
+    "file_type": "docx",
+    "page": null,
+    "section": "Assignment 1: Diagnosing a Model",
+    "filename": "ml_exercise_guide.docx"
+   },
+   "derived_from": []
+  },
+  "S2": {
+   "id": "S2",
+   "kind": "document",
+   "title": "Ml Model Evaluation Runs",
+   "text": "row 1: run_id=ML001; model=Logistic Regression; task=spam classification; train_accuracy=0.94; val_accuracy=0.93; precision=0.91; recall=0.89; f1=0.8999; notes=Good baseline, small gap\nrow 2: run_id=ML002; model=Decision Tree (depth=None); task=spam classification; train_accuracy=1.0; val_accuracy=0.86; precision=0.84; recall=0.83; f1=0.835; notes=Overfits: perfect training accuracy\nrow 3: run_id=ML003; model=Decision Tree (depth=4); task=spam classification; train_accuracy=0.92; val_accuracy=0.9; precision=0.88; recall=0.86; f1=0.8699; notes=Depth limit reduces overfitting\nrow 4: run_id=ML004; model=Random Forest (100 trees); task=spam classification; train_accuracy=0.99; val_accuracy=0.95; precision=0.94; recall=0.93; f1=0.935; notes=Best validation accuracy of spam runs\nrow 5: run_id=ML005; model=k-NN (k=1); task=spam classification; train_accuracy=1.0; val_accuracy=0.88; precision=0.86; recall=0.85; f1=0.855; notes=k=1 memorizes training data\nrow 6: run_id=ML006; model=k-NN (k=15); task=spam classification; train_accuracy=0.91; val_accuracy=0.91; precision=0.9; recall=0.87; f1=0.8847; notes=Smoother decision boundary\nrow 7: run_id=ML007; model=Always predict majority; task=fraud detection; train_accuracy=0.99; val_accuracy=0.99; precision=0.0; recall=0.0; f1=0.0; notes=Accuracy 0.99 but recall 0: useless on rare class\nrow 8: run_id=ML008; model=Logistic Regression; task=fraud detection; train_accuracy=0.98; val_accuracy=0.98; precision=0.62; recall=0.55; f1=0.5829; notes=Moderate recall on rare class",
+   "doc_id": "ml_model_evaluation_runs",
+   "course_id": "ml",
+   "location": "rows 1-8",
+   "chunk_id": "ml_model_evaluation_runs:0001",
+   "score": 0.4141,
+   "data": {
+    "file_type": "csv",
+    "page": null,
+    "section": "data rows",
+    "filename": "ml_model_evaluation_runs.csv"
+   },
+   "derived_from": []
+  },
+  "S3": {
+   "id": "S3",
+   "kind": "document",
+   "title": "Ml Evaluation Protocol V1",
+   "text": "Split the data 60% training, 20% validation and 20% test.\nUse k = 10 folds for cross-validation.\nThe primary metric is accuracy.\nFix the random seed to 0.",
+   "doc_id": "ml_evaluation_protocol_v1",
+   "course_id": "ml",
+   "location": "-",
+   "chunk_id": "ml_evaluation_protocol_v1:0002",
+   "score": 0.4174,
+   "data": {
+    "file_type": "txt",
+    "page": null,
+    "section": null,
+    "filename": "ml_evaluation_protocol_v1.txt"
+   },
+   "derived_from": []
+  },
+  "S4": {
+   "id": "S4",
+   "kind": "document",
+   "title": "Ml Model Evaluation Runs",
+   "text": "Dataset ml_model_evaluation_runs: 10 rows, columns: run_id, model, task, train_accuracy, val_accuracy, precision, recall, f1, notes.",
+   "doc_id": "ml_model_evaluation_runs",
+   "course_id": "ml",
+   "location": "dataset overview",
+   "chunk_id": "ml_model_evaluation_runs:0000",
+   "score": 0.3888,
+   "data": {
+    "file_type": "csv",
+    "page": null,
+    "section": "dataset overview",
+    "filename": "ml_model_evaluation_runs.csv"
+   },
+   "derived_from": []
+  },
+  "S5": {
+   "id": "S5",
+   "kind": "document",
+   "title": "Ml Regularization Experiments",
+   "text": "row 1: run_id=R01; model=MLP (2 hidden layers); dataset=image-tiny; technique=none (baseline); train_accuracy=0.998; val_accuracy=0.812; epochs=60; notes=Memorizes training set; large train-val gap\nrow 2: run_id=R02; model=MLP (2 hidden layers); dataset=image-tiny; technique=L2 weight decay 1e-3; train_accuracy=0.951; val_accuracy=0.874; epochs=60; notes=Gap shrinks; weights shrunk\nrow 3: run_id=R03; model=MLP (2 hidden layers); dataset=image-tiny; technique=dropout p=0.3; train_accuracy=0.943; val_accuracy=0.881; epochs=60; notes=Stochastic unit removal at training time\nrow 4: run_id=R04; model=MLP (2 hidden layers); dataset=image-tiny; technique=early stopping patience=5; train_accuracy=0.927; val_accuracy=0.866; epochs=23; notes=Stopped at epoch 23 of 60 saving compute\nrow 5: run_id=R05; model=MLP (2 hidden layers); dataset=image-tiny; technique=L2 + early stopping; train_accuracy=0.935; val_accuracy=0.889; epochs=27; notes=Best validation accuracy of the image-tiny runs\nrow 6: run_id=R06; model=MLP (2 hidden layers); dataset=image-tiny; technique=data augmentation; train_accuracy=0.962; val_accuracy=0.893; epochs=60; notes=Highest validation accuracy but needs extra preprocessing\nrow 7: run_id=R07; model=Gradient Boosting; dataset=tabular-churn; technique=none (baseline); train_accuracy=0.991; val_accuracy=0.842; epochs=300; notes=Deep trees overfit\nrow 8: run_id=R08; model=Gradient Boosting; dataset=tabular-churn; technique=shrinkage 0.05 + max_depth 3; train_accuracy=0.902; val_accuracy=0.861; epochs=300; notes=Shallower trees reduce variance",
+   "doc_id": "ml_regularization_experiments",
+   "course_id": "ml",
+   "location": "rows 1-8",
+   "chunk_id": "ml_regularization_experiments:0001",
+   "score": 0.3691,
+   "data": {
+    "file_type": "csv",
+    "page": null,
+    "section": "data rows",
+    "filename": "ml_regularization_experiments.csv"
+   },
+   "derived_from": []
+  }
+ },
+ "trace": [
+  {
+   "seq": 1,
+   "t_ms": 0,
+   "type": "request_received",
+   "question": "A model has training accuracy 0.998 and validation accuracy 0.812. What is the gap between them?",
+   "scope": null,
+   "tools": [
+    "search_knowledge_base",
+    "retrieve_source_context",
+    "summarize_evidence",
+    "compare_evidence",
+    "refine_search_query"
+   ],
+   "planner": "llm",
+   "replanning": false,
+   "llm": "qwen2.5:3b-instruct",
+   "registry_version": "1.0.0"
+  },
+  {
+   "seq": 2,
+   "t_ms": 1,
+   "type": "question_analysis",
+   "calc_cue": true,
+   "data_cue": true,
+   "compare_cue": false,
+   "summary_cue": false,
+   "multi_cue": false,
+   "named_datasets": [],
+   "length_words": 16,
+   "needs_data": false,
+   "explicit_dataset": false,
+   "literal_numbers": [
+    "0.998",
+    "0.812"
+   ],
+   "needs_calc": true,
+   "concept_cue": true
+  },
+  {
+   "seq": 3,
+   "t_ms": 2913,
+   "type": "plan_created",
+   "source": "llm",
+   "question_type": "calculation",
+   "complexity": "simple",
+   "requires": {
+    "retrieval": true,
+    "calculation": false,
+    "data_analysis": false,
+    "comparison": false
+   },
+   "summary": "LLM plan: 1 step(s)",
+   "adjustments": [
+    "removed t1: tool 'calculate_expression' unavailable",
+    "added search (plan had no evidence-gathering step)"
+   ],
+   "note": "",
+   "subtasks": [
+    {
+     "id": "t1",
+     "tool": "search_knowledge_base",
+     "goal": "find evidence",
+     "depends_on": []
+    }
+   ]
+  },
+  {
+   "seq": 4,
+   "t_ms": 2913,
+   "type": "tool_selected",
+   "step": "t1",
+   "tool": "search_knowledge_base",
+   "goal": "find evidence",
+   "attempt": 1,
+   "args": {
+    "query": "A model has training accuracy 0.998 and validation accuracy 0.812. What is the gap between them?",
+    "course_ids": null,
+    "top_k": 5
+   }
+  },
+  {
+   "seq": 5,
+   "t_ms": 2938,
+   "type": "tool_result",
+   "step": "t1",
+   "tool": "search_knowledge_base",
+   "ok": true,
+   "ms": 25.1,
+   "summary": "5 chunks, best cosine 0.62",
+   "evidence_ids": [
+    "S1",
+    "S2",
+    "S3",
+    "S4",
+    "S5"
+   ],
+   "error": null,
+   "error_type": null,
+   "sufficient": true,
+   "relevance": {
+    "best_score": 0.616,
+    "keyword_coverage": 0.6,
+    "threshold": {
+     "min_best_score": 0.35,
+     "min_keyword_coverage": 0.35
+    }
+   },
+   "sources": [
+    {
+     "id": "S1",
+     "title": "Ml Exercise Guide",
+     "location": "Assignment 1: Diagnosing a Model",
+     "score": 0.616
+    },
+    {
+     "id": "S2",
+     "title": "Ml Model Evaluation Runs",
+     "location": "rows 1-8",
+     "score": 0.414
+    },
+    {
+     "id": "S3",
+     "title": "Ml Evaluation Protocol V1",
+     "location": "-",
+     "score": 0.417
+    },
+    {
+     "id": "S4",
+     "title": "Ml Model Evaluation Runs",
+     "location": "dataset overview",
+     "score": 0.389
+    },
+    {
+     "id": "S5",
+     "title": "Ml Regularization Experiments",
+     "location": "rows 1-8",
+     "score": 0.369
+    }
+   ]
+  },
+  {
+   "seq": 6,
+   "t_ms": 2938,
+   "type": "validation",
+   "sufficient": true,
+   "steps": {
+    "t1": {
+     "status": "done",
+     "sufficient": true
+    }
+   },
+   "problems": []
+  },
+  {
+   "seq": 7,
+   "t_ms": 2938,
+   "type": "synthesis_started",
+   "evidence": [
+    "S1",
+    "S3",
+    "S2"
+   ],
+   "computed": [],
+   "gaps": []
+  },
+  {
+   "seq": 8,
+   "t_ms": 7579,
+   "type": "citation_check",
+   "n_cited_sentences": 1,
+   "n_supported": 1,
+   "support_rate": 1.0,
+   "invalid_ids": [],
+   "removed_unsupported": 1,
+   "regenerated": 1,
+   "injection_flags": [],
+   "fallback_extractive": false
+  },
+  {
+   "seq": 9,
+   "t_ms": 7579,
+   "type": "answer",
+   "abstained": false,
+   "citations": [
+    "S2"
+   ]
+  },
+  {
+   "seq": 10,
+   "t_ms": 7579,
+   "type": "completed",
+   "stop_reason": "answered",
+   "latency_s": 7.58
+  }
+ ],
+ "validation": {
+  "n_cited_sentences": 1,
+  "n_supported": 1,
+  "support_rate": 1.0,
+  "invalid_ids": [],
+  "unsupported": [],
+  "uncited_numeric_sentences": []
+ },
+ "metrics": {
+  "latency_s": 7.58,
+  "llm_calls": 3,
+  "prompt_tokens": 3059,
+  "completion_tokens": 153,
+  "tool_calls": 1,
+  "replans": 0,
+  "steps": 1,
+  "errors": [],
+  "step_status": {
+   "t1": "done"
+  },
+  "removed_unsupported": 1,
+  "injection_flags": []
+ },
+ "system": "agentic",
+ "config": {
+  "name": "llm_no_numeric_tools",
+  "planner": "llm",
+  "replan": false,
+  "tools": [
+   "search_knowledge_base",
+   "retrieve_source_context",
+   "summarize_evidence",
+   "compare_evidence",
+   "refine_search_query"
+  ],
+  "model": "qwen2.5:3b-instruct",
+  "registry_version": "1.0.0"
+ }
+}

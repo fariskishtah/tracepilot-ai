@@ -1,0 +1,112 @@
+{
+  "system": "rules_all_tools",
+  "split": "test",
+  "llm": "qwen2.5:3b-instruct",
+  "embedding": "sentence-transformers/all-MiniLM-L6-v2",
+  "temperature": 0,
+  "seed": 7,
+  "registry_version": "1.0.0",
+  "agent_config": {
+    "budgets": {
+      "max_replans": 2,
+      "max_plan_steps": 7,
+      "max_attempts_per_subtask": 3,
+      "max_tool_calls": 9,
+      "max_llm_calls": 6,
+      "tool_timeout_s": 30,
+      "request_timeout_s": 180,
+      "max_tool_output_chars": 6000,
+      "max_evidence_chars_in_prompt": 5200
+    },
+    "sufficiency": {
+      "min_best_score": 0.35,
+      "min_keyword_coverage": 0.35
+    },
+    "planner": {
+      "mode": "llm",
+      "allow_rules_fallback": true
+    },
+    "tools_enabled": [
+      "search_knowledge_base",
+      "retrieve_source_context",
+      "summarize_evidence",
+      "analyze_dataset",
+      "calculate_expression",
+      "compare_evidence",
+      "refine_search_query"
+    ],
+    "registry_version": "1.0.0"
+  },
+  "retrieval_config": {
+    "chunking": {
+      "target_chars": 900,
+      "overlap_chars": 120,
+      "csv_rows_per_chunk": 8
+    },
+    "retrieval": {
+      "top_k": 5,
+      "max_top_k": 8,
+      "dense_candidates": 20,
+      "lexical_weight": 0.35,
+      "min_relevance": 0.3
+    },
+    "collection": "tracepilot_chunks"
+  },
+  "date": "2026-11-21 03:48",
+  "dataset": {
+    "dataset_version": "1.0",
+    "n_questions": 114,
+    "n_dev": 42,
+    "n_test": 72,
+    "by_category": {
+      "simple_factual": [
+        8,
+        15
+      ],
+      "comparison": [
+        5,
+        9
+      ],
+      "csv_analysis": [
+        6,
+        11
+      ],
+      "calculation": [
+        3,
+        5
+      ],
+      "multi_step": [
+        5,
+        9
+      ],
+      "summarization": [
+        2,
+        4
+      ],
+      "ambiguous": [
+        2,
+        2
+      ],
+      "unanswerable": [
+        4,
+        6
+      ],
+      "conflict": [
+        2,
+        2
+      ],
+      "tool_routing": [
+        3,
+        5
+      ],
+      "injection": [
+        2,
+        4
+      ]
+    },
+    "corpus_text_sha256": "2d371db40d39c20797396cae9c9ea68159011d4236b050fdb236c721a04fb1dd",
+    "questions_sha256": "5775547ed920aeb519402873138d1fd74e1b08bad0cf46e139505b9fc0a469ff"
+  },
+  "code_commit": "eb6d241",
+  "n": 72
+}

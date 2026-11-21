@@ -1,0 +1,158 @@
+{
+ "request_id": "65cd69989433",
+ "question": "By what percent does validation accuracy increase from 0.812 to 0.889?",
+ "answer": "The evidence does not provide a method to calculate percent increase between two validation accuracies.",
+ "abstained": true,
+ "stop_reason": "insufficient_evidence",
+ "plan": null,
+ "plan_source": "none",
+ "tool_sequence": [
+  "search_knowledge_base"
+ ],
+ "citations": [],
+ "evidence": {
+  "S1": {
+   "id": "S1",
+   "kind": "document",
+   "title": "Ml Exercise Guide",
+   "text": "Assignment 1: Diagnosing a Model\nTask. You trained a decision tree classifier and obtained 99% training accuracy but 71% validation accuracy. Explain what is happening and propose two fixes.\nExpected answer. The large gap between training and validation accuracy is the signature of overfitting (high variance). Fixes include limiting the maximum depth of the tree, requiring a minimum number of samples per leaf, pruning, switching to a random forest, or collecting more data. Report validation performance using cross-validation rather than a single split.",
+   "doc_id": "ml_exercise_guide",
+   "course_id": "ml",
+   "location": "Assignment 1: Diagnosing a Model",
+   "chunk_id": "ml_exercise_guide:0001",
+   "score": 0.5229,
+   "data": {
+    "file_type": "docx",
+    "page": null,
+    "section": "Assignment 1: Diagnosing a Model",
+    "filename": "ml_exercise_guide.docx"
+   },
+   "derived_from": []
+  },
+  "S2": {
+   "id": "S2",
+   "kind": "document",
+   "title": "Ml Evaluation Protocol V1",
+   "text": "Split the data 60% training, 20% validation and 20% test.\nUse k = 10 folds for cross-validation.\nThe primary metric is accuracy.\nFix the random seed to 0.",
+   "doc_id": "ml_evaluation_protocol_v1",
+   "course_id": "ml",
+   "location": "-",
+   "chunk_id": "ml_evaluation_protocol_v1:0002",
+   "score": 0.4413,
+   "data": {
+    "file_type": "txt",
+    "page": null,
+    "section": null,
+    "filename": "ml_evaluation_protocol_v1.txt"
+   },
+   "derived_from": []
+  },
+  "S3": {
+   "id": "S3",
+   "kind": "document",
+   "title": "Ml Lecture Notes",
+   "text": "4. Evaluation Metrics for Classification A confusion matrix counts true positives (TP), false positives (FP), true negatives (TN) and false negatives (FN). Accuracy is (TP + TN) divided by all examples. Accuracy is misleading on imbalanced data: a model that always predicts the majority class can reach 99% accuracy while detecting nothing. Precision = TP / (TP + FP) answers \"of the examples predicted positive, how many are truly positive?\". Recall (sensitivity) = TP / (TP + FN) answers \"of the truly positive examples, how many did we find?\". The F1 score is the harmonic mean of precision and recall: 2 * precision * recall / (precision + recall). Raising the decision threshold usually increases precision and lowers recall. The ROC curve plots the true positive rate against the false positive rate across thresholds, and AUC summarizes it: 0.5 is random guessing and 1.0 is perfect ranking.",
+   "doc_id": "ml_lecture_notes",
+   "course_id": "ml",
+   "location": "p.5",
+   "chunk_id": "ml_lecture_notes:0006",
+   "score": 0.4664,
+   "data": {
+    "file_type": "pdf",
+    "page": 5,
+    "section": "4. Evaluation Metrics for Classification",
+    "filename": "ml_lecture_notes.pdf"
+   },
+   "derived_from": []
+  },
+  "S4": {
+   "id": "S4",
+   "kind": "document",
+   "title": "Ml Project Handbook",
+   "text": "Evaluation Protocol v2\nEvaluation protocol v2 supersedes protocol v1 for all projects started in 2025. Split the data 70% training, 15% validation and 15% test. Use k = 5 folds for cross-validation and report the mean and standard deviation of the fold scores. Set random_state=42 everywhere. The test set may be used exactly once. The primary metric is F1 for imbalanced data and accuracy otherwise.",
+   "doc_id": "ml_project_handbook",
+   "course_id": "ml",
+   "location": "Evaluation Protocol v2",
+   "chunk_id": "ml_project_handbook:0001",
+   "score": 0.342,
+   "data": {
+    "file_type": "docx",
+    "page": null,
+    "section": "Evaluation Protocol v2",
+    "filename": "ml_project_handbook.docx"
+   },
+   "derived_from": []
+  },
+  "S5": {
+   "id": "S5",
+   "kind": "document",
+   "title": "Ml Exercise Guide",
+   "text": "Assignment 2: Choosing a Metric\nTask. A fraud detection dataset has 1% fraudulent transactions. A teammate reports 99% accuracy. Decide whether the model is good.\nExpected answer. Accuracy is not informative here because a model that predicts \"not fraud\" for everything also reaches 99%. Evaluate precision, recall, F1 and the precision-recall curve. In fraud detection, missing a fraud (a false negative) is usually costly, so recall is emphasized, while precision controls how many legitimate customers are inconvenienced.",
+   "doc_id": "ml_exercise_guide",
+   "course_id": "ml",
+   "location": "Assignment 2: Choosing a Metric",
+   "chunk_id": "ml_exercise_guide:0002",
+   "score": 0.4338,
+   "data": {
+    "file_type": "docx",
+    "page": null,
+    "section": "Assignment 2: Choosing a Metric",
+    "filename": "ml_exercise_guide.docx"
+   },
+   "derived_from": []
+  }
+ },
+ "trace": [
+  {
+   "seq": 1,
+   "t_ms": 1,
+   "type": "request_received",
+   "question": "By what percent does validation accuracy increase from 0.812 to 0.889?",
+   "scope": null,
+   "system": "standard_rag"
+  },
+  {
+   "seq": 2,
+   "t_ms": 63,
+   "type": "retrieval",
+   "query": "By what percent does validation accuracy increase from 0.812 to 0.889?",
+   "n": 5,
+   "sources": [
+    "S1",
+    "S2",
+    "S3",
+    "S4",
+    "S5"
+   ],
+   "best_score": 0.523
+  },
+  {
+   "seq": 3,
+   "t_ms": 4174,
+   "type": "answer",
+   "abstained": true,
+   "citations": []
+  }
+ ],
+ "validation": {
+  "n_cited_sentences": 0,
+  "n_supported": 0,
+  "support_rate": 0.0,
+  "invalid_ids": [],
+  "unsupported": [],
+  "uncited_numeric_sentences": []
+ },
+ "metrics": {
+  "latency_s": 4.17,
+  "llm_calls": 1,
+  "prompt_tokens": 908,
+  "completion_tokens": 25,
+  "tool_calls": 1,
+  "replans": 0,
+  "steps": 1
+ },
+ "system": "standard_rag",
+ "config": {
+  "top_k": 5
+ }
+}

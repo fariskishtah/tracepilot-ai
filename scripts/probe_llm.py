@@ -29,9 +29,13 @@ def main():
     for it in items:
         if not it["requires_tools"]:
             continue
-        r = requests.post(f"{c['host']}/api/chat", json={"model": c["model"], "stream": False, "messages": [
-            {"role": "system", "content": "Pick the single best first tool for the user's question."}, {"role": "user", "content": it["question"]}],
-            "tools": TOOLS, "options": {"temperature": 0, "seed": 7, "num_ctx": 4096}}, timeout=120).json()
+        try:
+            r = requests.post(f"{c['host']}/api/chat", json={"model": c["model"], "stream": False, "messages": [
+                {"role": "system", "content": "Pick the single best first tool for the user's question."}, {"role": "user", "content": it["question"]}],
+                "tools": TOOLS, "options": {"temperature": 0, "seed": 7, "num_ctx": 4096, "num_predict": 120}}, timeout=90).json()
+        except requests.RequestException:
+            n += 1
+            continue
         calls = (r.get("message") or {}).get("tool_calls") or []
         n += 1
         if calls:

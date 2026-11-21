@@ -1,0 +1,209 @@
+{
+ "request_id": "6ddec0952793",
+ "question": "What is the train_accuracy of run R05 in the regularization experiments dataset?",
+ "answer": "Dataset ml_regularization_experiments: 9 rows, columns: run_id, model, dataset, technique, train_accuracy, val_accuracy, epochs, notes. [S1] Dataset ml_model_evaluation_runs: 10 rows, columns: run_id, model, task, train_accuracy, val_accuracy, precision, recall, f1, notes. [S2]",
+ "abstained": false,
+ "stop_reason": "answered",
+ "plan": null,
+ "plan_source": "none",
+ "tool_sequence": [
+  "search_knowledge_base"
+ ],
+ "citations": [
+  {
+   "id": "S1",
+   "kind": "document",
+   "title": "Ml Regularization Experiments",
+   "text": "Dataset ml_regularization_experiments: 9 rows, columns: run_id, model, dataset, technique, train_accuracy, val_accuracy, epochs, notes.",
+   "doc_id": "ml_regularization_experiments",
+   "course_id": "ml",
+   "location": "dataset overview",
+   "chunk_id": "ml_regularization_experiments:0000",
+   "score": 0.5839,
+   "data": {
+    "file_type": "csv",
+    "page": null,
+    "section": "dataset overview",
+    "filename": "ml_regularization_experiments.csv"
+   },
+   "derived_from": []
+  },
+  {
+   "id": "S2",
+   "kind": "document",
+   "title": "Ml Model Evaluation Runs",
+   "text": "Dataset ml_model_evaluation_runs: 10 rows, columns: run_id, model, task, train_accuracy, val_accuracy, precision, recall, f1, notes.",
+   "doc_id": "ml_model_evaluation_runs",
+   "course_id": "ml",
+   "location": "dataset overview",
+   "chunk_id": "ml_model_evaluation_runs:0000",
+   "score": 0.4645,
+   "data": {
+    "file_type": "csv",
+    "page": null,
+    "section": "dataset overview",
+    "filename": "ml_model_evaluation_runs.csv"
+   },
+   "derived_from": []
+  }
+ ],
+ "evidence": {
+  "S1": {
+   "id": "S1",
+   "kind": "document",
+   "title": "Ml Regularization Experiments",
+   "text": "Dataset ml_regularization_experiments: 9 rows, columns: run_id, model, dataset, technique, train_accuracy, val_accuracy, epochs, notes.",
+   "doc_id": "ml_regularization_experiments",
+   "course_id": "ml",
+   "location": "dataset overview",
+   "chunk_id": "ml_regularization_experiments:0000",
+   "score": 0.5839,
+   "data": {
+    "file_type": "csv",
+    "page": null,
+    "section": "dataset overview",
+    "filename": "ml_regularization_experiments.csv"
+   },
+   "derived_from": []
+  },
+  "S2": {
+   "id": "S2",
+   "kind": "document",
+   "title": "Ml Model Evaluation Runs",
+   "text": "Dataset ml_model_evaluation_runs: 10 rows, columns: run_id, model, task, train_accuracy, val_accuracy, precision, recall, f1, notes.",
+   "doc_id": "ml_model_evaluation_runs",
+   "course_id": "ml",
+   "location": "dataset overview",
+   "chunk_id": "ml_model_evaluation_runs:0000",
+   "score": 0.4645,
+   "data": {
+    "file_type": "csv",
+    "page": null,
+    "section": "dataset overview",
+    "filename": "ml_model_evaluation_runs.csv"
+   },
+   "derived_from": []
+  },
+  "S3": {
+   "id": "S3",
+   "kind": "document",
+   "title": "Ml Regularization Experiments",
+   "text": "row 9: run_id=R09; model=Gradient Boosting; dataset=tabular-churn; technique=early stopping rounds=20; train_accuracy=0.918; val_accuracy=0.867; epochs=118; notes=Stopped at 118 of 300 rounds",
+   "doc_id": "ml_regularization_experiments",
+   "course_id": "ml",
+   "location": "rows 9-9",
+   "chunk_id": "ml_regularization_experiments:0002",
+   "score": 0.4088,
+   "data": {
+    "file_type": "csv",
+    "page": null,
+    "section": "data rows",
+    "filename": "ml_regularization_experiments.csv"
+   },
+   "derived_from": []
+  },
+  "S4": {
+   "id": "S4",
+   "kind": "document",
+   "title": "Ml Regularization Experiments",
+   "text": "row 1: run_id=R01; model=MLP (2 hidden layers); dataset=image-tiny; technique=none (baseline); train_accuracy=0.998; val_accuracy=0.812; epochs=60; notes=Memorizes training set; large train-val gap\nrow 2: run_id=R02; model=MLP (2 hidden layers); dataset=image-tiny; technique=L2 weight decay 1e-3; train_accuracy=0.951; val_accuracy=0.874; epochs=60; notes=Gap shrinks; weights shrunk\nrow 3: run_id=R03; model=MLP (2 hidden layers); dataset=image-tiny; technique=dropout p=0.3; train_accuracy=0.943; val_accuracy=0.881; epochs=60; notes=Stochastic unit removal at training time\nrow 4: run_id=R04; model=MLP (2 hidden layers); dataset=image-tiny; technique=early stopping patience=5; train_accuracy=0.927; val_accuracy=0.866; epochs=23; notes=Stopped at epoch 23 of 60 saving compute\nrow 5: run_id=R05; model=MLP (2 hidden layers); dataset=image-tiny; technique=L2 + early stopping; train_accuracy=0.935; val_accuracy=0.889; epochs=27; notes=Best validation accuracy of the image-tiny runs\nrow 6: run_id=R06; model=MLP (2 hidden layers); dataset=image-tiny; technique=data augmentation; train_accuracy=0.962; val_accuracy=0.893; epochs=60; notes=Highest validation accuracy but needs extra preprocessing\nrow 7: run_id=R07; model=Gradient Boosting; dataset=tabular-churn; technique=none (baseline); train_accuracy=0.991; val_accuracy=0.842; epochs=300; notes=Deep trees overfit\nrow 8: run_id=R08; model=Gradient Boosting; dataset=tabular-churn; technique=shrinkage 0.05 + max_depth 3; train_accuracy=0.902; val_accuracy=0.861; epochs=300; notes=Shallower trees reduce variance",
+   "doc_id": "ml_regularization_experiments",
+   "course_id": "ml",
+   "location": "rows 1-8",
+   "chunk_id": "ml_regularization_experiments:0001",
+   "score": 0.3555,
+   "data": {
+    "file_type": "csv",
+    "page": null,
+    "section": "data rows",
+    "filename": "ml_regularization_experiments.csv"
+   },
+   "derived_from": []
+  },
+  "S5": {
+   "id": "S5",
+   "kind": "document",
+   "title": "Ml Model Diagnostics Handbook",
+   "text": "3. Regularization Strength in scikit-learn\nIn scikit-learn LogisticRegression the parameter C is the inverse of the regularization strength: a\nsmaller C means stronger regularization, and the default is C=1.0. For Ridge regression the\nparameter alpha works the opposite way: a larger alpha means stronger shrinkage.\nL2 regularization (ridge) shrinks all weights toward zero; L1 regularization (lasso) can set some\nweights exactly to zero and therefore performs feature selection.",
+   "doc_id": "ml_model_diagnostics_handbook",
+   "course_id": "ml",
+   "location": "p.3",
+   "chunk_id": "ml_model_diagnostics_handbook:0002",
+   "score": 0.4052,
+   "data": {
+    "file_type": "pdf",
+    "page": 3,
+    "section": "3. Regularization Strength in scikit-learn",
+    "filename": "ml_model_diagnostics_handbook.pdf"
+   },
+   "derived_from": []
+  }
+ },
+ "trace": [
+  {
+   "seq": 1,
+   "t_ms": 1,
+   "type": "request_received",
+   "question": "What is the train_accuracy of run R05 in the regularization experiments dataset?",
+   "scope": null,
+   "system": "standard_rag"
+  },
+  {
+   "seq": 2,
+   "t_ms": 81,
+   "type": "retrieval",
+   "query": "What is the train_accuracy of run R05 in the regularization experiments dataset?",
+   "n": 5,
+   "sources": [
+    "S1",
+    "S2",
+    "S3",
+    "S4",
+    "S5"
+   ],
+   "best_score": 0.584
+  },
+  {
+   "seq": 3,
+   "t_ms": 10489,
+   "type": "answer",
+   "abstained": false,
+   "citations": [
+    "S1",
+    "S2"
+   ]
+  }
+ ],
+ "validation": {
+  "n_cited_sentences": 1,
+  "n_supported": 0,
+  "support_rate": 0.0,
+  "invalid_ids": [],
+  "unsupported": [
+   {
+    "sentence": "[S1] Dataset ml_model_evaluation_runs: 10 rows, columns: run_id, model, task, train_accuracy, val_accuracy, precision, recall, f1, notes.",
+    "cited": [
+     "S1"
+    ],
+    "reason": "numbers not in evidence: ['10']",
+    "sim": 0.0
+   }
+  ],
+  "uncited_numeric_sentences": [
+   "Dataset ml_regularization_experiments: 9 rows, columns: run_id, model, dataset, technique, train_accuracy, val_accuracy, epochs, notes."
+  ]
+ },
+ "metrics": {
+  "latency_s": 10.49,
+  "llm_calls": 1,
+  "prompt_tokens": 875,
+  "completion_tokens": 45,
+  "tool_calls": 1,
+  "replans": 0,
+  "steps": 1
+ },
+ "system": "standard_rag",
+ "config": {
+  "top_k": 5
+ }
+}

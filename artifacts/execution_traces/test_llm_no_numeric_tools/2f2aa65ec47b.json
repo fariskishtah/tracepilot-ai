@@ -1,0 +1,376 @@
+{
+ "request_id": "2f2aa65ec47b",
+ "question": "What does the Central Limit Theorem state?",
+ "answer": "The Central Limit Theorem states that for sufficiently large n, the distribution of the sample mean is approximately normal with mean mu and standard error sigma / sqrt(n), regardless of the shape of the original population [S1].",
+ "abstained": false,
+ "stop_reason": "answered",
+ "plan": {
+  "question_type": "factual",
+  "complexity": "simple",
+  "requires_retrieval": true,
+  "requires_calculation": false,
+  "requires_data_analysis": false,
+  "requires_comparison": false,
+  "subtasks": [
+   {
+    "id": "t1",
+    "tool": "search_knowledge_base",
+    "goal": "find the definition of Central Limit Theorem",
+    "query": "Central Limit Theorem definition",
+    "dataset_id": null,
+    "operation": null,
+    "column": null,
+    "group_by": null,
+    "agg": null,
+    "filters": null,
+    "expression": null,
+    "aspects": null,
+    "depends_on": []
+   }
+  ],
+  "rationale": "LLM plan: 1 step(s)"
+ },
+ "plan_source": "llm",
+ "tool_sequence": [
+  "search_knowledge_base"
+ ],
+ "citations": [
+  {
+   "id": "S1",
+   "kind": "document",
+   "title": "Statistics Lecture Notes",
+   "text": "4. Sampling and Confidence Intervals A population is the entire group of interest and a sample is a subset used to learn about it. Simple random sampling gives every member an equal chance of selection; stratified sampling samples within subgroups; convenience sampling is easy but prone to bias. Sampling bias occurs when the sample systematically differs from the population. The sampling distribution of the mean describes how sample means vary from sample to sample. The Central Limit Theorem states that for sufficiently large n the distribution of the sample mean is approximately normal with mean mu and standard error sigma / sqrt(n), regardless of the shape of the original population. The standard error shrinks as the sample size grows. A confidence interval gives a range of plausible values for a parameter. A 95% confidence interval for",
+   "doc_id": "statistics_lecture_notes",
+   "course_id": "statistics",
+   "location": "p.5",
+   "chunk_id": "statistics_lecture_notes:0007",
+   "score": 0.5365,
+   "data": {
+    "file_type": "pdf",
+    "page": 5,
+    "section": "4. Sampling and Confidence Intervals",
+    "filename": "statistics_lecture_notes.pdf"
+   },
+   "derived_from": []
+  }
+ ],
+ "evidence": {
+  "S1": {
+   "id": "S1",
+   "kind": "document",
+   "title": "Statistics Lecture Notes",
+   "text": "4. Sampling and Confidence Intervals A population is the entire group of interest and a sample is a subset used to learn about it. Simple random sampling gives every member an equal chance of selection; stratified sampling samples within subgroups; convenience sampling is easy but prone to bias. Sampling bias occurs when the sample systematically differs from the population. The sampling distribution of the mean describes how sample means vary from sample to sample. The Central Limit Theorem states that for sufficiently large n the distribution of the sample mean is approximately normal with mean mu and standard error sigma / sqrt(n), regardless of the shape of the original population. The standard error shrinks as the sample size grows. A confidence interval gives a range of plausible values for a parameter. A 95% confidence interval for",
+   "doc_id": "statistics_lecture_notes",
+   "course_id": "statistics",
+   "location": "p.5",
+   "chunk_id": "statistics_lecture_notes:0007",
+   "score": 0.5365,
+   "data": {
+    "file_type": "pdf",
+    "page": 5,
+    "section": "4. Sampling and Confidence Intervals",
+    "filename": "statistics_lecture_notes.pdf"
+   },
+   "derived_from": []
+  },
+  "S2": {
+   "id": "S2",
+   "kind": "document",
+   "title": "Statistics Lecture Notes",
+   "text": "1. Descriptive Statistics Descriptive statistics summarize a dataset. Measures of central tendency are the mean (the sum of the values divided by the number of values), the median (the middle value of the sorted data) and the mode (the most frequent value). The mean is sensitive to outliers; the median is robust to them. For right-skewed data such as incomes the mean is usually larger than the median. Measures of spread describe variability. The range is maximum minus minimum. The variance averages squared deviations from the mean, and the standard deviation is the square root of the variance, so it has the same units as the data. The interquartile range (IQR) is Q3 minus Q1 and is used to flag outliers: a common rule marks values below Q1 - 1.5 * IQR or above Q3 + 1.5 * IQR. Population variance divides the sum of squared deviations by N, the population size. Sample",
+   "doc_id": "statistics_lecture_notes",
+   "course_id": "statistics",
+   "location": "p.2",
+   "chunk_id": "statistics_lecture_notes:0001",
+   "score": 0.3509,
+   "data": {
+    "file_type": "pdf",
+    "page": 2,
+    "section": "1. Descriptive Statistics",
+    "filename": "statistics_lecture_notes.pdf"
+   },
+   "derived_from": []
+  },
+  "S3": {
+   "id": "S3",
+   "kind": "document",
+   "title": "Statistics Worked Examples",
+   "text": "row 17: example_id=ST017; topic=Descriptive statistics; dataset_or_scenario=Dataset C: 1,2,3,4,5,6,7,8,9,100; n=10; statistic=Population standard deviation; value=28.6051; method_note=square root of population variance\nrow 18: example_id=ST018; topic=Descriptive statistics; dataset_or_scenario=Dataset C: 1,2,3,4,5,6,7,8,9,100; n=10; statistic=Sample standard deviation; value=30.1524; method_note=square root of sample variance\nrow 19: example_id=ST019; topic=Probability; dataset_or_scenario=Fair die: P(rolling a 6); n=1; statistic=P = 1/6; value=0.1667; method_note=equally likely outcomes\nrow 20: example_id=ST020; topic=Probability; dataset_or_scenario=Two fair coins: P(two heads); n=2; statistic=P = 1/2 * 1/2; value=0.25; method_note=independent events\nrow 21: example_id=ST021; topic=Probability; dataset_or_scenario=Two cards without replacement: P(both aces); n=2; statistic=P = 4/52 * 3/51; value=0.0045; method_note=conditional probability\nrow 22: example_id=ST022; topic=Bayes; dataset_or_scenario=Disease 1%, sensitivity 95%, false positive 5%: P(disease | positive); n=1; statistic=Bayes theorem; value=0.161; method_note=base rate effect\nrow 23: example_id=ST023; topic=Binomial; dataset_or_scenario=10 fair coin flips: P(exactly 5 heads); n=10; statistic=C(10,5) * 0.5^10; value=0.2461; method_note=binomial PMF\nrow 24: example_id=ST024; topic=Normal; dataset_or_scenario=z-score of x = 85 with mean 70 and standard deviation 10; n=1; statistic=z = (x - mu) / sigma; value=1.5; method_note=standardization",
+   "doc_id": "statistics_worked_examples",
+   "course_id": "statistics",
+   "location": "rows 17-24",
+   "chunk_id": "statistics_worked_examples:0003",
+   "score": 0.2919,
+   "data": {
+    "file_type": "csv",
+    "page": null,
+    "section": "data rows",
+    "filename": "statistics_worked_examples.csv"
+   },
+   "derived_from": []
+  },
+  "S4": {
+   "id": "S4",
+   "kind": "document",
+   "title": "Statistics Lecture Notes",
+   "text": "3. Probability Distributions A random variable assigns a number to each outcome of a random process. A discrete random variable takes countable values; a continuous one takes values in an interval. A probability mass function (PMF) gives P(X = x) for discrete variables, while a probability density function (PDF) describes continuous variables, where probabilities are areas under the curve. The binomial distribution models the number of successes in n independent trials with success probability p. Its mean is n * p and its variance is n * p * (1 - p). The Poisson distribution models counts of events in a fixed interval with mean and variance both equal to lambda. The normal distribution is symmetric and bell-shaped, described by its mean mu and standard deviation sigma. The empirical rule says about 68% of values lie within one standard deviation of the",
+   "doc_id": "statistics_lecture_notes",
+   "course_id": "statistics",
+   "location": "p.4",
+   "chunk_id": "statistics_lecture_notes:0005",
+   "score": 0.3945,
+   "data": {
+    "file_type": "pdf",
+    "page": 4,
+    "section": "3. Probability Distributions",
+    "filename": "statistics_lecture_notes.pdf"
+   },
+   "derived_from": []
+  },
+  "S5": {
+   "id": "S5",
+   "kind": "document",
+   "title": "Statistics Exercise Guide",
+   "text": "Common Distribution Facts",
+   "doc_id": "statistics_exercise_guide",
+   "course_id": "statistics",
+   "location": "Common Distribution Facts",
+   "chunk_id": "statistics_exercise_guide:0005",
+   "score": 0.3847,
+   "data": {
+    "file_type": "docx",
+    "page": null,
+    "section": "Common Distribution Facts",
+    "filename": "statistics_exercise_guide.docx"
+   },
+   "derived_from": []
+  }
+ },
+ "trace": [
+  {
+   "seq": 1,
+   "t_ms": 0,
+   "type": "request_received",
+   "question": "What does the Central Limit Theorem state?",
+   "scope": null,
+   "tools": [
+    "search_knowledge_base",
+    "retrieve_source_context",
+    "summarize_evidence",
+    "compare_evidence",
+    "refine_search_query"
+   ],
+   "planner": "llm",
+   "replanning": false,
+   "llm": "qwen2.5:3b-instruct",
+   "registry_version": "1.0.0"
+  },
+  {
+   "seq": 2,
+   "t_ms": 1,
+   "type": "question_analysis",
+   "calc_cue": false,
+   "data_cue": false,
+   "compare_cue": false,
+   "summary_cue": false,
+   "multi_cue": false,
+   "named_datasets": [],
+   "length_words": 7,
+   "needs_data": false,
+   "explicit_dataset": false,
+   "literal_numbers": [],
+   "needs_calc": false,
+   "concept_cue": true
+  },
+  {
+   "seq": 3,
+   "t_ms": 6494,
+   "type": "plan_created",
+   "source": "llm",
+   "question_type": "factual",
+   "complexity": "simple",
+   "requires": {
+    "retrieval": true,
+    "calculation": false,
+    "data_analysis": false,
+    "comparison": false
+   },
+   "summary": "LLM plan: 1 step(s)",
+   "adjustments": [],
+   "note": "",
+   "subtasks": [
+    {
+     "id": "t1",
+     "tool": "search_knowledge_base",
+     "goal": "find the definition of Central Limit Theorem",
+     "depends_on": []
+    }
+   ]
+  },
+  {
+   "seq": 4,
+   "t_ms": 6494,
+   "type": "tool_selected",
+   "step": "t1",
+   "tool": "search_knowledge_base",
+   "goal": "find the definition of Central Limit Theorem",
+   "attempt": 1,
+   "args": {
+    "query": "Central Limit Theorem definition",
+    "course_ids": null,
+    "top_k": 5
+   }
+  },
+  {
+   "seq": 5,
+   "t_ms": 16983,
+   "type": "tool_result",
+   "step": "t1",
+   "tool": "search_knowledge_base",
+   "ok": true,
+   "ms": 10488.7,
+   "summary": "5 chunks, best cosine 0.54",
+   "evidence_ids": [
+    "S1",
+    "S2",
+    "S3",
+    "S4",
+    "S5"
+   ],
+   "error": null,
+   "error_type": null,
+   "sufficient": true,
+   "relevance": {
+    "best_score": 0.537,
+    "keyword_coverage": 1.0,
+    "threshold": {
+     "min_best_score": 0.35,
+     "min_keyword_coverage": 0.35
+    }
+   },
+   "sources": [
+    {
+     "id": "S1",
+     "title": "Statistics Lecture Notes",
+     "location": "p.5",
+     "score": 0.537
+    },
+    {
+     "id": "S2",
+     "title": "Statistics Lecture Notes",
+     "location": "p.2",
+     "score": 0.351
+    },
+    {
+     "id": "S3",
+     "title": "Statistics Worked Examples",
+     "location": "rows 17-24",
+     "score": 0.292
+    },
+    {
+     "id": "S4",
+     "title": "Statistics Lecture Notes",
+     "location": "p.4",
+     "score": 0.394
+    },
+    {
+     "id": "S5",
+     "title": "Statistics Exercise Guide",
+     "location": "Common Distribution Facts",
+     "score": 0.385
+    }
+   ]
+  },
+  {
+   "seq": 6,
+   "t_ms": 16983,
+   "type": "validation",
+   "sufficient": true,
+   "steps": {
+    "t1": {
+     "status": "done",
+     "sufficient": true
+    }
+   },
+   "problems": []
+  },
+  {
+   "seq": 7,
+   "t_ms": 16983,
+   "type": "synthesis_started",
+   "evidence": [
+    "S1",
+    "S2"
+   ],
+   "computed": [],
+   "gaps": []
+  },
+  {
+   "seq": 8,
+   "t_ms": 19613,
+   "type": "citation_check",
+   "n_cited_sentences": 1,
+   "n_supported": 1,
+   "support_rate": 1.0,
+   "invalid_ids": [],
+   "removed_unsupported": 0,
+   "regenerated": 0,
+   "injection_flags": [],
+   "fallback_extractive": false
+  },
+  {
+   "seq": 9,
+   "t_ms": 19613,
+   "type": "answer",
+   "abstained": false,
+   "citations": [
+    "S1"
+   ]
+  },
+  {
+   "seq": 10,
+   "t_ms": 19616,
+   "type": "completed",
+   "stop_reason": "answered",
+   "latency_s": 19.61
+  }
+ ],
+ "validation": {
+  "n_cited_sentences": 1,
+  "n_supported": 1,
+  "support_rate": 1.0,
+  "invalid_ids": [],
+  "unsupported": [],
+  "uncited_numeric_sentences": []
+ },
+ "metrics": {
+  "latency_s": 19.61,
+  "llm_calls": 2,
+  "prompt_tokens": 2011,
+  "completion_tokens": 118,
+  "tool_calls": 1,
+  "replans": 0,
+  "steps": 1,
+  "errors": [],
+  "step_status": {
+   "t1": "done"
+  },
+  "removed_unsupported": 0,
+  "injection_flags": []
+ },
+ "system": "agentic",
+ "config": {
+  "name": "llm_no_numeric_tools",
+  "planner": "llm",
+  "replan": false,
+  "tools": [
+   "search_knowledge_base",
+   "retrieve_source_context",
+   "summarize_evidence",
+   "compare_evidence",
+   "refine_search_query"
+  ],
+  "model": "qwen2.5:3b-instruct",
+  "registry_version": "1.0.0"
+ }
+}

@@ -1,0 +1,380 @@
+{
+ "request_id": "67fe5ef74d77",
+ "question": "What is data leakage?",
+ "answer": "Data leakage means information from outside the training data influences the features, leading to unrealistically good scores. [S2] This is more broadly defined as data leakage in ML, where future values or the target itself affect the features, contrary to the training data's intended use [S2].",
+ "abstained": false,
+ "stop_reason": "answered",
+ "plan": {
+  "question_type": "factual",
+  "complexity": "simple",
+  "requires_retrieval": true,
+  "requires_calculation": false,
+  "requires_data_analysis": false,
+  "requires_comparison": false,
+  "subtasks": [
+   {
+    "id": "t1",
+    "tool": "search_knowledge_base",
+    "goal": "definition of data leakage",
+    "query": "data leakage definition",
+    "dataset_id": null,
+    "operation": null,
+    "column": null,
+    "group_by": null,
+    "agg": null,
+    "filters": null,
+    "expression": null,
+    "aspects": null,
+    "depends_on": []
+   }
+  ],
+  "rationale": "LLM plan: 1 step(s)"
+ },
+ "plan_source": "llm",
+ "tool_sequence": [
+  "search_knowledge_base"
+ ],
+ "citations": [
+  {
+   "id": "S2",
+   "kind": "document",
+   "title": "Ml Lecture Notes",
+   "text": "5. Data Splitting and Cross-Validation Data is usually divided into a training set for fitting, a validation set for tuning hyperparameters and a test set used once for the final unbiased estimate. Using the test set repeatedly for decisions leaks information and makes the estimate optimistic. Data leakage more generally means that information from outside the training data, such as future values or the target itself, influences the features; it produces unrealistically good scores that collapse in production. k-fold cross-validation splits the training data into k equal folds. The model is trained k times, each time holding out a different fold for validation, and the k scores are averaged. Typical values are k = 5 or k = 10. Stratified k-fold preserves the class proportions in every fold and is recommended for classification with imbalanced classes.",
+   "doc_id": "ml_lecture_notes",
+   "course_id": "ml",
+   "location": "p.6",
+   "chunk_id": "ml_lecture_notes:0008",
+   "score": 0.4185,
+   "data": {
+    "file_type": "pdf",
+    "page": 6,
+    "section": "5. Data Splitting and Cross-Validation",
+    "filename": "ml_lecture_notes.pdf"
+   },
+   "derived_from": []
+  }
+ ],
+ "evidence": {
+  "S1": {
+   "id": "S1",
+   "kind": "document",
+   "title": "Ml Exercise Guide",
+   "text": "Assignment 3: Preventing Data Leakage\nTask. A student standardizes the whole dataset, then splits it into train and test sets. What is wrong?\nExpected answer. The scaler computed the mean and standard deviation using the test rows, so information from the test set leaked into the training pipeline. The correct procedure is to split first, fit the scaler on the training set only and apply the fitted scaler to the test set. Using a scikit-learn Pipeline inside cross-validation automates this.",
+   "doc_id": "ml_exercise_guide",
+   "course_id": "ml",
+   "location": "Assignment 3: Preventing Data Leakage",
+   "chunk_id": "ml_exercise_guide:0003",
+   "score": 0.4542,
+   "data": {
+    "file_type": "docx",
+    "page": null,
+    "section": "Assignment 3: Preventing Data Leakage",
+    "filename": "ml_exercise_guide.docx"
+   },
+   "derived_from": []
+  },
+  "S2": {
+   "id": "S2",
+   "kind": "document",
+   "title": "Ml Lecture Notes",
+   "text": "5. Data Splitting and Cross-Validation Data is usually divided into a training set for fitting, a validation set for tuning hyperparameters and a test set used once for the final unbiased estimate. Using the test set repeatedly for decisions leaks information and makes the estimate optimistic. Data leakage more generally means that information from outside the training data, such as future values or the target itself, influences the features; it produces unrealistically good scores that collapse in production. k-fold cross-validation splits the training data into k equal folds. The model is trained k times, each time holding out a different fold for validation, and the k scores are averaged. Typical values are k = 5 or k = 10. Stratified k-fold preserves the class proportions in every fold and is recommended for classification with imbalanced classes.",
+   "doc_id": "ml_lecture_notes",
+   "course_id": "ml",
+   "location": "p.6",
+   "chunk_id": "ml_lecture_notes:0008",
+   "score": 0.4185,
+   "data": {
+    "file_type": "pdf",
+    "page": 6,
+    "section": "5. Data Splitting and Cross-Validation",
+    "filename": "ml_lecture_notes.pdf"
+   },
+   "derived_from": []
+  },
+  "S3": {
+   "id": "S3",
+   "kind": "document",
+   "title": "Data Lab Guide",
+   "text": "Data Wrangling Lab Guide (v2, 2025)",
+   "doc_id": "data_lab_guide",
+   "course_id": "data",
+   "location": "Data Wrangling Lab Guide (v2, 2025)",
+   "chunk_id": "data_lab_guide:0000",
+   "score": 0.2702,
+   "data": {
+    "file_type": "docx",
+    "page": null,
+    "section": "Data Wrangling Lab Guide (v2, 2025)",
+    "filename": "data_lab_guide.docx"
+   },
+   "derived_from": []
+  },
+  "S4": {
+   "id": "S4",
+   "kind": "document",
+   "title": "Ml Lecture Notes",
+   "text": "environment. A typical workflow is: define the problem, collect and clean data, split it, engineer features, train a  model, evaluate it on unseen data, tune it and finally deploy and monitor it.",
+   "doc_id": "ml_lecture_notes",
+   "course_id": "ml",
+   "location": "p.2",
+   "chunk_id": "ml_lecture_notes:0002",
+   "score": 0.2697,
+   "data": {
+    "file_type": "pdf",
+    "page": 2,
+    "section": "1. Supervised and Unsupervised Learning",
+    "filename": "ml_lecture_notes.pdf"
+   },
+   "derived_from": []
+  },
+  "S5": {
+   "id": "S5",
+   "kind": "document",
+   "title": "Data Legacy Lab Notes 2021",
+   "text": "DATA WRANGLING LAB NOTES (2021 edition)\n=======================================",
+   "doc_id": "data_legacy_lab_notes_2021",
+   "course_id": "data",
+   "location": "-",
+   "chunk_id": "data_legacy_lab_notes_2021:0000",
+   "score": 0.2604,
+   "data": {
+    "file_type": "txt",
+    "page": null,
+    "section": null,
+    "filename": "data_legacy_lab_notes_2021.txt"
+   },
+   "derived_from": []
+  }
+ },
+ "trace": [
+  {
+   "seq": 1,
+   "t_ms": 1,
+   "type": "request_received",
+   "question": "What is data leakage?",
+   "scope": null,
+   "tools": [
+    "search_knowledge_base",
+    "retrieve_source_context",
+    "summarize_evidence",
+    "analyze_dataset",
+    "calculate_expression",
+    "compare_evidence",
+    "refine_search_query"
+   ],
+   "planner": "llm",
+   "replanning": true,
+   "llm": "qwen2.5:3b-instruct",
+   "registry_version": "1.0.0"
+  },
+  {
+   "seq": 2,
+   "t_ms": 6,
+   "type": "question_analysis",
+   "calc_cue": false,
+   "data_cue": false,
+   "compare_cue": false,
+   "summary_cue": false,
+   "multi_cue": false,
+   "named_datasets": [],
+   "length_words": 4,
+   "needs_data": false,
+   "explicit_dataset": false,
+   "literal_numbers": [],
+   "needs_calc": false,
+   "concept_cue": true
+  },
+  {
+   "seq": 3,
+   "t_ms": 3078,
+   "type": "plan_created",
+   "source": "llm",
+   "question_type": "factual",
+   "complexity": "simple",
+   "requires": {
+    "retrieval": true,
+    "calculation": false,
+    "data_analysis": false,
+    "comparison": false
+   },
+   "summary": "LLM plan: 1 step(s)",
+   "adjustments": [],
+   "note": "",
+   "subtasks": [
+    {
+     "id": "t1",
+     "tool": "search_knowledge_base",
+     "goal": "definition of data leakage",
+     "depends_on": []
+    }
+   ]
+  },
+  {
+   "seq": 4,
+   "t_ms": 3078,
+   "type": "tool_selected",
+   "step": "t1",
+   "tool": "search_knowledge_base",
+   "goal": "definition of data leakage",
+   "attempt": 1,
+   "args": {
+    "query": "data leakage definition",
+    "course_ids": null,
+    "top_k": 5
+   }
+  },
+  {
+   "seq": 5,
+   "t_ms": 3425,
+   "type": "tool_result",
+   "step": "t1",
+   "tool": "search_knowledge_base",
+   "ok": true,
+   "ms": 346.2,
+   "summary": "5 chunks, best cosine 0.45",
+   "evidence_ids": [
+    "S1",
+    "S2",
+    "S3",
+    "S4",
+    "S5"
+   ],
+   "error": null,
+   "error_type": null,
+   "sufficient": true,
+   "relevance": {
+    "best_score": 0.454,
+    "keyword_coverage": 1.0,
+    "threshold": {
+     "min_best_score": 0.35,
+     "min_keyword_coverage": 0.35
+    }
+   },
+   "sources": [
+    {
+     "id": "S1",
+     "title": "Ml Exercise Guide",
+     "location": "Assignment 3: Preventing Data Leakage",
+     "score": 0.454
+    },
+    {
+     "id": "S2",
+     "title": "Ml Lecture Notes",
+     "location": "p.6",
+     "score": 0.418
+    },
+    {
+     "id": "S3",
+     "title": "Data Lab Guide",
+     "location": "Data Wrangling Lab Guide (v2, 2025)",
+     "score": 0.27
+    },
+    {
+     "id": "S4",
+     "title": "Ml Lecture Notes",
+     "location": "p.2",
+     "score": 0.27
+    },
+    {
+     "id": "S5",
+     "title": "Data Legacy Lab Notes 2021",
+     "location": "-",
+     "score": 0.26
+    }
+   ]
+  },
+  {
+   "seq": 6,
+   "t_ms": 3425,
+   "type": "validation",
+   "sufficient": true,
+   "steps": {
+    "t1": {
+     "status": "done",
+     "sufficient": true
+    }
+   },
+   "problems": []
+  },
+  {
+   "seq": 7,
+   "t_ms": 3425,
+   "type": "synthesis_started",
+   "evidence": [
+    "S1",
+    "S2"
+   ],
+   "computed": [],
+   "gaps": []
+  },
+  {
+   "seq": 8,
+   "t_ms": 8215,
+   "type": "citation_check",
+   "n_cited_sentences": 1,
+   "n_supported": 1,
+   "support_rate": 1.0,
+   "invalid_ids": [],
+   "removed_unsupported": 0,
+   "regenerated": 0,
+   "injection_flags": [],
+   "fallback_extractive": false
+  },
+  {
+   "seq": 9,
+   "t_ms": 8215,
+   "type": "answer",
+   "abstained": false,
+   "citations": [
+    "S2"
+   ]
+  },
+  {
+   "seq": 10,
+   "t_ms": 8225,
+   "type": "completed",
+   "stop_reason": "answered",
+   "latency_s": 8.22
+  }
+ ],
+ "validation": {
+  "n_cited_sentences": 1,
+  "n_supported": 1,
+  "support_rate": 1.0,
+  "invalid_ids": [],
+  "unsupported": [],
+  "uncited_numeric_sentences": []
+ },
+ "metrics": {
+  "latency_s": 8.22,
+  "llm_calls": 2,
+  "prompt_tokens": 2105,
+  "completion_tokens": 122,
+  "tool_calls": 1,
+  "replans": 0,
+  "steps": 1,
+  "errors": [],
+  "step_status": {
+   "t1": "done"
+  },
+  "removed_unsupported": 0,
+  "injection_flags": []
+ },
+ "system": "agentic",
+ "config": {
+  "name": "full",
+  "planner": "llm",
+  "replan": true,
+  "tools": [
+   "search_knowledge_base",
+   "retrieve_source_context",
+   "summarize_evidence",
+   "analyze_dataset",
+   "calculate_expression",
+   "compare_evidence",
+   "refine_search_query"
+  ],
+  "model": "qwen2.5:3b-instruct",
+  "registry_version": "1.0.0"
+ }
+}

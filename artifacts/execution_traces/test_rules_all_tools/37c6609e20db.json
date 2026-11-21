@@ -1,0 +1,646 @@
+{
+ "request_id": "37c6609e20db",
+ "question": "Compare statistics.variance and statistics.pvariance in Python.",
+ "answer": "statistics.variance(data) in Python returns the sample variance, while statistics.pvariance(data) returns the population variance [S1] [S2].",
+ "abstained": false,
+ "stop_reason": "answered",
+ "plan": {
+  "question_type": "comparison",
+  "complexity": "moderate",
+  "requires_retrieval": true,
+  "requires_calculation": false,
+  "requires_data_analysis": false,
+  "requires_comparison": true,
+  "subtasks": [
+   {
+    "id": "t1",
+    "tool": "search_knowledge_base",
+    "goal": "find evidence: statistics.variance statistics.pvariance",
+    "query": "statistics.variance statistics.pvariance",
+    "dataset_id": null,
+    "operation": null,
+    "column": null,
+    "group_by": null,
+    "agg": null,
+    "filters": null,
+    "expression": null,
+    "aspects": null,
+    "depends_on": []
+   },
+   {
+    "id": "t2",
+    "tool": "search_knowledge_base",
+    "goal": "find evidence: statistics.pvariance in Python",
+    "query": "statistics.pvariance in Python",
+    "dataset_id": null,
+    "operation": null,
+    "column": null,
+    "group_by": null,
+    "agg": null,
+    "filters": null,
+    "expression": null,
+    "aspects": null,
+    "depends_on": []
+   },
+   {
+    "id": "t3",
+    "tool": "compare_evidence",
+    "goal": "compare retrieved evidence",
+    "query": null,
+    "dataset_id": null,
+    "operation": null,
+    "column": null,
+    "group_by": null,
+    "agg": null,
+    "filters": null,
+    "expression": null,
+    "aspects": [
+     "statistics.variance statistics.pvariance",
+     "statistics.pvariance in Python"
+    ],
+    "depends_on": [
+     "t1",
+     "t2"
+    ]
+   }
+  ],
+  "rationale": "rule-based plan from question features"
+ },
+ "plan_source": "rules",
+ "tool_sequence": [
+  "search_knowledge_base",
+  "search_knowledge_base",
+  "compare_evidence"
+ ],
+ "citations": [
+  {
+   "id": "S1",
+   "kind": "document",
+   "title": "Python Faq Style Addendum",
+   "text": "Frequently Asked Questions\nWhich Python version does the course use? The course uses Python 3.12 in all examples and tests.\nWhich editor should I use? Any editor is allowed; VS Code is used in the demonstrations.\nIs the statistics module allowed in assignments? Yes. statistics.variance(data) returns the sample variance, while statistics.pvariance(data) returns the population variance. In the same way statistics.stdev is the sample standard deviation and statistics.pstdev is the population standard deviation.\nWhere do I ask questions? Post them on the course forum; answers are usually given within two working days.",
+   "doc_id": "python_faq_style_addendum",
+   "course_id": "python",
+   "location": "Frequently Asked Questions",
+   "chunk_id": "python_faq_style_addendum:0002",
+   "score": 0.5117996335029602,
+   "data": {
+    "file_type": "docx",
+    "page": null,
+    "section": "Frequently Asked Questions",
+    "filename": "python_faq_style_addendum.docx"
+   },
+   "derived_from": []
+  },
+  {
+   "id": "S2",
+   "kind": "document",
+   "title": "Statistics Lab Report Guide",
+   "text": "Statistics Lab Report Guide",
+   "doc_id": "statistics_lab_report_guide",
+   "course_id": "statistics",
+   "location": "Statistics Lab Report Guide",
+   "chunk_id": "statistics_lab_report_guide:0000",
+   "score": 0.5735,
+   "data": {
+    "file_type": "docx",
+    "page": null,
+    "section": "Statistics Lab Report Guide",
+    "filename": "statistics_lab_report_guide.docx"
+   },
+   "derived_from": []
+  }
+ ],
+ "evidence": {
+  "S1": {
+   "id": "S1",
+   "kind": "document",
+   "title": "Python Faq Style Addendum",
+   "text": "Frequently Asked Questions\nWhich Python version does the course use? The course uses Python 3.12 in all examples and tests.\nWhich editor should I use? Any editor is allowed; VS Code is used in the demonstrations.\nIs the statistics module allowed in assignments? Yes. statistics.variance(data) returns the sample variance, while statistics.pvariance(data) returns the population variance. In the same way statistics.stdev is the sample standard deviation and statistics.pstdev is the population standard deviation.\nWhere do I ask questions? Post them on the course forum; answers are usually given within two working days.",
+   "doc_id": "python_faq_style_addendum",
+   "course_id": "python",
+   "location": "Frequently Asked Questions",
+   "chunk_id": "python_faq_style_addendum:0002",
+   "score": 0.5117996335029602,
+   "data": {
+    "file_type": "docx",
+    "page": null,
+    "section": "Frequently Asked Questions",
+    "filename": "python_faq_style_addendum.docx"
+   },
+   "derived_from": []
+  },
+  "S2": {
+   "id": "S2",
+   "kind": "document",
+   "title": "Statistics Lab Report Guide",
+   "text": "Statistics Lab Report Guide",
+   "doc_id": "statistics_lab_report_guide",
+   "course_id": "statistics",
+   "location": "Statistics Lab Report Guide",
+   "chunk_id": "statistics_lab_report_guide:0000",
+   "score": 0.5735,
+   "data": {
+    "file_type": "docx",
+    "page": null,
+    "section": "Statistics Lab Report Guide",
+    "filename": "statistics_lab_report_guide.docx"
+   },
+   "derived_from": []
+  },
+  "S3": {
+   "id": "S3",
+   "kind": "document",
+   "title": "Statistics Reference Notes",
+   "text": "DESCRIPTIVE FORMULAS\nMean: x-bar = (sum of x) / n\nPopulation variance: sigma^2 = sum((x - mu)^2) / N\nSample variance: s^2 = sum((x - x-bar)^2) / (n - 1)\nStandard deviation: the square root of the variance.\nIQR = Q3 - Q1. Outlier fences: Q1 - 1.5*IQR and Q3 + 1.5*IQR.\nCoefficient of variation: CV = standard deviation / mean.",
+   "doc_id": "statistics_reference_notes",
+   "course_id": "statistics",
+   "location": "DESCRIPTIVE FORMULAS",
+   "chunk_id": "statistics_reference_notes:0001",
+   "score": 0.513,
+   "data": {
+    "file_type": "txt",
+    "page": null,
+    "section": "DESCRIPTIVE FORMULAS",
+    "filename": "statistics_reference_notes.txt"
+   },
+   "derived_from": []
+  },
+  "S4": {
+   "id": "S4",
+   "kind": "document",
+   "title": "Statistics Confusable Terms",
+   "text": "STATISTICS CONFUSABLE TERMS (original course material, CC BY 4.0)\n==================================================================",
+   "doc_id": "statistics_confusable_terms",
+   "course_id": "statistics",
+   "location": "-",
+   "chunk_id": "statistics_confusable_terms:0000",
+   "score": 0.5088,
+   "data": {
+    "file_type": "txt",
+    "page": null,
+    "section": null,
+    "filename": "statistics_confusable_terms.txt"
+   },
+   "derived_from": []
+  },
+  "S5": {
+   "id": "S5",
+   "kind": "document",
+   "title": "Statistics Exercise Guide",
+   "text": "Statistics Problem Explanations\nIndependently written demonstration material (CC BY 4.0). Not official university material.",
+   "doc_id": "statistics_exercise_guide",
+   "course_id": "statistics",
+   "location": "Statistics Problem Explanations",
+   "chunk_id": "statistics_exercise_guide:0000",
+   "score": 0.5045,
+   "data": {
+    "file_type": "docx",
+    "page": null,
+    "section": "Statistics Problem Explanations",
+    "filename": "statistics_exercise_guide.docx"
+   },
+   "derived_from": []
+  },
+  "S6": {
+   "id": "S6",
+   "kind": "document",
+   "title": "Python Reference Notes",
+   "text": "PYTHON QUICK REFERENCE NOTES (original demo material, CC BY 4.0)\n===============================================================",
+   "doc_id": "python_reference_notes",
+   "course_id": "python",
+   "location": "-",
+   "chunk_id": "python_reference_notes:0000",
+   "score": 0.4682,
+   "data": {
+    "file_type": "txt",
+    "page": null,
+    "section": null,
+    "filename": "python_reference_notes.txt"
+   },
+   "derived_from": []
+  },
+  "S7": {
+   "id": "S7",
+   "kind": "document",
+   "title": "Python Library Cheatsheet",
+   "text": "row 1: entry_id=LIB001; identifier=math.isclose; module=math; returns=bool; min_python=3.5; note=Compares floats; the default rel_tol is 1e-09\nrow 2: entry_id=LIB002; identifier=math.prod; module=math; returns=number; min_python=3.8; note=Multiplies all items of an iterable\nrow 3: entry_id=LIB003; identifier=math.dist; module=math; returns=float; min_python=3.8; note=Euclidean distance between two points\nrow 4: entry_id=LIB004; identifier=statistics.fmean; module=statistics; returns=float; min_python=3.8; note=Fast floating-point arithmetic mean\nrow 5: entry_id=LIB005; identifier=statistics.correlation; module=statistics; returns=float; min_python=3.10; note=Pearson correlation of two inputs\nrow 6: entry_id=LIB006; identifier=functools.cache; module=functools; returns=decorator; min_python=3.9; note=Unbounded memoization; shortcut for lru_cache(maxsize=None)\nrow 7: entry_id=LIB007; identifier=str.removeprefix; module=builtins; returns=str; min_python=3.9; note=Returns the string without the given prefix if present\nrow 8: entry_id=LIB008; identifier=str.casefold; module=builtins; returns=str; min_python=3.3; note=Aggressive lowercase for caseless comparison",
+   "doc_id": "python_library_cheatsheet",
+   "course_id": "python",
+   "location": "rows 1-8",
+   "chunk_id": "python_library_cheatsheet:0001",
+   "score": 0.4334,
+   "data": {
+    "file_type": "csv",
+    "page": null,
+    "section": "data rows",
+    "filename": "python_library_cheatsheet.csv"
+   },
+   "derived_from": []
+  },
+  "S8": {
+   "id": "S8",
+   "kind": "document",
+   "title": "Python Lecture Notes",
+   "text": "Python Lecture Notes\nPython Programming - independently written demonstration notes. Not official university material.",
+   "doc_id": "python_lecture_notes",
+   "course_id": "python",
+   "location": "p.1",
+   "chunk_id": "python_lecture_notes:0000",
+   "score": 0.4053,
+   "data": {
+    "file_type": "pdf",
+    "page": 1,
+    "section": null,
+    "filename": "python_lecture_notes.pdf"
+   },
+   "derived_from": []
+  },
+  "S9": {
+   "id": "S9",
+   "kind": "document",
+   "title": "Python Exercise Guide",
+   "text": "Grading Rubric for Python Exercises",
+   "doc_id": "python_exercise_guide",
+   "course_id": "python",
+   "location": "Grading Rubric for Python Exercises",
+   "chunk_id": "python_exercise_guide:0004",
+   "score": 0.3977,
+   "data": {
+    "file_type": "docx",
+    "page": null,
+    "section": "Grading Rubric for Python Exercises",
+    "filename": "python_exercise_guide.docx"
+   },
+   "derived_from": []
+  }
+ },
+ "trace": [
+  {
+   "seq": 1,
+   "t_ms": 0,
+   "type": "request_received",
+   "question": "Compare statistics.variance and statistics.pvariance in Python.",
+   "scope": null,
+   "tools": [
+    "search_knowledge_base",
+    "retrieve_source_context",
+    "summarize_evidence",
+    "analyze_dataset",
+    "calculate_expression",
+    "compare_evidence",
+    "refine_search_query"
+   ],
+   "planner": "rules",
+   "replanning": false,
+   "llm": "qwen2.5:3b-instruct",
+   "registry_version": "1.0.0"
+  },
+  {
+   "seq": 2,
+   "t_ms": 1,
+   "type": "question_analysis",
+   "calc_cue": true,
+   "data_cue": false,
+   "compare_cue": true,
+   "summary_cue": false,
+   "multi_cue": false,
+   "named_datasets": [],
+   "length_words": 6,
+   "needs_data": false,
+   "explicit_dataset": false,
+   "literal_numbers": [],
+   "needs_calc": false,
+   "concept_cue": true
+  },
+  {
+   "seq": 3,
+   "t_ms": 1,
+   "type": "plan_created",
+   "source": "rules",
+   "question_type": "comparison",
+   "complexity": "moderate",
+   "requires": {
+    "retrieval": true,
+    "calculation": false,
+    "data_analysis": false,
+    "comparison": true
+   },
+   "summary": "rule-based plan from question features",
+   "adjustments": [],
+   "note": "",
+   "subtasks": [
+    {
+     "id": "t1",
+     "tool": "search_knowledge_base",
+     "goal": "find evidence: statistics.variance statistics.pvariance",
+     "depends_on": []
+    },
+    {
+     "id": "t2",
+     "tool": "search_knowledge_base",
+     "goal": "find evidence: statistics.pvariance in Python",
+     "depends_on": []
+    },
+    {
+     "id": "t3",
+     "tool": "compare_evidence",
+     "goal": "compare retrieved evidence",
+     "depends_on": [
+      "t1",
+      "t2"
+     ]
+    }
+   ]
+  },
+  {
+   "seq": 4,
+   "t_ms": 1,
+   "type": "tool_selected",
+   "step": "t1",
+   "tool": "search_knowledge_base",
+   "goal": "find evidence: statistics.variance statistics.pvariance",
+   "attempt": 1,
+   "args": {
+    "query": "statistics.variance statistics.pvariance",
+    "course_ids": null,
+    "top_k": 5
+   }
+  },
+  {
+   "seq": 5,
+   "t_ms": 10,
+   "type": "tool_result",
+   "step": "t1",
+   "tool": "search_knowledge_base",
+   "ok": true,
+   "ms": 8.7,
+   "summary": "5 chunks, best cosine 0.57",
+   "evidence_ids": [
+    "S1",
+    "S2",
+    "S3",
+    "S4",
+    "S5"
+   ],
+   "error": null,
+   "error_type": null,
+   "sufficient": true,
+   "relevance": {
+    "best_score": 0.574,
+    "keyword_coverage": 1.0,
+    "threshold": {
+     "min_best_score": 0.35,
+     "min_keyword_coverage": 0.35
+    }
+   },
+   "sources": [
+    {
+     "id": "S1",
+     "title": "Python Faq Style Addendum",
+     "location": "Frequently Asked Questions",
+     "score": 0.503
+    },
+    {
+     "id": "S2",
+     "title": "Statistics Lab Report Guide",
+     "location": "Statistics Lab Report Guide",
+     "score": 0.574
+    },
+    {
+     "id": "S3",
+     "title": "Statistics Reference Notes",
+     "location": "DESCRIPTIVE FORMULAS",
+     "score": 0.513
+    },
+    {
+     "id": "S4",
+     "title": "Statistics Confusable Terms",
+     "location": "-",
+     "score": 0.509
+    },
+    {
+     "id": "S5",
+     "title": "Statistics Exercise Guide",
+     "location": "Statistics Problem Explanations",
+     "score": 0.505
+    }
+   ]
+  },
+  {
+   "seq": 6,
+   "t_ms": 10,
+   "type": "tool_selected",
+   "step": "t2",
+   "tool": "search_knowledge_base",
+   "goal": "find evidence: statistics.pvariance in Python",
+   "attempt": 1,
+   "args": {
+    "query": "statistics.pvariance in Python",
+    "course_ids": null,
+    "top_k": 5
+   }
+  },
+  {
+   "seq": 7,
+   "t_ms": 19,
+   "type": "tool_result",
+   "step": "t2",
+   "tool": "search_knowledge_base",
+   "ok": true,
+   "ms": 8.8,
+   "summary": "5 chunks, best cosine 0.51",
+   "evidence_ids": [
+    "S1",
+    "S6",
+    "S7",
+    "S8",
+    "S9"
+   ],
+   "error": null,
+   "error_type": null,
+   "sufficient": true,
+   "relevance": {
+    "best_score": 0.512,
+    "keyword_coverage": 1.0,
+    "threshold": {
+     "min_best_score": 0.35,
+     "min_keyword_coverage": 0.35
+    }
+   },
+   "sources": [
+    {
+     "id": "S1",
+     "title": "Python Faq Style Addendum",
+     "location": "Frequently Asked Questions",
+     "score": 0.512
+    },
+    {
+     "id": "S6",
+     "title": "Python Reference Notes",
+     "location": "-",
+     "score": 0.468
+    },
+    {
+     "id": "S7",
+     "title": "Python Library Cheatsheet",
+     "location": "rows 1-8",
+     "score": 0.433
+    },
+    {
+     "id": "S8",
+     "title": "Python Lecture Notes",
+     "location": "p.1",
+     "score": 0.405
+    },
+    {
+     "id": "S9",
+     "title": "Python Exercise Guide",
+     "location": "Grading Rubric for Python Exercises",
+     "score": 0.398
+    }
+   ]
+  },
+  {
+   "seq": 8,
+   "t_ms": 19,
+   "type": "tool_selected",
+   "step": "t3",
+   "tool": "compare_evidence",
+   "goal": "compare retrieved evidence",
+   "attempt": 1,
+   "args": {
+    "source_ids": [
+     "S1",
+     "S2",
+     "S6"
+    ],
+    "aspects": [
+     "statistics.variance statistics.pvariance",
+     "statistics.pvariance in Python"
+    ]
+   }
+  },
+  {
+   "seq": 9,
+   "t_ms": 56,
+   "type": "tool_result",
+   "step": "t3",
+   "tool": "compare_evidence",
+   "ok": true,
+   "ms": 36.8,
+   "summary": "2 aspects covered, 0 missing, 0 agreements, 1 conflicts",
+   "evidence_ids": [],
+   "error": null,
+   "error_type": null,
+   "conflicts": 1,
+   "missing_aspects": []
+  },
+  {
+   "seq": 10,
+   "t_ms": 56,
+   "type": "validation",
+   "sufficient": true,
+   "steps": {
+    "t1": {
+     "status": "done",
+     "sufficient": true
+    },
+    "t2": {
+     "status": "done",
+     "sufficient": true
+    },
+    "t3": {
+     "status": "done",
+     "sufficient": null
+    }
+   },
+   "problems": []
+  },
+  {
+   "seq": 11,
+   "t_ms": 56,
+   "type": "synthesis_started",
+   "evidence": [
+    "S2",
+    "S3",
+    "S1",
+    "S6",
+    "S7"
+   ],
+   "computed": [],
+   "gaps": []
+  },
+  {
+   "seq": 12,
+   "t_ms": 4321,
+   "type": "citation_check",
+   "n_cited_sentences": 1,
+   "n_supported": 1,
+   "support_rate": 1.0,
+   "invalid_ids": [],
+   "removed_unsupported": 0,
+   "regenerated": 0,
+   "injection_flags": [],
+   "fallback_extractive": false
+  },
+  {
+   "seq": 13,
+   "t_ms": 4321,
+   "type": "answer",
+   "abstained": false,
+   "citations": [
+    "S1",
+    "S2"
+   ]
+  },
+  {
+   "seq": 14,
+   "t_ms": 4321,
+   "type": "completed",
+   "stop_reason": "answered",
+   "latency_s": 4.32
+  }
+ ],
+ "validation": {
+  "n_cited_sentences": 1,
+  "n_supported": 1,
+  "support_rate": 1.0,
+  "invalid_ids": [],
+  "unsupported": [],
+  "uncited_numeric_sentences": []
+ },
+ "metrics": {
+  "latency_s": 4.32,
+  "llm_calls": 1,
+  "prompt_tokens": 1089,
+  "completion_tokens": 32,
+  "tool_calls": 3,
+  "replans": 0,
+  "steps": 3,
+  "errors": [],
+  "step_status": {
+   "t1": "done",
+   "t2": "done",
+   "t3": "done"
+  },
+  "removed_unsupported": 0,
+  "injection_flags": []
+ },
+ "system": "agentic",
+ "config": {
+  "name": "rules_all_tools",
+  "planner": "rules",
+  "replan": false,
+  "tools": [
+   "search_knowledge_base",
+   "retrieve_source_context",
+   "summarize_evidence",
+   "analyze_dataset",
+   "calculate_expression",
+   "compare_evidence",
+   "refine_search_query"
+  ],
+  "model": "qwen2.5:3b-instruct",
+  "registry_version": "1.0.0"
+ }
+}

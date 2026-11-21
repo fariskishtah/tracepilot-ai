@@ -1,0 +1,198 @@
+{
+ "request_id": "66ff19b2d20b",
+ "question": "Compare L1 and L2 regularization.",
+ "answer": "L2 regularization (ridge) shrinks all weights toward zero, reducing the model complexity and preventing overfitting by adding a penalty proportional to the sum of squared weights [S1] [S4]. L1 regularization (lasso) can set some weights exactly to zero, performing feature selection by shrinking some weights to zero [S1] [S4]. L2 regularization is smooth and works with gradient-based optimizers, keeping all features [S4]. L1 regularization, on the other hand, can drive weights to exactly zero, leading to feature selection [S4] [S1].",
+ "abstained": false,
+ "stop_reason": "answered",
+ "plan": null,
+ "plan_source": "none",
+ "tool_sequence": [
+  "search_knowledge_base"
+ ],
+ "citations": [
+  {
+   "id": "S1",
+   "kind": "document",
+   "title": "Ml Model Diagnostics Handbook",
+   "text": "3. Regularization Strength in scikit-learn\nIn scikit-learn LogisticRegression the parameter C is the inverse of the regularization strength: a\nsmaller C means stronger regularization, and the default is C=1.0. For Ridge regression the\nparameter alpha works the opposite way: a larger alpha means stronger shrinkage.\nL2 regularization (ridge) shrinks all weights toward zero; L1 regularization (lasso) can set some\nweights exactly to zero and therefore performs feature selection.",
+   "doc_id": "ml_model_diagnostics_handbook",
+   "course_id": "ml",
+   "location": "p.3",
+   "chunk_id": "ml_model_diagnostics_handbook:0002",
+   "score": 0.5425,
+   "data": {
+    "file_type": "pdf",
+    "page": 3,
+    "section": "3. Regularization Strength in scikit-learn",
+    "filename": "ml_model_diagnostics_handbook.pdf"
+   },
+   "derived_from": []
+  },
+  {
+   "id": "S4",
+   "kind": "document",
+   "title": "Ml Overfitting Mitigation Guide",
+   "text": "Overfitting mitigation guide OVERFITTING MITIGATION GUIDE - TracePilot demo course pack (Machine Learning Fundamentals) Original educational material, CC BY 4.0, (c) Faris Mohamed Kishtah. 1. What overfitting means in practice A model overfits when its training accuracy is far higher than its validation accuracy. The gap between the two (train accuracy minus validation accuracy) is the simplest warning sign. 2. L2 regularization (weight decay) L2 regularization adds a penalty proportional to the sum of squared weights to the loss, which shrinks weights toward zero without usually making them exactly zero. Advantages: it is smooth, works with gradient-based optimizers, and keeps all features. Disadvantages: it introduces a strength hyperparameter (lambda or weight decay) that must be tuned with cross-validation, and it does not remove irrelevant features. It",
+   "doc_id": "ml_overfitting_mitigation_guide",
+   "course_id": "ml",
+   "location": "p.1",
+   "chunk_id": "ml_overfitting_mitigation_guide:0000",
+   "score": 0.4683,
+   "data": {
+    "file_type": "pdf",
+    "page": 1,
+    "section": null,
+    "filename": "ml_overfitting_mitigation_guide.pdf"
+   },
+   "derived_from": []
+  }
+ ],
+ "evidence": {
+  "S1": {
+   "id": "S1",
+   "kind": "document",
+   "title": "Ml Model Diagnostics Handbook",
+   "text": "3. Regularization Strength in scikit-learn\nIn scikit-learn LogisticRegression the parameter C is the inverse of the regularization strength: a\nsmaller C means stronger regularization, and the default is C=1.0. For Ridge regression the\nparameter alpha works the opposite way: a larger alpha means stronger shrinkage.\nL2 regularization (ridge) shrinks all weights toward zero; L1 regularization (lasso) can set some\nweights exactly to zero and therefore performs feature selection.",
+   "doc_id": "ml_model_diagnostics_handbook",
+   "course_id": "ml",
+   "location": "p.3",
+   "chunk_id": "ml_model_diagnostics_handbook:0002",
+   "score": 0.5425,
+   "data": {
+    "file_type": "pdf",
+    "page": 3,
+    "section": "3. Regularization Strength in scikit-learn",
+    "filename": "ml_model_diagnostics_handbook.pdf"
+   },
+   "derived_from": []
+  },
+  "S2": {
+   "id": "S2",
+   "kind": "document",
+   "title": "Ml Overfitting Mitigation Guide",
+   "text": "Dropout and choosing between methods\n5. Choosing between methods L2 and early stopping are complementary and are often combined.\nEarly stopping is cheapest; L2 gives a smoother, more reproducible solution. Compare methods by\nvalidation accuracy, never by training accuracy.",
+   "doc_id": "ml_overfitting_mitigation_guide",
+   "course_id": "ml",
+   "location": "p.3",
+   "chunk_id": "ml_overfitting_mitigation_guide:0003",
+   "score": 0.4726,
+   "data": {
+    "file_type": "pdf",
+    "page": 3,
+    "section": null,
+    "filename": "ml_overfitting_mitigation_guide.pdf"
+   },
+   "derived_from": []
+  },
+  "S3": {
+   "id": "S3",
+   "kind": "document",
+   "title": "Ml Overfitting Mitigation Guide",
+   "text": "L2 regularization and early stopping\n3. Early stopping Early stopping monitors validation loss during training and stops when it has not\nimproved for a fixed number of epochs (the patience); the best checkpoint is restored. Advantages:\nit needs no change to the model, saves training compute, and the stopping epoch acts as an\nimplicit regularizer. Disadvantages: it requires a held-out validation set that is then not used for\ntraining, results are sensitive to the patience value, and noisy validation curves can trigger a\npremature stop. 4. Dropout Dropout randomly zeroes a fraction p of hidden units at each training\nstep so units cannot co-adapt. It is applied only during training. It is mainly used for neural\nnetworks.",
+   "doc_id": "ml_overfitting_mitigation_guide",
+   "course_id": "ml",
+   "location": "p.2",
+   "chunk_id": "ml_overfitting_mitigation_guide:0002",
+   "score": 0.4904,
+   "data": {
+    "file_type": "pdf",
+    "page": 2,
+    "section": null,
+    "filename": "ml_overfitting_mitigation_guide.pdf"
+   },
+   "derived_from": []
+  },
+  "S4": {
+   "id": "S4",
+   "kind": "document",
+   "title": "Ml Overfitting Mitigation Guide",
+   "text": "Overfitting mitigation guide OVERFITTING MITIGATION GUIDE - TracePilot demo course pack (Machine Learning Fundamentals) Original educational material, CC BY 4.0, (c) Faris Mohamed Kishtah. 1. What overfitting means in practice A model overfits when its training accuracy is far higher than its validation accuracy. The gap between the two (train accuracy minus validation accuracy) is the simplest warning sign. 2. L2 regularization (weight decay) L2 regularization adds a penalty proportional to the sum of squared weights to the loss, which shrinks weights toward zero without usually making them exactly zero. Advantages: it is smooth, works with gradient-based optimizers, and keeps all features. Disadvantages: it introduces a strength hyperparameter (lambda or weight decay) that must be tuned with cross-validation, and it does not remove irrelevant features. It",
+   "doc_id": "ml_overfitting_mitigation_guide",
+   "course_id": "ml",
+   "location": "p.1",
+   "chunk_id": "ml_overfitting_mitigation_guide:0000",
+   "score": 0.4683,
+   "data": {
+    "file_type": "pdf",
+    "page": 1,
+    "section": null,
+    "filename": "ml_overfitting_mitigation_guide.pdf"
+   },
+   "derived_from": []
+  },
+  "S5": {
+   "id": "S5",
+   "kind": "document",
+   "title": "Ml Lecture Notes",
+   "text": "is bias squared plus variance plus irreducible noise. Increasing model complexity lowers bias but raises variance.  Ways to reduce overfitting include collecting more training data, simplifying the model, regularization (L1 and L2 penalties that shrink weights; L1 can drive weights to exactly zero), early stopping, dropout for neural networks, feature selection and cross-validation to choose hyperparameters. Learning curves, which plot error against training set size, help diagnose whether a model suffers from high bias or high variance.",
+   "doc_id": "ml_lecture_notes",
+   "course_id": "ml",
+   "location": "p.4",
+   "chunk_id": "ml_lecture_notes:0005",
+   "score": 0.3364,
+   "data": {
+    "file_type": "pdf",
+    "page": 4,
+    "section": "3. Generalization, Overfitting and the Bias-Variance",
+    "filename": "ml_lecture_notes.pdf"
+   },
+   "derived_from": []
+  }
+ },
+ "trace": [
+  {
+   "seq": 1,
+   "t_ms": 1,
+   "type": "request_received",
+   "question": "Compare L1 and L2 regularization.",
+   "scope": null,
+   "system": "standard_rag"
+  },
+  {
+   "seq": 2,
+   "t_ms": 22,
+   "type": "retrieval",
+   "query": "Compare L1 and L2 regularization.",
+   "n": 5,
+   "sources": [
+    "S1",
+    "S2",
+    "S3",
+    "S4",
+    "S5"
+   ],
+   "best_score": 0.543
+  },
+  {
+   "seq": 3,
+   "t_ms": 8591,
+   "type": "answer",
+   "abstained": false,
+   "citations": [
+    "S1",
+    "S4"
+   ]
+  }
+ ],
+ "validation": {
+  "n_cited_sentences": 4,
+  "n_supported": 4,
+  "support_rate": 1.0,
+  "invalid_ids": [],
+  "unsupported": [],
+  "uncited_numeric_sentences": []
+ },
+ "metrics": {
+  "latency_s": 8.59,
+  "llm_calls": 1,
+  "prompt_tokens": 934,
+  "completion_tokens": 132,
+  "tool_calls": 1,
+  "replans": 0,
+  "steps": 1
+ },
+ "system": "standard_rag",
+ "config": {
+  "top_k": 5
+ }
+}

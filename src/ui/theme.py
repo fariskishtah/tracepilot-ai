@@ -14,5 +14,11 @@ CSS = """
 .wf{background:var(--panel2);border:1px solid var(--line);border-radius:12px;padding:8px}.legend{display:flex;gap:14px;font-size:12px;color:var(--muted);padding:4px 8px}.lg i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:5px}
 .answer-box{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:14px 16px}
 button.primary,.primary{background:linear-gradient(90deg,var(--blue),var(--violet))!important;border:none!important;color:#fff!important}
-@media (max-width:700px){.tp-hero h1{font-size:22px}.kv{flex-direction:column;gap:0}.kv span{flex:none}}
+.gradio-container code,.gradio-container .prose code,.gradio-container .md code{background:#0b1230!important;color:#cfe0ff!important;border:1px solid #24305a;padding:1px 6px;border-radius:6px}
+.gradio-container table,.gradio-container .table-wrap,.gradio-container .cell-wrap,.gradio-container td,.gradio-container th{color:#eaf0ff!important}
+.gradio-container th{background:#1b2652!important}
+.gradio-container label span,.gradio-container .wrap label{color:#eaf0ff}
+[data-testid="block-label"],.gradio-container .block-label{background:#1b2652!important;color:#cfe0ff!important;border-color:#3b4a85!important}
+.tp-col{flex:1 1 280px!important;min-width:min(280px,100%)!important}
+@media (max-width:700px){.gradio-container .row{flex-direction:column!important}.gradio-container label{white-space:normal!important;word-break:break-all}.tp-hero h1{font-size:22px}.kv{flex-direction:column;gap:0}.kv span{flex:none}}
 """
