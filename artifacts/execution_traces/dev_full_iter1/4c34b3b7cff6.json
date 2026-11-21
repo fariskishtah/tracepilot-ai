@@ -1,0 +1,921 @@
+{
+ "request_id": "4c34b3b7cff6",
+ "question": "List the standard error of the mean and t statistic formulas given in the statistics formula reference notes.",
+ "answer": "The standard error of the mean and t statistic formulas are not provided in the given evidence.",
+ "abstained": true,
+ "stop_reason": "insufficient_evidence",
+ "plan": {
+  "question_type": "multi_step",
+  "complexity": "moderate",
+  "requires_retrieval": true,
+  "requires_calculation": false,
+  "requires_data_analysis": true,
+  "requires_comparison": false,
+  "subtasks": [
+   {
+    "id": "t1",
+    "tool": "search_knowledge_base",
+    "goal": "find standard error of the mean formula",
+    "query": "standard error of the mean formula",
+    "dataset_id": null,
+    "operation": null,
+    "column": null,
+    "group_by": null,
+    "agg": null,
+    "filters": null,
+    "expression": null,
+    "aspects": null,
+    "depends_on": []
+   },
+   {
+    "id": "t2",
+    "tool": "search_knowledge_base",
+    "goal": "find t statistic formula",
+    "query": "t statistic formula",
+    "dataset_id": null,
+    "operation": null,
+    "column": null,
+    "group_by": null,
+    "agg": null,
+    "filters": null,
+    "expression": null,
+    "aspects": null,
+    "depends_on": []
+   },
+   {
+    "id": "t3",
+    "tool": "analyze_dataset",
+    "goal": "extract standard error of the mean formula from notes",
+    "query": null,
+    "dataset_id": "ml_hyperparameter_reference",
+    "operation": "lookup_value",
+    "column": "effect_of_increasing",
+    "group_by": null,
+    "agg": null,
+    "filters": [
+     {
+      "column": "hyperparameter",
+      "op": "==",
+      "value": "standard error of the mean"
+     },
+     {
+      "column": "effect_of_increasing",
+      "op": "==",
+      "value": "formula"
+     }
+    ],
+    "expression": null,
+    "aspects": null,
+    "depends_on": []
+   },
+   {
+    "id": "t4",
+    "tool": "analyze_dataset",
+    "goal": "extract t statistic formula from notes",
+    "query": null,
+    "dataset_id": "ml_hyperparameter_reference",
+    "operation": "lookup_value",
+    "column": "effect_of_increasing",
+    "group_by": null,
+    "agg": null,
+    "filters": [
+     {
+      "column": "hyperparameter",
+      "op": "==",
+      "value": "t statistic"
+     },
+     {
+      "column": "effect_of_increasing",
+      "op": "==",
+      "value": "formula"
+     }
+    ],
+    "expression": null,
+    "aspects": null,
+    "depends_on": []
+   },
+   {
+    "id": "t5",
+    "tool": "search_knowledge_base",
+    "goal": "find notes on standard error of the mean",
+    "query": "standard error of the mean notes",
+    "dataset_id": null,
+    "operation": null,
+    "column": null,
+    "group_by": null,
+    "agg": null,
+    "filters": null,
+    "expression": null,
+    "aspects": null,
+    "depends_on": []
+   },
+   {
+    "id": "t6",
+    "tool": "search_knowledge_base",
+    "goal": "find notes on t statistic",
+    "query": "t statistic notes",
+    "dataset_id": null,
+    "operation": null,
+    "column": null,
+    "group_by": null,
+    "agg": null,
+    "filters": null,
+    "expression": null,
+    "aspects": null,
+    "depends_on": []
+   }
+  ],
+  "rationale": "LLM plan: 6 step(s)"
+ },
+ "plan_source": "llm",
+ "tool_sequence": [
+  "search_knowledge_base",
+  "search_knowledge_base",
+  "analyze_dataset",
+  "analyze_dataset",
+  "search_knowledge_base",
+  "search_knowledge_base"
+ ],
+ "citations": [],
+ "evidence": {
+  "S1": {
+   "id": "S1",
+   "kind": "document",
+   "title": "Statistics Exercise Guide",
+   "text": "Problem 3: Confidence Interval for a Mean\nQuestion. A sample of n = 36 students has mean study time 12.4 hours per week. The population standard deviation is known to be 3 hours. Build a 95% confidence interval.\nSolution. The standard error is 3 / sqrt(36) = 0.5. The margin of error is 1.96 * 0.5 = 0.98. The interval is 12.4 plus or minus 0.98, that is (11.42, 13.38). Interpretation: the procedure captures the true mean in about 95% of repeated samples. If the sample size were four times larger (n = 144) the standard error would halve to 0.25 and the interval would become narrower.",
+   "doc_id": "statistics_exercise_guide",
+   "course_id": "statistics",
+   "location": "Problem 3: Confidence Interval for a Mean",
+   "chunk_id": "statistics_exercise_guide:0003",
+   "score": 0.4998,
+   "data": {
+    "file_type": "docx",
+    "page": null,
+    "section": "Problem 3: Confidence Interval for a Mean",
+    "filename": "statistics_exercise_guide.docx"
+   },
+   "derived_from": []
+  },
+  "S2": {
+   "id": "S2",
+   "kind": "document",
+   "title": "Statistics Estimators And Bias",
+   "text": "2. Variance of an Estimator\nThe variance of an estimator describes how much the estimate changes from one random sample\nto the next. For the sample mean it equals sigma squared divided by n, so the standard error of the\nmean is sigma divided by the square root of n.\nThis is not the same quantity as the variance of the data themselves, which describes the spread\nof individual observations around their mean. Quadrupling the sample size halves the standard\nerror but does not change the variance of the data.",
+   "doc_id": "statistics_estimators_and_bias",
+   "course_id": "statistics",
+   "location": "p.2",
+   "chunk_id": "statistics_estimators_and_bias:0001",
+   "score": 0.4468,
+   "data": {
+    "file_type": "pdf",
+    "page": 2,
+    "section": "2. Variance of an Estimator",
+    "filename": "statistics_estimators_and_bias.pdf"
+   },
+   "derived_from": []
+  },
+  "S3": {
+   "id": "S3",
+   "kind": "document",
+   "title": "Statistics Reference Notes",
+   "text": "DESCRIPTIVE FORMULAS\nMean: x-bar = (sum of x) / n\nPopulation variance: sigma^2 = sum((x - mu)^2) / N\nSample variance: s^2 = sum((x - x-bar)^2) / (n - 1)\nStandard deviation: the square root of the variance.\nIQR = Q3 - Q1. Outlier fences: Q1 - 1.5*IQR and Q3 + 1.5*IQR.\nCoefficient of variation: CV = standard deviation / mean.",
+   "doc_id": "statistics_reference_notes",
+   "course_id": "statistics",
+   "location": "DESCRIPTIVE FORMULAS",
+   "chunk_id": "statistics_reference_notes:0001",
+   "score": 0.4821,
+   "data": {
+    "file_type": "txt",
+    "page": null,
+    "section": "DESCRIPTIVE FORMULAS",
+    "filename": "statistics_reference_notes.txt"
+   },
+   "derived_from": []
+  },
+  "S4": {
+   "id": "S4",
+   "kind": "document",
+   "title": "Statistics Lecture Notes",
+   "text": "mu and standard deviation sigma. The empirical rule says about 68% of values lie within one standard deviation of the  mean, 95% within two and 99.7% within three. A z-score z = (x - mu) / sigma tells how many standard deviations a value is from the mean. The standard normal distribution has mean 0 and standard deviation 1.",
+   "doc_id": "statistics_lecture_notes",
+   "course_id": "statistics",
+   "location": "p.4",
+   "chunk_id": "statistics_lecture_notes:0006",
+   "score": 0.4283,
+   "data": {
+    "file_type": "pdf",
+    "page": 4,
+    "section": "3. Probability Distributions",
+    "filename": "statistics_lecture_notes.pdf"
+   },
+   "derived_from": []
+  },
+  "S5": {
+   "id": "S5",
+   "kind": "document",
+   "title": "Statistics Reference Notes",
+   "text": "INFERENCE\n95% confidence interval for a mean (sigma known): x-bar +/- 1.96 * sigma / sqrt(n)\nt statistic: t = (x-bar - mu0) / (s / sqrt(n)), with n - 1 degrees of freedom\nType I error rate = alpha. Power = 1 - beta.\nChi-square statistic: sum((observed - expected)^2 / expected)",
+   "doc_id": "statistics_reference_notes",
+   "course_id": "statistics",
+   "location": "INFERENCE",
+   "chunk_id": "statistics_reference_notes:0004",
+   "score": 0.392,
+   "data": {
+    "file_type": "txt",
+    "page": null,
+    "section": "INFERENCE",
+    "filename": "statistics_reference_notes.txt"
+   },
+   "derived_from": []
+  },
+  "S6": {
+   "id": "S6",
+   "kind": "document",
+   "title": "Statistics Exercise Guide",
+   "text": "Problem 4: One-Sample Hypothesis Test\nQuestion. A factory claims bulbs last 1000 hours on average. A sample of 25 bulbs has mean 980 and sample standard deviation 50. Test H0: mu = 1000 against H1: mu is not 1000 at alpha = 0.05.\nSolution. The t statistic is (980 - 1000) / (50 / sqrt(25)) = -20 / 10 = -2.0 with 24 degrees of freedom. The two-sided critical value is about 2.064. Because the absolute value 2.0 is smaller than 2.064 we fail to reject H0 at the 5% level. Failing to reject does not prove the claim is true; the sample may simply lack the power to detect a 20 hour difference.",
+   "doc_id": "statistics_exercise_guide",
+   "course_id": "statistics",
+   "location": "Problem 4: One-Sample Hypothesis Test",
+   "chunk_id": "statistics_exercise_guide:0004",
+   "score": 0.40265846252441406,
+   "data": {
+    "file_type": "docx",
+    "page": null,
+    "section": "Problem 4: One-Sample Hypothesis Test",
+    "filename": "statistics_exercise_guide.docx"
+   },
+   "derived_from": []
+  },
+  "S7": {
+   "id": "S7",
+   "kind": "document",
+   "title": "Statistics Reference Notes",
+   "text": "STATISTICS & PROBABILITY FORMULA REFERENCE (original demo material, CC BY 4.0)\n======================================================================================",
+   "doc_id": "statistics_reference_notes",
+   "course_id": "statistics",
+   "location": "-",
+   "chunk_id": "statistics_reference_notes:0000",
+   "score": 0.389,
+   "data": {
+    "file_type": "txt",
+    "page": null,
+    "section": null,
+    "filename": "statistics_reference_notes.txt"
+   },
+   "derived_from": []
+  },
+  "S8": {
+   "id": "S8",
+   "kind": "document",
+   "title": "Statistics Lecture Notes",
+   "text": "size grows. A confidence interval gives a range of plausible values for a parameter. A 95% confidence interval for  a mean with known sigma is x-bar plus or minus 1.96 * sigma / sqrt(n). When sigma is unknown and n is small, replace 1.96 with a critical value from the t distribution with n - 1 degrees of freedom. A 95% confidence level means that if the procedure were repeated many times, about 95% of the intervals would contain the true parameter; it does not mean there is a 95% probability that one specific computed interval contains it.",
+   "doc_id": "statistics_lecture_notes",
+   "course_id": "statistics",
+   "location": "p.5",
+   "chunk_id": "statistics_lecture_notes:0008",
+   "score": 0.3763,
+   "data": {
+    "file_type": "pdf",
+    "page": 5,
+    "section": "4. Sampling and Confidence Intervals",
+    "filename": "statistics_lecture_notes.pdf"
+   },
+   "derived_from": []
+  },
+  "S9": {
+   "id": "S9",
+   "kind": "document",
+   "title": "Statistics Lecture Notes",
+   "text": "Statistics Theory Notes\nStatistics & Probability - independently written demonstration notes. Not official university material.",
+   "doc_id": "statistics_lecture_notes",
+   "course_id": "statistics",
+   "location": "p.1",
+   "chunk_id": "statistics_lecture_notes:0000",
+   "score": 0.5392,
+   "data": {
+    "file_type": "pdf",
+    "page": 1,
+    "section": null,
+    "filename": "statistics_lecture_notes.pdf"
+   },
+   "derived_from": []
+  },
+  "S10": {
+   "id": "S10",
+   "kind": "document",
+   "title": "Data Legacy Lab Notes 2021",
+   "text": "DATA WRANGLING LAB NOTES (2021 edition)\n=======================================",
+   "doc_id": "data_legacy_lab_notes_2021",
+   "course_id": "data",
+   "location": "-",
+   "chunk_id": "data_legacy_lab_notes_2021:0000",
+   "score": 0.3292,
+   "data": {
+    "file_type": "txt",
+    "page": null,
+    "section": null,
+    "filename": "data_legacy_lab_notes_2021.txt"
+   },
+   "derived_from": []
+  }
+ },
+ "trace": [
+  {
+   "seq": 1,
+   "t_ms": 0,
+   "type": "request_received",
+   "question": "List the standard error of the mean and t statistic formulas given in the statistics formula reference notes.",
+   "scope": null,
+   "tools": [
+    "search_knowledge_base",
+    "retrieve_source_context",
+    "summarize_evidence",
+    "analyze_dataset",
+    "calculate_expression",
+    "compare_evidence",
+    "refine_search_query"
+   ],
+   "planner": "llm",
+   "replanning": true,
+   "llm": "qwen2.5:3b-instruct",
+   "registry_version": "1.0.0"
+  },
+  {
+   "seq": 2,
+   "t_ms": 0,
+   "type": "question_analysis",
+   "calc_cue": true,
+   "data_cue": false,
+   "compare_cue": false,
+   "summary_cue": false,
+   "multi_cue": false,
+   "named_datasets": [],
+   "length_words": 18,
+   "needs_data": false,
+   "explicit_dataset": true,
+   "literal_numbers": [],
+   "needs_calc": false,
+   "concept_cue": false
+  },
+  {
+   "seq": 3,
+   "t_ms": 15144,
+   "type": "plan_created",
+   "source": "llm",
+   "question_type": "multi_step",
+   "complexity": "moderate",
+   "requires": {
+    "retrieval": true,
+    "calculation": false,
+    "data_analysis": true,
+    "comparison": false
+   },
+   "summary": "LLM plan: 6 step(s)",
+   "adjustments": [],
+   "note": "",
+   "subtasks": [
+    {
+     "id": "t1",
+     "tool": "search_knowledge_base",
+     "goal": "find standard error of the mean formula",
+     "depends_on": []
+    },
+    {
+     "id": "t2",
+     "tool": "search_knowledge_base",
+     "goal": "find t statistic formula",
+     "depends_on": []
+    },
+    {
+     "id": "t3",
+     "tool": "analyze_dataset",
+     "goal": "extract standard error of the mean formula from notes",
+     "depends_on": []
+    },
+    {
+     "id": "t4",
+     "tool": "analyze_dataset",
+     "goal": "extract t statistic formula from notes",
+     "depends_on": []
+    },
+    {
+     "id": "t5",
+     "tool": "search_knowledge_base",
+     "goal": "find notes on standard error of the mean",
+     "depends_on": []
+    },
+    {
+     "id": "t6",
+     "tool": "search_knowledge_base",
+     "goal": "find notes on t statistic",
+     "depends_on": []
+    }
+   ]
+  },
+  {
+   "seq": 4,
+   "t_ms": 15144,
+   "type": "tool_selected",
+   "step": "t1",
+   "tool": "search_knowledge_base",
+   "goal": "find standard error of the mean formula",
+   "attempt": 1,
+   "args": {
+    "query": "standard error of the mean formula",
+    "course_ids": null,
+    "top_k": 4
+   }
+  },
+  {
+   "seq": 5,
+   "t_ms": 15378,
+   "type": "tool_result",
+   "step": "t1",
+   "tool": "search_knowledge_base",
+   "ok": true,
+   "ms": 233.0,
+   "summary": "4 chunks, best cosine 0.50",
+   "evidence_ids": [
+    "S1",
+    "S2",
+    "S3",
+    "S4"
+   ],
+   "error": null,
+   "error_type": null,
+   "sufficient": true,
+   "relevance": {
+    "best_score": 0.5,
+    "keyword_coverage": 1.0,
+    "threshold": {
+     "min_best_score": 0.35,
+     "min_keyword_coverage": 0.35
+    }
+   },
+   "sources": [
+    {
+     "id": "S1",
+     "title": "Statistics Exercise Guide",
+     "location": "Problem 3: Confidence Interval for a Mean",
+     "score": 0.5
+    },
+    {
+     "id": "S2",
+     "title": "Statistics Estimators And Bias",
+     "location": "p.2",
+     "score": 0.447
+    },
+    {
+     "id": "S3",
+     "title": "Statistics Reference Notes",
+     "location": "DESCRIPTIVE FORMULAS",
+     "score": 0.482
+    },
+    {
+     "id": "S4",
+     "title": "Statistics Lecture Notes",
+     "location": "p.4",
+     "score": 0.428
+    }
+   ]
+  },
+  {
+   "seq": 6,
+   "t_ms": 15378,
+   "type": "tool_selected",
+   "step": "t2",
+   "tool": "search_knowledge_base",
+   "goal": "find t statistic formula",
+   "attempt": 1,
+   "args": {
+    "query": "t statistic formula",
+    "course_ids": null,
+    "top_k": 4
+   }
+  },
+  {
+   "seq": 7,
+   "t_ms": 15386,
+   "type": "tool_result",
+   "step": "t2",
+   "tool": "search_knowledge_base",
+   "ok": true,
+   "ms": 7.9,
+   "summary": "4 chunks, best cosine 0.39",
+   "evidence_ids": [
+    "S5",
+    "S6",
+    "S7",
+    "S8"
+   ],
+   "error": null,
+   "error_type": null,
+   "sufficient": true,
+   "relevance": {
+    "best_score": 0.393,
+    "keyword_coverage": 1.0,
+    "threshold": {
+     "min_best_score": 0.35,
+     "min_keyword_coverage": 0.35
+    }
+   },
+   "sources": [
+    {
+     "id": "S5",
+     "title": "Statistics Reference Notes",
+     "location": "INFERENCE",
+     "score": 0.392
+    },
+    {
+     "id": "S6",
+     "title": "Statistics Exercise Guide",
+     "location": "Problem 4: One-Sample Hypothesis Test",
+     "score": 0.393
+    },
+    {
+     "id": "S7",
+     "title": "Statistics Reference Notes",
+     "location": "-",
+     "score": 0.389
+    },
+    {
+     "id": "S8",
+     "title": "Statistics Lecture Notes",
+     "location": "p.5",
+     "score": 0.376
+    }
+   ]
+  },
+  {
+   "seq": 8,
+   "t_ms": 15386,
+   "type": "tool_selected",
+   "step": "t3",
+   "tool": "analyze_dataset",
+   "goal": "extract standard error of the mean formula from notes",
+   "attempt": 1,
+   "args": {
+    "dataset_id": "ml_hyperparameter_reference",
+    "operation": "lookup_value",
+    "column": "effect_of_increasing",
+    "filters": [
+     {
+      "column": "hyperparameter",
+      "op": "==",
+      "value": "standard error of the mean"
+     },
+     {
+      "column": "effect_of_increasing",
+      "op": "==",
+      "value": "formula"
+     }
+    ]
+   }
+  },
+  {
+   "seq": 9,
+   "t_ms": 15409,
+   "type": "tool_result",
+   "step": "t3",
+   "tool": "analyze_dataset",
+   "ok": false,
+   "ms": 23.2,
+   "summary": "",
+   "evidence_ids": [],
+   "error": "no rows match the filters",
+   "error_type": "tool_error"
+  },
+  {
+   "seq": 10,
+   "t_ms": 15409,
+   "type": "tool_selected",
+   "step": "t4",
+   "tool": "analyze_dataset",
+   "goal": "extract t statistic formula from notes",
+   "attempt": 1,
+   "args": {
+    "dataset_id": "ml_hyperparameter_reference",
+    "operation": "lookup_value",
+    "column": "effect_of_increasing",
+    "filters": [
+     {
+      "column": "hyperparameter",
+      "op": "==",
+      "value": "t statistic"
+     },
+     {
+      "column": "effect_of_increasing",
+      "op": "==",
+      "value": "formula"
+     }
+    ]
+   }
+  },
+  {
+   "seq": 11,
+   "t_ms": 15410,
+   "type": "tool_result",
+   "step": "t4",
+   "tool": "analyze_dataset",
+   "ok": false,
+   "ms": 1.0,
+   "summary": "",
+   "evidence_ids": [],
+   "error": "no rows match the filters",
+   "error_type": "tool_error"
+  },
+  {
+   "seq": 12,
+   "t_ms": 15410,
+   "type": "tool_selected",
+   "step": "t5",
+   "tool": "search_knowledge_base",
+   "goal": "find notes on standard error of the mean",
+   "attempt": 1,
+   "args": {
+    "query": "standard error of the mean notes",
+    "course_ids": null,
+    "top_k": 4
+   }
+  },
+  {
+   "seq": 13,
+   "t_ms": 15417,
+   "type": "tool_result",
+   "step": "t5",
+   "tool": "search_knowledge_base",
+   "ok": true,
+   "ms": 6.8,
+   "summary": "4 chunks, best cosine 0.47",
+   "evidence_ids": [
+    "S1",
+    "S2",
+    "S4",
+    "S3"
+   ],
+   "error": null,
+   "error_type": null,
+   "sufficient": true,
+   "relevance": {
+    "best_score": 0.473,
+    "keyword_coverage": 0.75,
+    "threshold": {
+     "min_best_score": 0.35,
+     "min_keyword_coverage": 0.35
+    }
+   },
+   "sources": [
+    {
+     "id": "S1",
+     "title": "Statistics Exercise Guide",
+     "location": "Problem 3: Confidence Interval for a Mean",
+     "score": 0.473
+    },
+    {
+     "id": "S2",
+     "title": "Statistics Estimators And Bias",
+     "location": "p.2",
+     "score": 0.38
+    },
+    {
+     "id": "S4",
+     "title": "Statistics Lecture Notes",
+     "location": "p.4",
+     "score": 0.412
+    },
+    {
+     "id": "S3",
+     "title": "Statistics Reference Notes",
+     "location": "DESCRIPTIVE FORMULAS",
+     "score": 0.463
+    }
+   ]
+  },
+  {
+   "seq": 14,
+   "t_ms": 15417,
+   "type": "tool_selected",
+   "step": "t6",
+   "tool": "search_knowledge_base",
+   "goal": "find notes on t statistic",
+   "attempt": 1,
+   "args": {
+    "query": "t statistic notes",
+    "course_ids": null,
+    "top_k": 4
+   }
+  },
+  {
+   "seq": 15,
+   "t_ms": 15423,
+   "type": "tool_result",
+   "step": "t6",
+   "tool": "search_knowledge_base",
+   "ok": true,
+   "ms": 6.6,
+   "summary": "4 chunks, best cosine 0.54",
+   "evidence_ids": [
+    "S9",
+    "S6",
+    "S5",
+    "S10"
+   ],
+   "error": null,
+   "error_type": null,
+   "sufficient": true,
+   "relevance": {
+    "best_score": 0.539,
+    "keyword_coverage": 1.0,
+    "threshold": {
+     "min_best_score": 0.35,
+     "min_keyword_coverage": 0.35
+    }
+   },
+   "sources": [
+    {
+     "id": "S9",
+     "title": "Statistics Lecture Notes",
+     "location": "p.1",
+     "score": 0.539
+    },
+    {
+     "id": "S6",
+     "title": "Statistics Exercise Guide",
+     "location": "Problem 4: One-Sample Hypothesis Test",
+     "score": 0.403
+    },
+    {
+     "id": "S5",
+     "title": "Statistics Reference Notes",
+     "location": "INFERENCE",
+     "score": 0.388
+    },
+    {
+     "id": "S10",
+     "title": "Data Legacy Lab Notes 2021",
+     "location": "-",
+     "score": 0.329
+    }
+   ]
+  },
+  {
+   "seq": 16,
+   "t_ms": 15423,
+   "type": "validation",
+   "sufficient": false,
+   "steps": {
+    "t1": {
+     "status": "done",
+     "sufficient": true
+    },
+    "t2": {
+     "status": "done",
+     "sufficient": true
+    },
+    "t3": {
+     "status": "failed",
+     "sufficient": null
+    },
+    "t4": {
+     "status": "failed",
+     "sufficient": null
+    },
+    "t5": {
+     "status": "done",
+     "sufficient": true
+    },
+    "t6": {
+     "status": "done",
+     "sufficient": true
+    }
+   },
+   "problems": [
+    {
+     "step": "t3",
+     "kind": "analysis_error"
+    },
+    {
+     "step": "t4",
+     "kind": "analysis_error"
+    }
+   ]
+  },
+  {
+   "seq": 17,
+   "t_ms": 15427,
+   "type": "replan",
+   "round": 1,
+   "actions": [
+    {
+     "action": "repair_arguments",
+     "step": "t3",
+     "applied": false,
+     "detail": "no automatic repair available",
+     "reason": "no rows match the filters"
+    },
+    {
+     "action": "repair_arguments",
+     "step": "t4",
+     "applied": false,
+     "detail": "no automatic repair available",
+     "reason": "no rows match the filters"
+    }
+   ],
+   "replanned": false
+  },
+  {
+   "seq": 18,
+   "t_ms": 15427,
+   "type": "synthesis_started",
+   "evidence": [
+    "S9",
+    "S1",
+    "S3",
+    "S2",
+    "S4",
+    "S6",
+    "S5",
+    "S7"
+   ],
+   "computed": [],
+   "gaps": [
+    "extract standard error of the mean formula from notes (no rows match the filters)",
+    "extract t statistic formula from notes (no rows match the filters)"
+   ]
+  },
+  {
+   "seq": 19,
+   "t_ms": 19938,
+   "type": "citation_check",
+   "n_cited_sentences": 0,
+   "n_supported": 0,
+   "support_rate": 0.0,
+   "invalid_ids": [],
+   "removed_unsupported": 0,
+   "regenerated": 0,
+   "injection_flags": []
+  },
+  {
+   "seq": 20,
+   "t_ms": 19938,
+   "type": "answer",
+   "abstained": true,
+   "citations": []
+  },
+  {
+   "seq": 21,
+   "t_ms": 19938,
+   "type": "completed",
+   "stop_reason": "insufficient_evidence",
+   "latency_s": 19.94
+  }
+ ],
+ "validation": {
+  "n_cited_sentences": 0,
+  "n_supported": 0,
+  "support_rate": 0.0,
+  "invalid_ids": [],
+  "unsupported": [],
+  "uncited_numeric_sentences": []
+ },
+ "metrics": {
+  "latency_s": 19.94,
+  "llm_calls": 2,
+  "prompt_tokens": 2821,
+  "completion_tokens": 316,
+  "tool_calls": 6,
+  "replans": 1,
+  "steps": 6,
+  "errors": [
+   "t3:analyze_dataset:tool_error",
+   "t4:analyze_dataset:tool_error"
+  ],
+  "step_status": {
+   "t1": "done",
+   "t2": "done",
+   "t3": "failed",
+   "t4": "failed",
+   "t5": "done",
+   "t6": "done"
+  },
+  "removed_unsupported": 0,
+  "injection_flags": []
+ },
+ "system": "agentic",
+ "config": {
+  "name": "full",
+  "planner": "llm",
+  "replan": true,
+  "tools": [
+   "search_knowledge_base",
+   "retrieve_source_context",
+   "summarize_evidence",
+   "analyze_dataset",
+   "calculate_expression",
+   "compare_evidence",
+   "refine_search_query"
+  ],
+  "model": "qwen2.5:3b-instruct",
+  "registry_version": "1.0.0"
+ }
+}

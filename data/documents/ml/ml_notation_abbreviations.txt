@@ -1,0 +1,13 @@
+MACHINE LEARNING NOTATION AND ABBREVIATIONS (original course material, CC BY 4.0)
+====================================================================================
+
+OOB: out-of-bag. In a random forest each tree is trained on a bootstrap sample, and the rows left out of that sample are the out-of-bag rows; about 36.8% (1/e) of the rows are out-of-bag for each tree. They provide a free validation estimate.
+MAE: mean absolute error. RMSE: root mean squared error.
+SGD: stochastic gradient descent.
+k-NN: k-nearest neighbors.
+PR AUC: area under the precision-recall curve; preferred over ROC AUC for strongly imbalanced classes.
+i.i.d.: independent and identically distributed.
+precision: in classification, TP / (TP + FP). It is not the same as measurement precision in statistics.
+sample: in machine learning a sample usually means one row of data (one example). In statistics a sample is a subset of a population.
+bias: the error from wrong assumptions of a model. The bias term (intercept) of a linear model is a different thing.
+regression: predicting a continuous number, for example a house price. Linear regression is also used in statistics to describe relationships.

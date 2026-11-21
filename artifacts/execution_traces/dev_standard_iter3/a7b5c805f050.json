@@ -1,0 +1,200 @@
+{
+ "request_id": "a7b5c805f050",
+ "question": "Summarize the key differences between evaluation protocol v1 and v2.",
+ "answer": "Evaluation Protocol v2 splits the data 70% training, 15% validation, and 15% test. [S1] Protocol v2 uses k = 5 folds for cross-validation and reports mean and standard deviation of fold scores, while v1 did not detail this. [S1] Protocol v2 sets random_state=42 everywhere, a feature not mentioned in v1. [S1] Protocol v2 allows the test set to be used exactly once, unlike v1. [S1] For imbalanced data, the primary metric is F1 in v2, not specified in v1 [S1] [S2].",
+ "abstained": false,
+ "stop_reason": "answered",
+ "plan": null,
+ "plan_source": "none",
+ "tool_sequence": [
+  "search_knowledge_base"
+ ],
+ "citations": [
+  {
+   "id": "S1",
+   "kind": "document",
+   "title": "Ml Project Handbook",
+   "text": "Evaluation Protocol v2\nEvaluation protocol v2 supersedes protocol v1 for all projects started in 2025. Split the data 70% training, 15% validation and 15% test. Use k = 5 folds for cross-validation and report the mean and standard deviation of the fold scores. Set random_state=42 everywhere. The test set may be used exactly once. The primary metric is F1 for imbalanced data and accuracy otherwise.",
+   "doc_id": "ml_project_handbook",
+   "course_id": "ml",
+   "location": "Evaluation Protocol v2",
+   "chunk_id": "ml_project_handbook:0001",
+   "score": 0.6195,
+   "data": {
+    "file_type": "docx",
+    "page": null,
+    "section": "Evaluation Protocol v2",
+    "filename": "ml_project_handbook.docx"
+   },
+   "derived_from": []
+  },
+  {
+   "id": "S2",
+   "kind": "document",
+   "title": "Ml Evaluation Protocol V1",
+   "text": "This protocol applied to projects started before 2025 and was replaced by protocol v2.",
+   "doc_id": "ml_evaluation_protocol_v1",
+   "course_id": "ml",
+   "location": "-",
+   "chunk_id": "ml_evaluation_protocol_v1:0001",
+   "score": 0.5398,
+   "data": {
+    "file_type": "txt",
+    "page": null,
+    "section": null,
+    "filename": "ml_evaluation_protocol_v1.txt"
+   },
+   "derived_from": []
+  }
+ ],
+ "evidence": {
+  "S1": {
+   "id": "S1",
+   "kind": "document",
+   "title": "Ml Project Handbook",
+   "text": "Evaluation Protocol v2\nEvaluation protocol v2 supersedes protocol v1 for all projects started in 2025. Split the data 70% training, 15% validation and 15% test. Use k = 5 folds for cross-validation and report the mean and standard deviation of the fold scores. Set random_state=42 everywhere. The test set may be used exactly once. The primary metric is F1 for imbalanced data and accuracy otherwise.",
+   "doc_id": "ml_project_handbook",
+   "course_id": "ml",
+   "location": "Evaluation Protocol v2",
+   "chunk_id": "ml_project_handbook:0001",
+   "score": 0.6195,
+   "data": {
+    "file_type": "docx",
+    "page": null,
+    "section": "Evaluation Protocol v2",
+    "filename": "ml_project_handbook.docx"
+   },
+   "derived_from": []
+  },
+  "S2": {
+   "id": "S2",
+   "kind": "document",
+   "title": "Ml Evaluation Protocol V1",
+   "text": "This protocol applied to projects started before 2025 and was replaced by protocol v2.",
+   "doc_id": "ml_evaluation_protocol_v1",
+   "course_id": "ml",
+   "location": "-",
+   "chunk_id": "ml_evaluation_protocol_v1:0001",
+   "score": 0.5398,
+   "data": {
+    "file_type": "txt",
+    "page": null,
+    "section": null,
+    "filename": "ml_evaluation_protocol_v1.txt"
+   },
+   "derived_from": []
+  },
+  "S3": {
+   "id": "S3",
+   "kind": "document",
+   "title": "Ml Evaluation Protocol V1",
+   "text": "MACHINE LEARNING EVALUATION PROTOCOL v1 (2023 edition, SUPERSEDED)\n==================================================================",
+   "doc_id": "ml_evaluation_protocol_v1",
+   "course_id": "ml",
+   "location": "-",
+   "chunk_id": "ml_evaluation_protocol_v1:0000",
+   "score": 0.5236,
+   "data": {
+    "file_type": "txt",
+    "page": null,
+    "section": null,
+    "filename": "ml_evaluation_protocol_v1.txt"
+   },
+   "derived_from": []
+  },
+  "S4": {
+   "id": "S4",
+   "kind": "document",
+   "title": "Data Lab Guide",
+   "text": "Data Wrangling Lab Guide (v2, 2025)",
+   "doc_id": "data_lab_guide",
+   "course_id": "data",
+   "location": "Data Wrangling Lab Guide (v2, 2025)",
+   "chunk_id": "data_lab_guide:0000",
+   "score": 0.2477,
+   "data": {
+    "file_type": "docx",
+    "page": null,
+    "section": "Data Wrangling Lab Guide (v2, 2025)",
+    "filename": "data_lab_guide.docx"
+   },
+   "derived_from": []
+  },
+  "S5": {
+   "id": "S5",
+   "kind": "document",
+   "title": "Ml Project Handbook",
+   "text": "Machine Learning Project Handbook (v2, current)",
+   "doc_id": "ml_project_handbook",
+   "course_id": "ml",
+   "location": "Machine Learning Project Handbook (v2, current)",
+   "chunk_id": "ml_project_handbook:0000",
+   "score": 0.2083,
+   "data": {
+    "file_type": "docx",
+    "page": null,
+    "section": "Machine Learning Project Handbook (v2, current)",
+    "filename": "ml_project_handbook.docx"
+   },
+   "derived_from": []
+  }
+ },
+ "trace": [
+  {
+   "seq": 1,
+   "t_ms": 0,
+   "type": "request_received",
+   "question": "Summarize the key differences between evaluation protocol v1 and v2.",
+   "scope": null,
+   "system": "standard_rag"
+  },
+  {
+   "seq": 2,
+   "t_ms": 56,
+   "type": "retrieval",
+   "query": "Summarize the key differences between evaluation protocol v1 and v2.",
+   "n": 5,
+   "sources": [
+    "S1",
+    "S2",
+    "S3",
+    "S4",
+    "S5"
+   ],
+   "best_score": 0.62
+  },
+  {
+   "seq": 3,
+   "t_ms": 5930,
+   "type": "answer",
+   "abstained": false,
+   "citations": [
+    "S1",
+    "S2"
+   ]
+  }
+ ],
+ "validation": {
+  "n_cited_sentences": 4,
+  "n_supported": 4,
+  "support_rate": 1.0,
+  "invalid_ids": [],
+  "unsupported": [],
+  "uncited_numeric_sentences": [
+   "Evaluation Protocol v2 splits the data 70% training, 15% validation, and 15% test."
+  ]
+ },
+ "metrics": {
+  "latency_s": 5.93,
+  "llm_calls": 1,
+  "prompt_tokens": 544,
+  "completion_tokens": 130,
+  "tool_calls": 1,
+  "replans": 0,
+  "steps": 1
+ },
+ "system": "standard_rag",
+ "config": {
+  "top_k": 5
+ }
+}

@@ -1,0 +1,11 @@
+DATA WRANGLING GLOSSARY (original course material, CC BY 4.0)
+================================================================
+
+NULL: the SQL marker for a missing value.
+NaN: floating-point not-a-number used by pandas for missing numeric data.
+None: Python's null object; pandas also treats None as missing in object columns.
+key: the column or columns used to match rows when joining two tables.
+schema: the names and data types of the columns of a table.
+sample: DataFrame.sample(n=3) returns 3 random rows. It is a row draw, not a statistical sample design.
+merge versus join: pd.merge joins on columns by default, whereas DataFrame.join joins on the index by default.
+index: depends on context - database index, pandas Index or list position.

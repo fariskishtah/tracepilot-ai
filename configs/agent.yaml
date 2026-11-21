@@ -1,0 +1,18 @@
+budgets:
+  max_replans: 2              # planning rounds = 1 initial plan + at most 2 replans (docs/AGENT_DESIGN.md)
+  max_plan_steps: 7
+  max_attempts_per_subtask: 3 # initial search + 2 retries
+  max_tool_calls: 9
+  max_llm_calls: 6            # cap on OPTIONAL LLM work (summaries, calculation proposals); planner + synthesis always run
+  tool_timeout_s: 30
+  request_timeout_s: 180
+  max_tool_output_chars: 6000
+  max_evidence_chars_in_prompt: 5200
+sufficiency:
+  min_best_score: 0.35        # dense cosine; calibrated on the DEV split
+  min_keyword_coverage: 0.35
+planner:
+  mode: llm                   # llm | rules
+  allow_rules_fallback: true
+tools_enabled: [search_knowledge_base, retrieve_source_context, summarize_evidence, analyze_dataset, calculate_expression, compare_evidence, refine_search_query]
+registry_version: "1.0.0"

@@ -1,0 +1,11 @@
+run_id,model,task,train_accuracy,val_accuracy,precision,recall,f1,notes
+ML001,Logistic Regression,spam classification,0.94,0.93,0.91,0.89,0.8999,"Good baseline, small gap"
+ML002,Decision Tree (depth=None),spam classification,1.0,0.86,0.84,0.83,0.835,Overfits: perfect training accuracy
+ML003,Decision Tree (depth=4),spam classification,0.92,0.9,0.88,0.86,0.8699,Depth limit reduces overfitting
+ML004,Random Forest (100 trees),spam classification,0.99,0.95,0.94,0.93,0.935,Best validation accuracy of spam runs
+ML005,k-NN (k=1),spam classification,1.0,0.88,0.86,0.85,0.855,k=1 memorizes training data
+ML006,k-NN (k=15),spam classification,0.91,0.91,0.9,0.87,0.8847,Smoother decision boundary
+ML007,Always predict majority,fraud detection,0.99,0.99,0.0,0.0,0.0,Accuracy 0.99 but recall 0: useless on rare class
+ML008,Logistic Regression,fraud detection,0.98,0.98,0.62,0.55,0.5829,Moderate recall on rare class
+ML009,Gradient Boosting,fraud detection,0.99,0.985,0.81,0.74,0.7734,Highest F1 among fraud runs
+ML010,Logistic Regression + class weights,fraud detection,0.96,0.95,0.48,0.83,0.6082,"Recall up, precision down"

@@ -1,0 +1,198 @@
+{
+ "request_id": "3c17aad1196c",
+ "question": "What does mode mean?",
+ "answer": "Mode in Python refers to the mode() function used to find the most frequently occurring value in a dataset [S1] [S3].",
+ "abstained": false,
+ "stop_reason": "answered",
+ "plan": null,
+ "plan_source": "none",
+ "tool_sequence": [
+  "search_knowledge_base"
+ ],
+ "citations": [
+  {
+   "id": "S1",
+   "kind": "document",
+   "title": "Python Glossary Overloaded Terms",
+   "text": "class: in Python a class is a blueprint for creating objects. It is not a category label as in classification problems. function: a reusable block of code defined with def. It is not necessarily a mathematical function. mode: when opening a file the mode string such as \"r\", \"w\" or \"a\" says how the file is used. statistics.mode(data) is a different thing: it returns the most frequent value. sample: random.sample(population, k) draws k unique elements without replacement. It has nothing to do with a statistical sample unless you use it to build one. normal: random.gauss(mu, sigma) and random.normalvariate(mu, sigma) draw numbers from a normal distribution. seed: random.seed(n) makes the random sequence reproducible, so a program prints the same random numbers on every run. iterable: an object you can loop over, such as a list or string.",
+   "doc_id": "python_glossary_overloaded_terms",
+   "course_id": "python",
+   "location": "-",
+   "chunk_id": "python_glossary_overloaded_terms:0001",
+   "score": 0.4228,
+   "data": {
+    "file_type": "txt",
+    "page": null,
+    "section": null,
+    "filename": "python_glossary_overloaded_terms.txt"
+   },
+   "derived_from": []
+  },
+  {
+   "id": "S3",
+   "kind": "document",
+   "title": "Statistics Confusable Terms",
+   "text": "learning course). normal: the normal distribution is the bell curve. It does not mean \"typical\" or \"healthy\" values.  standardization: in this course standardization means converting values to z-scores with mean 0 and standard deviation 1. adjusted R squared: adjusted R2 = 1 - (1 - R2) * (n - 1) / (n - p - 1) where p is the number of predictors. Plain R2 never decreases when a predictor is added to the model, so adjusted R2 is used to compare models of different sizes. sample: in statistics a sample is a subset drawn from a population. In machine learning courses a sample often means a single row of data.",
+   "doc_id": "statistics_confusable_terms",
+   "course_id": "statistics",
+   "location": "-",
+   "chunk_id": "statistics_confusable_terms:0002",
+   "score": 0.221,
+   "data": {
+    "file_type": "txt",
+    "page": null,
+    "section": null,
+    "filename": "statistics_confusable_terms.txt"
+   },
+   "derived_from": []
+  }
+ ],
+ "evidence": {
+  "S1": {
+   "id": "S1",
+   "kind": "document",
+   "title": "Python Glossary Overloaded Terms",
+   "text": "class: in Python a class is a blueprint for creating objects. It is not a category label as in classification problems. function: a reusable block of code defined with def. It is not necessarily a mathematical function. mode: when opening a file the mode string such as \"r\", \"w\" or \"a\" says how the file is used. statistics.mode(data) is a different thing: it returns the most frequent value. sample: random.sample(population, k) draws k unique elements without replacement. It has nothing to do with a statistical sample unless you use it to build one. normal: random.gauss(mu, sigma) and random.normalvariate(mu, sigma) draw numbers from a normal distribution. seed: random.seed(n) makes the random sequence reproducible, so a program prints the same random numbers on every run. iterable: an object you can loop over, such as a list or string.",
+   "doc_id": "python_glossary_overloaded_terms",
+   "course_id": "python",
+   "location": "-",
+   "chunk_id": "python_glossary_overloaded_terms:0001",
+   "score": 0.4228,
+   "data": {
+    "file_type": "txt",
+    "page": null,
+    "section": null,
+    "filename": "python_glossary_overloaded_terms.txt"
+   },
+   "derived_from": []
+  },
+  "S2": {
+   "id": "S2",
+   "kind": "document",
+   "title": "Statistics Lecture Notes",
+   "text": "1. Descriptive Statistics Descriptive statistics summarize a dataset. Measures of central tendency are the mean (the sum of the values divided by the number of values), the median (the middle value of the sorted data) and the mode (the most frequent value). The mean is sensitive to outliers; the median is robust to them. For right-skewed data such as incomes the mean is usually larger than the median. Measures of spread describe variability. The range is maximum minus minimum. The variance averages squared deviations from the mean, and the standard deviation is the square root of the variance, so it has the same units as the data. The interquartile range (IQR) is Q3 minus Q1 and is used to flag outliers: a common rule marks values below Q1 - 1.5 * IQR or above Q3 + 1.5 * IQR. Population variance divides the sum of squared deviations by N, the population size. Sample",
+   "doc_id": "statistics_lecture_notes",
+   "course_id": "statistics",
+   "location": "p.2",
+   "chunk_id": "statistics_lecture_notes:0001",
+   "score": 0.2372,
+   "data": {
+    "file_type": "pdf",
+    "page": 2,
+    "section": "1. Descriptive Statistics",
+    "filename": "statistics_lecture_notes.pdf"
+   },
+   "derived_from": []
+  },
+  "S3": {
+   "id": "S3",
+   "kind": "document",
+   "title": "Statistics Confusable Terms",
+   "text": "learning course). normal: the normal distribution is the bell curve. It does not mean \"typical\" or \"healthy\" values.  standardization: in this course standardization means converting values to z-scores with mean 0 and standard deviation 1. adjusted R squared: adjusted R2 = 1 - (1 - R2) * (n - 1) / (n - p - 1) where p is the number of predictors. Plain R2 never decreases when a predictor is added to the model, so adjusted R2 is used to compare models of different sizes. sample: in statistics a sample is a subset drawn from a population. In machine learning courses a sample often means a single row of data.",
+   "doc_id": "statistics_confusable_terms",
+   "course_id": "statistics",
+   "location": "-",
+   "chunk_id": "statistics_confusable_terms:0002",
+   "score": 0.221,
+   "data": {
+    "file_type": "txt",
+    "page": null,
+    "section": null,
+    "filename": "statistics_confusable_terms.txt"
+   },
+   "derived_from": []
+  },
+  "S4": {
+   "id": "S4",
+   "kind": "document",
+   "title": "Python Glossary Overloaded Terms",
+   "text": "program prints the same random numbers on every run. iterable: an object you can loop over, such as a list or string.  An iterator is the object that produces the values one at a time and is returned by iter(iterable). generator: a function that uses yield to produce values lazily, one at a time, instead of building a whole list in memory. decorator: a function that wraps another function; written with the @ syntax above a def line. mean: Python has no built-in mean. Use statistics.mean(data), or statistics.fmean(data) for a faster floating-point mean.",
+   "doc_id": "python_glossary_overloaded_terms",
+   "course_id": "python",
+   "location": "-",
+   "chunk_id": "python_glossary_overloaded_terms:0002",
+   "score": 0.1851,
+   "data": {
+    "file_type": "txt",
+    "page": null,
+    "section": null,
+    "filename": "python_glossary_overloaded_terms.txt"
+   },
+   "derived_from": []
+  },
+  "S5": {
+   "id": "S5",
+   "kind": "document",
+   "title": "Statistics Robust Summaries",
+   "text": "The mean is the sum of the values divided by their count, so every value, including extreme ones,\npulls it. The median is the middle value of the sorted data and ignores how far the extremes lie.\nWhen a distribution is right-skewed (a long tail of a few very large values, as with prices or\nincomes) a few large values drag the mean upward while the median stays near the typical value, so\nthe mean exceeds the median. When the data are symmetric the two are close. A large gap between the\nmean and the median is therefore a quick diagnostic for skew or outliers. For skewed data, report\nthe median (or both) because it better describes a typical observation.",
+   "doc_id": "statistics_robust_summaries",
+   "course_id": "statistics",
+   "location": "ROBUST SUMMARIES: WHY THE MEAN AND THE MEDIAN DIFFER",
+   "chunk_id": "statistics_robust_summaries:0001",
+   "score": 0.1704,
+   "data": {
+    "file_type": "txt",
+    "page": null,
+    "section": "ROBUST SUMMARIES: WHY THE MEAN AND THE MEDIAN DIFFER",
+    "filename": "statistics_robust_summaries.txt"
+   },
+   "derived_from": []
+  }
+ },
+ "trace": [
+  {
+   "seq": 1,
+   "t_ms": 0,
+   "type": "request_received",
+   "question": "What does mode mean?",
+   "scope": null,
+   "system": "standard_rag"
+  },
+  {
+   "seq": 2,
+   "t_ms": 10,
+   "type": "retrieval",
+   "query": "What does mode mean?",
+   "n": 5,
+   "sources": [
+    "S1",
+    "S2",
+    "S3",
+    "S4",
+    "S5"
+   ],
+   "best_score": 0.423
+  },
+  {
+   "seq": 3,
+   "t_ms": 4177,
+   "type": "answer",
+   "abstained": false,
+   "citations": [
+    "S1",
+    "S3"
+   ]
+  }
+ ],
+ "validation": {
+  "n_cited_sentences": 1,
+  "n_supported": 1,
+  "support_rate": 1.0,
+  "invalid_ids": [],
+  "unsupported": [],
+  "uncited_numeric_sentences": []
+ },
+ "metrics": {
+  "latency_s": 4.18,
+  "llm_calls": 1,
+  "prompt_tokens": 1108,
+  "completion_tokens": 29,
+  "tool_calls": 1,
+  "replans": 0,
+  "steps": 1
+ },
+ "system": "standard_rag",
+ "config": {
+  "top_k": 5
+ }
+}

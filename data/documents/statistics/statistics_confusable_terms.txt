@@ -1,0 +1,12 @@
+STATISTICS CONFUSABLE TERMS (original course material, CC BY 4.0)
+==================================================================
+
+standard deviation vs standard error: the standard deviation describes the spread of individual observations; the standard error describes the spread of a statistic such as the sample mean across repeated samples.
+confidence level vs confidence interval: the level (for example 95%) is a property of the procedure; the interval is the computed range of values.
+significance level vs p-value: alpha is chosen before the test; the p-value is computed from the data.
+covariance vs correlation: covariance carries the units of x times the units of y; correlation is unitless and always between -1 and 1.
+precision of a measurement: how close repeated measurements are to each other. Precision in classification is a different concept (see the machine learning course).
+normal: the normal distribution is the bell curve. It does not mean "typical" or "healthy" values.
+standardization: in this course standardization means converting values to z-scores with mean 0 and standard deviation 1.
+adjusted R squared: adjusted R2 = 1 - (1 - R2) * (n - 1) / (n - p - 1) where p is the number of predictors. Plain R2 never decreases when a predictor is added to the model, so adjusted R2 is used to compare models of different sizes.
+sample: in statistics a sample is a subset drawn from a population. In machine learning courses a sample often means a single row of data.

@@ -1,0 +1,478 @@
+{
+ "request_id": "b1e541e50d66",
+ "question": "What is the default join type of pandas merge and what does a left join keep?",
+ "answer": "The default join type of pandas merge is an inner join [S2]. This keeps only keys present in both tables [S2]. A left join keeps every row of the left table and fills unmatched right-hand columns with NaN [S2].",
+ "abstained": false,
+ "stop_reason": "answered",
+ "plan": {
+  "question_type": "factual",
+  "complexity": "simple",
+  "requires_retrieval": true,
+  "requires_calculation": false,
+  "requires_data_analysis": false,
+  "requires_comparison": false,
+  "subtasks": [
+   {
+    "id": "t1",
+    "tool": "search_knowledge_base",
+    "goal": "default join type of pandas merge",
+    "query": "default join type of pandas merge",
+    "dataset_id": null,
+    "operation": null,
+    "column": null,
+    "group_by": null,
+    "agg": null,
+    "filters": null,
+    "expression": null,
+    "aspects": null,
+    "depends_on": []
+   },
+   {
+    "id": "t2",
+    "tool": "search_knowledge_base",
+    "goal": "left join keeps in pandas merge",
+    "query": "left join keeps pandas merge",
+    "dataset_id": null,
+    "operation": null,
+    "column": null,
+    "group_by": null,
+    "agg": null,
+    "filters": null,
+    "expression": null,
+    "aspects": null,
+    "depends_on": []
+   }
+  ],
+  "rationale": "LLM plan: 2 step(s)"
+ },
+ "plan_source": "llm",
+ "tool_sequence": [
+  "search_knowledge_base",
+  "search_knowledge_base"
+ ],
+ "citations": [
+  {
+   "id": "S2",
+   "kind": "document",
+   "title": "Data Wrangling Handbook",
+   "text": "3. Combining Tables\npd.merge joins two DataFrames on key columns. The default is an inner join, which keeps only\nkeys present in both tables. A left join keeps every row of the left table and fills unmatched\nright-hand columns with NaN.\nIf a key is duplicated in both tables the result contains every pairing of the matching rows, so the\nrow count can grow (a many-to-many join). pd.concat stacks tables; by default it stacks vertically\n(axis=0).",
+   "doc_id": "data_wrangling_handbook",
+   "course_id": "data",
+   "location": "p.3",
+   "chunk_id": "data_wrangling_handbook:0002",
+   "score": 0.6186715364456177,
+   "data": {
+    "file_type": "pdf",
+    "page": 3,
+    "section": "3. Combining Tables",
+    "filename": "data_wrangling_handbook.pdf"
+   },
+   "derived_from": []
+  }
+ ],
+ "evidence": {
+  "S1": {
+   "id": "S1",
+   "kind": "document",
+   "title": "Data Glossary",
+   "text": "NULL: the SQL marker for a missing value.\nNaN: floating-point not-a-number used by pandas for missing numeric data.\nNone: Python's null object; pandas also treats None as missing in object columns.\nkey: the column or columns used to match rows when joining two tables.\nschema: the names and data types of the columns of a table.\nsample: DataFrame.sample(n=3) returns 3 random rows. It is a row draw, not a statistical sample design.\nmerge versus join: pd.merge joins on columns by default, whereas DataFrame.join joins on the index by default.\nindex: depends on context - database index, pandas Index or list position.",
+   "doc_id": "data_glossary",
+   "course_id": "data",
+   "location": "-",
+   "chunk_id": "data_glossary:0001",
+   "score": 0.6006,
+   "data": {
+    "file_type": "txt",
+    "page": null,
+    "section": null,
+    "filename": "data_glossary.txt"
+   },
+   "derived_from": []
+  },
+  "S2": {
+   "id": "S2",
+   "kind": "document",
+   "title": "Data Wrangling Handbook",
+   "text": "3. Combining Tables\npd.merge joins two DataFrames on key columns. The default is an inner join, which keeps only\nkeys present in both tables. A left join keeps every row of the left table and fills unmatched\nright-hand columns with NaN.\nIf a key is duplicated in both tables the result contains every pairing of the matching rows, so the\nrow count can grow (a many-to-many join). pd.concat stacks tables; by default it stacks vertically\n(axis=0).",
+   "doc_id": "data_wrangling_handbook",
+   "course_id": "data",
+   "location": "p.3",
+   "chunk_id": "data_wrangling_handbook:0002",
+   "score": 0.6186715364456177,
+   "data": {
+    "file_type": "pdf",
+    "page": 3,
+    "section": "3. Combining Tables",
+    "filename": "data_wrangling_handbook.pdf"
+   },
+   "derived_from": []
+  },
+  "S3": {
+   "id": "S3",
+   "kind": "document",
+   "title": "Data Legacy Lab Notes 2021",
+   "text": "Lab datasets are limited to 10,000 rows.\nSubmit a printed report.\nJoin tables with SQL only; pandas is optional.",
+   "doc_id": "data_legacy_lab_notes_2021",
+   "course_id": "data",
+   "location": "-",
+   "chunk_id": "data_legacy_lab_notes_2021:0001",
+   "score": 0.3712496757507324,
+   "data": {
+    "file_type": "txt",
+    "page": null,
+    "section": null,
+    "filename": "data_legacy_lab_notes_2021.txt"
+   },
+   "derived_from": []
+  },
+  "S4": {
+   "id": "S4",
+   "kind": "document",
+   "title": "Pandas Function Defaults",
+   "text": "Dataset pandas_function_defaults: 13 rows, columns: ref_id, function, parameter, default_value, note.",
+   "doc_id": "pandas_function_defaults",
+   "course_id": "data",
+   "location": "dataset overview",
+   "chunk_id": "pandas_function_defaults:0000",
+   "score": 0.4439,
+   "data": {
+    "file_type": "csv",
+    "page": null,
+    "section": "dataset overview",
+    "filename": "pandas_function_defaults.csv"
+   },
+   "derived_from": []
+  },
+  "S5": {
+   "id": "S5",
+   "kind": "document",
+   "title": "Data Wrangling Handbook",
+   "text": "2. Missing Values\npandas represents missing numbers as NaN. isna() flags them, dropna() removes rows with any\nmissing value by default, and fillna(value) replaces them. NaN is not equal to itself, so a\ncomparison such as x == np.nan is never true; use isna() instead.\nIn SQL the missing marker is NULL, and a comparison with NULL is unknown, so use IS NULL\nrather than = NULL. Aggregations such as AVG ignore NULL values; the pandas mean() skips\nNaN by default (skipna=True).",
+   "doc_id": "data_wrangling_handbook",
+   "course_id": "data",
+   "location": "p.2",
+   "chunk_id": "data_wrangling_handbook:0001",
+   "score": 0.3613,
+   "data": {
+    "file_type": "pdf",
+    "page": 2,
+    "section": "2. Missing Values",
+    "filename": "data_wrangling_handbook.pdf"
+   },
+   "derived_from": []
+  }
+ },
+ "trace": [
+  {
+   "seq": 1,
+   "t_ms": 0,
+   "type": "request_received",
+   "question": "What is the default join type of pandas merge and what does a left join keep?",
+   "scope": null,
+   "tools": [
+    "search_knowledge_base",
+    "retrieve_source_context",
+    "summarize_evidence",
+    "analyze_dataset",
+    "calculate_expression",
+    "compare_evidence",
+    "refine_search_query"
+   ],
+   "planner": "llm",
+   "replanning": true,
+   "llm": "qwen2.5:3b-instruct",
+   "registry_version": "1.0.0"
+  },
+  {
+   "seq": 2,
+   "t_ms": 3,
+   "type": "question_analysis",
+   "calc_cue": false,
+   "data_cue": false,
+   "compare_cue": false,
+   "summary_cue": false,
+   "multi_cue": false,
+   "named_datasets": [],
+   "length_words": 16,
+   "needs_data": false,
+   "concept_cue": true
+  },
+  {
+   "seq": 3,
+   "t_ms": 5130,
+   "type": "plan_created",
+   "source": "llm",
+   "question_type": "factual",
+   "complexity": "simple",
+   "requires": {
+    "retrieval": true,
+    "calculation": false,
+    "data_analysis": false,
+    "comparison": false
+   },
+   "summary": "LLM plan: 2 step(s)",
+   "adjustments": [],
+   "note": "",
+   "subtasks": [
+    {
+     "id": "t1",
+     "tool": "search_knowledge_base",
+     "goal": "default join type of pandas merge",
+     "depends_on": []
+    },
+    {
+     "id": "t2",
+     "tool": "search_knowledge_base",
+     "goal": "left join keeps in pandas merge",
+     "depends_on": []
+    }
+   ]
+  },
+  {
+   "seq": 4,
+   "t_ms": 5130,
+   "type": "tool_selected",
+   "step": "t1",
+   "tool": "search_knowledge_base",
+   "goal": "default join type of pandas merge",
+   "attempt": 1,
+   "args": {
+    "query": "default join type of pandas merge",
+    "course_ids": null,
+    "top_k": 5
+   }
+  },
+  {
+   "seq": 5,
+   "t_ms": 5462,
+   "type": "tool_result",
+   "step": "t1",
+   "tool": "search_knowledge_base",
+   "ok": true,
+   "ms": 331.5,
+   "summary": "5 chunks, best cosine 0.60",
+   "evidence_ids": [
+    "S1",
+    "S2",
+    "S3",
+    "S4",
+    "S5"
+   ],
+   "error": null,
+   "error_type": null,
+   "sufficient": true,
+   "relevance": {
+    "best_score": 0.601,
+    "keyword_coverage": 0.8,
+    "threshold": {
+     "min_best_score": 0.35,
+     "min_keyword_coverage": 0.35
+    }
+   },
+   "sources": [
+    {
+     "id": "S1",
+     "title": "Data Glossary",
+     "location": "-",
+     "score": 0.601
+    },
+    {
+     "id": "S2",
+     "title": "Data Wrangling Handbook",
+     "location": "p.3",
+     "score": 0.595
+    },
+    {
+     "id": "S3",
+     "title": "Data Legacy Lab Notes 2021",
+     "location": "-",
+     "score": 0.366
+    },
+    {
+     "id": "S4",
+     "title": "Pandas Function Defaults",
+     "location": "dataset overview",
+     "score": 0.444
+    },
+    {
+     "id": "S5",
+     "title": "Data Wrangling Handbook",
+     "location": "p.2",
+     "score": 0.361
+    }
+   ]
+  },
+  {
+   "seq": 6,
+   "t_ms": 5462,
+   "type": "tool_selected",
+   "step": "t2",
+   "tool": "search_knowledge_base",
+   "goal": "left join keeps in pandas merge",
+   "attempt": 1,
+   "args": {
+    "query": "left join keeps pandas merge",
+    "course_ids": null,
+    "top_k": 5
+   }
+  },
+  {
+   "seq": 7,
+   "t_ms": 5475,
+   "type": "tool_result",
+   "step": "t2",
+   "tool": "search_knowledge_base",
+   "ok": true,
+   "ms": 12.6,
+   "summary": "5 chunks, best cosine 0.62",
+   "evidence_ids": [
+    "S2",
+    "S1",
+    "S3",
+    "S5",
+    "S4"
+   ],
+   "error": null,
+   "error_type": null,
+   "sufficient": true,
+   "relevance": {
+    "best_score": 0.619,
+    "keyword_coverage": 1.0,
+    "threshold": {
+     "min_best_score": 0.35,
+     "min_keyword_coverage": 0.35
+    }
+   },
+   "sources": [
+    {
+     "id": "S2",
+     "title": "Data Wrangling Handbook",
+     "location": "p.3",
+     "score": 0.619
+    },
+    {
+     "id": "S1",
+     "title": "Data Glossary",
+     "location": "-",
+     "score": 0.538
+    },
+    {
+     "id": "S3",
+     "title": "Data Legacy Lab Notes 2021",
+     "location": "-",
+     "score": 0.371
+    },
+    {
+     "id": "S5",
+     "title": "Data Wrangling Handbook",
+     "location": "p.2",
+     "score": 0.356
+    },
+    {
+     "id": "S4",
+     "title": "Pandas Function Defaults",
+     "location": "dataset overview",
+     "score": 0.275
+    }
+   ]
+  },
+  {
+   "seq": 8,
+   "t_ms": 5475,
+   "type": "validation",
+   "sufficient": true,
+   "steps": {
+    "t1": {
+     "status": "done",
+     "sufficient": true
+    },
+    "t2": {
+     "status": "done",
+     "sufficient": true
+    }
+   },
+   "problems": []
+  },
+  {
+   "seq": 9,
+   "t_ms": 5475,
+   "type": "synthesis_started",
+   "evidence": [
+    "S2",
+    "S1",
+    "S3"
+   ],
+   "computed": [],
+   "gaps": []
+  },
+  {
+   "seq": 10,
+   "t_ms": 10972,
+   "type": "citation_check",
+   "n_cited_sentences": 3,
+   "n_supported": 3,
+   "support_rate": 1.0,
+   "invalid_ids": [],
+   "removed_unsupported": 0,
+   "regenerated": 0,
+   "injection_flags": []
+  },
+  {
+   "seq": 11,
+   "t_ms": 10972,
+   "type": "answer",
+   "abstained": false,
+   "citations": [
+    "S2"
+   ]
+  },
+  {
+   "seq": 12,
+   "t_ms": 10973,
+   "type": "completed",
+   "stop_reason": "answered",
+   "latency_s": 10.97
+  }
+ ],
+ "validation": {
+  "n_cited_sentences": 3,
+  "n_supported": 3,
+  "support_rate": 1.0,
+  "invalid_ids": [],
+  "unsupported": [],
+  "uncited_numeric_sentences": []
+ },
+ "metrics": {
+  "latency_s": 10.97,
+  "llm_calls": 2,
+  "prompt_tokens": 2009,
+  "completion_tokens": 156,
+  "tool_calls": 2,
+  "replans": 0,
+  "steps": 2,
+  "errors": [],
+  "step_status": {
+   "t1": "done",
+   "t2": "done"
+  },
+  "removed_unsupported": 0,
+  "injection_flags": []
+ },
+ "system": "agentic",
+ "config": {
+  "name": "full",
+  "planner": "llm",
+  "replan": true,
+  "tools": [
+   "search_knowledge_base",
+   "retrieve_source_context",
+   "summarize_evidence",
+   "analyze_dataset",
+   "calculate_expression",
+   "compare_evidence",
+   "refine_search_query"
+  ],
+  "model": "qwen2.5:3b-instruct",
+  "registry_version": "1.0.0"
+ }
+}

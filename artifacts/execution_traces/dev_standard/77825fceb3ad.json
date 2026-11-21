@@ -1,0 +1,217 @@
+{
+ "request_id": "77825fceb3ad",
+ "question": "Compare list.sort() and sorted() in Python.",
+ "answer": "list.sort() sorts the list in place and returns None [S1]/ [S3], while sorted() returns a new sorted list and leaves the original list unchanged [S2]/ [S3] [S1].",
+ "abstained": false,
+ "stop_reason": "answered",
+ "plan": null,
+ "plan_source": "none",
+ "tool_sequence": [
+  "search_knowledge_base"
+ ],
+ "citations": [
+  {
+   "id": "S1",
+   "kind": "document",
+   "title": "Python Debugging Playbook",
+   "text": "3. Lookup Errors Compared\nKeyError is raised when a dictionary key is missing. IndexError is raised when a sequence index is\nout of range. AttributeError is raised when an object has no attribute of that name.\nThe message 'NoneType' object has no attribute 'append' almost always means a variable holds\nNone instead of a list. The classic cause is writing nums = nums.sort(), because list.sort() sorts in\nplace and returns None. Use nums.sort() on its own line or sorted(nums) when a new list is\nneeded.\ndict.get(key, default) avoids a KeyError, while collections.defaultdict(list) creates a missing key with\nan empty list the first time it is accessed, which makes grouping code shorter.",
+   "doc_id": "python_debugging_playbook",
+   "course_id": "python",
+   "location": "p.3",
+   "chunk_id": "python_debugging_playbook:0002",
+   "score": 0.5794,
+   "data": {
+    "file_type": "pdf",
+    "page": 3,
+    "section": "3. Lookup Errors Compared",
+    "filename": "python_debugging_playbook.pdf"
+   },
+   "derived_from": []
+  },
+  {
+   "id": "S3",
+   "kind": "document",
+   "title": "Python Lecture Notes",
+   "text": "4. Lists, Tuples, Sets and Dictionaries A list is an ordered, mutable sequence: nums = [3, 1, 2]. Common methods are append(x) to add at the end, insert(i, x), remove(x), pop() to remove and return the last item, and sort() to sort in place. The built-in sorted(nums) returns a new sorted list and leaves the original unchanged. List comprehensions build lists concisely: [n * n for n in nums if n > 1]. A tuple is an ordered but immutable sequence, written (1, 2). Tuples are used for fixed records and can be dictionary keys because they are hashable. A set stores unique, unordered elements and supports fast membership tests plus union (|), intersection (&) and difference (-). A dictionary maps keys to values: ages = {\"Ali\": 20, \"Mona\": 22}. Looking up ages[\"Ali\"] raises KeyError when the key is missing, whereas ages.get(\"Sam\", 0) returns the default 0. The methods",
+   "doc_id": "python_lecture_notes",
+   "course_id": "python",
+   "location": "p.5",
+   "chunk_id": "python_lecture_notes:0007",
+   "score": 0.514,
+   "data": {
+    "file_type": "pdf",
+    "page": 5,
+    "section": "4. Lists, Tuples, Sets and Dictionaries",
+    "filename": "python_lecture_notes.pdf"
+   },
+   "derived_from": []
+  },
+  {
+   "id": "S2",
+   "kind": "document",
+   "title": "Python Reference Notes",
+   "text": "BUILT-IN FUNCTIONS\nlen(x) returns the number of items in x.\nsum(nums) adds the numbers in an iterable.\nmin(nums) and max(nums) return the smallest and largest items.\nsorted(items) returns a new sorted list; list.sort() sorts in place and returns None.\nenumerate(items) gives (index, item) pairs.\nzip(a, b) pairs items from two iterables and stops at the shortest.\nrange(stop) generates 0 .. stop-1; range(start, stop, step) supports steps.\nisinstance(x, int) tests whether x is an instance of a type.",
+   "doc_id": "python_reference_notes",
+   "course_id": "python",
+   "location": "BUILT-IN FUNCTIONS",
+   "chunk_id": "python_reference_notes:0001",
+   "score": 0.5199,
+   "data": {
+    "file_type": "txt",
+    "page": null,
+    "section": "BUILT-IN FUNCTIONS",
+    "filename": "python_reference_notes.txt"
+   },
+   "derived_from": []
+  }
+ ],
+ "evidence": {
+  "S1": {
+   "id": "S1",
+   "kind": "document",
+   "title": "Python Debugging Playbook",
+   "text": "3. Lookup Errors Compared\nKeyError is raised when a dictionary key is missing. IndexError is raised when a sequence index is\nout of range. AttributeError is raised when an object has no attribute of that name.\nThe message 'NoneType' object has no attribute 'append' almost always means a variable holds\nNone instead of a list. The classic cause is writing nums = nums.sort(), because list.sort() sorts in\nplace and returns None. Use nums.sort() on its own line or sorted(nums) when a new list is\nneeded.\ndict.get(key, default) avoids a KeyError, while collections.defaultdict(list) creates a missing key with\nan empty list the first time it is accessed, which makes grouping code shorter.",
+   "doc_id": "python_debugging_playbook",
+   "course_id": "python",
+   "location": "p.3",
+   "chunk_id": "python_debugging_playbook:0002",
+   "score": 0.5794,
+   "data": {
+    "file_type": "pdf",
+    "page": 3,
+    "section": "3. Lookup Errors Compared",
+    "filename": "python_debugging_playbook.pdf"
+   },
+   "derived_from": []
+  },
+  "S2": {
+   "id": "S2",
+   "kind": "document",
+   "title": "Python Reference Notes",
+   "text": "BUILT-IN FUNCTIONS\nlen(x) returns the number of items in x.\nsum(nums) adds the numbers in an iterable.\nmin(nums) and max(nums) return the smallest and largest items.\nsorted(items) returns a new sorted list; list.sort() sorts in place and returns None.\nenumerate(items) gives (index, item) pairs.\nzip(a, b) pairs items from two iterables and stops at the shortest.\nrange(stop) generates 0 .. stop-1; range(start, stop, step) supports steps.\nisinstance(x, int) tests whether x is an instance of a type.",
+   "doc_id": "python_reference_notes",
+   "course_id": "python",
+   "location": "BUILT-IN FUNCTIONS",
+   "chunk_id": "python_reference_notes:0001",
+   "score": 0.5199,
+   "data": {
+    "file_type": "txt",
+    "page": null,
+    "section": "BUILT-IN FUNCTIONS",
+    "filename": "python_reference_notes.txt"
+   },
+   "derived_from": []
+  },
+  "S3": {
+   "id": "S3",
+   "kind": "document",
+   "title": "Python Lecture Notes",
+   "text": "4. Lists, Tuples, Sets and Dictionaries A list is an ordered, mutable sequence: nums = [3, 1, 2]. Common methods are append(x) to add at the end, insert(i, x), remove(x), pop() to remove and return the last item, and sort() to sort in place. The built-in sorted(nums) returns a new sorted list and leaves the original unchanged. List comprehensions build lists concisely: [n * n for n in nums if n > 1]. A tuple is an ordered but immutable sequence, written (1, 2). Tuples are used for fixed records and can be dictionary keys because they are hashable. A set stores unique, unordered elements and supports fast membership tests plus union (|), intersection (&) and difference (-). A dictionary maps keys to values: ages = {\"Ali\": 20, \"Mona\": 22}. Looking up ages[\"Ali\"] raises KeyError when the key is missing, whereas ages.get(\"Sam\", 0) returns the default 0. The methods",
+   "doc_id": "python_lecture_notes",
+   "course_id": "python",
+   "location": "p.5",
+   "chunk_id": "python_lecture_notes:0007",
+   "score": 0.514,
+   "data": {
+    "file_type": "pdf",
+    "page": 5,
+    "section": "4. Lists, Tuples, Sets and Dictionaries",
+    "filename": "python_lecture_notes.pdf"
+   },
+   "derived_from": []
+  },
+  "S4": {
+   "id": "S4",
+   "kind": "document",
+   "title": "Python Reference Notes",
+   "text": "PYTHON QUICK REFERENCE NOTES (original demo material, CC BY 4.0)\n===============================================================",
+   "doc_id": "python_reference_notes",
+   "course_id": "python",
+   "location": "-",
+   "chunk_id": "python_reference_notes:0000",
+   "score": 0.3311,
+   "data": {
+    "file_type": "txt",
+    "page": null,
+    "section": null,
+    "filename": "python_reference_notes.txt"
+   },
+   "derived_from": []
+  },
+  "S5": {
+   "id": "S5",
+   "kind": "document",
+   "title": "Python Exercise Guide",
+   "text": "Grading Rubric for Python Exercises",
+   "doc_id": "python_exercise_guide",
+   "course_id": "python",
+   "location": "Grading Rubric for Python Exercises",
+   "chunk_id": "python_exercise_guide:0004",
+   "score": 0.3263,
+   "data": {
+    "file_type": "docx",
+    "page": null,
+    "section": "Grading Rubric for Python Exercises",
+    "filename": "python_exercise_guide.docx"
+   },
+   "derived_from": []
+  }
+ },
+ "trace": [
+  {
+   "seq": 1,
+   "t_ms": 1,
+   "type": "request_received",
+   "question": "Compare list.sort() and sorted() in Python.",
+   "scope": null,
+   "system": "standard_rag"
+  },
+  {
+   "seq": 2,
+   "t_ms": 50,
+   "type": "retrieval",
+   "query": "Compare list.sort() and sorted() in Python.",
+   "n": 5,
+   "sources": [
+    "S1",
+    "S2",
+    "S3",
+    "S4",
+    "S5"
+   ],
+   "best_score": 0.579
+  },
+  {
+   "seq": 3,
+   "t_ms": 3483,
+   "type": "answer",
+   "abstained": false,
+   "citations": [
+    "S1",
+    "S3",
+    "S2"
+   ]
+  }
+ ],
+ "validation": {
+  "n_cited_sentences": 1,
+  "n_supported": 1,
+  "support_rate": 1.0,
+  "invalid_ids": [],
+  "unsupported": [],
+  "uncited_numeric_sentences": []
+ },
+ "metrics": {
+  "latency_s": 3.48,
+  "llm_calls": 1,
+  "prompt_tokens": 852,
+  "completion_tokens": 46,
+  "tool_calls": 1,
+  "replans": 0,
+  "steps": 1
+ },
+ "system": "standard_rag",
+ "config": {
+  "top_k": 5
+ }
+}

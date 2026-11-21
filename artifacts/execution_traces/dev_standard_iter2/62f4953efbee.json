@@ -1,0 +1,198 @@
+{
+ "request_id": "62f4953efbee",
+ "question": "What is the difference between population variance and sample variance?",
+ "answer": "Population variance is calculated by dividing the sum of squared deviations by the population size N [S1] [S2]. Sample variance, used when the data is a sample from a larger population, is calculated by dividing by n - 1 [S1] [S2]. This adjustment, known as Bessel's correction, accounts for the fact that the sample mean is used to estimate the population mean, leading to an underestimation of the true variance if n were used instead of n - 1 [S1] [S2]. Therefore, the sample variance is generally larger than the population variance [S2].",
+ "abstained": false,
+ "stop_reason": "answered",
+ "plan": null,
+ "plan_source": "none",
+ "tool_sequence": [
+  "search_knowledge_base"
+ ],
+ "citations": [
+  {
+   "id": "S1",
+   "kind": "document",
+   "title": "Statistics Lecture Notes",
+   "text": "or above Q3 + 1.5 * IQR. Population variance divides the sum of squared deviations by N, the population size. Sample  variance divides by n - 1 (Bessel's correction) because deviations are measured from the sample mean rather than the unknown population mean, which would otherwise underestimate the true variance. Use sample variance whenever the data are a sample used to estimate a larger population.",
+   "doc_id": "statistics_lecture_notes",
+   "course_id": "statistics",
+   "location": "p.2",
+   "chunk_id": "statistics_lecture_notes:0002",
+   "score": 0.6495,
+   "data": {
+    "file_type": "pdf",
+    "page": 2,
+    "section": "1. Descriptive Statistics",
+    "filename": "statistics_lecture_notes.pdf"
+   },
+   "derived_from": []
+  },
+  {
+   "id": "S2",
+   "kind": "document",
+   "title": "Statistics Exercise Guide",
+   "text": "Problem 1: Sample versus Population Variance\nQuestion. For the data 2, 4, 4, 4, 5, 5, 7, 9 compute the population variance and the sample variance.\nSolution. The mean is 40 / 8 = 5. The squared deviations are 9, 1, 1, 1, 0, 0, 4, 16, which sum to 32. The population variance is 32 / 8 = 4 and the population standard deviation is 2. Treated as a sample, the sample variance is 32 / 7, about 4.571, and the sample standard deviation is about 2.138. The sample version is larger because it divides by n - 1 instead of n.",
+   "doc_id": "statistics_exercise_guide",
+   "course_id": "statistics",
+   "location": "Problem 1: Sample versus Population Variance",
+   "chunk_id": "statistics_exercise_guide:0001",
+   "score": 0.6418,
+   "data": {
+    "file_type": "docx",
+    "page": null,
+    "section": "Problem 1: Sample versus Population Variance",
+    "filename": "statistics_exercise_guide.docx"
+   },
+   "derived_from": []
+  }
+ ],
+ "evidence": {
+  "S1": {
+   "id": "S1",
+   "kind": "document",
+   "title": "Statistics Lecture Notes",
+   "text": "or above Q3 + 1.5 * IQR. Population variance divides the sum of squared deviations by N, the population size. Sample  variance divides by n - 1 (Bessel's correction) because deviations are measured from the sample mean rather than the unknown population mean, which would otherwise underestimate the true variance. Use sample variance whenever the data are a sample used to estimate a larger population.",
+   "doc_id": "statistics_lecture_notes",
+   "course_id": "statistics",
+   "location": "p.2",
+   "chunk_id": "statistics_lecture_notes:0002",
+   "score": 0.6495,
+   "data": {
+    "file_type": "pdf",
+    "page": 2,
+    "section": "1. Descriptive Statistics",
+    "filename": "statistics_lecture_notes.pdf"
+   },
+   "derived_from": []
+  },
+  "S2": {
+   "id": "S2",
+   "kind": "document",
+   "title": "Statistics Exercise Guide",
+   "text": "Problem 1: Sample versus Population Variance\nQuestion. For the data 2, 4, 4, 4, 5, 5, 7, 9 compute the population variance and the sample variance.\nSolution. The mean is 40 / 8 = 5. The squared deviations are 9, 1, 1, 1, 0, 0, 4, 16, which sum to 32. The population variance is 32 / 8 = 4 and the population standard deviation is 2. Treated as a sample, the sample variance is 32 / 7, about 4.571, and the sample standard deviation is about 2.138. The sample version is larger because it divides by n - 1 instead of n.",
+   "doc_id": "statistics_exercise_guide",
+   "course_id": "statistics",
+   "location": "Problem 1: Sample versus Population Variance",
+   "chunk_id": "statistics_exercise_guide:0001",
+   "score": 0.6418,
+   "data": {
+    "file_type": "docx",
+    "page": null,
+    "section": "Problem 1: Sample versus Population Variance",
+    "filename": "statistics_exercise_guide.docx"
+   },
+   "derived_from": []
+  },
+  "S3": {
+   "id": "S3",
+   "kind": "document",
+   "title": "Statistics Estimators And Bias",
+   "text": "2. Variance of an Estimator\nThe variance of an estimator describes how much the estimate changes from one random sample\nto the next. For the sample mean it equals sigma squared divided by n, so the standard error of the\nmean is sigma divided by the square root of n.\nThis is not the same quantity as the variance of the data themselves, which describes the spread\nof individual observations around their mean. Quadrupling the sample size halves the standard\nerror but does not change the variance of the data.",
+   "doc_id": "statistics_estimators_and_bias",
+   "course_id": "statistics",
+   "location": "p.2",
+   "chunk_id": "statistics_estimators_and_bias:0001",
+   "score": 0.6277,
+   "data": {
+    "file_type": "pdf",
+    "page": 2,
+    "section": "2. Variance of an Estimator",
+    "filename": "statistics_estimators_and_bias.pdf"
+   },
+   "derived_from": []
+  },
+  "S4": {
+   "id": "S4",
+   "kind": "document",
+   "title": "Statistics Estimators And Bias",
+   "text": "1. Bias of an Estimator\nIn statistics the bias of an estimator is its expected value minus the true parameter it estimates. An\nestimator with zero bias is called unbiased. The sample mean is an unbiased estimator of the\npopulation mean. The sample variance that divides by n - 1 is an unbiased estimator of the\npopulation variance, while dividing by n gives a biased estimator that underestimates the\npopulation variance by the factor (n - 1) / n.\nEstimator bias is a property of a calculation procedure over repeated samples. It is different from\nsampling bias, which is a flaw in how the data were collected, for example surveying only\nvolunteers.",
+   "doc_id": "statistics_estimators_and_bias",
+   "course_id": "statistics",
+   "location": "p.1",
+   "chunk_id": "statistics_estimators_and_bias:0000",
+   "score": 0.4575,
+   "data": {
+    "file_type": "pdf",
+    "page": 1,
+    "section": "1. Bias of an Estimator",
+    "filename": "statistics_estimators_and_bias.pdf"
+   },
+   "derived_from": []
+  },
+  "S5": {
+   "id": "S5",
+   "kind": "document",
+   "title": "Statistics Lecture Notes",
+   "text": "4. Sampling and Confidence Intervals A population is the entire group of interest and a sample is a subset used to learn about it. Simple random sampling gives every member an equal chance of selection; stratified sampling samples within subgroups; convenience sampling is easy but prone to bias. Sampling bias occurs when the sample systematically differs from the population. The sampling distribution of the mean describes how sample means vary from sample to sample. The Central Limit Theorem states that for sufficiently large n the distribution of the sample mean is approximately normal with mean mu and standard error sigma / sqrt(n), regardless of the shape of the original population. The standard error shrinks as the sample size grows. A confidence interval gives a range of plausible values for a parameter. A 95% confidence interval for",
+   "doc_id": "statistics_lecture_notes",
+   "course_id": "statistics",
+   "location": "p.5",
+   "chunk_id": "statistics_lecture_notes:0007",
+   "score": 0.4895,
+   "data": {
+    "file_type": "pdf",
+    "page": 5,
+    "section": "4. Sampling and Confidence Intervals",
+    "filename": "statistics_lecture_notes.pdf"
+   },
+   "derived_from": []
+  }
+ },
+ "trace": [
+  {
+   "seq": 1,
+   "t_ms": 0,
+   "type": "request_received",
+   "question": "What is the difference between population variance and sample variance?",
+   "scope": null,
+   "system": "standard_rag"
+  },
+  {
+   "seq": 2,
+   "t_ms": 19710,
+   "type": "retrieval",
+   "query": "What is the difference between population variance and sample variance?",
+   "n": 5,
+   "sources": [
+    "S1",
+    "S2",
+    "S3",
+    "S4",
+    "S5"
+   ],
+   "best_score": 0.65
+  },
+  {
+   "seq": 3,
+   "t_ms": 35258,
+   "type": "answer",
+   "abstained": false,
+   "citations": [
+    "S1",
+    "S2"
+   ]
+  }
+ ],
+ "validation": {
+  "n_cited_sentences": 4,
+  "n_supported": 4,
+  "support_rate": 1.0,
+  "invalid_ids": [],
+  "unsupported": [],
+  "uncited_numeric_sentences": []
+ },
+ "metrics": {
+  "latency_s": 35.26,
+  "llm_calls": 1,
+  "prompt_tokens": 1005,
+  "completion_tokens": 124,
+  "tool_calls": 1,
+  "replans": 0,
+  "steps": 1
+ },
+ "system": "standard_rag",
+ "config": {
+  "top_k": 5
+ }
+}

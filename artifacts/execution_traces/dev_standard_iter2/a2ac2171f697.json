@@ -1,0 +1,179 @@
+{
+ "request_id": "a2ac2171f697",
+ "question": "What does 7 // 2 evaluate to in Python according to the course notes?",
+ "answer": "7 // 2 evaluates to 3 in Python, as per the notes on integer division [S1].",
+ "abstained": false,
+ "stop_reason": "answered",
+ "plan": null,
+ "plan_source": "none",
+ "tool_sequence": [
+  "search_knowledge_base"
+ ],
+ "citations": [
+  {
+   "id": "S1",
+   "kind": "document",
+   "title": "Python Lecture Notes",
+   "text": "count from the end, so \"python\"[-1] is \"n\". Slicing \"python\"[1:4] returns \"yth\" (start included, stop excluded).  F-strings embed expressions inside text: f\"Total: {price * 2:.2f}\" formats a number with two decimals. Integer division // discards the fractional part (7 // 2 is 3), the modulo operator % returns the remainder (7 % 2 is 1), and ** is exponentiation (2 ** 10 is 1024). Dividing with / always returns a float, so 6 / 3 is 2.0.",
+   "doc_id": "python_lecture_notes",
+   "course_id": "python",
+   "location": "p.2",
+   "chunk_id": "python_lecture_notes:0002",
+   "score": 0.5863,
+   "data": {
+    "file_type": "pdf",
+    "page": 2,
+    "section": "1. Variables and Data Types",
+    "filename": "python_lecture_notes.pdf"
+   },
+   "derived_from": []
+  }
+ ],
+ "evidence": {
+  "S1": {
+   "id": "S1",
+   "kind": "document",
+   "title": "Python Lecture Notes",
+   "text": "count from the end, so \"python\"[-1] is \"n\". Slicing \"python\"[1:4] returns \"yth\" (start included, stop excluded).  F-strings embed expressions inside text: f\"Total: {price * 2:.2f}\" formats a number with two decimals. Integer division // discards the fractional part (7 // 2 is 3), the modulo operator % returns the remainder (7 % 2 is 1), and ** is exponentiation (2 ** 10 is 1024). Dividing with / always returns a float, so 6 / 3 is 2.0.",
+   "doc_id": "python_lecture_notes",
+   "course_id": "python",
+   "location": "p.2",
+   "chunk_id": "python_lecture_notes:0002",
+   "score": 0.5863,
+   "data": {
+    "file_type": "pdf",
+    "page": 2,
+    "section": "1. Variables and Data Types",
+    "filename": "python_lecture_notes.pdf"
+   },
+   "derived_from": []
+  },
+  "S2": {
+   "id": "S2",
+   "kind": "document",
+   "title": "Python Lecture Notes",
+   "text": "Python Lecture Notes\nPython Programming - independently written demonstration notes. Not official university material.",
+   "doc_id": "python_lecture_notes",
+   "course_id": "python",
+   "location": "p.1",
+   "chunk_id": "python_lecture_notes:0000",
+   "score": 0.4551,
+   "data": {
+    "file_type": "pdf",
+    "page": 1,
+    "section": null,
+    "filename": "python_lecture_notes.pdf"
+   },
+   "derived_from": []
+  },
+  "S3": {
+   "id": "S3",
+   "kind": "document",
+   "title": "Python Reference Notes",
+   "text": "PYTHON QUICK REFERENCE NOTES (original demo material, CC BY 4.0)\n===============================================================",
+   "doc_id": "python_reference_notes",
+   "course_id": "python",
+   "location": "-",
+   "chunk_id": "python_reference_notes:0000",
+   "score": 0.4531,
+   "data": {
+    "file_type": "txt",
+    "page": null,
+    "section": null,
+    "filename": "python_reference_notes.txt"
+   },
+   "derived_from": []
+  },
+  "S4": {
+   "id": "S4",
+   "kind": "document",
+   "title": "Python Glossary Overloaded Terms",
+   "text": "PYTHON GLOSSARY OF OVERLOADED TERMS (original course material, CC BY 4.0)\n===========================================================================",
+   "doc_id": "python_glossary_overloaded_terms",
+   "course_id": "python",
+   "location": "-",
+   "chunk_id": "python_glossary_overloaded_terms:0000",
+   "score": 0.3469,
+   "data": {
+    "file_type": "txt",
+    "page": null,
+    "section": null,
+    "filename": "python_glossary_overloaded_terms.txt"
+   },
+   "derived_from": []
+  },
+  "S5": {
+   "id": "S5",
+   "kind": "document",
+   "title": "Python Faq Style Addendum",
+   "text": "Frequently Asked Questions\nWhich Python version does the course use? The course uses Python 3.12 in all examples and tests.\nWhich editor should I use? Any editor is allowed; VS Code is used in the demonstrations.\nIs the statistics module allowed in assignments? Yes. statistics.variance(data) returns the sample variance, while statistics.pvariance(data) returns the population variance. In the same way statistics.stdev is the sample standard deviation and statistics.pstdev is the population standard deviation.\nWhere do I ask questions? Post them on the course forum; answers are usually given within two working days.",
+   "doc_id": "python_faq_style_addendum",
+   "course_id": "python",
+   "location": "Frequently Asked Questions",
+   "chunk_id": "python_faq_style_addendum:0002",
+   "score": 0.3499,
+   "data": {
+    "file_type": "docx",
+    "page": null,
+    "section": "Frequently Asked Questions",
+    "filename": "python_faq_style_addendum.docx"
+   },
+   "derived_from": []
+  }
+ },
+ "trace": [
+  {
+   "seq": 1,
+   "t_ms": 0,
+   "type": "request_received",
+   "question": "What does 7 // 2 evaluate to in Python according to the course notes?",
+   "scope": null,
+   "system": "standard_rag"
+  },
+  {
+   "seq": 2,
+   "t_ms": 11,
+   "type": "retrieval",
+   "query": "What does 7 // 2 evaluate to in Python according to the course notes?",
+   "n": 5,
+   "sources": [
+    "S1",
+    "S2",
+    "S3",
+    "S4",
+    "S5"
+   ],
+   "best_score": 0.586
+  },
+  {
+   "seq": 3,
+   "t_ms": 2871,
+   "type": "answer",
+   "abstained": false,
+   "citations": [
+    "S1"
+   ]
+  }
+ ],
+ "validation": {
+  "n_cited_sentences": 1,
+  "n_supported": 1,
+  "support_rate": 1.0,
+  "invalid_ids": [],
+  "unsupported": [],
+  "uncited_numeric_sentences": []
+ },
+ "metrics": {
+  "latency_s": 2.87,
+  "llm_calls": 1,
+  "prompt_tokens": 679,
+  "completion_tokens": 24,
+  "tool_calls": 1,
+  "replans": 0,
+  "steps": 1
+ },
+ "system": "standard_rag",
+ "config": {
+  "top_k": 5
+ }
+}

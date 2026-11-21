@@ -1,0 +1,217 @@
+{
+ "request_id": "a3ea99e124b3",
+ "question": "What does the statistics formula reference note say about Bayes' theorem?",
+ "answer": "The statistics formula reference note states that Bayes' theorem is P(A|B) = P(B|A) * P(A) / P(B) [S1] [S2] [S4]",
+ "abstained": false,
+ "stop_reason": "answered",
+ "plan": null,
+ "plan_source": "none",
+ "tool_sequence": [
+  "search_knowledge_base"
+ ],
+ "citations": [
+  {
+   "id": "S1",
+   "kind": "document",
+   "title": "Statistics Reference Notes",
+   "text": "STATISTICS & PROBABILITY FORMULA REFERENCE (original demo material, CC BY 4.0)\n======================================================================================",
+   "doc_id": "statistics_reference_notes",
+   "course_id": "statistics",
+   "location": "-",
+   "chunk_id": "statistics_reference_notes:0000",
+   "score": 0.6047,
+   "data": {
+    "file_type": "txt",
+    "page": null,
+    "section": null,
+    "filename": "statistics_reference_notes.txt"
+   },
+   "derived_from": []
+  },
+  {
+   "id": "S2",
+   "kind": "document",
+   "title": "Statistics Lecture Notes",
+   "text": "2. Probability Fundamentals Probability measures how likely an event is, on a scale from 0 (impossible) to 1 (certain). For equally likely outcomes, P(A) equals the number of outcomes in A divided by the total number of outcomes. The complement rule states P(not A) = 1 - P(A). The addition rule is P(A or B) = P(A) + P(B) - P(A and B). Mutually exclusive events cannot occur together, so their intersection has probability zero. Two events are independent when the occurrence of one does not change the probability of the other, so P(A and B) = P(A) * P(B). Conditional probability is P(A | B) = P(A and B) / P(B), defined when P(B) > 0. Bayes' theorem reverses a conditional probability: P(A | B) = P(B | A) * P(A) / P(B). Example: a disease affects 1% of people; a test detects it 95% of the time (sensitivity) and gives a false positive 5% of the time.",
+   "doc_id": "statistics_lecture_notes",
+   "course_id": "statistics",
+   "location": "p.3",
+   "chunk_id": "statistics_lecture_notes:0003",
+   "score": 0.3962,
+   "data": {
+    "file_type": "pdf",
+    "page": 3,
+    "section": "2. Probability Fundamentals",
+    "filename": "statistics_lecture_notes.pdf"
+   },
+   "derived_from": []
+  },
+  {
+   "id": "S4",
+   "kind": "document",
+   "title": "Statistics Reference Notes",
+   "text": "PROBABILITY RULES\nComplement: P(A') = 1 - P(A)\nAddition: P(A or B) = P(A) + P(B) - P(A and B)\nMultiplication for independent events: P(A and B) = P(A) * P(B)\nConditional: P(A|B) = P(A and B) / P(B)\nBayes: P(A|B) = P(B|A) * P(A) / P(B)\nLaw of total probability: P(B) = sum over i of P(B|Ai) * P(Ai)",
+   "doc_id": "statistics_reference_notes",
+   "course_id": "statistics",
+   "location": "PROBABILITY RULES",
+   "chunk_id": "statistics_reference_notes:0002",
+   "score": 0.4168,
+   "data": {
+    "file_type": "txt",
+    "page": null,
+    "section": "PROBABILITY RULES",
+    "filename": "statistics_reference_notes.txt"
+   },
+   "derived_from": []
+  }
+ ],
+ "evidence": {
+  "S1": {
+   "id": "S1",
+   "kind": "document",
+   "title": "Statistics Reference Notes",
+   "text": "STATISTICS & PROBABILITY FORMULA REFERENCE (original demo material, CC BY 4.0)\n======================================================================================",
+   "doc_id": "statistics_reference_notes",
+   "course_id": "statistics",
+   "location": "-",
+   "chunk_id": "statistics_reference_notes:0000",
+   "score": 0.6047,
+   "data": {
+    "file_type": "txt",
+    "page": null,
+    "section": null,
+    "filename": "statistics_reference_notes.txt"
+   },
+   "derived_from": []
+  },
+  "S2": {
+   "id": "S2",
+   "kind": "document",
+   "title": "Statistics Lecture Notes",
+   "text": "2. Probability Fundamentals Probability measures how likely an event is, on a scale from 0 (impossible) to 1 (certain). For equally likely outcomes, P(A) equals the number of outcomes in A divided by the total number of outcomes. The complement rule states P(not A) = 1 - P(A). The addition rule is P(A or B) = P(A) + P(B) - P(A and B). Mutually exclusive events cannot occur together, so their intersection has probability zero. Two events are independent when the occurrence of one does not change the probability of the other, so P(A and B) = P(A) * P(B). Conditional probability is P(A | B) = P(A and B) / P(B), defined when P(B) > 0. Bayes' theorem reverses a conditional probability: P(A | B) = P(B | A) * P(A) / P(B). Example: a disease affects 1% of people; a test detects it 95% of the time (sensitivity) and gives a false positive 5% of the time.",
+   "doc_id": "statistics_lecture_notes",
+   "course_id": "statistics",
+   "location": "p.3",
+   "chunk_id": "statistics_lecture_notes:0003",
+   "score": 0.3962,
+   "data": {
+    "file_type": "pdf",
+    "page": 3,
+    "section": "2. Probability Fundamentals",
+    "filename": "statistics_lecture_notes.pdf"
+   },
+   "derived_from": []
+  },
+  "S3": {
+   "id": "S3",
+   "kind": "document",
+   "title": "Statistics Lecture Notes",
+   "text": "Statistics Theory Notes\nStatistics & Probability - independently written demonstration notes. Not official university material.",
+   "doc_id": "statistics_lecture_notes",
+   "course_id": "statistics",
+   "location": "p.1",
+   "chunk_id": "statistics_lecture_notes:0000",
+   "score": 0.5472,
+   "data": {
+    "file_type": "pdf",
+    "page": 1,
+    "section": null,
+    "filename": "statistics_lecture_notes.pdf"
+   },
+   "derived_from": []
+  },
+  "S4": {
+   "id": "S4",
+   "kind": "document",
+   "title": "Statistics Reference Notes",
+   "text": "PROBABILITY RULES\nComplement: P(A') = 1 - P(A)\nAddition: P(A or B) = P(A) + P(B) - P(A and B)\nMultiplication for independent events: P(A and B) = P(A) * P(B)\nConditional: P(A|B) = P(A and B) / P(B)\nBayes: P(A|B) = P(B|A) * P(A) / P(B)\nLaw of total probability: P(B) = sum over i of P(B|Ai) * P(Ai)",
+   "doc_id": "statistics_reference_notes",
+   "course_id": "statistics",
+   "location": "PROBABILITY RULES",
+   "chunk_id": "statistics_reference_notes:0002",
+   "score": 0.4168,
+   "data": {
+    "file_type": "txt",
+    "page": null,
+    "section": "PROBABILITY RULES",
+    "filename": "statistics_reference_notes.txt"
+   },
+   "derived_from": []
+  },
+  "S5": {
+   "id": "S5",
+   "kind": "document",
+   "title": "Statistics Lab Report Guide",
+   "text": "Statistics Lab Report Guide",
+   "doc_id": "statistics_lab_report_guide",
+   "course_id": "statistics",
+   "location": "Statistics Lab Report Guide",
+   "chunk_id": "statistics_lab_report_guide:0000",
+   "score": 0.3929,
+   "data": {
+    "file_type": "docx",
+    "page": null,
+    "section": "Statistics Lab Report Guide",
+    "filename": "statistics_lab_report_guide.docx"
+   },
+   "derived_from": []
+  }
+ },
+ "trace": [
+  {
+   "seq": 1,
+   "t_ms": 0,
+   "type": "request_received",
+   "question": "What does the statistics formula reference note say about Bayes' theorem?",
+   "scope": null,
+   "system": "standard_rag"
+  },
+  {
+   "seq": 2,
+   "t_ms": 172,
+   "type": "retrieval",
+   "query": "What does the statistics formula reference note say about Bayes' theorem?",
+   "n": 5,
+   "sources": [
+    "S1",
+    "S2",
+    "S3",
+    "S4",
+    "S5"
+   ],
+   "best_score": 0.605
+  },
+  {
+   "seq": 3,
+   "t_ms": 4568,
+   "type": "answer",
+   "abstained": false,
+   "citations": [
+    "S1",
+    "S2",
+    "S4"
+   ]
+  }
+ ],
+ "validation": {
+  "n_cited_sentences": 1,
+  "n_supported": 1,
+  "support_rate": 1.0,
+  "invalid_ids": [],
+  "unsupported": [],
+  "uncited_numeric_sentences": []
+ },
+ "metrics": {
+  "latency_s": 4.57,
+  "llm_calls": 1,
+  "prompt_tokens": 731,
+  "completion_tokens": 42,
+  "tool_calls": 1,
+  "replans": 0,
+  "steps": 1
+ },
+ "system": "standard_rag",
+ "config": {
+  "top_k": 5
+ }
+}

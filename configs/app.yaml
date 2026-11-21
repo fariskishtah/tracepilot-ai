@@ -1,0 +1,6 @@
+upload:
+  max_bytes: 5242880
+  allowed_extensions: [".pdf", ".docx", ".csv", ".txt"]
+server:
+  host: 127.0.0.1
+  port: 7860

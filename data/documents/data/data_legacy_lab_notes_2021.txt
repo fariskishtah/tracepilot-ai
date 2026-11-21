@@ -1,0 +1,6 @@
+DATA WRANGLING LAB NOTES (2021 edition)
+=======================================
+
+Lab datasets are limited to 10,000 rows.
+Submit a printed report.
+Join tables with SQL only; pandas is optional.

@@ -1,0 +1,158 @@
+{
+ "request_id": "c3fd8c0043e2",
+ "question": "What is the mean val_accuracy across all runs in the regularization experiments dataset?",
+ "answer": "The provided datasets do not contain the mean val_accuracy across all runs for the regularization experiments.",
+ "abstained": true,
+ "stop_reason": "insufficient_evidence",
+ "plan": null,
+ "plan_source": "none",
+ "tool_sequence": [
+  "search_knowledge_base"
+ ],
+ "citations": [],
+ "evidence": {
+  "S1": {
+   "id": "S1",
+   "kind": "document",
+   "title": "Ml Regularization Experiments",
+   "text": "Dataset ml_regularization_experiments: 9 rows, columns: run_id, model, dataset, technique, train_accuracy, val_accuracy, epochs, notes.",
+   "doc_id": "ml_regularization_experiments",
+   "course_id": "ml",
+   "location": "dataset overview",
+   "chunk_id": "ml_regularization_experiments:0000",
+   "score": 0.5889,
+   "data": {
+    "file_type": "csv",
+    "page": null,
+    "section": "dataset overview",
+    "filename": "ml_regularization_experiments.csv"
+   },
+   "derived_from": []
+  },
+  "S2": {
+   "id": "S2",
+   "kind": "document",
+   "title": "Ml Model Evaluation Runs",
+   "text": "Dataset ml_model_evaluation_runs: 10 rows, columns: run_id, model, task, train_accuracy, val_accuracy, precision, recall, f1, notes.",
+   "doc_id": "ml_model_evaluation_runs",
+   "course_id": "ml",
+   "location": "dataset overview",
+   "chunk_id": "ml_model_evaluation_runs:0000",
+   "score": 0.4658,
+   "data": {
+    "file_type": "csv",
+    "page": null,
+    "section": "dataset overview",
+    "filename": "ml_model_evaluation_runs.csv"
+   },
+   "derived_from": []
+  },
+  "S3": {
+   "id": "S3",
+   "kind": "document",
+   "title": "Ml Model Diagnostics Handbook",
+   "text": "3. Regularization Strength in scikit-learn\nIn scikit-learn LogisticRegression the parameter C is the inverse of the regularization strength: a\nsmaller C means stronger regularization, and the default is C=1.0. For Ridge regression the\nparameter alpha works the opposite way: a larger alpha means stronger shrinkage.\nL2 regularization (ridge) shrinks all weights toward zero; L1 regularization (lasso) can set some\nweights exactly to zero and therefore performs feature selection.",
+   "doc_id": "ml_model_diagnostics_handbook",
+   "course_id": "ml",
+   "location": "p.3",
+   "chunk_id": "ml_model_diagnostics_handbook:0002",
+   "score": 0.4158,
+   "data": {
+    "file_type": "pdf",
+    "page": 3,
+    "section": "3. Regularization Strength in scikit-learn",
+    "filename": "ml_model_diagnostics_handbook.pdf"
+   },
+   "derived_from": []
+  },
+  "S4": {
+   "id": "S4",
+   "kind": "document",
+   "title": "Ml Model Evaluation Runs",
+   "text": "row 9: run_id=ML009; model=Gradient Boosting; task=fraud detection; train_accuracy=0.99; val_accuracy=0.985; precision=0.81; recall=0.74; f1=0.7734; notes=Highest F1 among fraud runs\nrow 10: run_id=ML010; model=Logistic Regression + class weights; task=fraud detection; train_accuracy=0.96; val_accuracy=0.95; precision=0.48; recall=0.83; f1=0.6082; notes=Recall up, precision down",
+   "doc_id": "ml_model_evaluation_runs",
+   "course_id": "ml",
+   "location": "rows 9-10",
+   "chunk_id": "ml_model_evaluation_runs:0002",
+   "score": 0.337,
+   "data": {
+    "file_type": "csv",
+    "page": null,
+    "section": "data rows",
+    "filename": "ml_model_evaluation_runs.csv"
+   },
+   "derived_from": []
+  },
+  "S5": {
+   "id": "S5",
+   "kind": "document",
+   "title": "Ml Model Diagnostics Handbook",
+   "text": "4. Class Imbalance and Validation Practice\nFor imbalanced classification set class_weight='balanced' so that rare classes receive a larger\nweight in the loss, or resample the training folds. Oversampling must be done inside each training\nfold only; oversampling before splitting leaks duplicated rows into the validation fold. Report the\nprecision-recall curve or F1 rather than accuracy.\nA common validation setup is StratifiedKFold(n_splits=5, shuffle=True, random_state=42). The\nhelper cross_val_score(estimator, X, y, cv=5, scoring='f1') returns one score per fold. For time\nseries use TimeSeriesSplit so that the training data always come before the validation data.",
+   "doc_id": "ml_model_diagnostics_handbook",
+   "course_id": "ml",
+   "location": "p.4",
+   "chunk_id": "ml_model_diagnostics_handbook:0003",
+   "score": 0.3652,
+   "data": {
+    "file_type": "pdf",
+    "page": 4,
+    "section": "4. Class Imbalance and Validation Practice",
+    "filename": "ml_model_diagnostics_handbook.pdf"
+   },
+   "derived_from": []
+  }
+ },
+ "trace": [
+  {
+   "seq": 1,
+   "t_ms": 1,
+   "type": "request_received",
+   "question": "What is the mean val_accuracy across all runs in the regularization experiments dataset?",
+   "scope": null,
+   "system": "standard_rag"
+  },
+  {
+   "seq": 2,
+   "t_ms": 69,
+   "type": "retrieval",
+   "query": "What is the mean val_accuracy across all runs in the regularization experiments dataset?",
+   "n": 5,
+   "sources": [
+    "S1",
+    "S2",
+    "S3",
+    "S4",
+    "S5"
+   ],
+   "best_score": 0.589
+  },
+  {
+   "seq": 3,
+   "t_ms": 3971,
+   "type": "answer",
+   "abstained": true,
+   "citations": []
+  }
+ ],
+ "validation": {
+  "n_cited_sentences": 0,
+  "n_supported": 0,
+  "support_rate": 0.0,
+  "invalid_ids": [],
+  "unsupported": [],
+  "uncited_numeric_sentences": []
+ },
+ "metrics": {
+  "latency_s": 3.97,
+  "llm_calls": 1,
+  "prompt_tokens": 836,
+  "completion_tokens": 25,
+  "tool_calls": 1,
+  "replans": 0,
+  "steps": 1
+ },
+ "system": "standard_rag",
+ "config": {
+  "top_k": 5
+ }
+}

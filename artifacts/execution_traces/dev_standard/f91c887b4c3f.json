@@ -1,0 +1,198 @@
+{
+ "request_id": "f91c887b4c3f",
+ "question": "Why is accuracy misleading on imbalanced data?",
+ "answer": "Accuracy is misleading on imbalanced data because a model that always predicts the majority class can achieve high accuracy while failing to detect the minority class [S1] [S2]. Precision and recall provide more nuanced insights into a model's performance, especially in imbalanced datasets [S1] [S2].",
+ "abstained": false,
+ "stop_reason": "answered",
+ "plan": null,
+ "plan_source": "none",
+ "tool_sequence": [
+  "search_knowledge_base"
+ ],
+ "citations": [
+  {
+   "id": "S1",
+   "kind": "document",
+   "title": "Ml Lecture Notes",
+   "text": "4. Evaluation Metrics for Classification A confusion matrix counts true positives (TP), false positives (FP), true negatives (TN) and false negatives (FN). Accuracy is (TP + TN) divided by all examples. Accuracy is misleading on imbalanced data: a model that always predicts the majority class can reach 99% accuracy while detecting nothing. Precision = TP / (TP + FP) answers \"of the examples predicted positive, how many are truly positive?\". Recall (sensitivity) = TP / (TP + FN) answers \"of the truly positive examples, how many did we find?\". The F1 score is the harmonic mean of precision and recall: 2 * precision * recall / (precision + recall). Raising the decision threshold usually increases precision and lowers recall. The ROC curve plots the true positive rate against the false positive rate across thresholds, and AUC summarizes it: 0.5 is random guessing and 1.0 is perfect ranking.",
+   "doc_id": "ml_lecture_notes",
+   "course_id": "ml",
+   "location": "p.5",
+   "chunk_id": "ml_lecture_notes:0006",
+   "score": 0.4543,
+   "data": {
+    "file_type": "pdf",
+    "page": 5,
+    "section": "4. Evaluation Metrics for Classification",
+    "filename": "ml_lecture_notes.pdf"
+   },
+   "derived_from": []
+  },
+  {
+   "id": "S2",
+   "kind": "document",
+   "title": "Ml Model Diagnostics Handbook",
+   "text": "4. Class Imbalance and Validation Practice\nFor imbalanced classification set class_weight='balanced' so that rare classes receive a larger\nweight in the loss, or resample the training folds. Oversampling must be done inside each training\nfold only; oversampling before splitting leaks duplicated rows into the validation fold. Report the\nprecision-recall curve or F1 rather than accuracy.\nA common validation setup is StratifiedKFold(n_splits=5, shuffle=True, random_state=42). The\nhelper cross_val_score(estimator, X, y, cv=5, scoring='f1') returns one score per fold. For time\nseries use TimeSeriesSplit so that the training data always come before the validation data.",
+   "doc_id": "ml_model_diagnostics_handbook",
+   "course_id": "ml",
+   "location": "p.4",
+   "chunk_id": "ml_model_diagnostics_handbook:0003",
+   "score": 0.3993,
+   "data": {
+    "file_type": "pdf",
+    "page": 4,
+    "section": "4. Class Imbalance and Validation Practice",
+    "filename": "ml_model_diagnostics_handbook.pdf"
+   },
+   "derived_from": []
+  }
+ ],
+ "evidence": {
+  "S1": {
+   "id": "S1",
+   "kind": "document",
+   "title": "Ml Lecture Notes",
+   "text": "4. Evaluation Metrics for Classification A confusion matrix counts true positives (TP), false positives (FP), true negatives (TN) and false negatives (FN). Accuracy is (TP + TN) divided by all examples. Accuracy is misleading on imbalanced data: a model that always predicts the majority class can reach 99% accuracy while detecting nothing. Precision = TP / (TP + FP) answers \"of the examples predicted positive, how many are truly positive?\". Recall (sensitivity) = TP / (TP + FN) answers \"of the truly positive examples, how many did we find?\". The F1 score is the harmonic mean of precision and recall: 2 * precision * recall / (precision + recall). Raising the decision threshold usually increases precision and lowers recall. The ROC curve plots the true positive rate against the false positive rate across thresholds, and AUC summarizes it: 0.5 is random guessing and 1.0 is perfect ranking.",
+   "doc_id": "ml_lecture_notes",
+   "course_id": "ml",
+   "location": "p.5",
+   "chunk_id": "ml_lecture_notes:0006",
+   "score": 0.4543,
+   "data": {
+    "file_type": "pdf",
+    "page": 5,
+    "section": "4. Evaluation Metrics for Classification",
+    "filename": "ml_lecture_notes.pdf"
+   },
+   "derived_from": []
+  },
+  "S2": {
+   "id": "S2",
+   "kind": "document",
+   "title": "Ml Model Diagnostics Handbook",
+   "text": "4. Class Imbalance and Validation Practice\nFor imbalanced classification set class_weight='balanced' so that rare classes receive a larger\nweight in the loss, or resample the training folds. Oversampling must be done inside each training\nfold only; oversampling before splitting leaks duplicated rows into the validation fold. Report the\nprecision-recall curve or F1 rather than accuracy.\nA common validation setup is StratifiedKFold(n_splits=5, shuffle=True, random_state=42). The\nhelper cross_val_score(estimator, X, y, cv=5, scoring='f1') returns one score per fold. For time\nseries use TimeSeriesSplit so that the training data always come before the validation data.",
+   "doc_id": "ml_model_diagnostics_handbook",
+   "course_id": "ml",
+   "location": "p.4",
+   "chunk_id": "ml_model_diagnostics_handbook:0003",
+   "score": 0.3993,
+   "data": {
+    "file_type": "pdf",
+    "page": 4,
+    "section": "4. Class Imbalance and Validation Practice",
+    "filename": "ml_model_diagnostics_handbook.pdf"
+   },
+   "derived_from": []
+  },
+  "S3": {
+   "id": "S3",
+   "kind": "document",
+   "title": "Ml Exercise Guide",
+   "text": "Assignment 1: Diagnosing a Model\nTask. You trained a decision tree classifier and obtained 99% training accuracy but 71% validation accuracy. Explain what is happening and propose two fixes.\nExpected answer. The large gap between training and validation accuracy is the signature of overfitting (high variance). Fixes include limiting the maximum depth of the tree, requiring a minimum number of samples per leaf, pruning, switching to a random forest, or collecting more data. Report validation performance using cross-validation rather than a single split.",
+   "doc_id": "ml_exercise_guide",
+   "course_id": "ml",
+   "location": "Assignment 1: Diagnosing a Model",
+   "chunk_id": "ml_exercise_guide:0001",
+   "score": 0.3944,
+   "data": {
+    "file_type": "docx",
+    "page": null,
+    "section": "Assignment 1: Diagnosing a Model",
+    "filename": "ml_exercise_guide.docx"
+   },
+   "derived_from": []
+  },
+  "S4": {
+   "id": "S4",
+   "kind": "document",
+   "title": "Ml Reference Notes",
+   "text": "training and validation data because the model is too simple. Bias: error from wrong or overly simple assumptions.  Variance: error from sensitivity to the specific training sample. Cross-validation: repeated training on different train/validation splits to estimate performance reliably. Data leakage: using information during training that would not be available at prediction time. Confusion matrix: a table of TP, FP, TN and FN counts. Precision: TP / (TP + FP). Recall: TP / (TP + FN). F1: harmonic mean of precision and recall. ROC AUC: area under the receiver operating characteristic curve; 0.5 means random ranking. Imbalanced data: classes occur with very different frequencies. One-hot encoding: representing a category as a binary vector with a single 1. Standardization: rescaling to mean 0 and standard deviation 1.",
+   "doc_id": "ml_reference_notes",
+   "course_id": "ml",
+   "location": "-",
+   "chunk_id": "ml_reference_notes:0002",
+   "score": 0.4946,
+   "data": {
+    "file_type": "txt",
+    "page": null,
+    "section": null,
+    "filename": "ml_reference_notes.txt"
+   },
+   "derived_from": []
+  },
+  "S5": {
+   "id": "S5",
+   "kind": "document",
+   "title": "Ml Evaluation Protocol V1",
+   "text": "Split the data 60% training, 20% validation and 20% test.\nUse k = 10 folds for cross-validation.\nThe primary metric is accuracy.\nFix the random seed to 0.",
+   "doc_id": "ml_evaluation_protocol_v1",
+   "course_id": "ml",
+   "location": "-",
+   "chunk_id": "ml_evaluation_protocol_v1:0002",
+   "score": 0.3742,
+   "data": {
+    "file_type": "txt",
+    "page": null,
+    "section": null,
+    "filename": "ml_evaluation_protocol_v1.txt"
+   },
+   "derived_from": []
+  }
+ },
+ "trace": [
+  {
+   "seq": 1,
+   "t_ms": 0,
+   "type": "request_received",
+   "question": "Why is accuracy misleading on imbalanced data?",
+   "scope": null,
+   "system": "standard_rag"
+  },
+  {
+   "seq": 2,
+   "t_ms": 20,
+   "type": "retrieval",
+   "query": "Why is accuracy misleading on imbalanced data?",
+   "n": 5,
+   "sources": [
+    "S1",
+    "S2",
+    "S3",
+    "S4",
+    "S5"
+   ],
+   "best_score": 0.495
+  },
+  {
+   "seq": 3,
+   "t_ms": 3936,
+   "type": "answer",
+   "abstained": false,
+   "citations": [
+    "S1",
+    "S2"
+   ]
+  }
+ ],
+ "validation": {
+  "n_cited_sentences": 2,
+  "n_supported": 2,
+  "support_rate": 1.0,
+  "invalid_ids": [],
+  "unsupported": [],
+  "uncited_numeric_sentences": []
+ },
+ "metrics": {
+  "latency_s": 3.94,
+  "llm_calls": 1,
+  "prompt_tokens": 985,
+  "completion_tokens": 60,
+  "tool_calls": 1,
+  "replans": 0,
+  "steps": 1
+ },
+ "system": "standard_rag",
+ "config": {
+  "top_k": 5
+ }
+}

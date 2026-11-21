@@ -1,0 +1,158 @@
+{
+ "request_id": "10f8149f51a0",
+ "question": "How many students are enrolled in the Python course?",
+ "answer": "The provided evidence does not contain information about the number of students enrolled in the Python course.",
+ "abstained": true,
+ "stop_reason": "insufficient_evidence",
+ "plan": null,
+ "plan_source": "none",
+ "tool_sequence": [
+  "search_knowledge_base"
+ ],
+ "citations": [],
+ "evidence": {
+  "S1": {
+   "id": "S1",
+   "kind": "document",
+   "title": "Python Faq Style Addendum",
+   "text": "Python Course FAQ and Style Addendum (v2, 2025)",
+   "doc_id": "python_faq_style_addendum",
+   "course_id": "python",
+   "location": "Python Course FAQ and Style Addendum (v2, 2025)",
+   "chunk_id": "python_faq_style_addendum:0000",
+   "score": 0.4713,
+   "data": {
+    "file_type": "docx",
+    "page": null,
+    "section": "Python Course FAQ and Style Addendum (v2, 2025)",
+    "filename": "python_faq_style_addendum.docx"
+   },
+   "derived_from": []
+  },
+  "S2": {
+   "id": "S2",
+   "kind": "document",
+   "title": "Python Faq Style Addendum",
+   "text": "Frequently Asked Questions\nWhich Python version does the course use? The course uses Python 3.12 in all examples and tests.\nWhich editor should I use? Any editor is allowed; VS Code is used in the demonstrations.\nIs the statistics module allowed in assignments? Yes. statistics.variance(data) returns the sample variance, while statistics.pvariance(data) returns the population variance. In the same way statistics.stdev is the sample standard deviation and statistics.pstdev is the population standard deviation.\nWhere do I ask questions? Post them on the course forum; answers are usually given within two working days.",
+   "doc_id": "python_faq_style_addendum",
+   "course_id": "python",
+   "location": "Frequently Asked Questions",
+   "chunk_id": "python_faq_style_addendum:0002",
+   "score": 0.5354,
+   "data": {
+    "file_type": "docx",
+    "page": null,
+    "section": "Frequently Asked Questions",
+    "filename": "python_faq_style_addendum.docx"
+   },
+   "derived_from": []
+  },
+  "S3": {
+   "id": "S3",
+   "kind": "document",
+   "title": "Python Lecture Notes",
+   "text": "Python Lecture Notes\nPython Programming - independently written demonstration notes. Not official university material.",
+   "doc_id": "python_lecture_notes",
+   "course_id": "python",
+   "location": "p.1",
+   "chunk_id": "python_lecture_notes:0000",
+   "score": 0.5573,
+   "data": {
+    "file_type": "pdf",
+    "page": 1,
+    "section": null,
+    "filename": "python_lecture_notes.pdf"
+   },
+   "derived_from": []
+  },
+  "S4": {
+   "id": "S4",
+   "kind": "document",
+   "title": "Python Faq Style Addendum",
+   "text": "Course Style Addendum\nFor course submissions the maximum line length is 99 characters. Docstrings use triple double quotes. Imports go at the top of the file in three groups: standard library, third-party packages, then local modules. Variable and function names use snake_case.\nLate policy: a submission loses 10% of its grade for each day it is late, for up to 3 days after the deadline.",
+   "doc_id": "python_faq_style_addendum",
+   "course_id": "python",
+   "location": "Course Style Addendum",
+   "chunk_id": "python_faq_style_addendum:0001",
+   "score": 0.4114,
+   "data": {
+    "file_type": "docx",
+    "page": null,
+    "section": "Course Style Addendum",
+    "filename": "python_faq_style_addendum.docx"
+   },
+   "derived_from": []
+  },
+  "S5": {
+   "id": "S5",
+   "kind": "document",
+   "title": "Statistics Confusable Terms",
+   "text": "STATISTICS CONFUSABLE TERMS (original course material, CC BY 4.0)\n==================================================================",
+   "doc_id": "statistics_confusable_terms",
+   "course_id": "statistics",
+   "location": "-",
+   "chunk_id": "statistics_confusable_terms:0000",
+   "score": 0.3417,
+   "data": {
+    "file_type": "txt",
+    "page": null,
+    "section": null,
+    "filename": "statistics_confusable_terms.txt"
+   },
+   "derived_from": []
+  }
+ },
+ "trace": [
+  {
+   "seq": 1,
+   "t_ms": 0,
+   "type": "request_received",
+   "question": "How many students are enrolled in the Python course?",
+   "scope": null,
+   "system": "standard_rag"
+  },
+  {
+   "seq": 2,
+   "t_ms": 38,
+   "type": "retrieval",
+   "query": "How many students are enrolled in the Python course?",
+   "n": 5,
+   "sources": [
+    "S1",
+    "S2",
+    "S3",
+    "S4",
+    "S5"
+   ],
+   "best_score": 0.557
+  },
+  {
+   "seq": 3,
+   "t_ms": 2414,
+   "type": "answer",
+   "abstained": true,
+   "citations": []
+  }
+ ],
+ "validation": {
+  "n_cited_sentences": 0,
+  "n_supported": 0,
+  "support_rate": 0.0,
+  "invalid_ids": [],
+  "unsupported": [],
+  "uncited_numeric_sentences": []
+ },
+ "metrics": {
+  "latency_s": 2.41,
+  "llm_calls": 1,
+  "prompt_tokens": 634,
+  "completion_tokens": 25,
+  "tool_calls": 1,
+  "replans": 0,
+  "steps": 1
+ },
+ "system": "standard_rag",
+ "config": {
+  "top_k": 5
+ }
+}

@@ -1,0 +1,797 @@
+{
+ "request_id": "052b23f5e4dd",
+ "question": "What is 15% of 240?",
+ "answer": "15% of 240 is 36 [C1].",
+ "abstained": false,
+ "stop_reason": "answered",
+ "plan": {
+  "question_type": "calculation",
+  "complexity": "simple",
+  "requires_retrieval": true,
+  "requires_calculation": true,
+  "requires_data_analysis": false,
+  "requires_comparison": false,
+  "subtasks": [
+   {
+    "id": "t2",
+    "tool": "search_knowledge_base",
+    "goal": "find evidence",
+    "query": "What is 15% of 240?",
+    "dataset_id": null,
+    "operation": null,
+    "column": null,
+    "group_by": null,
+    "agg": null,
+    "filters": null,
+    "expression": null,
+    "aspects": null,
+    "depends_on": []
+   },
+   {
+    "id": "t1",
+    "tool": "calculate_expression",
+    "goal": "compute 15 percent of 240",
+    "query": null,
+    "dataset_id": null,
+    "operation": null,
+    "column": null,
+    "group_by": null,
+    "agg": null,
+    "filters": null,
+    "expression": "percent_of(15, 240)",
+    "aspects": null,
+    "depends_on": []
+   }
+  ],
+  "rationale": "LLM plan: 1 step(s)"
+ },
+ "plan_source": "llm",
+ "tool_sequence": [
+  "search_knowledge_base",
+  "search_knowledge_base",
+  "search_knowledge_base",
+  "calculate_expression"
+ ],
+ "citations": [
+  {
+   "id": "C1",
+   "kind": "calculation",
+   "title": "Calculator",
+   "text": "percent_of(15, 240) = 36",
+   "doc_id": null,
+   "course_id": null,
+   "location": null,
+   "chunk_id": null,
+   "score": null,
+   "data": {
+    "value": 36.0,
+    "expression": "percent_of(15, 240)",
+    "inputs": {},
+    "input_evidence": []
+   },
+   "derived_from": []
+  }
+ ],
+ "evidence": {
+  "S1": {
+   "id": "S1",
+   "kind": "document",
+   "title": "Python Exercise Guide",
+   "text": "Exercise Set A: Variables and Control Flow\nExercise A1. Write a program that asks for a temperature in Celsius and prints it in Fahrenheit. The formula is F = C * 9 / 5 + 32. Expected result: 100 Celsius becomes 212.0 Fahrenheit.\nExercise A2. Print all even numbers from 1 to 20 using a for loop and the modulo operator. Hint: a number n is even when n % 2 == 0. A common mistake is writing range(1, 20), which stops at 19; use range(1, 21).\nExercise A3. Implement FizzBuzz for numbers 1 to 30. Print \"Fizz\" for multiples of 3, \"Buzz\" for multiples of 5 and \"FizzBuzz\" for multiples of both. The test for multiples of both must come first, otherwise the Fizz branch will catch the number 15 too early.",
+   "doc_id": "python_exercise_guide",
+   "course_id": "python",
+   "location": "Exercise Set A: Variables and Control Flow",
+   "chunk_id": "python_exercise_guide:0001",
+   "score": 0.23852241039276123,
+   "data": {
+    "file_type": "docx",
+    "page": null,
+    "section": "Exercise Set A: Variables and Control Flow",
+    "filename": "python_exercise_guide.docx"
+   },
+   "derived_from": []
+  },
+  "S2": {
+   "id": "S2",
+   "kind": "document",
+   "title": "Statistics Lecture Notes",
+   "text": "affects 1% of people; a test detects it 95% of the time (sensitivity) and gives a false positive 5% of the time.  P(positive) = 0.95 * 0.01 + 0.05 * 0.99 = 0.059. So P(disease | positive) = 0.0095 / 0.059, about 0.161. Even after a positive test, the probability of disease is only about 16% because the disease is rare. This is the base rate effect.",
+   "doc_id": "statistics_lecture_notes",
+   "course_id": "statistics",
+   "location": "p.3",
+   "chunk_id": "statistics_lecture_notes:0004",
+   "score": 0.2878,
+   "data": {
+    "file_type": "pdf",
+    "page": 3,
+    "section": "2. Probability Fundamentals",
+    "filename": "statistics_lecture_notes.pdf"
+   },
+   "derived_from": []
+  },
+  "S3": {
+   "id": "S3",
+   "kind": "document",
+   "title": "Product Prices",
+   "text": "Dataset product_prices: 40 rows, columns: product_id, category, product_name, price_usd, units_sold.",
+   "doc_id": "product_prices",
+   "course_id": "data",
+   "location": "dataset overview",
+   "chunk_id": "product_prices:0000",
+   "score": 0.2901952266693115,
+   "data": {
+    "file_type": "csv",
+    "page": null,
+    "section": "dataset overview",
+    "filename": "product_prices.csv"
+   },
+   "derived_from": []
+  },
+  "S4": {
+   "id": "S4",
+   "kind": "document",
+   "title": "Statistics Exam Scores",
+   "text": "Dataset statistics_exam_scores: 20 rows, columns: student_id, section, hours_studied, exam_score.",
+   "doc_id": "statistics_exam_scores",
+   "course_id": "statistics",
+   "location": "dataset overview",
+   "chunk_id": "statistics_exam_scores:0000",
+   "score": 0.2847,
+   "data": {
+    "file_type": "csv",
+    "page": null,
+    "section": "dataset overview",
+    "filename": "statistics_exam_scores.csv"
+   },
+   "derived_from": []
+  },
+  "S5": {
+   "id": "S5",
+   "kind": "document",
+   "title": "Python Lecture Notes",
+   "text": "count from the end, so \"python\"[-1] is \"n\". Slicing \"python\"[1:4] returns \"yth\" (start included, stop excluded).  F-strings embed expressions inside text: f\"Total: {price * 2:.2f}\" formats a number with two decimals. Integer division // discards the fractional part (7 // 2 is 3), the modulo operator % returns the remainder (7 % 2 is 1), and ** is exponentiation (2 ** 10 is 1024). Dividing with / always returns a float, so 6 / 3 is 2.0.",
+   "doc_id": "python_lecture_notes",
+   "course_id": "python",
+   "location": "p.2",
+   "chunk_id": "python_lecture_notes:0002",
+   "score": 0.2762,
+   "data": {
+    "file_type": "pdf",
+    "page": 2,
+    "section": "1. Variables and Data Types",
+    "filename": "python_lecture_notes.pdf"
+   },
+   "derived_from": []
+  },
+  "C1": {
+   "id": "C1",
+   "kind": "calculation",
+   "title": "Calculator",
+   "text": "percent_of(15, 240) = 36",
+   "doc_id": null,
+   "course_id": null,
+   "location": null,
+   "chunk_id": null,
+   "score": null,
+   "data": {
+    "value": 36.0,
+    "expression": "percent_of(15, 240)",
+    "inputs": {},
+    "input_evidence": []
+   },
+   "derived_from": []
+  },
+  "S6": {
+   "id": "S6",
+   "kind": "document",
+   "title": "Data Orders",
+   "text": "row 1: order_id=O001; customer_id=C01; region=North; amount=120; status=paid\nrow 2: order_id=O002; customer_id=C08; region=South; amount=85; status=paid\nrow 3: order_id=O003; customer_id=C03; region=East; amount=240; status=refunded\nrow 4: order_id=O004; customer_id=C10; region=North; amount=60; status=paid\nrow 5: order_id=O005; customer_id=C05; region=South; amount=310; status=pending\nrow 6: order_id=O006; customer_id=C12; region=East; amount=150; status=paid\nrow 7: order_id=O007; customer_id=C07; region=North; amount=95; status=paid\nrow 8: order_id=O008; customer_id=C02; region=South; amount=410; status=refunded",
+   "doc_id": "data_orders",
+   "course_id": "data",
+   "location": "rows 1-8",
+   "chunk_id": "data_orders:0001",
+   "score": 0.2262,
+   "data": {
+    "file_type": "csv",
+    "page": null,
+    "section": "data rows",
+    "filename": "data_orders.csv"
+   },
+   "derived_from": []
+  },
+  "S7": {
+   "id": "S7",
+   "kind": "document",
+   "title": "Product Prices",
+   "text": "row 9: product_id=P009; category=Accessories; product_name=Accessories item 9; price_usd=18.67; units_sold=51\nrow 10: product_id=P010; category=Audio; product_name=Audio item 10; price_usd=77.59; units_sold=99\nrow 11: product_id=P011; category=Computing; product_name=Computing item 11; price_usd=149.61; units_sold=15\nrow 12: product_id=P012; category=Home; product_name=Home item 12; price_usd=26.56; units_sold=68\nrow 13: product_id=P013; category=Accessories; product_name=Accessories item 13; price_usd=29.18; units_sold=36\nrow 14: product_id=P014; category=Audio; product_name=Audio item 14; price_usd=54.2; units_sold=77\nrow 15: product_id=P015; category=Computing; product_name=Computing item 15; price_usd=165.03; units_sold=12\nrow 16: product_id=P016; category=Home; product_name=Home item 16; price_usd=41.33; units_sold=116",
+   "doc_id": "product_prices",
+   "course_id": "data",
+   "location": "rows 9-16",
+   "chunk_id": "product_prices:0002",
+   "score": 0.2237,
+   "data": {
+    "file_type": "csv",
+    "page": null,
+    "section": "data rows",
+    "filename": "product_prices.csv"
+   },
+   "derived_from": []
+  },
+  "S8": {
+   "id": "S8",
+   "kind": "document",
+   "title": "Statistics Worked Examples",
+   "text": "row 25: example_id=ST025; topic=Confidence interval; dataset_or_scenario=n = 36, mean 12.4, sigma 3: half-width of 95% CI; n=36; statistic=1.96 * sigma / sqrt(n); value=0.98; method_note=margin of error",
+   "doc_id": "statistics_worked_examples",
+   "course_id": "statistics",
+   "location": "rows 25-25",
+   "chunk_id": "statistics_worked_examples:0004",
+   "score": 0.2792,
+   "data": {
+    "file_type": "csv",
+    "page": null,
+    "section": "data rows",
+    "filename": "statistics_worked_examples.csv"
+   },
+   "derived_from": []
+  },
+  "S9": {
+   "id": "S9",
+   "kind": "document",
+   "title": "Statistics Exam Scores",
+   "text": "row 9: student_id=S09; section=A; hours_studied=5; exam_score=66\nrow 10: student_id=S10; section=A; hours_studied=11; exam_score=88\nrow 11: student_id=S11; section=B; hours_studied=2; exam_score=48\nrow 12: student_id=S12; section=B; hours_studied=5; exam_score=63\nrow 13: student_id=S13; section=B; hours_studied=7; exam_score=70\nrow 14: student_id=S14; section=B; hours_studied=9; exam_score=79\nrow 15: student_id=S15; section=B; hours_studied=4; exam_score=58\nrow 16: student_id=S16; section=B; hours_studied=10; exam_score=84",
+   "doc_id": "statistics_exam_scores",
+   "course_id": "statistics",
+   "location": "rows 9-16",
+   "chunk_id": "statistics_exam_scores:0002",
+   "score": 0.2124,
+   "data": {
+    "file_type": "csv",
+    "page": null,
+    "section": "data rows",
+    "filename": "statistics_exam_scores.csv"
+   },
+   "derived_from": []
+  },
+  "S10": {
+   "id": "S10",
+   "kind": "document",
+   "title": "Data Orders",
+   "text": "row 9: order_id=O009; customer_id=C09; region=East; amount=75; status=paid\nrow 10: order_id=O010; customer_id=C04; region=North; amount=180; status=pending\nrow 11: order_id=O011; customer_id=C11; region=South; amount=220; status=paid\nrow 12: order_id=O012; customer_id=C06; region=East; amount=130; status=paid\nrow 13: order_id=O013; customer_id=C01; region=North; amount=55; status=refunded\nrow 14: order_id=O014; customer_id=C08; region=South; amount=280; status=paid\nrow 15: order_id=O015; customer_id=C03; region=East; amount=165; status=pending\nrow 16: order_id=O016; customer_id=C10; region=North; amount=90; status=paid",
+   "doc_id": "data_orders",
+   "course_id": "data",
+   "location": "rows 9-16",
+   "chunk_id": "data_orders:0002",
+   "score": 0.1991,
+   "data": {
+    "file_type": "csv",
+    "page": null,
+    "section": "data rows",
+    "filename": "data_orders.csv"
+   },
+   "derived_from": []
+  },
+  "S11": {
+   "id": "S11",
+   "kind": "document",
+   "title": "Ml Project Handbook",
+   "text": "Evaluation Protocol v2\nEvaluation protocol v2 supersedes protocol v1 for all projects started in 2025. Split the data 70% training, 15% validation and 15% test. Use k = 5 folds for cross-validation and report the mean and standard deviation of the fold scores. Set random_state=42 everywhere. The test set may be used exactly once. The primary metric is F1 for imbalanced data and accuracy otherwise.",
+   "doc_id": "ml_project_handbook",
+   "course_id": "ml",
+   "location": "Evaluation Protocol v2",
+   "chunk_id": "ml_project_handbook:0001",
+   "score": 0.1813,
+   "data": {
+    "file_type": "docx",
+    "page": null,
+    "section": "Evaluation Protocol v2",
+    "filename": "ml_project_handbook.docx"
+   },
+   "derived_from": []
+  }
+ },
+ "trace": [
+  {
+   "seq": 1,
+   "t_ms": 1,
+   "type": "request_received",
+   "question": "What is 15% of 240?",
+   "scope": null,
+   "tools": [
+    "search_knowledge_base",
+    "retrieve_source_context",
+    "summarize_evidence",
+    "analyze_dataset",
+    "calculate_expression",
+    "compare_evidence",
+    "refine_search_query"
+   ],
+   "planner": "llm",
+   "replanning": true,
+   "llm": "qwen2.5:3b-instruct",
+   "registry_version": "1.0.0"
+  },
+  {
+   "seq": 2,
+   "t_ms": 11,
+   "type": "question_analysis",
+   "calc_cue": false,
+   "data_cue": false,
+   "compare_cue": false,
+   "summary_cue": false,
+   "multi_cue": false,
+   "named_datasets": [],
+   "length_words": 5,
+   "needs_data": false,
+   "explicit_dataset": false,
+   "literal_numbers": [
+    "15%",
+    "240"
+   ],
+   "needs_calc": true,
+   "concept_cue": true
+  },
+  {
+   "seq": 3,
+   "t_ms": 3873,
+   "type": "plan_created",
+   "source": "llm",
+   "question_type": "calculation",
+   "complexity": "simple",
+   "requires": {
+    "retrieval": true,
+    "calculation": true,
+    "data_analysis": false,
+    "comparison": false
+   },
+   "summary": "LLM plan: 1 step(s)",
+   "adjustments": [
+    "added search (plan had no evidence-gathering step)"
+   ],
+   "note": "",
+   "subtasks": [
+    {
+     "id": "t2",
+     "tool": "search_knowledge_base",
+     "goal": "find evidence",
+     "depends_on": []
+    },
+    {
+     "id": "t1",
+     "tool": "calculate_expression",
+     "goal": "compute 15 percent of 240",
+     "depends_on": []
+    }
+   ]
+  },
+  {
+   "seq": 4,
+   "t_ms": 3873,
+   "type": "tool_selected",
+   "step": "t2",
+   "tool": "search_knowledge_base",
+   "goal": "find evidence",
+   "attempt": 1,
+   "args": {
+    "query": "What is 15% of 240?",
+    "course_ids": null,
+    "top_k": 5
+   }
+  },
+  {
+   "seq": 5,
+   "t_ms": 4146,
+   "type": "tool_result",
+   "step": "t2",
+   "tool": "search_knowledge_base",
+   "ok": true,
+   "ms": 271.3,
+   "summary": "5 chunks, best cosine 0.29",
+   "evidence_ids": [
+    "S1",
+    "S2",
+    "S3",
+    "S4",
+    "S5"
+   ],
+   "error": null,
+   "error_type": null,
+   "sufficient": false,
+   "relevance": {
+    "best_score": 0.288,
+    "keyword_coverage": 0.0,
+    "threshold": {
+     "min_best_score": 0.35,
+     "min_keyword_coverage": 0.35
+    }
+   },
+   "sources": [
+    {
+     "id": "S1",
+     "title": "Python Exercise Guide",
+     "location": "Exercise Set A: Variables and Control Flow",
+     "score": 0.231
+    },
+    {
+     "id": "S2",
+     "title": "Statistics Lecture Notes",
+     "location": "p.3",
+     "score": 0.288
+    },
+    {
+     "id": "S3",
+     "title": "Product Prices",
+     "location": "dataset overview",
+     "score": 0.286
+    },
+    {
+     "id": "S4",
+     "title": "Statistics Exam Scores",
+     "location": "dataset overview",
+     "score": 0.285
+    },
+    {
+     "id": "S5",
+     "title": "Python Lecture Notes",
+     "location": "p.2",
+     "score": 0.276
+    }
+   ]
+  },
+  {
+   "seq": 6,
+   "t_ms": 4146,
+   "type": "tool_selected",
+   "step": "t1",
+   "tool": "calculate_expression",
+   "goal": "compute 15 percent of 240",
+   "attempt": 1,
+   "args": {
+    "expression": "percent_of(15, 240)",
+    "variables": {}
+   }
+  },
+  {
+   "seq": 7,
+   "t_ms": 4151,
+   "type": "tool_result",
+   "step": "t1",
+   "tool": "calculate_expression",
+   "ok": true,
+   "ms": 5.9,
+   "summary": "percent_of(15, 240) = 36",
+   "evidence_ids": [
+    "C1"
+   ],
+   "error": null,
+   "error_type": null,
+   "result": {
+    "value": 36.0,
+    "expression": "percent_of(15, 240)"
+   }
+  },
+  {
+   "seq": 8,
+   "t_ms": 4151,
+   "type": "validation",
+   "sufficient": false,
+   "steps": {
+    "t2": {
+     "status": "weak",
+     "sufficient": false
+    },
+    "t1": {
+     "status": "done",
+     "sufficient": null
+    }
+   },
+   "problems": [
+    {
+     "step": "t2",
+     "kind": "weak_evidence"
+    }
+   ]
+  },
+  {
+   "seq": 9,
+   "t_ms": 4153,
+   "type": "replan",
+   "round": 1,
+   "actions": [
+    {
+     "action": "re_search",
+     "step": "t2",
+     "new_query": "15% of 240",
+     "method": "expand: synonyms",
+     "reason": "best relevance 0.288 below threshold"
+    }
+   ],
+   "replanned": true
+  },
+  {
+   "seq": 10,
+   "t_ms": 4153,
+   "type": "tool_selected",
+   "step": "t2",
+   "tool": "search_knowledge_base",
+   "goal": "find evidence",
+   "attempt": 2,
+   "args": {
+    "query": "15% of 240",
+    "course_ids": null,
+    "top_k": 5
+   }
+  },
+  {
+   "seq": 11,
+   "t_ms": 4161,
+   "type": "tool_result",
+   "step": "t2",
+   "tool": "search_knowledge_base",
+   "ok": true,
+   "ms": 8.0,
+   "summary": "5 chunks, best cosine 0.29",
+   "evidence_ids": [
+    "S1",
+    "S6",
+    "S7",
+    "S3",
+    "S8"
+   ],
+   "error": null,
+   "error_type": null,
+   "sufficient": false,
+   "relevance": {
+    "best_score": 0.29,
+    "keyword_coverage": 1.0,
+    "threshold": {
+     "min_best_score": 0.35,
+     "min_keyword_coverage": 0.35
+    }
+   },
+   "sources": [
+    {
+     "id": "S1",
+     "title": "Python Exercise Guide",
+     "location": "Exercise Set A: Variables and Control Flow",
+     "score": 0.238
+    },
+    {
+     "id": "S6",
+     "title": "Data Orders",
+     "location": "rows 1-8",
+     "score": 0.226
+    },
+    {
+     "id": "S7",
+     "title": "Product Prices",
+     "location": "rows 9-16",
+     "score": 0.224
+    },
+    {
+     "id": "S3",
+     "title": "Product Prices",
+     "location": "dataset overview",
+     "score": 0.29
+    },
+    {
+     "id": "S8",
+     "title": "Statistics Worked Examples",
+     "location": "rows 25-25",
+     "score": 0.279
+    }
+   ]
+  },
+  {
+   "seq": 12,
+   "t_ms": 4161,
+   "type": "validation",
+   "sufficient": false,
+   "steps": {
+    "t2": {
+     "status": "weak",
+     "sufficient": false
+    },
+    "t1": {
+     "status": "done",
+     "sufficient": null
+    }
+   },
+   "problems": [
+    {
+     "step": "t2",
+     "kind": "weak_evidence"
+    }
+   ]
+  },
+  {
+   "seq": 13,
+   "t_ms": 4161,
+   "type": "replan",
+   "round": 2,
+   "actions": [
+    {
+     "action": "re_search",
+     "step": "t2",
+     "new_query": "15 240",
+     "method": "expand: synonyms",
+     "reason": "best relevance 0.29 below threshold"
+    }
+   ],
+   "replanned": true
+  },
+  {
+   "seq": 14,
+   "t_ms": 4161,
+   "type": "tool_selected",
+   "step": "t2",
+   "tool": "search_knowledge_base",
+   "goal": "find evidence",
+   "attempt": 3,
+   "args": {
+    "query": "15 240",
+    "course_ids": null,
+    "top_k": 5
+   }
+  },
+  {
+   "seq": 15,
+   "t_ms": 4168,
+   "type": "tool_result",
+   "step": "t2",
+   "tool": "search_knowledge_base",
+   "ok": true,
+   "ms": 6.6,
+   "summary": "5 chunks, best cosine 0.24",
+   "evidence_ids": [
+    "S1",
+    "S9",
+    "S6",
+    "S10",
+    "S11"
+   ],
+   "error": null,
+   "error_type": null,
+   "sufficient": false,
+   "relevance": {
+    "best_score": 0.239,
+    "keyword_coverage": 1.0,
+    "threshold": {
+     "min_best_score": 0.35,
+     "min_keyword_coverage": 0.35
+    }
+   },
+   "sources": [
+    {
+     "id": "S1",
+     "title": "Python Exercise Guide",
+     "location": "Exercise Set A: Variables and Control Flow",
+     "score": 0.239
+    },
+    {
+     "id": "S9",
+     "title": "Statistics Exam Scores",
+     "location": "rows 9-16",
+     "score": 0.212
+    },
+    {
+     "id": "S6",
+     "title": "Data Orders",
+     "location": "rows 1-8",
+     "score": 0.202
+    },
+    {
+     "id": "S10",
+     "title": "Data Orders",
+     "location": "rows 9-16",
+     "score": 0.199
+    },
+    {
+     "id": "S11",
+     "title": "Ml Project Handbook",
+     "location": "Evaluation Protocol v2",
+     "score": 0.181
+    }
+   ]
+  },
+  {
+   "seq": 16,
+   "t_ms": 4168,
+   "type": "validation",
+   "sufficient": true,
+   "steps": {
+    "t2": {
+     "status": "weak",
+     "sufficient": false
+    },
+    "t1": {
+     "status": "done",
+     "sufficient": null
+    }
+   },
+   "problems": []
+  },
+  {
+   "seq": 17,
+   "t_ms": 4168,
+   "type": "synthesis_started",
+   "evidence": [],
+   "computed": [
+    "C1"
+   ],
+   "gaps": [
+    "find evidence"
+   ]
+  },
+  {
+   "seq": 18,
+   "t_ms": 5395,
+   "type": "citation_check",
+   "n_cited_sentences": 1,
+   "n_supported": 1,
+   "support_rate": 1.0,
+   "invalid_ids": [],
+   "removed_unsupported": 0,
+   "regenerated": 0,
+   "injection_flags": [],
+   "fallback_extractive": false
+  },
+  {
+   "seq": 19,
+   "t_ms": 5395,
+   "type": "answer",
+   "abstained": false,
+   "citations": [
+    "C1"
+   ]
+  },
+  {
+   "seq": 20,
+   "t_ms": 5395,
+   "type": "completed",
+   "stop_reason": "answered",
+   "latency_s": 5.39
+  }
+ ],
+ "validation": {
+  "n_cited_sentences": 1,
+  "n_supported": 1,
+  "support_rate": 1.0,
+  "invalid_ids": [],
+  "unsupported": [],
+  "uncited_numeric_sentences": []
+ },
+ "metrics": {
+  "latency_s": 5.39,
+  "llm_calls": 2,
+  "prompt_tokens": 1871,
+  "completion_tokens": 96,
+  "tool_calls": 4,
+  "replans": 2,
+  "steps": 2,
+  "errors": [],
+  "step_status": {
+   "t2": "weak",
+   "t1": "done"
+  },
+  "removed_unsupported": 0,
+  "injection_flags": []
+ },
+ "system": "agentic",
+ "config": {
+  "name": "full",
+  "planner": "llm",
+  "replan": true,
+  "tools": [
+   "search_knowledge_base",
+   "retrieve_source_context",
+   "summarize_evidence",
+   "analyze_dataset",
+   "calculate_expression",
+   "compare_evidence",
+   "refine_search_query"
+  ],
+  "model": "qwen2.5:3b-instruct",
+  "registry_version": "1.0.0"
+ }
+}

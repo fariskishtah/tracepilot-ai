@@ -1,0 +1,179 @@
+{
+ "request_id": "d979b3a1a9f8",
+ "question": "What was the val_accuracy of run ML099 in the ML model evaluation runs dataset?",
+ "answer": "The val_accuracy for run ML099 in the ML model evaluation runs dataset is [S1]/ [S1].",
+ "abstained": false,
+ "stop_reason": "answered",
+ "plan": null,
+ "plan_source": "none",
+ "tool_sequence": [
+  "search_knowledge_base"
+ ],
+ "citations": [
+  {
+   "id": "S1",
+   "kind": "document",
+   "title": "Ml Model Evaluation Runs",
+   "text": "Dataset ml_model_evaluation_runs: 10 rows, columns: run_id, model, task, train_accuracy, val_accuracy, precision, recall, f1, notes.",
+   "doc_id": "ml_model_evaluation_runs",
+   "course_id": "ml",
+   "location": "dataset overview",
+   "chunk_id": "ml_model_evaluation_runs:0000",
+   "score": 0.6103,
+   "data": {
+    "file_type": "csv",
+    "page": null,
+    "section": "dataset overview",
+    "filename": "ml_model_evaluation_runs.csv"
+   },
+   "derived_from": []
+  }
+ ],
+ "evidence": {
+  "S1": {
+   "id": "S1",
+   "kind": "document",
+   "title": "Ml Model Evaluation Runs",
+   "text": "Dataset ml_model_evaluation_runs: 10 rows, columns: run_id, model, task, train_accuracy, val_accuracy, precision, recall, f1, notes.",
+   "doc_id": "ml_model_evaluation_runs",
+   "course_id": "ml",
+   "location": "dataset overview",
+   "chunk_id": "ml_model_evaluation_runs:0000",
+   "score": 0.6103,
+   "data": {
+    "file_type": "csv",
+    "page": null,
+    "section": "dataset overview",
+    "filename": "ml_model_evaluation_runs.csv"
+   },
+   "derived_from": []
+  },
+  "S2": {
+   "id": "S2",
+   "kind": "document",
+   "title": "Ml Regularization Experiments",
+   "text": "Dataset ml_regularization_experiments: 9 rows, columns: run_id, model, dataset, technique, train_accuracy, val_accuracy, epochs, notes.",
+   "doc_id": "ml_regularization_experiments",
+   "course_id": "ml",
+   "location": "dataset overview",
+   "chunk_id": "ml_regularization_experiments:0000",
+   "score": 0.5409,
+   "data": {
+    "file_type": "csv",
+    "page": null,
+    "section": "dataset overview",
+    "filename": "ml_regularization_experiments.csv"
+   },
+   "derived_from": []
+  },
+  "S3": {
+   "id": "S3",
+   "kind": "document",
+   "title": "Ml Model Evaluation Runs",
+   "text": "row 9: run_id=ML009; model=Gradient Boosting; task=fraud detection; train_accuracy=0.99; val_accuracy=0.985; precision=0.81; recall=0.74; f1=0.7734; notes=Highest F1 among fraud runs\nrow 10: run_id=ML010; model=Logistic Regression + class weights; task=fraud detection; train_accuracy=0.96; val_accuracy=0.95; precision=0.48; recall=0.83; f1=0.6082; notes=Recall up, precision down",
+   "doc_id": "ml_model_evaluation_runs",
+   "course_id": "ml",
+   "location": "rows 9-10",
+   "chunk_id": "ml_model_evaluation_runs:0002",
+   "score": 0.4412,
+   "data": {
+    "file_type": "csv",
+    "page": null,
+    "section": "data rows",
+    "filename": "ml_model_evaluation_runs.csv"
+   },
+   "derived_from": []
+  },
+  "S4": {
+   "id": "S4",
+   "kind": "document",
+   "title": "Ml Regularization Experiments",
+   "text": "row 9: run_id=R09; model=Gradient Boosting; dataset=tabular-churn; technique=early stopping rounds=20; train_accuracy=0.918; val_accuracy=0.867; epochs=118; notes=Stopped at 118 of 300 rounds",
+   "doc_id": "ml_regularization_experiments",
+   "course_id": "ml",
+   "location": "rows 9-9",
+   "chunk_id": "ml_regularization_experiments:0002",
+   "score": 0.3999,
+   "data": {
+    "file_type": "csv",
+    "page": null,
+    "section": "data rows",
+    "filename": "ml_regularization_experiments.csv"
+   },
+   "derived_from": []
+  },
+  "S5": {
+   "id": "S5",
+   "kind": "document",
+   "title": "Ml Regularization Experiments",
+   "text": "row 1: run_id=R01; model=MLP (2 hidden layers); dataset=image-tiny; technique=none (baseline); train_accuracy=0.998; val_accuracy=0.812; epochs=60; notes=Memorizes training set; large train-val gap\nrow 2: run_id=R02; model=MLP (2 hidden layers); dataset=image-tiny; technique=L2 weight decay 1e-3; train_accuracy=0.951; val_accuracy=0.874; epochs=60; notes=Gap shrinks; weights shrunk\nrow 3: run_id=R03; model=MLP (2 hidden layers); dataset=image-tiny; technique=dropout p=0.3; train_accuracy=0.943; val_accuracy=0.881; epochs=60; notes=Stochastic unit removal at training time\nrow 4: run_id=R04; model=MLP (2 hidden layers); dataset=image-tiny; technique=early stopping patience=5; train_accuracy=0.927; val_accuracy=0.866; epochs=23; notes=Stopped at epoch 23 of 60 saving compute\nrow 5: run_id=R05; model=MLP (2 hidden layers); dataset=image-tiny; technique=L2 + early stopping; train_accuracy=0.935; val_accuracy=0.889; epochs=27; notes=Best validation accuracy of the image-tiny runs\nrow 6: run_id=R06; model=MLP (2 hidden layers); dataset=image-tiny; technique=data augmentation; train_accuracy=0.962; val_accuracy=0.893; epochs=60; notes=Highest validation accuracy but needs extra preprocessing\nrow 7: run_id=R07; model=Gradient Boosting; dataset=tabular-churn; technique=none (baseline); train_accuracy=0.991; val_accuracy=0.842; epochs=300; notes=Deep trees overfit\nrow 8: run_id=R08; model=Gradient Boosting; dataset=tabular-churn; technique=shrinkage 0.05 + max_depth 3; train_accuracy=0.902; val_accuracy=0.861; epochs=300; notes=Shallower trees reduce variance",
+   "doc_id": "ml_regularization_experiments",
+   "course_id": "ml",
+   "location": "rows 1-8",
+   "chunk_id": "ml_regularization_experiments:0001",
+   "score": 0.3687,
+   "data": {
+    "file_type": "csv",
+    "page": null,
+    "section": "data rows",
+    "filename": "ml_regularization_experiments.csv"
+   },
+   "derived_from": []
+  }
+ },
+ "trace": [
+  {
+   "seq": 1,
+   "t_ms": 2,
+   "type": "request_received",
+   "question": "What was the val_accuracy of run ML099 in the ML model evaluation runs dataset?",
+   "scope": null,
+   "system": "standard_rag"
+  },
+  {
+   "seq": 2,
+   "t_ms": 135,
+   "type": "retrieval",
+   "query": "What was the val_accuracy of run ML099 in the ML model evaluation runs dataset?",
+   "n": 5,
+   "sources": [
+    "S1",
+    "S2",
+    "S3",
+    "S4",
+    "S5"
+   ],
+   "best_score": 0.61
+  },
+  {
+   "seq": 3,
+   "t_ms": 5742,
+   "type": "answer",
+   "abstained": false,
+   "citations": [
+    "S1"
+   ]
+  }
+ ],
+ "validation": {
+  "n_cited_sentences": 1,
+  "n_supported": 1,
+  "support_rate": 1.0,
+  "invalid_ids": [],
+  "unsupported": [],
+  "uncited_numeric_sentences": []
+ },
+ "metrics": {
+  "latency_s": 5.74,
+  "llm_calls": 1,
+  "prompt_tokens": 926,
+  "completion_tokens": 30,
+  "tool_calls": 1,
+  "replans": 0,
+  "steps": 1
+ },
+ "system": "standard_rag",
+ "config": {
+  "top_k": 5
+ }
+}

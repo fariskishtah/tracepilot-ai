@@ -1,0 +1,179 @@
+{
+ "request_id": "765092fc5f09",
+ "question": "What is Anscombe's quartet meant to teach?",
+ "answer": "Anscombe's quartet is meant to teach that always plotting the data is crucial, not just relying on summary statistics like means and variances alone, as they can be misleading [S1].",
+ "abstained": false,
+ "stop_reason": "answered",
+ "plan": null,
+ "plan_source": "none",
+ "tool_sequence": [
+  "search_knowledge_base"
+ ],
+ "citations": [
+  {
+   "id": "S1",
+   "kind": "document",
+   "title": "Statistics Lab Report Guide",
+   "text": "Anscombe's Quartet\nAnscombe's quartet consists of four small datasets that have almost identical means, variances and correlation (about 0.816) but completely different shapes when plotted. The lesson is to always plot the data and not to rely on summary statistics alone.",
+   "doc_id": "statistics_lab_report_guide",
+   "course_id": "statistics",
+   "location": "Anscombe's Quartet",
+   "chunk_id": "statistics_lab_report_guide:0003",
+   "score": 0.6247,
+   "data": {
+    "file_type": "docx",
+    "page": null,
+    "section": "Anscombe's Quartet",
+    "filename": "statistics_lab_report_guide.docx"
+   },
+   "derived_from": []
+  }
+ ],
+ "evidence": {
+  "S1": {
+   "id": "S1",
+   "kind": "document",
+   "title": "Statistics Lab Report Guide",
+   "text": "Anscombe's Quartet\nAnscombe's quartet consists of four small datasets that have almost identical means, variances and correlation (about 0.816) but completely different shapes when plotted. The lesson is to always plot the data and not to rely on summary statistics alone.",
+   "doc_id": "statistics_lab_report_guide",
+   "course_id": "statistics",
+   "location": "Anscombe's Quartet",
+   "chunk_id": "statistics_lab_report_guide:0003",
+   "score": 0.6247,
+   "data": {
+    "file_type": "docx",
+    "page": null,
+    "section": "Anscombe's Quartet",
+    "filename": "statistics_lab_report_guide.docx"
+   },
+   "derived_from": []
+  },
+  "S2": {
+   "id": "S2",
+   "kind": "document",
+   "title": "Python Lecture Notes",
+   "text": "Python Lecture Notes\nPython Programming - independently written demonstration notes. Not official university material.",
+   "doc_id": "python_lecture_notes",
+   "course_id": "python",
+   "location": "p.1",
+   "chunk_id": "python_lecture_notes:0000",
+   "score": 0.2985,
+   "data": {
+    "file_type": "pdf",
+    "page": 1,
+    "section": null,
+    "filename": "python_lecture_notes.pdf"
+   },
+   "derived_from": []
+  },
+  "S3": {
+   "id": "S3",
+   "kind": "document",
+   "title": "Python Exercise Guide",
+   "text": "Grading Rubric for Python Exercises",
+   "doc_id": "python_exercise_guide",
+   "course_id": "python",
+   "location": "Grading Rubric for Python Exercises",
+   "chunk_id": "python_exercise_guide:0004",
+   "score": 0.2604,
+   "data": {
+    "file_type": "docx",
+    "page": null,
+    "section": "Grading Rubric for Python Exercises",
+    "filename": "python_exercise_guide.docx"
+   },
+   "derived_from": []
+  },
+  "S4": {
+   "id": "S4",
+   "kind": "document",
+   "title": "Python Exercise Guide",
+   "text": "Python Exercise Guide\nIndependently written demonstration material (CC BY 4.0). Not official university material.",
+   "doc_id": "python_exercise_guide",
+   "course_id": "python",
+   "location": "Python Exercise Guide",
+   "chunk_id": "python_exercise_guide:0000",
+   "score": 0.2354,
+   "data": {
+    "file_type": "docx",
+    "page": null,
+    "section": "Python Exercise Guide",
+    "filename": "python_exercise_guide.docx"
+   },
+   "derived_from": []
+  },
+  "S5": {
+   "id": "S5",
+   "kind": "document",
+   "title": "Statistics Robust Summaries",
+   "text": "ROBUST SUMMARIES: WHY THE MEAN AND THE MEDIAN DIFFER\nOriginal educational material, CC BY 4.0, (c) Faris Mohamed Kishtah. TracePilot demo course pack.",
+   "doc_id": "statistics_robust_summaries",
+   "course_id": "statistics",
+   "location": "ROBUST SUMMARIES: WHY THE MEAN AND THE MEDIAN DIFFER",
+   "chunk_id": "statistics_robust_summaries:0000",
+   "score": 0.235,
+   "data": {
+    "file_type": "txt",
+    "page": null,
+    "section": "ROBUST SUMMARIES: WHY THE MEAN AND THE MEDIAN DIFFER",
+    "filename": "statistics_robust_summaries.txt"
+   },
+   "derived_from": []
+  }
+ },
+ "trace": [
+  {
+   "seq": 1,
+   "t_ms": 0,
+   "type": "request_received",
+   "question": "What is Anscombe's quartet meant to teach?",
+   "scope": null,
+   "system": "standard_rag"
+  },
+  {
+   "seq": 2,
+   "t_ms": 9,
+   "type": "retrieval",
+   "query": "What is Anscombe's quartet meant to teach?",
+   "n": 5,
+   "sources": [
+    "S1",
+    "S2",
+    "S3",
+    "S4",
+    "S5"
+   ],
+   "best_score": 0.625
+  },
+  {
+   "seq": 3,
+   "t_ms": 1835,
+   "type": "answer",
+   "abstained": false,
+   "citations": [
+    "S1"
+   ]
+  }
+ ],
+ "validation": {
+  "n_cited_sentences": 1,
+  "n_supported": 1,
+  "support_rate": 1.0,
+  "invalid_ids": [],
+  "unsupported": [],
+  "uncited_numeric_sentences": []
+ },
+ "metrics": {
+  "latency_s": 1.84,
+  "llm_calls": 1,
+  "prompt_tokens": 525,
+  "completion_tokens": 41,
+  "tool_calls": 1,
+  "replans": 0,
+  "steps": 1
+ },
+ "system": "standard_rag",
+ "config": {
+  "top_k": 5
+ }
+}

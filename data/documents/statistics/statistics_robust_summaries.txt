@@ -1,0 +1,10 @@
+ROBUST SUMMARIES: WHY THE MEAN AND THE MEDIAN DIFFER
+Original educational material, CC BY 4.0, (c) Faris Mohamed Kishtah. TracePilot demo course pack.
+
+The mean is the sum of the values divided by their count, so every value, including extreme ones,
+pulls it. The median is the middle value of the sorted data and ignores how far the extremes lie.
+When a distribution is right-skewed (a long tail of a few very large values, as with prices or
+incomes) a few large values drag the mean upward while the median stays near the typical value, so
+the mean exceeds the median. When the data are symmetric the two are close. A large gap between the
+mean and the median is therefore a quick diagnostic for skew or outliers. For skewed data, report
+the median (or both) because it better describes a typical observation.

@@ -1,0 +1,179 @@
+{
+ "request_id": "1837e4e994e6",
+ "question": "What was the val_accuracy of run ML009 in the ML model evaluation runs dataset?",
+ "answer": "The val_accuracy of run ML009 in the ML model evaluation runs dataset is [S1]/.",
+ "abstained": false,
+ "stop_reason": "answered",
+ "plan": null,
+ "plan_source": "none",
+ "tool_sequence": [
+  "search_knowledge_base"
+ ],
+ "citations": [
+  {
+   "id": "S1",
+   "kind": "document",
+   "title": "Ml Model Evaluation Runs",
+   "text": "Dataset ml_model_evaluation_runs: 10 rows, columns: run_id, model, task, train_accuracy, val_accuracy, precision, recall, f1, notes.",
+   "doc_id": "ml_model_evaluation_runs",
+   "course_id": "ml",
+   "location": "dataset overview",
+   "chunk_id": "ml_model_evaluation_runs:0000",
+   "score": 0.6223,
+   "data": {
+    "file_type": "csv",
+    "page": null,
+    "section": "dataset overview",
+    "filename": "ml_model_evaluation_runs.csv"
+   },
+   "derived_from": []
+  }
+ ],
+ "evidence": {
+  "S1": {
+   "id": "S1",
+   "kind": "document",
+   "title": "Ml Model Evaluation Runs",
+   "text": "Dataset ml_model_evaluation_runs: 10 rows, columns: run_id, model, task, train_accuracy, val_accuracy, precision, recall, f1, notes.",
+   "doc_id": "ml_model_evaluation_runs",
+   "course_id": "ml",
+   "location": "dataset overview",
+   "chunk_id": "ml_model_evaluation_runs:0000",
+   "score": 0.6223,
+   "data": {
+    "file_type": "csv",
+    "page": null,
+    "section": "dataset overview",
+    "filename": "ml_model_evaluation_runs.csv"
+   },
+   "derived_from": []
+  },
+  "S2": {
+   "id": "S2",
+   "kind": "document",
+   "title": "Ml Regularization Experiments",
+   "text": "Dataset ml_regularization_experiments: 9 rows, columns: run_id, model, dataset, technique, train_accuracy, val_accuracy, epochs, notes.",
+   "doc_id": "ml_regularization_experiments",
+   "course_id": "ml",
+   "location": "dataset overview",
+   "chunk_id": "ml_regularization_experiments:0000",
+   "score": 0.5319,
+   "data": {
+    "file_type": "csv",
+    "page": null,
+    "section": "dataset overview",
+    "filename": "ml_regularization_experiments.csv"
+   },
+   "derived_from": []
+  },
+  "S3": {
+   "id": "S3",
+   "kind": "document",
+   "title": "Ml Model Evaluation Runs",
+   "text": "row 9: run_id=ML009; model=Gradient Boosting; task=fraud detection; train_accuracy=0.99; val_accuracy=0.985; precision=0.81; recall=0.74; f1=0.7734; notes=Highest F1 among fraud runs\nrow 10: run_id=ML010; model=Logistic Regression + class weights; task=fraud detection; train_accuracy=0.96; val_accuracy=0.95; precision=0.48; recall=0.83; f1=0.6082; notes=Recall up, precision down",
+   "doc_id": "ml_model_evaluation_runs",
+   "course_id": "ml",
+   "location": "rows 9-10",
+   "chunk_id": "ml_model_evaluation_runs:0002",
+   "score": 0.4295,
+   "data": {
+    "file_type": "csv",
+    "page": null,
+    "section": "data rows",
+    "filename": "ml_model_evaluation_runs.csv"
+   },
+   "derived_from": []
+  },
+  "S4": {
+   "id": "S4",
+   "kind": "document",
+   "title": "Ml Hyperparameter Reference",
+   "text": "Dataset ml_hyperparameter_reference: 14 rows, columns: ref_id, estimator, hyperparameter, default_value, effect_of_increasing.",
+   "doc_id": "ml_hyperparameter_reference",
+   "course_id": "ml",
+   "location": "dataset overview",
+   "chunk_id": "ml_hyperparameter_reference:0000",
+   "score": 0.3935,
+   "data": {
+    "file_type": "csv",
+    "page": null,
+    "section": "dataset overview",
+    "filename": "ml_hyperparameter_reference.csv"
+   },
+   "derived_from": []
+  },
+  "S5": {
+   "id": "S5",
+   "kind": "document",
+   "title": "Ml Regularization Experiments",
+   "text": "row 9: run_id=R09; model=Gradient Boosting; dataset=tabular-churn; technique=early stopping rounds=20; train_accuracy=0.918; val_accuracy=0.867; epochs=118; notes=Stopped at 118 of 300 rounds",
+   "doc_id": "ml_regularization_experiments",
+   "course_id": "ml",
+   "location": "rows 9-9",
+   "chunk_id": "ml_regularization_experiments:0002",
+   "score": 0.3894,
+   "data": {
+    "file_type": "csv",
+    "page": null,
+    "section": "data rows",
+    "filename": "ml_regularization_experiments.csv"
+   },
+   "derived_from": []
+  }
+ },
+ "trace": [
+  {
+   "seq": 1,
+   "t_ms": 0,
+   "type": "request_received",
+   "question": "What was the val_accuracy of run ML009 in the ML model evaluation runs dataset?",
+   "scope": null,
+   "system": "standard_rag"
+  },
+  {
+   "seq": 2,
+   "t_ms": 405,
+   "type": "retrieval",
+   "query": "What was the val_accuracy of run ML009 in the ML model evaluation runs dataset?",
+   "n": 5,
+   "sources": [
+    "S1",
+    "S2",
+    "S3",
+    "S4",
+    "S5"
+   ],
+   "best_score": 0.622
+  },
+  {
+   "seq": 3,
+   "t_ms": 4189,
+   "type": "answer",
+   "abstained": false,
+   "citations": [
+    "S1"
+   ]
+  }
+ ],
+ "validation": {
+  "n_cited_sentences": 1,
+  "n_supported": 1,
+  "support_rate": 1.0,
+  "invalid_ids": [],
+  "unsupported": [],
+  "uncited_numeric_sentences": []
+ },
+ "metrics": {
+  "latency_s": 4.19,
+  "llm_calls": 1,
+  "prompt_tokens": 688,
+  "completion_tokens": 26,
+  "tool_calls": 1,
+  "replans": 0,
+  "steps": 1
+ },
+ "system": "standard_rag",
+ "config": {
+  "top_k": 5
+ }
+}

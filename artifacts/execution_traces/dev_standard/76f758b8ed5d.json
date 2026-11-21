@@ -1,0 +1,217 @@
+{
+ "request_id": "76f758b8ed5d",
+ "question": "Using the standard error formula from the statistics reference notes, compute it for sigma = 3 and n = 36.",
+ "answer": "To compute the standard error (SE) for sigma = 3 and n = 36, use the formula SE = sigma / sqrt(n) [S2] [S3] [S1]. shows SE = 3 / sqrt(36) = 0.5 [S1] [S3] [S2] [S1] [S3] [S2] [S1] [S3] [S2].",
+ "abstained": false,
+ "stop_reason": "answered",
+ "plan": null,
+ "plan_source": "none",
+ "tool_sequence": [
+  "search_knowledge_base"
+ ],
+ "citations": [
+  {
+   "id": "S2",
+   "kind": "document",
+   "title": "Statistics Reference Notes",
+   "text": "DISTRIBUTIONS\nBinomial: P(X = k) = C(n, k) * p^k * (1 - p)^(n - k)\nPoisson: P(X = k) = e^(-lambda) * lambda^k / k!\nNormal z-score: z = (x - mu) / sigma\nEmpirical rule: 68% within 1 sigma, 95% within 2 sigma, 99.7% within 3 sigma.\nStandard error of the mean: SE = sigma / sqrt(n)",
+   "doc_id": "statistics_reference_notes",
+   "course_id": "statistics",
+   "location": "DISTRIBUTIONS",
+   "chunk_id": "statistics_reference_notes:0003",
+   "score": 0.4679,
+   "data": {
+    "file_type": "txt",
+    "page": null,
+    "section": "DISTRIBUTIONS",
+    "filename": "statistics_reference_notes.txt"
+   },
+   "derived_from": []
+  },
+  {
+   "id": "S3",
+   "kind": "document",
+   "title": "Statistics Exercise Guide",
+   "text": "Problem 3: Confidence Interval for a Mean\nQuestion. A sample of n = 36 students has mean study time 12.4 hours per week. The population standard deviation is known to be 3 hours. Build a 95% confidence interval.\nSolution. The standard error is 3 / sqrt(36) = 0.5. The margin of error is 1.96 * 0.5 = 0.98. The interval is 12.4 plus or minus 0.98, that is (11.42, 13.38). Interpretation: the procedure captures the true mean in about 95% of repeated samples. If the sample size were four times larger (n = 144) the standard error would halve to 0.25 and the interval would become narrower.",
+   "doc_id": "statistics_exercise_guide",
+   "course_id": "statistics",
+   "location": "Problem 3: Confidence Interval for a Mean",
+   "chunk_id": "statistics_exercise_guide:0003",
+   "score": 0.4595,
+   "data": {
+    "file_type": "docx",
+    "page": null,
+    "section": "Problem 3: Confidence Interval for a Mean",
+    "filename": "statistics_exercise_guide.docx"
+   },
+   "derived_from": []
+  },
+  {
+   "id": "S1",
+   "kind": "document",
+   "title": "Statistics Worked Examples",
+   "text": "row 25: example_id=ST025; topic=Confidence interval; dataset_or_scenario=n = 36, mean 12.4, sigma 3: half-width of 95% CI; n=36; statistic=1.96 * sigma / sqrt(n); value=0.98; method_note=margin of error",
+   "doc_id": "statistics_worked_examples",
+   "course_id": "statistics",
+   "location": "rows 25-25",
+   "chunk_id": "statistics_worked_examples:0004",
+   "score": 0.4805,
+   "data": {
+    "file_type": "csv",
+    "page": null,
+    "section": "data rows",
+    "filename": "statistics_worked_examples.csv"
+   },
+   "derived_from": []
+  }
+ ],
+ "evidence": {
+  "S1": {
+   "id": "S1",
+   "kind": "document",
+   "title": "Statistics Worked Examples",
+   "text": "row 25: example_id=ST025; topic=Confidence interval; dataset_or_scenario=n = 36, mean 12.4, sigma 3: half-width of 95% CI; n=36; statistic=1.96 * sigma / sqrt(n); value=0.98; method_note=margin of error",
+   "doc_id": "statistics_worked_examples",
+   "course_id": "statistics",
+   "location": "rows 25-25",
+   "chunk_id": "statistics_worked_examples:0004",
+   "score": 0.4805,
+   "data": {
+    "file_type": "csv",
+    "page": null,
+    "section": "data rows",
+    "filename": "statistics_worked_examples.csv"
+   },
+   "derived_from": []
+  },
+  "S2": {
+   "id": "S2",
+   "kind": "document",
+   "title": "Statistics Reference Notes",
+   "text": "DISTRIBUTIONS\nBinomial: P(X = k) = C(n, k) * p^k * (1 - p)^(n - k)\nPoisson: P(X = k) = e^(-lambda) * lambda^k / k!\nNormal z-score: z = (x - mu) / sigma\nEmpirical rule: 68% within 1 sigma, 95% within 2 sigma, 99.7% within 3 sigma.\nStandard error of the mean: SE = sigma / sqrt(n)",
+   "doc_id": "statistics_reference_notes",
+   "course_id": "statistics",
+   "location": "DISTRIBUTIONS",
+   "chunk_id": "statistics_reference_notes:0003",
+   "score": 0.4679,
+   "data": {
+    "file_type": "txt",
+    "page": null,
+    "section": "DISTRIBUTIONS",
+    "filename": "statistics_reference_notes.txt"
+   },
+   "derived_from": []
+  },
+  "S3": {
+   "id": "S3",
+   "kind": "document",
+   "title": "Statistics Exercise Guide",
+   "text": "Problem 3: Confidence Interval for a Mean\nQuestion. A sample of n = 36 students has mean study time 12.4 hours per week. The population standard deviation is known to be 3 hours. Build a 95% confidence interval.\nSolution. The standard error is 3 / sqrt(36) = 0.5. The margin of error is 1.96 * 0.5 = 0.98. The interval is 12.4 plus or minus 0.98, that is (11.42, 13.38). Interpretation: the procedure captures the true mean in about 95% of repeated samples. If the sample size were four times larger (n = 144) the standard error would halve to 0.25 and the interval would become narrower.",
+   "doc_id": "statistics_exercise_guide",
+   "course_id": "statistics",
+   "location": "Problem 3: Confidence Interval for a Mean",
+   "chunk_id": "statistics_exercise_guide:0003",
+   "score": 0.4595,
+   "data": {
+    "file_type": "docx",
+    "page": null,
+    "section": "Problem 3: Confidence Interval for a Mean",
+    "filename": "statistics_exercise_guide.docx"
+   },
+   "derived_from": []
+  },
+  "S4": {
+   "id": "S4",
+   "kind": "document",
+   "title": "Statistics Reference Notes",
+   "text": "STATISTICS & PROBABILITY FORMULA REFERENCE (original demo material, CC BY 4.0)\n======================================================================================",
+   "doc_id": "statistics_reference_notes",
+   "course_id": "statistics",
+   "location": "-",
+   "chunk_id": "statistics_reference_notes:0000",
+   "score": 0.4158,
+   "data": {
+    "file_type": "txt",
+    "page": null,
+    "section": null,
+    "filename": "statistics_reference_notes.txt"
+   },
+   "derived_from": []
+  },
+  "S5": {
+   "id": "S5",
+   "kind": "document",
+   "title": "Statistics Reference Notes",
+   "text": "DESCRIPTIVE FORMULAS\nMean: x-bar = (sum of x) / n\nPopulation variance: sigma^2 = sum((x - mu)^2) / N\nSample variance: s^2 = sum((x - x-bar)^2) / (n - 1)\nStandard deviation: the square root of the variance.\nIQR = Q3 - Q1. Outlier fences: Q1 - 1.5*IQR and Q3 + 1.5*IQR.\nCoefficient of variation: CV = standard deviation / mean.",
+   "doc_id": "statistics_reference_notes",
+   "course_id": "statistics",
+   "location": "DESCRIPTIVE FORMULAS",
+   "chunk_id": "statistics_reference_notes:0001",
+   "score": 0.4283,
+   "data": {
+    "file_type": "txt",
+    "page": null,
+    "section": "DESCRIPTIVE FORMULAS",
+    "filename": "statistics_reference_notes.txt"
+   },
+   "derived_from": []
+  }
+ },
+ "trace": [
+  {
+   "seq": 1,
+   "t_ms": 0,
+   "type": "request_received",
+   "question": "Using the standard error formula from the statistics reference notes, compute it for sigma = 3 and n = 36.",
+   "scope": null,
+   "system": "standard_rag"
+  },
+  {
+   "seq": 2,
+   "t_ms": 43,
+   "type": "retrieval",
+   "query": "Using the standard error formula from the statistics reference notes, compute it for sigma = 3 and n = 36.",
+   "n": 5,
+   "sources": [
+    "S1",
+    "S2",
+    "S3",
+    "S4",
+    "S5"
+   ],
+   "best_score": 0.48
+  },
+  {
+   "seq": 3,
+   "t_ms": 6648,
+   "type": "answer",
+   "abstained": false,
+   "citations": [
+    "S2",
+    "S3",
+    "S1"
+   ]
+  }
+ ],
+ "validation": {
+  "n_cited_sentences": 1,
+  "n_supported": 1,
+  "support_rate": 1.0,
+  "invalid_ids": [],
+  "unsupported": [],
+  "uncited_numeric_sentences": []
+ },
+ "metrics": {
+  "latency_s": 6.65,
+  "llm_calls": 1,
+  "prompt_tokens": 892,
+  "completion_tokens": 120,
+  "tool_calls": 1,
+  "replans": 0,
+  "steps": 1
+ },
+ "system": "standard_rag",
+ "config": {
+  "top_k": 5
+ }
+}

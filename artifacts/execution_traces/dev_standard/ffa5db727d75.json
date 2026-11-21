@@ -1,0 +1,198 @@
+{
+ "request_id": "ffa5db727d75",
+ "question": "What does 'class' mean in Python?",
+ "answer": "'class' in Python means a blueprint for creating objects [S1] [S3]",
+ "abstained": false,
+ "stop_reason": "answered",
+ "plan": null,
+ "plan_source": "none",
+ "tool_sequence": [
+  "search_knowledge_base"
+ ],
+ "citations": [
+  {
+   "id": "S1",
+   "kind": "document",
+   "title": "Python Lecture Notes",
+   "text": "6. Object-Oriented Programming A class is a blueprint and an object is an instance of that class. The special method __init__ initializes a new object, and self is the conventional name for the instance. Attributes store data; methods are functions defined inside the class. class Account:  def __init__(self, owner, balance=0):  self.owner = owner  self.balance = balance  def deposit(self, amount):  self.balance += amount Inheritance lets a subclass reuse a parent class: class Savings(Account). The subclass can override methods and call the parent version through super(). Polymorphism means different classes can provide the same method name, so code can call obj.describe() without knowing the exact class. Encapsulation is the idea of keeping internal state controlled. By convention, a leading underscore",
+   "doc_id": "python_lecture_notes",
+   "course_id": "python",
+   "location": "p.7",
+   "chunk_id": "python_lecture_notes:0011",
+   "score": 0.5516,
+   "data": {
+    "file_type": "pdf",
+    "page": 7,
+    "section": "6. Object-Oriented Programming",
+    "filename": "python_lecture_notes.pdf"
+   },
+   "derived_from": []
+  },
+  {
+   "id": "S3",
+   "kind": "document",
+   "title": "Python Lecture Notes",
+   "text": "the exact class. Encapsulation is the idea of keeping internal state controlled. By convention, a leading underscore  (_balance) marks an attribute as internal, while a double underscore triggers name mangling. The __str__ method defines the readable text of an object and __repr__ its developer-oriented representation. A @classmethod receives the class as its first argument and a @staticmethod receives neither the instance nor the class. The @property decorator exposes a method as a read-only attribute.",
+   "doc_id": "python_lecture_notes",
+   "course_id": "python",
+   "location": "p.7",
+   "chunk_id": "python_lecture_notes:0012",
+   "score": 0.415,
+   "data": {
+    "file_type": "pdf",
+    "page": 7,
+    "section": "6. Object-Oriented Programming",
+    "filename": "python_lecture_notes.pdf"
+   },
+   "derived_from": []
+  }
+ ],
+ "evidence": {
+  "S1": {
+   "id": "S1",
+   "kind": "document",
+   "title": "Python Lecture Notes",
+   "text": "6. Object-Oriented Programming A class is a blueprint and an object is an instance of that class. The special method __init__ initializes a new object, and self is the conventional name for the instance. Attributes store data; methods are functions defined inside the class. class Account:  def __init__(self, owner, balance=0):  self.owner = owner  self.balance = balance  def deposit(self, amount):  self.balance += amount Inheritance lets a subclass reuse a parent class: class Savings(Account). The subclass can override methods and call the parent version through super(). Polymorphism means different classes can provide the same method name, so code can call obj.describe() without knowing the exact class. Encapsulation is the idea of keeping internal state controlled. By convention, a leading underscore",
+   "doc_id": "python_lecture_notes",
+   "course_id": "python",
+   "location": "p.7",
+   "chunk_id": "python_lecture_notes:0011",
+   "score": 0.5516,
+   "data": {
+    "file_type": "pdf",
+    "page": 7,
+    "section": "6. Object-Oriented Programming",
+    "filename": "python_lecture_notes.pdf"
+   },
+   "derived_from": []
+  },
+  "S2": {
+   "id": "S2",
+   "kind": "document",
+   "title": "Python Glossary Overloaded Terms",
+   "text": "class: in Python a class is a blueprint for creating objects. It is not a category label as in classification problems. function: a reusable block of code defined with def. It is not necessarily a mathematical function. mode: when opening a file the mode string such as \"r\", \"w\" or \"a\" says how the file is used. statistics.mode(data) is a different thing: it returns the most frequent value. sample: random.sample(population, k) draws k unique elements without replacement. It has nothing to do with a statistical sample unless you use it to build one. normal: random.gauss(mu, sigma) and random.normalvariate(mu, sigma) draw numbers from a normal distribution. seed: random.seed(n) makes the random sequence reproducible, so a program prints the same random numbers on every run. iterable: an object you can loop over, such as a list or string.",
+   "doc_id": "python_glossary_overloaded_terms",
+   "course_id": "python",
+   "location": "-",
+   "chunk_id": "python_glossary_overloaded_terms:0001",
+   "score": 0.4897,
+   "data": {
+    "file_type": "txt",
+    "page": null,
+    "section": null,
+    "filename": "python_glossary_overloaded_terms.txt"
+   },
+   "derived_from": []
+  },
+  "S3": {
+   "id": "S3",
+   "kind": "document",
+   "title": "Python Lecture Notes",
+   "text": "the exact class. Encapsulation is the idea of keeping internal state controlled. By convention, a leading underscore  (_balance) marks an attribute as internal, while a double underscore triggers name mangling. The __str__ method defines the readable text of an object and __repr__ its developer-oriented representation. A @classmethod receives the class as its first argument and a @staticmethod receives neither the instance nor the class. The @property decorator exposes a method as a read-only attribute.",
+   "doc_id": "python_lecture_notes",
+   "course_id": "python",
+   "location": "p.7",
+   "chunk_id": "python_lecture_notes:0012",
+   "score": 0.415,
+   "data": {
+    "file_type": "pdf",
+    "page": 7,
+    "section": "6. Object-Oriented Programming",
+    "filename": "python_lecture_notes.pdf"
+   },
+   "derived_from": []
+  },
+  "S4": {
+   "id": "S4",
+   "kind": "document",
+   "title": "Python Exercise Guide",
+   "text": "Grading Rubric for Python Exercises",
+   "doc_id": "python_exercise_guide",
+   "course_id": "python",
+   "location": "Grading Rubric for Python Exercises",
+   "chunk_id": "python_exercise_guide:0004",
+   "score": 0.4264,
+   "data": {
+    "file_type": "docx",
+    "page": null,
+    "section": "Grading Rubric for Python Exercises",
+    "filename": "python_exercise_guide.docx"
+   },
+   "derived_from": []
+  },
+  "S5": {
+   "id": "S5",
+   "kind": "document",
+   "title": "Python Lecture Notes",
+   "text": "Python Lecture Notes\nPython Programming - independently written demonstration notes. Not official university material.",
+   "doc_id": "python_lecture_notes",
+   "course_id": "python",
+   "location": "p.1",
+   "chunk_id": "python_lecture_notes:0000",
+   "score": 0.4147,
+   "data": {
+    "file_type": "pdf",
+    "page": 1,
+    "section": null,
+    "filename": "python_lecture_notes.pdf"
+   },
+   "derived_from": []
+  }
+ },
+ "trace": [
+  {
+   "seq": 1,
+   "t_ms": 1,
+   "type": "request_received",
+   "question": "What does 'class' mean in Python?",
+   "scope": null,
+   "system": "standard_rag"
+  },
+  {
+   "seq": 2,
+   "t_ms": 78,
+   "type": "retrieval",
+   "query": "What does 'class' mean in Python?",
+   "n": 5,
+   "sources": [
+    "S1",
+    "S2",
+    "S3",
+    "S4",
+    "S5"
+   ],
+   "best_score": 0.552
+  },
+  {
+   "seq": 3,
+   "t_ms": 3963,
+   "type": "answer",
+   "abstained": false,
+   "citations": [
+    "S1",
+    "S3"
+   ]
+  }
+ ],
+ "validation": {
+  "n_cited_sentences": 1,
+  "n_supported": 1,
+  "support_rate": 1.0,
+  "invalid_ids": [],
+  "unsupported": [],
+  "uncited_numeric_sentences": []
+ },
+ "metrics": {
+  "latency_s": 3.96,
+  "llm_calls": 1,
+  "prompt_tokens": 796,
+  "completion_tokens": 18,
+  "tool_calls": 1,
+  "replans": 0,
+  "steps": 1
+ },
+ "system": "standard_rag",
+ "config": {
+  "top_k": 5
+ }
+}

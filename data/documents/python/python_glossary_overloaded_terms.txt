@@ -1,0 +1,13 @@
+PYTHON GLOSSARY OF OVERLOADED TERMS (original course material, CC BY 4.0)
+===========================================================================
+
+class: in Python a class is a blueprint for creating objects. It is not a category label as in classification problems.
+function: a reusable block of code defined with def. It is not necessarily a mathematical function.
+mode: when opening a file the mode string such as "r", "w" or "a" says how the file is used. statistics.mode(data) is a different thing: it returns the most frequent value.
+sample: random.sample(population, k) draws k unique elements without replacement. It has nothing to do with a statistical sample unless you use it to build one.
+normal: random.gauss(mu, sigma) and random.normalvariate(mu, sigma) draw numbers from a normal distribution.
+seed: random.seed(n) makes the random sequence reproducible, so a program prints the same random numbers on every run.
+iterable: an object you can loop over, such as a list or string. An iterator is the object that produces the values one at a time and is returned by iter(iterable).
+generator: a function that uses yield to produce values lazily, one at a time, instead of building a whole list in memory.
+decorator: a function that wraps another function; written with the @ syntax above a def line.
+mean: Python has no built-in mean. Use statistics.mean(data), or statistics.fmean(data) for a faster floating-point mean.

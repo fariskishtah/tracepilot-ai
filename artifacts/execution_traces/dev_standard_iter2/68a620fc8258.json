@@ -1,0 +1,217 @@
+{
+ "request_id": "68a620fc8258",
+ "question": "Compare high-bias and high-variance models using learning curves.",
+ "answer": "To compare high-bias and high-variance models using learning curves, observe their behavior on training and validation errors as the model size increases. [S4] In a high-bias model, both training and validation errors remain high and converge, indicating the model is too simple and underfits. [S5] In contrast, a high-variance model shows a gap between training and validation errors, with the validation error decreasing as more data is added, suggesting the model overfits the training data [S1] [S4].",
+ "abstained": false,
+ "stop_reason": "answered",
+ "plan": null,
+ "plan_source": "none",
+ "tool_sequence": [
+  "search_knowledge_base"
+ ],
+ "citations": [
+  {
+   "id": "S4",
+   "kind": "document",
+   "title": "Ml Lecture Notes",
+   "text": "is bias squared plus variance plus irreducible noise. Increasing model complexity lowers bias but raises variance.  Ways to reduce overfitting include collecting more training data, simplifying the model, regularization (L1 and L2 penalties that shrink weights; L1 can drive weights to exactly zero), early stopping, dropout for neural networks, feature selection and cross-validation to choose hyperparameters. Learning curves, which plot error against training set size, help diagnose whether a model suffers from high bias or high variance.",
+   "doc_id": "ml_lecture_notes",
+   "course_id": "ml",
+   "location": "p.4",
+   "chunk_id": "ml_lecture_notes:0005",
+   "score": 0.5689,
+   "data": {
+    "file_type": "pdf",
+    "page": 4,
+    "section": "3. Generalization, Overfitting and the Bias-Variance",
+    "filename": "ml_lecture_notes.pdf"
+   },
+   "derived_from": []
+  },
+  {
+   "id": "S5",
+   "kind": "document",
+   "title": "Ml Reference Notes",
+   "text": "Feature: an input variable used by a model, for example a person's age. Label or target: the value the model should predict. Hyperparameter: a setting chosen before training, such as the learning rate, tree depth or number of neighbors k. Parameter: a value learned during training, such as the weights of linear regression. Epoch: one full pass through the training data. Batch size: the number of examples used for one gradient update. Learning rate: the step size of gradient descent. Regularization: a penalty that discourages overly complex models. L2 (ridge) shrinks weights; L1 (lasso) can set weights to zero. Overfitting: low training error but high validation error because the model memorized noise. Underfitting: high error on both training and validation data because the model is too simple. Bias: error from wrong or overly simple assumptions.",
+   "doc_id": "ml_reference_notes",
+   "course_id": "ml",
+   "location": "-",
+   "chunk_id": "ml_reference_notes:0001",
+   "score": 0.3458,
+   "data": {
+    "file_type": "txt",
+    "page": null,
+    "section": null,
+    "filename": "ml_reference_notes.txt"
+   },
+   "derived_from": []
+  },
+  {
+   "id": "S1",
+   "kind": "document",
+   "title": "Ml Model Diagnostics Handbook",
+   "text": "1. Reading Learning Curves\nA learning curve plots training error and validation error against the training set size. In a high-bias\nmodel both errors are high and they converge close to each other; adding more data barely helps\nbecause the model is too simple. In a high-variance model the training error is low and a large gap\nseparates it from the validation error; the validation error keeps falling as more data is added, so\ncollecting more data helps.\nWhen a model is overfitting the first actions to try are a simpler model, stronger regularization,\nmore training data or early stopping.",
+   "doc_id": "ml_model_diagnostics_handbook",
+   "course_id": "ml",
+   "location": "p.1",
+   "chunk_id": "ml_model_diagnostics_handbook:0000",
+   "score": 0.7057,
+   "data": {
+    "file_type": "pdf",
+    "page": 1,
+    "section": "1. Reading Learning Curves",
+    "filename": "ml_model_diagnostics_handbook.pdf"
+   },
+   "derived_from": []
+  }
+ ],
+ "evidence": {
+  "S1": {
+   "id": "S1",
+   "kind": "document",
+   "title": "Ml Model Diagnostics Handbook",
+   "text": "1. Reading Learning Curves\nA learning curve plots training error and validation error against the training set size. In a high-bias\nmodel both errors are high and they converge close to each other; adding more data barely helps\nbecause the model is too simple. In a high-variance model the training error is low and a large gap\nseparates it from the validation error; the validation error keeps falling as more data is added, so\ncollecting more data helps.\nWhen a model is overfitting the first actions to try are a simpler model, stronger regularization,\nmore training data or early stopping.",
+   "doc_id": "ml_model_diagnostics_handbook",
+   "course_id": "ml",
+   "location": "p.1",
+   "chunk_id": "ml_model_diagnostics_handbook:0000",
+   "score": 0.7057,
+   "data": {
+    "file_type": "pdf",
+    "page": 1,
+    "section": "1. Reading Learning Curves",
+    "filename": "ml_model_diagnostics_handbook.pdf"
+   },
+   "derived_from": []
+  },
+  "S2": {
+   "id": "S2",
+   "kind": "document",
+   "title": "Ml Lecture Notes",
+   "text": "3. Generalization, Overfitting and the Bias-Variance Tradeoff A model generalizes when it performs well on new data, not just on the data used for training. Overfitting happens when a model memorizes noise and idiosyncrasies of the training set: training error is very low but validation or test error is much higher. Underfitting happens when the model is too simple to capture the pattern, so both training and validation error are high. The bias-variance tradeoff explains this. Bias is the error caused by overly simple assumptions; high-bias models underfit. Variance is the sensitivity of a model to the particular training sample; high-variance models overfit. Total expected error is bias squared plus variance plus irreducible noise. Increasing model complexity lowers bias but raises variance.",
+   "doc_id": "ml_lecture_notes",
+   "course_id": "ml",
+   "location": "p.4",
+   "chunk_id": "ml_lecture_notes:0004",
+   "score": 0.5105,
+   "data": {
+    "file_type": "pdf",
+    "page": 4,
+    "section": "3. Generalization, Overfitting and the Bias-Variance",
+    "filename": "ml_lecture_notes.pdf"
+   },
+   "derived_from": []
+  },
+  "S3": {
+   "id": "S3",
+   "kind": "document",
+   "title": "Ml Model Diagnostics Handbook",
+   "text": "2. Variance in Machine Learning\nIn machine learning the variance of a model is how much its predictions change when it is trained\non different training sets drawn from the same source. High-variance models such as deep\ndecision trees fit the quirks of one training set. This is a property of the learning algorithm, not the\nspread of a data column.\nThe spread of a feature column is a different matter. In scikit-learn VarianceThreshold removes\nfeatures whose variance is below a threshold; the default threshold is 0.0, which removes only\nconstant features.",
+   "doc_id": "ml_model_diagnostics_handbook",
+   "course_id": "ml",
+   "location": "p.2",
+   "chunk_id": "ml_model_diagnostics_handbook:0001",
+   "score": 0.509,
+   "data": {
+    "file_type": "pdf",
+    "page": 2,
+    "section": "2. Variance in Machine Learning",
+    "filename": "ml_model_diagnostics_handbook.pdf"
+   },
+   "derived_from": []
+  },
+  "S4": {
+   "id": "S4",
+   "kind": "document",
+   "title": "Ml Lecture Notes",
+   "text": "is bias squared plus variance plus irreducible noise. Increasing model complexity lowers bias but raises variance.  Ways to reduce overfitting include collecting more training data, simplifying the model, regularization (L1 and L2 penalties that shrink weights; L1 can drive weights to exactly zero), early stopping, dropout for neural networks, feature selection and cross-validation to choose hyperparameters. Learning curves, which plot error against training set size, help diagnose whether a model suffers from high bias or high variance.",
+   "doc_id": "ml_lecture_notes",
+   "course_id": "ml",
+   "location": "p.4",
+   "chunk_id": "ml_lecture_notes:0005",
+   "score": 0.5689,
+   "data": {
+    "file_type": "pdf",
+    "page": 4,
+    "section": "3. Generalization, Overfitting and the Bias-Variance",
+    "filename": "ml_lecture_notes.pdf"
+   },
+   "derived_from": []
+  },
+  "S5": {
+   "id": "S5",
+   "kind": "document",
+   "title": "Ml Reference Notes",
+   "text": "Feature: an input variable used by a model, for example a person's age. Label or target: the value the model should predict. Hyperparameter: a setting chosen before training, such as the learning rate, tree depth or number of neighbors k. Parameter: a value learned during training, such as the weights of linear regression. Epoch: one full pass through the training data. Batch size: the number of examples used for one gradient update. Learning rate: the step size of gradient descent. Regularization: a penalty that discourages overly complex models. L2 (ridge) shrinks weights; L1 (lasso) can set weights to zero. Overfitting: low training error but high validation error because the model memorized noise. Underfitting: high error on both training and validation data because the model is too simple. Bias: error from wrong or overly simple assumptions.",
+   "doc_id": "ml_reference_notes",
+   "course_id": "ml",
+   "location": "-",
+   "chunk_id": "ml_reference_notes:0001",
+   "score": 0.3458,
+   "data": {
+    "file_type": "txt",
+    "page": null,
+    "section": null,
+    "filename": "ml_reference_notes.txt"
+   },
+   "derived_from": []
+  }
+ },
+ "trace": [
+  {
+   "seq": 1,
+   "t_ms": 1,
+   "type": "request_received",
+   "question": "Compare high-bias and high-variance models using learning curves.",
+   "scope": null,
+   "system": "standard_rag"
+  },
+  {
+   "seq": 2,
+   "t_ms": 52,
+   "type": "retrieval",
+   "query": "Compare high-bias and high-variance models using learning curves.",
+   "n": 5,
+   "sources": [
+    "S1",
+    "S2",
+    "S3",
+    "S4",
+    "S5"
+   ],
+   "best_score": 0.706
+  },
+  {
+   "seq": 3,
+   "t_ms": 6891,
+   "type": "answer",
+   "abstained": false,
+   "citations": [
+    "S4",
+    "S5",
+    "S1"
+   ]
+  }
+ ],
+ "validation": {
+  "n_cited_sentences": 2,
+  "n_supported": 2,
+  "support_rate": 1.0,
+  "invalid_ids": [],
+  "unsupported": [],
+  "uncited_numeric_sentences": []
+ },
+ "metrics": {
+  "latency_s": 6.89,
+  "llm_calls": 1,
+  "prompt_tokens": 1027,
+  "completion_tokens": 100,
+  "tool_calls": 1,
+  "replans": 0,
+  "steps": 1
+ },
+ "system": "standard_rag",
+ "config": {
+  "top_k": 5
+ }
+}

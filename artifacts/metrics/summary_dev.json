@@ -1,0 +1,410 @@
+{
+  "split": "dev",
+  "n_common": 42,
+  "systems": {
+    "standard": {
+      "n": 42,
+      "answer_correctness (all)": [
+        23,
+        42
+      ],
+      "answer_correctness (answerable)": [
+        20,
+        38
+      ],
+      "correct_abstention (unanswerable)": [
+        3,
+        4
+      ],
+      "false_abstention (answerable)": [
+        5,
+        38
+      ],
+      "numerical_accuracy": [
+        3,
+        15
+      ],
+      "multi_step_full_completion": [
+        7,
+        12
+      ],
+      "multi_step_full_completion_with_correct_tool_path": [
+        0,
+        12
+      ],
+      "citation_hit (answerable w/ gold docs)": [
+        30,
+        35
+      ],
+      "mean_citation_support_rate": 0.7857142857142857,
+      "unsupported_cited_sentences": [
+        0,
+        47
+      ],
+      "retrieval_coverage": 0.9476190476190476,
+      "recall@5": 1.0,
+      "MRR": 0.9428571428571428,
+      "latency": {
+        "mean": 6.099523809523809,
+        "median": 4.949999999999999,
+        "p95": 14.145999999999992
+      },
+      "mean_tool_calls": 1.0,
+      "mean_llm_calls": 1.2619047619047619,
+      "mean_tokens": 1344.2619047619048
+    },
+    "full": {
+      "n": 42,
+      "answer_correctness (all)": [
+        37,
+        42
+      ],
+      "answer_correctness (answerable)": [
+        33,
+        38
+      ],
+      "correct_abstention (unanswerable)": [
+        4,
+        4
+      ],
+      "false_abstention (answerable)": [
+        0,
+        38
+      ],
+      "numerical_accuracy": [
+        15,
+        15
+      ],
+      "multi_step_full_completion": [
+        10,
+        12
+      ],
+      "multi_step_full_completion_with_correct_tool_path": [
+        10,
+        12
+      ],
+      "citation_hit (answerable w/ gold docs)": [
+        34,
+        35
+      ],
+      "mean_citation_support_rate": 0.8536585365853658,
+      "unsupported_cited_sentences": [
+        1,
+        55
+      ],
+      "retrieval_coverage": 0.9571428571428572,
+      "recall@5": 1.0,
+      "MRR": 0.9095238095238095,
+      "latency": {
+        "mean": 13.114285714285714,
+        "median": 10.454999999999998,
+        "p95": 27.693499999999993
+      },
+      "mean_tool_calls": 2.238095238095238,
+      "mean_llm_calls": 2.3333333333333335,
+      "mean_tokens": 2636.6666666666665,
+      "tool_correct_path": [
+        40,
+        42
+      ],
+      "tool_required_ok(recall)": [
+        41,
+        42
+      ],
+      "mean_tool_precision": 0.8869047619047619,
+      "forbidden_tool_used": [
+        1,
+        42
+      ],
+      "unnecessary_call_rate": [
+        12,
+        94
+      ],
+      "plan_completion": [
+        39,
+        42
+      ],
+      "replanned_requests": [
+        8,
+        42
+      ],
+      "tool_failures_per_req": null,
+      "planner_rules_fallback": [
+        0,
+        42
+      ]
+    }
+  },
+  "by_category": {
+    "standard": {
+      "ambiguous": [
+        0,
+        2
+      ],
+      "calculation": [
+        2,
+        3
+      ],
+      "comparison": [
+        5,
+        5
+      ],
+      "conflict": [
+        2,
+        2
+      ],
+      "csv_analysis": [
+        0,
+        6
+      ],
+      "injection": [
+        1,
+        2
+      ],
+      "multi_step": [
+        1,
+        5
+      ],
+      "simple_factual": [
+        6,
+        8
+      ],
+      "summarization": [
+        1,
+        2
+      ],
+      "tool_routing": [
+        2,
+        3
+      ],
+      "unanswerable": [
+        3,
+        4
+      ]
+    },
+    "full": {
+      "ambiguous": [
+        1,
+        2
+      ],
+      "calculation": [
+        3,
+        3
+      ],
+      "comparison": [
+        5,
+        5
+      ],
+      "conflict": [
+        2,
+        2
+      ],
+      "csv_analysis": [
+        6,
+        6
+      ],
+      "injection": [
+        1,
+        2
+      ],
+      "multi_step": [
+        4,
+        5
+      ],
+      "simple_factual": [
+        7,
+        8
+      ],
+      "summarization": [
+        1,
+        2
+      ],
+      "tool_routing": [
+        3,
+        3
+      ],
+      "unanswerable": [
+        4,
+        4
+      ]
+    }
+  },
+  "paired_vs_baseline": {
+    "full": {
+      "overall": {
+        "n": 42,
+        "mean_diff": 0.3333333333333333,
+        "ci95": [
+          0.19047619047619047,
+          0.47619047619047616
+        ],
+        "b_only": 14,
+        "a_only": 0,
+        "significant": true
+      },
+      "ambiguous": {
+        "n": 2,
+        "mean_diff": 0.5,
+        "ci95": [
+          0.0,
+          1.0
+        ],
+        "b_only": 1,
+        "a_only": 0,
+        "significant": false
+      },
+      "calculation": {
+        "n": 3,
+        "mean_diff": 0.3333333333333333,
+        "ci95": [
+          0.0,
+          1.0
+        ],
+        "b_only": 1,
+        "a_only": 0,
+        "significant": false
+      },
+      "comparison": {
+        "n": 5,
+        "mean_diff": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "b_only": 0,
+        "a_only": 0,
+        "significant": false
+      },
+      "conflict": {
+        "n": 2,
+        "mean_diff": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "b_only": 0,
+        "a_only": 0,
+        "significant": false
+      },
+      "csv_analysis": {
+        "n": 6,
+        "mean_diff": 1.0,
+        "ci95": [
+          1.0,
+          1.0
+        ],
+        "b_only": 6,
+        "a_only": 0,
+        "significant": true
+      },
+      "injection": {
+        "n": 2,
+        "mean_diff": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "b_only": 0,
+        "a_only": 0,
+        "significant": false
+      },
+      "multi_step": {
+        "n": 5,
+        "mean_diff": 0.6,
+        "ci95": [
+          0.2,
+          1.0
+        ],
+        "b_only": 3,
+        "a_only": 0,
+        "significant": true
+      },
+      "simple_factual": {
+        "n": 8,
+        "mean_diff": 0.125,
+        "ci95": [
+          0.0,
+          0.375
+        ],
+        "b_only": 1,
+        "a_only": 0,
+        "significant": false
+      },
+      "summarization": {
+        "n": 2,
+        "mean_diff": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "b_only": 0,
+        "a_only": 0,
+        "significant": false
+      },
+      "tool_routing": {
+        "n": 3,
+        "mean_diff": 0.3333333333333333,
+        "ci95": [
+          0.0,
+          1.0
+        ],
+        "b_only": 1,
+        "a_only": 0,
+        "significant": false
+      },
+      "unanswerable": {
+        "n": 4,
+        "mean_diff": 0.25,
+        "ci95": [
+          0.0,
+          0.75
+        ],
+        "b_only": 1,
+        "a_only": 0,
+        "significant": false
+      }
+    }
+  },
+  "table": [
+    {
+      "metric": "answer_correctness (all)",
+      "standard": "23/42 (54.8%)",
+      "full": "37/42 (88.1%)"
+    },
+    {
+      "metric": "answer_correctness (answerable)",
+      "standard": "20/38 (52.6%)",
+      "full": "33/38 (86.8%)"
+    },
+    {
+      "metric": "correct_abstention (unanswerable)",
+      "standard": "3/4 (75.0%)",
+      "full": "4/4 (100.0%)"
+    },
+    {
+      "metric": "numerical_accuracy",
+      "standard": "3/15 (20.0%)",
+      "full": "15/15 (100.0%)"
+    },
+    {
+      "metric": "multi_step_full_completion",
+      "standard": "7/12 (58.3%)",
+      "full": "10/12 (83.3%)"
+    },
+    {
+      "metric": "mean latency (s)",
+      "standard": "6.1",
+      "full": "13.1"
+    },
+    {
+      "metric": "p95 latency (s)",
+      "standard": "14.1",
+      "full": "27.7"
+    },
+    {
+      "metric": "mean tool calls",
+      "standard": "1.00",
+      "full": "2.24"
+    }
+  ]
+}

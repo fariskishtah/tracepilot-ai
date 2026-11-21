@@ -1,0 +1,26 @@
+example_id,topic,dataset_or_scenario,n,statistic,value,method_note
+ST001,Descriptive statistics,"Dataset A: 2,4,4,4,5,5,7,9",8,Mean,5,sum divided by n
+ST002,Descriptive statistics,"Dataset A: 2,4,4,4,5,5,7,9",8,Median,4.5,middle value of sorted data
+ST003,Descriptive statistics,"Dataset A: 2,4,4,4,5,5,7,9",8,Population variance,4,divide squared deviations by N
+ST004,Descriptive statistics,"Dataset A: 2,4,4,4,5,5,7,9",8,Sample variance,4.5714,divide squared deviations by n - 1
+ST005,Descriptive statistics,"Dataset A: 2,4,4,4,5,5,7,9",8,Population standard deviation,2.0,square root of population variance
+ST006,Descriptive statistics,"Dataset A: 2,4,4,4,5,5,7,9",8,Sample standard deviation,2.1381,square root of sample variance
+ST007,Descriptive statistics,"Dataset B: 10,12,23,23,16,23,21,16",8,Mean,18,sum divided by n
+ST008,Descriptive statistics,"Dataset B: 10,12,23,23,16,23,21,16",8,Median,18.5,middle value of sorted data
+ST009,Descriptive statistics,"Dataset B: 10,12,23,23,16,23,21,16",8,Population variance,24,divide squared deviations by N
+ST010,Descriptive statistics,"Dataset B: 10,12,23,23,16,23,21,16",8,Sample variance,27.4286,divide squared deviations by n - 1
+ST011,Descriptive statistics,"Dataset B: 10,12,23,23,16,23,21,16",8,Population standard deviation,4.899,square root of population variance
+ST012,Descriptive statistics,"Dataset B: 10,12,23,23,16,23,21,16",8,Sample standard deviation,5.2372,square root of sample variance
+ST013,Descriptive statistics,"Dataset C: 1,2,3,4,5,6,7,8,9,100",10,Mean,14.5,sum divided by n
+ST014,Descriptive statistics,"Dataset C: 1,2,3,4,5,6,7,8,9,100",10,Median,5.5,middle value of sorted data
+ST015,Descriptive statistics,"Dataset C: 1,2,3,4,5,6,7,8,9,100",10,Population variance,818.25,divide squared deviations by N
+ST016,Descriptive statistics,"Dataset C: 1,2,3,4,5,6,7,8,9,100",10,Sample variance,909.1667,divide squared deviations by n - 1
+ST017,Descriptive statistics,"Dataset C: 1,2,3,4,5,6,7,8,9,100",10,Population standard deviation,28.6051,square root of population variance
+ST018,Descriptive statistics,"Dataset C: 1,2,3,4,5,6,7,8,9,100",10,Sample standard deviation,30.1524,square root of sample variance
+ST019,Probability,Fair die: P(rolling a 6),1,P = 1/6,0.1667,equally likely outcomes
+ST020,Probability,Two fair coins: P(two heads),2,P = 1/2 * 1/2,0.25,independent events
+ST021,Probability,Two cards without replacement: P(both aces),2,P = 4/52 * 3/51,0.0045,conditional probability
+ST022,Bayes,"Disease 1%, sensitivity 95%, false positive 5%: P(disease | positive)",1,Bayes theorem,0.161,base rate effect
+ST023,Binomial,10 fair coin flips: P(exactly 5 heads),10,"C(10,5) * 0.5^10",0.2461,binomial PMF
+ST024,Normal,z-score of x = 85 with mean 70 and standard deviation 10,1,z = (x - mu) / sigma,1.5,standardization
+ST025,Confidence interval,"n = 36, mean 12.4, sigma 3: half-width of 95% CI",36,1.96 * sigma / sqrt(n),0.98,margin of error

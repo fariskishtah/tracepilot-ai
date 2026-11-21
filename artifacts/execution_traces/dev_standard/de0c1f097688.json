@@ -1,0 +1,158 @@
+{
+ "request_id": "de0c1f097688",
+ "question": "What is 15% of 240?",
+ "answer": "Calculating 15% of 240 is not covered in the provided evidence.",
+ "abstained": true,
+ "stop_reason": "insufficient_evidence",
+ "plan": null,
+ "plan_source": "none",
+ "tool_sequence": [
+  "search_knowledge_base"
+ ],
+ "citations": [],
+ "evidence": {
+  "S1": {
+   "id": "S1",
+   "kind": "document",
+   "title": "Python Exercise Guide",
+   "text": "Exercise Set A: Variables and Control Flow\nExercise A1. Write a program that asks for a temperature in Celsius and prints it in Fahrenheit. The formula is F = C * 9 / 5 + 32. Expected result: 100 Celsius becomes 212.0 Fahrenheit.\nExercise A2. Print all even numbers from 1 to 20 using a for loop and the modulo operator. Hint: a number n is even when n % 2 == 0. A common mistake is writing range(1, 20), which stops at 19; use range(1, 21).\nExercise A3. Implement FizzBuzz for numbers 1 to 30. Print \"Fizz\" for multiples of 3, \"Buzz\" for multiples of 5 and \"FizzBuzz\" for multiples of both. The test for multiples of both must come first, otherwise the Fizz branch will catch the number 15 too early.",
+   "doc_id": "python_exercise_guide",
+   "course_id": "python",
+   "location": "Exercise Set A: Variables and Control Flow",
+   "chunk_id": "python_exercise_guide:0001",
+   "score": 0.2315,
+   "data": {
+    "file_type": "docx",
+    "page": null,
+    "section": "Exercise Set A: Variables and Control Flow",
+    "filename": "python_exercise_guide.docx"
+   },
+   "derived_from": []
+  },
+  "S2": {
+   "id": "S2",
+   "kind": "document",
+   "title": "Statistics Lecture Notes",
+   "text": "affects 1% of people; a test detects it 95% of the time (sensitivity) and gives a false positive 5% of the time.  P(positive) = 0.95 * 0.01 + 0.05 * 0.99 = 0.059. So P(disease | positive) = 0.0095 / 0.059, about 0.161. Even after a positive test, the probability of disease is only about 16% because the disease is rare. This is the base rate effect.",
+   "doc_id": "statistics_lecture_notes",
+   "course_id": "statistics",
+   "location": "p.3",
+   "chunk_id": "statistics_lecture_notes:0004",
+   "score": 0.2878,
+   "data": {
+    "file_type": "pdf",
+    "page": 3,
+    "section": "2. Probability Fundamentals",
+    "filename": "statistics_lecture_notes.pdf"
+   },
+   "derived_from": []
+  },
+  "S3": {
+   "id": "S3",
+   "kind": "document",
+   "title": "Product Prices",
+   "text": "Dataset product_prices: 40 rows, columns: product_id, category, product_name, price_usd, units_sold.",
+   "doc_id": "product_prices",
+   "course_id": "data",
+   "location": "dataset overview",
+   "chunk_id": "product_prices:0000",
+   "score": 0.2855,
+   "data": {
+    "file_type": "csv",
+    "page": null,
+    "section": "dataset overview",
+    "filename": "product_prices.csv"
+   },
+   "derived_from": []
+  },
+  "S4": {
+   "id": "S4",
+   "kind": "document",
+   "title": "Statistics Exam Scores",
+   "text": "Dataset statistics_exam_scores: 20 rows, columns: student_id, section, hours_studied, exam_score.",
+   "doc_id": "statistics_exam_scores",
+   "course_id": "statistics",
+   "location": "dataset overview",
+   "chunk_id": "statistics_exam_scores:0000",
+   "score": 0.2847,
+   "data": {
+    "file_type": "csv",
+    "page": null,
+    "section": "dataset overview",
+    "filename": "statistics_exam_scores.csv"
+   },
+   "derived_from": []
+  },
+  "S5": {
+   "id": "S5",
+   "kind": "document",
+   "title": "Python Lecture Notes",
+   "text": "count from the end, so \"python\"[-1] is \"n\". Slicing \"python\"[1:4] returns \"yth\" (start included, stop excluded).  F-strings embed expressions inside text: f\"Total: {price * 2:.2f}\" formats a number with two decimals. Integer division // discards the fractional part (7 // 2 is 3), the modulo operator % returns the remainder (7 % 2 is 1), and ** is exponentiation (2 ** 10 is 1024). Dividing with / always returns a float, so 6 / 3 is 2.0.",
+   "doc_id": "python_lecture_notes",
+   "course_id": "python",
+   "location": "p.2",
+   "chunk_id": "python_lecture_notes:0002",
+   "score": 0.2762,
+   "data": {
+    "file_type": "pdf",
+    "page": 2,
+    "section": "1. Variables and Data Types",
+    "filename": "python_lecture_notes.pdf"
+   },
+   "derived_from": []
+  }
+ },
+ "trace": [
+  {
+   "seq": 1,
+   "t_ms": 1,
+   "type": "request_received",
+   "question": "What is 15% of 240?",
+   "scope": null,
+   "system": "standard_rag"
+  },
+  {
+   "seq": 2,
+   "t_ms": 62,
+   "type": "retrieval",
+   "query": "What is 15% of 240?",
+   "n": 5,
+   "sources": [
+    "S1",
+    "S2",
+    "S3",
+    "S4",
+    "S5"
+   ],
+   "best_score": 0.288
+  },
+  {
+   "seq": 3,
+   "t_ms": 2723,
+   "type": "answer",
+   "abstained": true,
+   "citations": []
+  }
+ ],
+ "validation": {
+  "n_cited_sentences": 0,
+  "n_supported": 0,
+  "support_rate": 0.0,
+  "invalid_ids": [],
+  "unsupported": [],
+  "uncited_numeric_sentences": []
+ },
+ "metrics": {
+  "latency_s": 2.72,
+  "llm_calls": 1,
+  "prompt_tokens": 875,
+  "completion_tokens": 26,
+  "tool_calls": 1,
+  "replans": 0,
+  "steps": 1
+ },
+ "system": "standard_rag",
+ "config": {
+  "top_k": 5
+ }
+}

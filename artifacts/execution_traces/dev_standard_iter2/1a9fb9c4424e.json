@@ -1,0 +1,179 @@
+{
+ "request_id": "1a9fb9c4424e",
+ "question": "What is the default join type of pandas merge and what does a left join keep?",
+ "answer": "The default join type of pandas merge is an inner join [S2], which keeps only keys present in both tables [S2]. A left join keeps every row of the left table and fills unmatched right-hand columns with NaN [S2].",
+ "abstained": false,
+ "stop_reason": "answered",
+ "plan": null,
+ "plan_source": "none",
+ "tool_sequence": [
+  "search_knowledge_base"
+ ],
+ "citations": [
+  {
+   "id": "S2",
+   "kind": "document",
+   "title": "Data Wrangling Handbook",
+   "text": "3. Combining Tables\npd.merge joins two DataFrames on key columns. The default is an inner join, which keeps only\nkeys present in both tables. A left join keeps every row of the left table and fills unmatched\nright-hand columns with NaN.\nIf a key is duplicated in both tables the result contains every pairing of the matching rows, so the\nrow count can grow (a many-to-many join). pd.concat stacks tables; by default it stacks vertically\n(axis=0).",
+   "doc_id": "data_wrangling_handbook",
+   "course_id": "data",
+   "location": "p.3",
+   "chunk_id": "data_wrangling_handbook:0002",
+   "score": 0.6113,
+   "data": {
+    "file_type": "pdf",
+    "page": 3,
+    "section": "3. Combining Tables",
+    "filename": "data_wrangling_handbook.pdf"
+   },
+   "derived_from": []
+  }
+ ],
+ "evidence": {
+  "S1": {
+   "id": "S1",
+   "kind": "document",
+   "title": "Data Glossary",
+   "text": "NULL: the SQL marker for a missing value.\nNaN: floating-point not-a-number used by pandas for missing numeric data.\nNone: Python's null object; pandas also treats None as missing in object columns.\nkey: the column or columns used to match rows when joining two tables.\nschema: the names and data types of the columns of a table.\nsample: DataFrame.sample(n=3) returns 3 random rows. It is a row draw, not a statistical sample design.\nmerge versus join: pd.merge joins on columns by default, whereas DataFrame.join joins on the index by default.\nindex: depends on context - database index, pandas Index or list position.",
+   "doc_id": "data_glossary",
+   "course_id": "data",
+   "location": "-",
+   "chunk_id": "data_glossary:0001",
+   "score": 0.6671,
+   "data": {
+    "file_type": "txt",
+    "page": null,
+    "section": null,
+    "filename": "data_glossary.txt"
+   },
+   "derived_from": []
+  },
+  "S2": {
+   "id": "S2",
+   "kind": "document",
+   "title": "Data Wrangling Handbook",
+   "text": "3. Combining Tables\npd.merge joins two DataFrames on key columns. The default is an inner join, which keeps only\nkeys present in both tables. A left join keeps every row of the left table and fills unmatched\nright-hand columns with NaN.\nIf a key is duplicated in both tables the result contains every pairing of the matching rows, so the\nrow count can grow (a many-to-many join). pd.concat stacks tables; by default it stacks vertically\n(axis=0).",
+   "doc_id": "data_wrangling_handbook",
+   "course_id": "data",
+   "location": "p.3",
+   "chunk_id": "data_wrangling_handbook:0002",
+   "score": 0.6113,
+   "data": {
+    "file_type": "pdf",
+    "page": 3,
+    "section": "3. Combining Tables",
+    "filename": "data_wrangling_handbook.pdf"
+   },
+   "derived_from": []
+  },
+  "S3": {
+   "id": "S3",
+   "kind": "document",
+   "title": "Pandas Function Defaults",
+   "text": "row 1: ref_id=PD001; function=pandas.DataFrame.dropna; parameter=how; default_value=any; note=drop a row if any value is missing\nrow 2: ref_id=PD002; function=pandas.merge; parameter=how; default_value=inner; note=keep only keys present in both tables\nrow 3: ref_id=PD003; function=pandas.read_csv; parameter=sep; default_value=,; note=comma separated values\nrow 4: ref_id=PD004; function=pandas.DataFrame.sort_values; parameter=ascending; default_value=True; note=sort from small to large\nrow 5: ref_id=PD005; function=pandas.DataFrame.drop_duplicates; parameter=keep; default_value=first; note=keep the first occurrence of a duplicated row\nrow 6: ref_id=PD006; function=pandas.DataFrame.head; parameter=n; default_value=5; note=number of rows returned\nrow 7: ref_id=PD007; function=pandas.DataFrame.to_csv; parameter=index; default_value=True; note=writes the row index as a column\nrow 8: ref_id=PD008; function=pandas.concat; parameter=axis; default_value=0; note=stack vertically",
+   "doc_id": "pandas_function_defaults",
+   "course_id": "data",
+   "location": "rows 1-8",
+   "chunk_id": "pandas_function_defaults:0001",
+   "score": 0.4087,
+   "data": {
+    "file_type": "csv",
+    "page": null,
+    "section": "data rows",
+    "filename": "pandas_function_defaults.csv"
+   },
+   "derived_from": []
+  },
+  "S4": {
+   "id": "S4",
+   "kind": "document",
+   "title": "Pandas Function Defaults",
+   "text": "Dataset pandas_function_defaults: 13 rows, columns: ref_id, function, parameter, default_value, note.",
+   "doc_id": "pandas_function_defaults",
+   "course_id": "data",
+   "location": "dataset overview",
+   "chunk_id": "pandas_function_defaults:0000",
+   "score": 0.4367,
+   "data": {
+    "file_type": "csv",
+    "page": null,
+    "section": "dataset overview",
+    "filename": "pandas_function_defaults.csv"
+   },
+   "derived_from": []
+  },
+  "S5": {
+   "id": "S5",
+   "kind": "document",
+   "title": "Data Legacy Lab Notes 2021",
+   "text": "Lab datasets are limited to 10,000 rows.\nSubmit a printed report.\nJoin tables with SQL only; pandas is optional.",
+   "doc_id": "data_legacy_lab_notes_2021",
+   "course_id": "data",
+   "location": "-",
+   "chunk_id": "data_legacy_lab_notes_2021:0001",
+   "score": 0.3632,
+   "data": {
+    "file_type": "txt",
+    "page": null,
+    "section": null,
+    "filename": "data_legacy_lab_notes_2021.txt"
+   },
+   "derived_from": []
+  }
+ },
+ "trace": [
+  {
+   "seq": 1,
+   "t_ms": 0,
+   "type": "request_received",
+   "question": "What is the default join type of pandas merge and what does a left join keep?",
+   "scope": null,
+   "system": "standard_rag"
+  },
+  {
+   "seq": 2,
+   "t_ms": 49,
+   "type": "retrieval",
+   "query": "What is the default join type of pandas merge and what does a left join keep?",
+   "n": 5,
+   "sources": [
+    "S1",
+    "S2",
+    "S3",
+    "S4",
+    "S5"
+   ],
+   "best_score": 0.667
+  },
+  {
+   "seq": 3,
+   "t_ms": 5700,
+   "type": "answer",
+   "abstained": false,
+   "citations": [
+    "S2"
+   ]
+  }
+ ],
+ "validation": {
+  "n_cited_sentences": 2,
+  "n_supported": 2,
+  "support_rate": 1.0,
+  "invalid_ids": [],
+  "unsupported": [],
+  "uncited_numeric_sentences": []
+ },
+ "metrics": {
+  "latency_s": 5.7,
+  "llm_calls": 1,
+  "prompt_tokens": 869,
+  "completion_tokens": 78,
+  "tool_calls": 1,
+  "replans": 0,
+  "steps": 1
+ },
+ "system": "standard_rag",
+ "config": {
+  "top_k": 5
+ }
+}

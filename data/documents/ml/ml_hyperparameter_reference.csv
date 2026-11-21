@@ -1,0 +1,15 @@
+ref_id,estimator,hyperparameter,default_value,effect_of_increasing
+HP001,RandomForestClassifier,n_estimators,100,More trees reduce variance but training takes longer
+HP002,RandomForestClassifier,max_depth,None,Deeper trees fit the training data more closely
+HP003,DecisionTreeClassifier,min_samples_leaf,1,Larger values smooth the model and reduce overfitting
+HP004,DecisionTreeClassifier,criterion,gini,Split quality measure; entropy is the alternative
+HP005,LogisticRegression,C,1.0,Larger C means weaker regularization
+HP006,LogisticRegression,max_iter,100,More iterations allow the solver to converge
+HP007,KNeighborsClassifier,n_neighbors,5,Larger k gives a smoother boundary and higher bias
+HP008,GradientBoostingClassifier,learning_rate,0.1,Larger values fit faster but risk overfitting
+HP009,GradientBoostingClassifier,n_estimators,100,More boosting stages fit the training data more closely
+HP010,Ridge,alpha,1.0,Larger alpha means stronger shrinkage
+HP011,SVC,C,1.0,Larger C penalizes misclassification more strongly
+HP012,SVC,kernel,rbf,Radial basis function kernel is the default
+HP013,KMeans,n_clusters,8,Number of centroids to form
+HP014,PCA,n_components,None,None keeps all components

@@ -1,0 +1,179 @@
+{
+ "request_id": "02364ba2dff9",
+ "question": "What does the Python course say is the late policy for submissions?",
+ "answer": "The late policy for submissions is that a submission loses 10% of its grade for each day it is late, for up to 3 days after the deadline [S1].",
+ "abstained": false,
+ "stop_reason": "answered",
+ "plan": null,
+ "plan_source": "none",
+ "tool_sequence": [
+  "search_knowledge_base"
+ ],
+ "citations": [
+  {
+   "id": "S1",
+   "kind": "document",
+   "title": "Python Faq Style Addendum",
+   "text": "Course Style Addendum\nFor course submissions the maximum line length is 99 characters. Docstrings use triple double quotes. Imports go at the top of the file in three groups: standard library, third-party packages, then local modules. Variable and function names use snake_case.\nLate policy: a submission loses 10% of its grade for each day it is late, for up to 3 days after the deadline.",
+   "doc_id": "python_faq_style_addendum",
+   "course_id": "python",
+   "location": "Course Style Addendum",
+   "chunk_id": "python_faq_style_addendum:0001",
+   "score": 0.4996,
+   "data": {
+    "file_type": "docx",
+    "page": null,
+    "section": "Course Style Addendum",
+    "filename": "python_faq_style_addendum.docx"
+   },
+   "derived_from": []
+  }
+ ],
+ "evidence": {
+  "S1": {
+   "id": "S1",
+   "kind": "document",
+   "title": "Python Faq Style Addendum",
+   "text": "Course Style Addendum\nFor course submissions the maximum line length is 99 characters. Docstrings use triple double quotes. Imports go at the top of the file in three groups: standard library, third-party packages, then local modules. Variable and function names use snake_case.\nLate policy: a submission loses 10% of its grade for each day it is late, for up to 3 days after the deadline.",
+   "doc_id": "python_faq_style_addendum",
+   "course_id": "python",
+   "location": "Course Style Addendum",
+   "chunk_id": "python_faq_style_addendum:0001",
+   "score": 0.4996,
+   "data": {
+    "file_type": "docx",
+    "page": null,
+    "section": "Course Style Addendum",
+    "filename": "python_faq_style_addendum.docx"
+   },
+   "derived_from": []
+  },
+  "S2": {
+   "id": "S2",
+   "kind": "document",
+   "title": "Python Faq Style Addendum",
+   "text": "Python Course FAQ and Style Addendum (v2, 2025)",
+   "doc_id": "python_faq_style_addendum",
+   "course_id": "python",
+   "location": "Python Course FAQ and Style Addendum (v2, 2025)",
+   "chunk_id": "python_faq_style_addendum:0000",
+   "score": 0.44,
+   "data": {
+    "file_type": "docx",
+    "page": null,
+    "section": "Python Course FAQ and Style Addendum (v2, 2025)",
+    "filename": "python_faq_style_addendum.docx"
+   },
+   "derived_from": []
+  },
+  "S3": {
+   "id": "S3",
+   "kind": "document",
+   "title": "Python Faq Style Addendum",
+   "text": "Frequently Asked Questions\nWhich Python version does the course use? The course uses Python 3.12 in all examples and tests.\nWhich editor should I use? Any editor is allowed; VS Code is used in the demonstrations.\nIs the statistics module allowed in assignments? Yes. statistics.variance(data) returns the sample variance, while statistics.pvariance(data) returns the population variance. In the same way statistics.stdev is the sample standard deviation and statistics.pstdev is the population standard deviation.\nWhere do I ask questions? Post them on the course forum; answers are usually given within two working days.",
+   "doc_id": "python_faq_style_addendum",
+   "course_id": "python",
+   "location": "Frequently Asked Questions",
+   "chunk_id": "python_faq_style_addendum:0002",
+   "score": 0.4487,
+   "data": {
+    "file_type": "docx",
+    "page": null,
+    "section": "Frequently Asked Questions",
+    "filename": "python_faq_style_addendum.docx"
+   },
+   "derived_from": []
+  },
+  "S4": {
+   "id": "S4",
+   "kind": "document",
+   "title": "Python Lecture Notes",
+   "text": "Python Lecture Notes\nPython Programming - independently written demonstration notes. Not official university material.",
+   "doc_id": "python_lecture_notes",
+   "course_id": "python",
+   "location": "p.1",
+   "chunk_id": "python_lecture_notes:0000",
+   "score": 0.4655,
+   "data": {
+    "file_type": "pdf",
+    "page": 1,
+    "section": null,
+    "filename": "python_lecture_notes.pdf"
+   },
+   "derived_from": []
+  },
+  "S5": {
+   "id": "S5",
+   "kind": "document",
+   "title": "Ml Project Handbook",
+   "text": "Project Deliverables and Compute Policy\nEvery project delivers a model card, two baselines and an error analysis. Training must finish in under 30 minutes on a laptop CPU. Allowed libraries are scikit-learn, pandas, numpy and matplotlib.",
+   "doc_id": "ml_project_handbook",
+   "course_id": "ml",
+   "location": "Project Deliverables and Compute Policy",
+   "chunk_id": "ml_project_handbook:0002",
+   "score": 0.3845,
+   "data": {
+    "file_type": "docx",
+    "page": null,
+    "section": "Project Deliverables and Compute Policy",
+    "filename": "ml_project_handbook.docx"
+   },
+   "derived_from": []
+  }
+ },
+ "trace": [
+  {
+   "seq": 1,
+   "t_ms": 0,
+   "type": "request_received",
+   "question": "What does the Python course say is the late policy for submissions?",
+   "scope": null,
+   "system": "standard_rag"
+  },
+  {
+   "seq": 2,
+   "t_ms": 13,
+   "type": "retrieval",
+   "query": "What does the Python course say is the late policy for submissions?",
+   "n": 5,
+   "sources": [
+    "S1",
+    "S2",
+    "S3",
+    "S4",
+    "S5"
+   ],
+   "best_score": 0.5
+  },
+  {
+   "seq": 3,
+   "t_ms": 2940,
+   "type": "answer",
+   "abstained": false,
+   "citations": [
+    "S1"
+   ]
+  }
+ ],
+ "validation": {
+  "n_cited_sentences": 1,
+  "n_supported": 1,
+  "support_rate": 1.0,
+  "invalid_ids": [],
+  "unsupported": [],
+  "uncited_numeric_sentences": []
+ },
+ "metrics": {
+  "latency_s": 2.94,
+  "llm_calls": 1,
+  "prompt_tokens": 672,
+  "completion_tokens": 39,
+  "tool_calls": 1,
+  "replans": 0,
+  "steps": 1
+ },
+ "system": "standard_rag",
+ "config": {
+  "top_k": 5
+ }
+}

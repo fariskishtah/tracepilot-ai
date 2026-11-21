@@ -1,0 +1,236 @@
+{
+ "request_id": "dbf20ef04276",
+ "question": "Compare bagging and boosting according to the ML terminology reference.",
+ "answer": "Bagging and boosting are ensemble methods used in machine learning. [S1] Bagging reduces variance, while boosting reduces bias. [S1] Bagging combines several models to reduce variance, whereas boosting sequentially adds models to correct earlier errors, aiming to reduce bias [S1] [S3] [S4] [S5].",
+ "abstained": false,
+ "stop_reason": "answered",
+ "plan": null,
+ "plan_source": "none",
+ "tool_sequence": [
+  "search_knowledge_base"
+ ],
+ "citations": [
+  {
+   "id": "S1",
+   "kind": "document",
+   "title": "Ml Reference Notes",
+   "text": "a category as a binary vector with a single 1. Standardization: rescaling to mean 0 and standard deviation 1.  Ensemble: combining several models; bagging reduces variance, boosting reduces bias. Clustering: grouping unlabeled examples; k-means assigns each point to the nearest of k centroids. PCA: principal component analysis, a linear technique for dimensionality reduction.",
+   "doc_id": "ml_reference_notes",
+   "course_id": "ml",
+   "location": "-",
+   "chunk_id": "ml_reference_notes:0003",
+   "score": 0.4772,
+   "data": {
+    "file_type": "txt",
+    "page": null,
+    "section": null,
+    "filename": "ml_reference_notes.txt"
+   },
+   "derived_from": []
+  },
+  {
+   "id": "S3",
+   "kind": "document",
+   "title": "Ml Model Evaluation Runs",
+   "text": "row 9: run_id=ML009; model=Gradient Boosting; task=fraud detection; train_accuracy=0.99; val_accuracy=0.985; precision=0.81; recall=0.74; f1=0.7734; notes=Highest F1 among fraud runs\nrow 10: run_id=ML010; model=Logistic Regression + class weights; task=fraud detection; train_accuracy=0.96; val_accuracy=0.95; precision=0.48; recall=0.83; f1=0.6082; notes=Recall up, precision down",
+   "doc_id": "ml_model_evaluation_runs",
+   "course_id": "ml",
+   "location": "rows 9-10",
+   "chunk_id": "ml_model_evaluation_runs:0002",
+   "score": 0.3806,
+   "data": {
+    "file_type": "csv",
+    "page": null,
+    "section": "data rows",
+    "filename": "ml_model_evaluation_runs.csv"
+   },
+   "derived_from": []
+  },
+  {
+   "id": "S4",
+   "kind": "document",
+   "title": "Ml Lecture Notes",
+   "text": "and test data. Common algorithms: linear regression, logistic regression, k-nearest neighbors (classifies by the  majority label among the k closest examples), decision trees (split data using feature thresholds; deep trees overfit), random forests (many decorrelated trees averaged to reduce variance) and gradient boosting (trees added sequentially to correct earlier errors).",
+   "doc_id": "ml_lecture_notes",
+   "course_id": "ml",
+   "location": "p.7",
+   "chunk_id": "ml_lecture_notes:0011",
+   "score": 0.3685,
+   "data": {
+    "file_type": "pdf",
+    "page": 7,
+    "section": "6. Feature Engineering and Common Algorithms",
+    "filename": "ml_lecture_notes.pdf"
+   },
+   "derived_from": []
+  },
+  {
+   "id": "S5",
+   "kind": "document",
+   "title": "Ml Overfitting Mitigation Guide",
+   "text": "Dropout and choosing between methods\n5. Choosing between methods L2 and early stopping are complementary and are often combined.\nEarly stopping is cheapest; L2 gives a smoother, more reproducible solution. Compare methods by\nvalidation accuracy, never by training accuracy.",
+   "doc_id": "ml_overfitting_mitigation_guide",
+   "course_id": "ml",
+   "location": "p.3",
+   "chunk_id": "ml_overfitting_mitigation_guide:0003",
+   "score": 0.3566,
+   "data": {
+    "file_type": "pdf",
+    "page": 3,
+    "section": null,
+    "filename": "ml_overfitting_mitigation_guide.pdf"
+   },
+   "derived_from": []
+  }
+ ],
+ "evidence": {
+  "S1": {
+   "id": "S1",
+   "kind": "document",
+   "title": "Ml Reference Notes",
+   "text": "a category as a binary vector with a single 1. Standardization: rescaling to mean 0 and standard deviation 1.  Ensemble: combining several models; bagging reduces variance, boosting reduces bias. Clustering: grouping unlabeled examples; k-means assigns each point to the nearest of k centroids. PCA: principal component analysis, a linear technique for dimensionality reduction.",
+   "doc_id": "ml_reference_notes",
+   "course_id": "ml",
+   "location": "-",
+   "chunk_id": "ml_reference_notes:0003",
+   "score": 0.4772,
+   "data": {
+    "file_type": "txt",
+    "page": null,
+    "section": null,
+    "filename": "ml_reference_notes.txt"
+   },
+   "derived_from": []
+  },
+  "S2": {
+   "id": "S2",
+   "kind": "document",
+   "title": "Ml Reference Notes",
+   "text": "MACHINE LEARNING TERMINOLOGY REFERENCE (original demo material, CC BY 4.0)\n==========================================================================",
+   "doc_id": "ml_reference_notes",
+   "course_id": "ml",
+   "location": "-",
+   "chunk_id": "ml_reference_notes:0000",
+   "score": 0.4609,
+   "data": {
+    "file_type": "txt",
+    "page": null,
+    "section": null,
+    "filename": "ml_reference_notes.txt"
+   },
+   "derived_from": []
+  },
+  "S3": {
+   "id": "S3",
+   "kind": "document",
+   "title": "Ml Model Evaluation Runs",
+   "text": "row 9: run_id=ML009; model=Gradient Boosting; task=fraud detection; train_accuracy=0.99; val_accuracy=0.985; precision=0.81; recall=0.74; f1=0.7734; notes=Highest F1 among fraud runs\nrow 10: run_id=ML010; model=Logistic Regression + class weights; task=fraud detection; train_accuracy=0.96; val_accuracy=0.95; precision=0.48; recall=0.83; f1=0.6082; notes=Recall up, precision down",
+   "doc_id": "ml_model_evaluation_runs",
+   "course_id": "ml",
+   "location": "rows 9-10",
+   "chunk_id": "ml_model_evaluation_runs:0002",
+   "score": 0.3806,
+   "data": {
+    "file_type": "csv",
+    "page": null,
+    "section": "data rows",
+    "filename": "ml_model_evaluation_runs.csv"
+   },
+   "derived_from": []
+  },
+  "S4": {
+   "id": "S4",
+   "kind": "document",
+   "title": "Ml Lecture Notes",
+   "text": "and test data. Common algorithms: linear regression, logistic regression, k-nearest neighbors (classifies by the  majority label among the k closest examples), decision trees (split data using feature thresholds; deep trees overfit), random forests (many decorrelated trees averaged to reduce variance) and gradient boosting (trees added sequentially to correct earlier errors).",
+   "doc_id": "ml_lecture_notes",
+   "course_id": "ml",
+   "location": "p.7",
+   "chunk_id": "ml_lecture_notes:0011",
+   "score": 0.3685,
+   "data": {
+    "file_type": "pdf",
+    "page": 7,
+    "section": "6. Feature Engineering and Common Algorithms",
+    "filename": "ml_lecture_notes.pdf"
+   },
+   "derived_from": []
+  },
+  "S5": {
+   "id": "S5",
+   "kind": "document",
+   "title": "Ml Overfitting Mitigation Guide",
+   "text": "Dropout and choosing between methods\n5. Choosing between methods L2 and early stopping are complementary and are often combined.\nEarly stopping is cheapest; L2 gives a smoother, more reproducible solution. Compare methods by\nvalidation accuracy, never by training accuracy.",
+   "doc_id": "ml_overfitting_mitigation_guide",
+   "course_id": "ml",
+   "location": "p.3",
+   "chunk_id": "ml_overfitting_mitigation_guide:0003",
+   "score": 0.3566,
+   "data": {
+    "file_type": "pdf",
+    "page": 3,
+    "section": null,
+    "filename": "ml_overfitting_mitigation_guide.pdf"
+   },
+   "derived_from": []
+  }
+ },
+ "trace": [
+  {
+   "seq": 1,
+   "t_ms": 0,
+   "type": "request_received",
+   "question": "Compare bagging and boosting according to the ML terminology reference.",
+   "scope": null,
+   "system": "standard_rag"
+  },
+  {
+   "seq": 2,
+   "t_ms": 41,
+   "type": "retrieval",
+   "query": "Compare bagging and boosting according to the ML terminology reference.",
+   "n": 5,
+   "sources": [
+    "S1",
+    "S2",
+    "S3",
+    "S4",
+    "S5"
+   ],
+   "best_score": 0.477
+  },
+  {
+   "seq": 3,
+   "t_ms": 10192,
+   "type": "answer",
+   "abstained": false,
+   "citations": [
+    "S1",
+    "S3",
+    "S4",
+    "S5"
+   ]
+  }
+ ],
+ "validation": {
+  "n_cited_sentences": 2,
+  "n_supported": 2,
+  "support_rate": 1.0,
+  "invalid_ids": [],
+  "unsupported": [],
+  "uncited_numeric_sentences": []
+ },
+ "metrics": {
+  "latency_s": 10.19,
+  "llm_calls": 1,
+  "prompt_tokens": 730,
+  "completion_tokens": 60,
+  "tool_calls": 1,
+  "replans": 0,
+  "steps": 1
+ },
+ "system": "standard_rag",
+ "config": {
+  "top_k": 5
+ }
+}

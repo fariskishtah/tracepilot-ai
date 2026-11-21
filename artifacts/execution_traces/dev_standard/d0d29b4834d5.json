@@ -1,0 +1,179 @@
+{
+ "request_id": "d0d29b4834d5",
+ "question": "What is the difference between a shallow copy and a deep copy of a Python list?",
+ "answer": "A shallow copy of a Python list creates a new list with the same elements as the original list. [S1] This means that if you modify the elements of the original list, the changes will be reflected in the copy. [S1] However, if the elements are mutable objects (like other lists or dictionaries), the copy will share those objects with the original. [S1] This is in contrast to a deep copy, which creates a new list and recursively copies all elements, including mutable ones, into the new list [S1].",
+ "abstained": false,
+ "stop_reason": "answered",
+ "plan": null,
+ "plan_source": "none",
+ "tool_sequence": [
+  "search_knowledge_base"
+ ],
+ "citations": [
+  {
+   "id": "S1",
+   "kind": "document",
+   "title": "Python Lecture Notes",
+   "text": "up ages[\"Ali\"] raises KeyError when the key is missing, whereas ages.get(\"Sam\", 0) returns the default 0. The methods  keys(), values() and items() return views for iteration. Since Python 3.7 dictionaries preserve insertion order. Dictionary comprehensions such as {w: len(w) for w in words} are common. Copying matters: b = a makes both names refer to the same list, while b = a.copy() creates a shallow copy. A shallow copy still shares nested objects; copy.deepcopy copies them too.",
+   "doc_id": "python_lecture_notes",
+   "course_id": "python",
+   "location": "p.5",
+   "chunk_id": "python_lecture_notes:0008",
+   "score": 0.5743,
+   "data": {
+    "file_type": "pdf",
+    "page": 5,
+    "section": "4. Lists, Tuples, Sets and Dictionaries",
+    "filename": "python_lecture_notes.pdf"
+   },
+   "derived_from": []
+  }
+ ],
+ "evidence": {
+  "S1": {
+   "id": "S1",
+   "kind": "document",
+   "title": "Python Lecture Notes",
+   "text": "up ages[\"Ali\"] raises KeyError when the key is missing, whereas ages.get(\"Sam\", 0) returns the default 0. The methods  keys(), values() and items() return views for iteration. Since Python 3.7 dictionaries preserve insertion order. Dictionary comprehensions such as {w: len(w) for w in words} are common. Copying matters: b = a makes both names refer to the same list, while b = a.copy() creates a shallow copy. A shallow copy still shares nested objects; copy.deepcopy copies them too.",
+   "doc_id": "python_lecture_notes",
+   "course_id": "python",
+   "location": "p.5",
+   "chunk_id": "python_lecture_notes:0008",
+   "score": 0.5743,
+   "data": {
+    "file_type": "pdf",
+    "page": 5,
+    "section": "4. Lists, Tuples, Sets and Dictionaries",
+    "filename": "python_lecture_notes.pdf"
+   },
+   "derived_from": []
+  },
+  "S2": {
+   "id": "S2",
+   "kind": "document",
+   "title": "Python Lecture Notes",
+   "text": "4. Lists, Tuples, Sets and Dictionaries A list is an ordered, mutable sequence: nums = [3, 1, 2]. Common methods are append(x) to add at the end, insert(i, x), remove(x), pop() to remove and return the last item, and sort() to sort in place. The built-in sorted(nums) returns a new sorted list and leaves the original unchanged. List comprehensions build lists concisely: [n * n for n in nums if n > 1]. A tuple is an ordered but immutable sequence, written (1, 2). Tuples are used for fixed records and can be dictionary keys because they are hashable. A set stores unique, unordered elements and supports fast membership tests plus union (|), intersection (&) and difference (-). A dictionary maps keys to values: ages = {\"Ali\": 20, \"Mona\": 22}. Looking up ages[\"Ali\"] raises KeyError when the key is missing, whereas ages.get(\"Sam\", 0) returns the default 0. The methods",
+   "doc_id": "python_lecture_notes",
+   "course_id": "python",
+   "location": "p.5",
+   "chunk_id": "python_lecture_notes:0007",
+   "score": 0.4183,
+   "data": {
+    "file_type": "pdf",
+    "page": 5,
+    "section": "4. Lists, Tuples, Sets and Dictionaries",
+    "filename": "python_lecture_notes.pdf"
+   },
+   "derived_from": []
+  },
+  "S3": {
+   "id": "S3",
+   "kind": "document",
+   "title": "Python Debugging Playbook",
+   "text": "3. Lookup Errors Compared\nKeyError is raised when a dictionary key is missing. IndexError is raised when a sequence index is\nout of range. AttributeError is raised when an object has no attribute of that name.\nThe message 'NoneType' object has no attribute 'append' almost always means a variable holds\nNone instead of a list. The classic cause is writing nums = nums.sort(), because list.sort() sorts in\nplace and returns None. Use nums.sort() on its own line or sorted(nums) when a new list is\nneeded.\ndict.get(key, default) avoids a KeyError, while collections.defaultdict(list) creates a missing key with\nan empty list the first time it is accessed, which makes grouping code shorter.",
+   "doc_id": "python_debugging_playbook",
+   "course_id": "python",
+   "location": "p.3",
+   "chunk_id": "python_debugging_playbook:0002",
+   "score": 0.3829,
+   "data": {
+    "file_type": "pdf",
+    "page": 3,
+    "section": "3. Lookup Errors Compared",
+    "filename": "python_debugging_playbook.pdf"
+   },
+   "derived_from": []
+  },
+  "S4": {
+   "id": "S4",
+   "kind": "document",
+   "title": "Python Debugging Playbook",
+   "text": "4. Performance Pitfalls\nfunctools.lru_cache(maxsize=128) caches the results of a function for repeated arguments; the\ndefault maxsize is 128 and maxsize=None removes the limit. Arguments must be hashable.\nBuilding a long string with += inside a loop copies the string repeatedly; collect the pieces in a list\nand call \"\".join(parts) once. A membership test with in is a linear scan for a list but an average\nconstant-time lookup for a set or dict, so convert a list to a set when you test membership many\ntimes.\ncollections.Counter(words).most_common(3) returns the three most frequent items as (item, count)\npairs. Sorting with sorted(items, key=len) is faster and clearer than writing a comparison function.",
+   "doc_id": "python_debugging_playbook",
+   "course_id": "python",
+   "location": "p.4",
+   "chunk_id": "python_debugging_playbook:0003",
+   "score": 0.3418,
+   "data": {
+    "file_type": "pdf",
+    "page": 4,
+    "section": "4. Performance Pitfalls",
+    "filename": "python_debugging_playbook.pdf"
+   },
+   "derived_from": []
+  },
+  "S5": {
+   "id": "S5",
+   "kind": "document",
+   "title": "Python Glossary Overloaded Terms",
+   "text": "program prints the same random numbers on every run. iterable: an object you can loop over, such as a list or string.  An iterator is the object that produces the values one at a time and is returned by iter(iterable). generator: a function that uses yield to produce values lazily, one at a time, instead of building a whole list in memory. decorator: a function that wraps another function; written with the @ syntax above a def line. mean: Python has no built-in mean. Use statistics.mean(data), or statistics.fmean(data) for a faster floating-point mean.",
+   "doc_id": "python_glossary_overloaded_terms",
+   "course_id": "python",
+   "location": "-",
+   "chunk_id": "python_glossary_overloaded_terms:0002",
+   "score": 0.2874,
+   "data": {
+    "file_type": "txt",
+    "page": null,
+    "section": null,
+    "filename": "python_glossary_overloaded_terms.txt"
+   },
+   "derived_from": []
+  }
+ },
+ "trace": [
+  {
+   "seq": 1,
+   "t_ms": 0,
+   "type": "request_received",
+   "question": "What is the difference between a shallow copy and a deep copy of a Python list?",
+   "scope": null,
+   "system": "standard_rag"
+  },
+  {
+   "seq": 2,
+   "t_ms": 16,
+   "type": "retrieval",
+   "query": "What is the difference between a shallow copy and a deep copy of a Python list?",
+   "n": 5,
+   "sources": [
+    "S1",
+    "S2",
+    "S3",
+    "S4",
+    "S5"
+   ],
+   "best_score": 0.574
+  },
+  {
+   "seq": 3,
+   "t_ms": 6097,
+   "type": "answer",
+   "abstained": false,
+   "citations": [
+    "S1"
+   ]
+  }
+ ],
+ "validation": {
+  "n_cited_sentences": 3,
+  "n_supported": 3,
+  "support_rate": 1.0,
+  "invalid_ids": [],
+  "unsupported": [],
+  "uncited_numeric_sentences": []
+ },
+ "metrics": {
+  "latency_s": 6.1,
+  "llm_calls": 1,
+  "prompt_tokens": 1106,
+  "completion_tokens": 101,
+  "tool_calls": 1,
+  "replans": 0,
+  "steps": 1
+ },
+ "system": "standard_rag",
+ "config": {
+  "top_k": 5
+ }
+}

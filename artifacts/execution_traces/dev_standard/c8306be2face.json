@@ -1,0 +1,179 @@
+{
+ "request_id": "c8306be2face",
+ "question": "Calculate the difference in val_accuracy between runs ML003 and ML002 in the ML model evaluation runs dataset and explain why limiting tree depth helps.",
+ "answer": "Limiting the tree depth to 4 in run ML003 reduces overfitting, as indicated by the notes stating it reduces overfitting [S3].",
+ "abstained": false,
+ "stop_reason": "answered",
+ "plan": null,
+ "plan_source": "none",
+ "tool_sequence": [
+  "search_knowledge_base"
+ ],
+ "citations": [
+  {
+   "id": "S3",
+   "kind": "document",
+   "title": "Ml Exercise Guide",
+   "text": "Assignment 1: Diagnosing a Model\nTask. You trained a decision tree classifier and obtained 99% training accuracy but 71% validation accuracy. Explain what is happening and propose two fixes.\nExpected answer. The large gap between training and validation accuracy is the signature of overfitting (high variance). Fixes include limiting the maximum depth of the tree, requiring a minimum number of samples per leaf, pruning, switching to a random forest, or collecting more data. Report validation performance using cross-validation rather than a single split.",
+   "doc_id": "ml_exercise_guide",
+   "course_id": "ml",
+   "location": "Assignment 1: Diagnosing a Model",
+   "chunk_id": "ml_exercise_guide:0001",
+   "score": 0.4957,
+   "data": {
+    "file_type": "docx",
+    "page": null,
+    "section": "Assignment 1: Diagnosing a Model",
+    "filename": "ml_exercise_guide.docx"
+   },
+   "derived_from": []
+  }
+ ],
+ "evidence": {
+  "S1": {
+   "id": "S1",
+   "kind": "document",
+   "title": "Ml Model Evaluation Runs",
+   "text": "row 1: run_id=ML001; model=Logistic Regression; task=spam classification; train_accuracy=0.94; val_accuracy=0.93; precision=0.91; recall=0.89; f1=0.8999; notes=Good baseline, small gap\nrow 2: run_id=ML002; model=Decision Tree (depth=None); task=spam classification; train_accuracy=1.0; val_accuracy=0.86; precision=0.84; recall=0.83; f1=0.835; notes=Overfits: perfect training accuracy\nrow 3: run_id=ML003; model=Decision Tree (depth=4); task=spam classification; train_accuracy=0.92; val_accuracy=0.9; precision=0.88; recall=0.86; f1=0.8699; notes=Depth limit reduces overfitting\nrow 4: run_id=ML004; model=Random Forest (100 trees); task=spam classification; train_accuracy=0.99; val_accuracy=0.95; precision=0.94; recall=0.93; f1=0.935; notes=Best validation accuracy of spam runs\nrow 5: run_id=ML005; model=k-NN (k=1); task=spam classification; train_accuracy=1.0; val_accuracy=0.88; precision=0.86; recall=0.85; f1=0.855; notes=k=1 memorizes training data\nrow 6: run_id=ML006; model=k-NN (k=15); task=spam classification; train_accuracy=0.91; val_accuracy=0.91; precision=0.9; recall=0.87; f1=0.8847; notes=Smoother decision boundary\nrow 7: run_id=ML007; model=Always predict majority; task=fraud detection; train_accuracy=0.99; val_accuracy=0.99; precision=0.0; recall=0.0; f1=0.0; notes=Accuracy 0.99 but recall 0: useless on rare class\nrow 8: run_id=ML008; model=Logistic Regression; task=fraud detection; train_accuracy=0.98; val_accuracy=0.98; precision=0.62; recall=0.55; f1=0.5829; notes=Moderate recall on rare class",
+   "doc_id": "ml_model_evaluation_runs",
+   "course_id": "ml",
+   "location": "rows 1-8",
+   "chunk_id": "ml_model_evaluation_runs:0001",
+   "score": 0.5681,
+   "data": {
+    "file_type": "csv",
+    "page": null,
+    "section": "data rows",
+    "filename": "ml_model_evaluation_runs.csv"
+   },
+   "derived_from": []
+  },
+  "S2": {
+   "id": "S2",
+   "kind": "document",
+   "title": "Ml Model Evaluation Runs",
+   "text": "Dataset ml_model_evaluation_runs: 10 rows, columns: run_id, model, task, train_accuracy, val_accuracy, precision, recall, f1, notes.",
+   "doc_id": "ml_model_evaluation_runs",
+   "course_id": "ml",
+   "location": "dataset overview",
+   "chunk_id": "ml_model_evaluation_runs:0000",
+   "score": 0.4414,
+   "data": {
+    "file_type": "csv",
+    "page": null,
+    "section": "dataset overview",
+    "filename": "ml_model_evaluation_runs.csv"
+   },
+   "derived_from": []
+  },
+  "S3": {
+   "id": "S3",
+   "kind": "document",
+   "title": "Ml Exercise Guide",
+   "text": "Assignment 1: Diagnosing a Model\nTask. You trained a decision tree classifier and obtained 99% training accuracy but 71% validation accuracy. Explain what is happening and propose two fixes.\nExpected answer. The large gap between training and validation accuracy is the signature of overfitting (high variance). Fixes include limiting the maximum depth of the tree, requiring a minimum number of samples per leaf, pruning, switching to a random forest, or collecting more data. Report validation performance using cross-validation rather than a single split.",
+   "doc_id": "ml_exercise_guide",
+   "course_id": "ml",
+   "location": "Assignment 1: Diagnosing a Model",
+   "chunk_id": "ml_exercise_guide:0001",
+   "score": 0.4957,
+   "data": {
+    "file_type": "docx",
+    "page": null,
+    "section": "Assignment 1: Diagnosing a Model",
+    "filename": "ml_exercise_guide.docx"
+   },
+   "derived_from": []
+  },
+  "S4": {
+   "id": "S4",
+   "kind": "document",
+   "title": "Ml Regularization Experiments",
+   "text": "row 1: run_id=R01; model=MLP (2 hidden layers); dataset=image-tiny; technique=none (baseline); train_accuracy=0.998; val_accuracy=0.812; epochs=60; notes=Memorizes training set; large train-val gap\nrow 2: run_id=R02; model=MLP (2 hidden layers); dataset=image-tiny; technique=L2 weight decay 1e-3; train_accuracy=0.951; val_accuracy=0.874; epochs=60; notes=Gap shrinks; weights shrunk\nrow 3: run_id=R03; model=MLP (2 hidden layers); dataset=image-tiny; technique=dropout p=0.3; train_accuracy=0.943; val_accuracy=0.881; epochs=60; notes=Stochastic unit removal at training time\nrow 4: run_id=R04; model=MLP (2 hidden layers); dataset=image-tiny; technique=early stopping patience=5; train_accuracy=0.927; val_accuracy=0.866; epochs=23; notes=Stopped at epoch 23 of 60 saving compute\nrow 5: run_id=R05; model=MLP (2 hidden layers); dataset=image-tiny; technique=L2 + early stopping; train_accuracy=0.935; val_accuracy=0.889; epochs=27; notes=Best validation accuracy of the image-tiny runs\nrow 6: run_id=R06; model=MLP (2 hidden layers); dataset=image-tiny; technique=data augmentation; train_accuracy=0.962; val_accuracy=0.893; epochs=60; notes=Highest validation accuracy but needs extra preprocessing\nrow 7: run_id=R07; model=Gradient Boosting; dataset=tabular-churn; technique=none (baseline); train_accuracy=0.991; val_accuracy=0.842; epochs=300; notes=Deep trees overfit\nrow 8: run_id=R08; model=Gradient Boosting; dataset=tabular-churn; technique=shrinkage 0.05 + max_depth 3; train_accuracy=0.902; val_accuracy=0.861; epochs=300; notes=Shallower trees reduce variance",
+   "doc_id": "ml_regularization_experiments",
+   "course_id": "ml",
+   "location": "rows 1-8",
+   "chunk_id": "ml_regularization_experiments:0001",
+   "score": 0.4203,
+   "data": {
+    "file_type": "csv",
+    "page": null,
+    "section": "data rows",
+    "filename": "ml_regularization_experiments.csv"
+   },
+   "derived_from": []
+  },
+  "S5": {
+   "id": "S5",
+   "kind": "document",
+   "title": "Ml Regularization Experiments",
+   "text": "Dataset ml_regularization_experiments: 9 rows, columns: run_id, model, dataset, technique, train_accuracy, val_accuracy, epochs, notes.",
+   "doc_id": "ml_regularization_experiments",
+   "course_id": "ml",
+   "location": "dataset overview",
+   "chunk_id": "ml_regularization_experiments:0000",
+   "score": 0.3836,
+   "data": {
+    "file_type": "csv",
+    "page": null,
+    "section": "dataset overview",
+    "filename": "ml_regularization_experiments.csv"
+   },
+   "derived_from": []
+  }
+ },
+ "trace": [
+  {
+   "seq": 1,
+   "t_ms": 0,
+   "type": "request_received",
+   "question": "Calculate the difference in val_accuracy between runs ML003 and ML002 in the ML model evaluation runs dataset and explain why limiting tree depth helps.",
+   "scope": null,
+   "system": "standard_rag"
+  },
+  {
+   "seq": 2,
+   "t_ms": 52,
+   "type": "retrieval",
+   "query": "Calculate the difference in val_accuracy between runs ML003 and ML002 in the ML model evaluation runs dataset and explain why limiting tree depth helps.",
+   "n": 5,
+   "sources": [
+    "S1",
+    "S2",
+    "S3",
+    "S4",
+    "S5"
+   ],
+   "best_score": 0.568
+  },
+  {
+   "seq": 3,
+   "t_ms": 20002,
+   "type": "answer",
+   "abstained": false,
+   "citations": [
+    "S3"
+   ]
+  }
+ ],
+ "validation": {
+  "n_cited_sentences": 1,
+  "n_supported": 1,
+  "support_rate": 1.0,
+  "invalid_ids": [],
+  "unsupported": [],
+  "uncited_numeric_sentences": []
+ },
+ "metrics": {
+  "latency_s": 20.0,
+  "llm_calls": 2,
+  "prompt_tokens": 2354,
+  "completion_tokens": 328,
+  "tool_calls": 1,
+  "replans": 0,
+  "steps": 1
+ },
+ "system": "standard_rag",
+ "config": {
+  "top_k": 5
+ }
+}

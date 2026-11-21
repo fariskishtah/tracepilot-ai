@@ -1,0 +1,21 @@
+exercise_id,topic,concept,example_code,expected_output,difficulty
+PY001,Variables,Integer division,7 // 2,3,easy
+PY002,Variables,Modulo operator,7 % 2,1,easy
+PY003,Variables,Exponentiation,2 ** 10,1024,easy
+PY004,Variables,True division always returns float,6 / 3,2.0,easy
+PY005,Strings,Negative indexing,'python'[-1],n,easy
+PY006,Strings,Slicing excludes stop index,'python'[1:4],yth,easy
+PY007,Lists,Sorted returns new list,"sorted([3, 1, 2])","[1, 2, 3]",easy
+PY008,Lists,List comprehension with filter,"[n * n for n in [1, 2, 3] if n > 1]","[4, 9]",medium
+PY009,Dictionaries,get returns default for missing key,"{'a': 1}.get('b', 0)",0,easy
+PY010,Dictionaries,Missing key raises KeyError,{'a': 1}['b'],KeyError,easy
+PY011,Loops,range excludes stop,"list(range(1, 4))","[1, 2, 3]",easy
+PY012,Loops,zip stops at shortest,"list(zip([1, 2, 3], ['a', 'b']))","[(1, 'a'), (2, 'b')]",medium
+PY013,Functions,Function without return gives None,def f(): pass; f(),None,easy
+PY014,Functions,Mutable default argument bug,"def add(x, b=[]): b.append(x); return b",Shared list across calls,hard
+PY015,Exceptions,Converting bad text to int,int('abc'),ValueError,easy
+PY016,Exceptions,Division by zero,1 / 0,ZeroDivisionError,easy
+PY017,Files,Safe file reading,with open('a.txt') as f: f.read(),File closed automatically,medium
+PY018,OOP,Inheritance with super,class B(A): def __init__(self): super().__init__(),Parent initializer runs,medium
+PY019,Sets,Set intersection,"{1, 2, 3} & {2, 3, 4}","{2, 3}",medium
+PY020,Strings,Split on comma,"'a,b,c'.split(',')","['a', 'b', 'c']",easy

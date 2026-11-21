@@ -1,0 +1,9 @@
+MACHINE LEARNING EVALUATION PROTOCOL v1 (2023 edition, SUPERSEDED)
+==================================================================
+
+This protocol applied to projects started before 2025 and was replaced by protocol v2.
+
+Split the data 60% training, 20% validation and 20% test.
+Use k = 10 folds for cross-validation.
+The primary metric is accuracy.
+Fix the random seed to 0.

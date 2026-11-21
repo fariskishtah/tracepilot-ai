@@ -1,0 +1,217 @@
+{
+ "request_id": "f329e40ecd22",
+ "question": "How many folds should cross-validation use under the current evaluation protocol?",
+ "answer": "The current evaluation protocol uses k = 5 folds for cross-validation [S1] [S2] [S3].",
+ "abstained": false,
+ "stop_reason": "answered",
+ "plan": null,
+ "plan_source": "none",
+ "tool_sequence": [
+  "search_knowledge_base"
+ ],
+ "citations": [
+  {
+   "id": "S1",
+   "kind": "document",
+   "title": "Ml Project Handbook",
+   "text": "Evaluation Protocol v2\nEvaluation protocol v2 supersedes protocol v1 for all projects started in 2025. Split the data 70% training, 15% validation and 15% test. Use k = 5 folds for cross-validation and report the mean and standard deviation of the fold scores. Set random_state=42 everywhere. The test set may be used exactly once. The primary metric is F1 for imbalanced data and accuracy otherwise.",
+   "doc_id": "ml_project_handbook",
+   "course_id": "ml",
+   "location": "Evaluation Protocol v2",
+   "chunk_id": "ml_project_handbook:0001",
+   "score": 0.5873,
+   "data": {
+    "file_type": "docx",
+    "page": null,
+    "section": "Evaluation Protocol v2",
+    "filename": "ml_project_handbook.docx"
+   },
+   "derived_from": []
+  },
+  {
+   "id": "S2",
+   "kind": "document",
+   "title": "Ml Evaluation Protocol V1",
+   "text": "Split the data 60% training, 20% validation and 20% test.\nUse k = 10 folds for cross-validation.\nThe primary metric is accuracy.\nFix the random seed to 0.",
+   "doc_id": "ml_evaluation_protocol_v1",
+   "course_id": "ml",
+   "location": "-",
+   "chunk_id": "ml_evaluation_protocol_v1:0002",
+   "score": 0.3212,
+   "data": {
+    "file_type": "txt",
+    "page": null,
+    "section": null,
+    "filename": "ml_evaluation_protocol_v1.txt"
+   },
+   "derived_from": []
+  },
+  {
+   "id": "S3",
+   "kind": "document",
+   "title": "Ml Lecture Notes",
+   "text": "5. Data Splitting and Cross-Validation Data is usually divided into a training set for fitting, a validation set for tuning hyperparameters and a test set used once for the final unbiased estimate. Using the test set repeatedly for decisions leaks information and makes the estimate optimistic. Data leakage more generally means that information from outside the training data, such as future values or the target itself, influences the features; it produces unrealistically good scores that collapse in production. k-fold cross-validation splits the training data into k equal folds. The model is trained k times, each time holding out a different fold for validation, and the k scores are averaged. Typical values are k = 5 or k = 10. Stratified k-fold preserves the class proportions in every fold and is recommended for classification with imbalanced classes.",
+   "doc_id": "ml_lecture_notes",
+   "course_id": "ml",
+   "location": "p.6",
+   "chunk_id": "ml_lecture_notes:0008",
+   "score": 0.5512,
+   "data": {
+    "file_type": "pdf",
+    "page": 6,
+    "section": "5. Data Splitting and Cross-Validation",
+    "filename": "ml_lecture_notes.pdf"
+   },
+   "derived_from": []
+  }
+ ],
+ "evidence": {
+  "S1": {
+   "id": "S1",
+   "kind": "document",
+   "title": "Ml Project Handbook",
+   "text": "Evaluation Protocol v2\nEvaluation protocol v2 supersedes protocol v1 for all projects started in 2025. Split the data 70% training, 15% validation and 15% test. Use k = 5 folds for cross-validation and report the mean and standard deviation of the fold scores. Set random_state=42 everywhere. The test set may be used exactly once. The primary metric is F1 for imbalanced data and accuracy otherwise.",
+   "doc_id": "ml_project_handbook",
+   "course_id": "ml",
+   "location": "Evaluation Protocol v2",
+   "chunk_id": "ml_project_handbook:0001",
+   "score": 0.5873,
+   "data": {
+    "file_type": "docx",
+    "page": null,
+    "section": "Evaluation Protocol v2",
+    "filename": "ml_project_handbook.docx"
+   },
+   "derived_from": []
+  },
+  "S2": {
+   "id": "S2",
+   "kind": "document",
+   "title": "Ml Evaluation Protocol V1",
+   "text": "Split the data 60% training, 20% validation and 20% test.\nUse k = 10 folds for cross-validation.\nThe primary metric is accuracy.\nFix the random seed to 0.",
+   "doc_id": "ml_evaluation_protocol_v1",
+   "course_id": "ml",
+   "location": "-",
+   "chunk_id": "ml_evaluation_protocol_v1:0002",
+   "score": 0.3212,
+   "data": {
+    "file_type": "txt",
+    "page": null,
+    "section": null,
+    "filename": "ml_evaluation_protocol_v1.txt"
+   },
+   "derived_from": []
+  },
+  "S3": {
+   "id": "S3",
+   "kind": "document",
+   "title": "Ml Lecture Notes",
+   "text": "5. Data Splitting and Cross-Validation Data is usually divided into a training set for fitting, a validation set for tuning hyperparameters and a test set used once for the final unbiased estimate. Using the test set repeatedly for decisions leaks information and makes the estimate optimistic. Data leakage more generally means that information from outside the training data, such as future values or the target itself, influences the features; it produces unrealistically good scores that collapse in production. k-fold cross-validation splits the training data into k equal folds. The model is trained k times, each time holding out a different fold for validation, and the k scores are averaged. Typical values are k = 5 or k = 10. Stratified k-fold preserves the class proportions in every fold and is recommended for classification with imbalanced classes.",
+   "doc_id": "ml_lecture_notes",
+   "course_id": "ml",
+   "location": "p.6",
+   "chunk_id": "ml_lecture_notes:0008",
+   "score": 0.5512,
+   "data": {
+    "file_type": "pdf",
+    "page": 6,
+    "section": "5. Data Splitting and Cross-Validation",
+    "filename": "ml_lecture_notes.pdf"
+   },
+   "derived_from": []
+  },
+  "S4": {
+   "id": "S4",
+   "kind": "document",
+   "title": "Ml Evaluation Protocol V1",
+   "text": "MACHINE LEARNING EVALUATION PROTOCOL v1 (2023 edition, SUPERSEDED)\n==================================================================",
+   "doc_id": "ml_evaluation_protocol_v1",
+   "course_id": "ml",
+   "location": "-",
+   "chunk_id": "ml_evaluation_protocol_v1:0000",
+   "score": 0.2896,
+   "data": {
+    "file_type": "txt",
+    "page": null,
+    "section": null,
+    "filename": "ml_evaluation_protocol_v1.txt"
+   },
+   "derived_from": []
+  },
+  "S5": {
+   "id": "S5",
+   "kind": "document",
+   "title": "Ml Model Diagnostics Handbook",
+   "text": "4. Class Imbalance and Validation Practice\nFor imbalanced classification set class_weight='balanced' so that rare classes receive a larger\nweight in the loss, or resample the training folds. Oversampling must be done inside each training\nfold only; oversampling before splitting leaks duplicated rows into the validation fold. Report the\nprecision-recall curve or F1 rather than accuracy.\nA common validation setup is StratifiedKFold(n_splits=5, shuffle=True, random_state=42). The\nhelper cross_val_score(estimator, X, y, cv=5, scoring='f1') returns one score per fold. For time\nseries use TimeSeriesSplit so that the training data always come before the validation data.",
+   "doc_id": "ml_model_diagnostics_handbook",
+   "course_id": "ml",
+   "location": "p.4",
+   "chunk_id": "ml_model_diagnostics_handbook:0003",
+   "score": 0.5148,
+   "data": {
+    "file_type": "pdf",
+    "page": 4,
+    "section": "4. Class Imbalance and Validation Practice",
+    "filename": "ml_model_diagnostics_handbook.pdf"
+   },
+   "derived_from": []
+  }
+ },
+ "trace": [
+  {
+   "seq": 1,
+   "t_ms": 0,
+   "type": "request_received",
+   "question": "How many folds should cross-validation use under the current evaluation protocol?",
+   "scope": null,
+   "system": "standard_rag"
+  },
+  {
+   "seq": 2,
+   "t_ms": 8,
+   "type": "retrieval",
+   "query": "How many folds should cross-validation use under the current evaluation protocol?",
+   "n": 5,
+   "sources": [
+    "S1",
+    "S2",
+    "S3",
+    "S4",
+    "S5"
+   ],
+   "best_score": 0.587
+  },
+  {
+   "seq": 3,
+   "t_ms": 3257,
+   "type": "answer",
+   "abstained": false,
+   "citations": [
+    "S1",
+    "S2",
+    "S3"
+   ]
+  }
+ ],
+ "validation": {
+  "n_cited_sentences": 1,
+  "n_supported": 1,
+  "support_rate": 1.0,
+  "invalid_ids": [],
+  "unsupported": [],
+  "uncited_numeric_sentences": []
+ },
+ "metrics": {
+  "latency_s": 3.26,
+  "llm_calls": 1,
+  "prompt_tokens": 828,
+  "completion_tokens": 24,
+  "tool_calls": 1,
+  "replans": 0,
+  "steps": 1
+ },
+ "system": "standard_rag",
+ "config": {
+  "top_k": 5
+ }
+}

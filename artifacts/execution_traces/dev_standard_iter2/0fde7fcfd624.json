@@ -1,0 +1,158 @@
+{
+ "request_id": "0fde7fcfd624",
+ "question": "What is the mean order amount for the North region in the data_orders dataset?",
+ "answer": "I could not find sufficiently supported evidence in the selected knowledge base to answer this question. Searched for: 'What is the mean order amount for the North region in the data_orders dataset?'.",
+ "abstained": true,
+ "stop_reason": "insufficient_evidence",
+ "plan": null,
+ "plan_source": "none",
+ "tool_sequence": [
+  "search_knowledge_base"
+ ],
+ "citations": [],
+ "evidence": {
+  "S1": {
+   "id": "S1",
+   "kind": "document",
+   "title": "Data Orders",
+   "text": "Dataset data_orders: 30 rows, columns: order_id, customer_id, region, amount, status.",
+   "doc_id": "data_orders",
+   "course_id": "data",
+   "location": "dataset overview",
+   "chunk_id": "data_orders:0000",
+   "score": 0.6068,
+   "data": {
+    "file_type": "csv",
+    "page": null,
+    "section": "dataset overview",
+    "filename": "data_orders.csv"
+   },
+   "derived_from": []
+  },
+  "S2": {
+   "id": "S2",
+   "kind": "document",
+   "title": "Data Orders",
+   "text": "row 25: order_id=O025; customer_id=C01; region=North; amount=320; status=pending\nrow 26: order_id=O026; customer_id=C08; region=South; amount=80; status=paid\nrow 27: order_id=O027; customer_id=C03; region=East; amount=175; status=paid\nrow 28: order_id=O028; customer_id=C10; region=North; amount=230; status=refunded\nrow 29: order_id=O029; customer_id=C05; region=South; amount=125; status=paid\nrow 30: order_id=O030; customer_id=C12; region=East; amount=145; status=pending",
+   "doc_id": "data_orders",
+   "course_id": "data",
+   "location": "rows 25-30",
+   "chunk_id": "data_orders:0004",
+   "score": 0.4026,
+   "data": {
+    "file_type": "csv",
+    "page": null,
+    "section": "data rows",
+    "filename": "data_orders.csv"
+   },
+   "derived_from": []
+  },
+  "S3": {
+   "id": "S3",
+   "kind": "document",
+   "title": "Data Orders",
+   "text": "row 9: order_id=O009; customer_id=C09; region=East; amount=75; status=paid\nrow 10: order_id=O010; customer_id=C04; region=North; amount=180; status=pending\nrow 11: order_id=O011; customer_id=C11; region=South; amount=220; status=paid\nrow 12: order_id=O012; customer_id=C06; region=East; amount=130; status=paid\nrow 13: order_id=O013; customer_id=C01; region=North; amount=55; status=refunded\nrow 14: order_id=O014; customer_id=C08; region=South; amount=280; status=paid\nrow 15: order_id=O015; customer_id=C03; region=East; amount=165; status=pending\nrow 16: order_id=O016; customer_id=C10; region=North; amount=90; status=paid",
+   "doc_id": "data_orders",
+   "course_id": "data",
+   "location": "rows 9-16",
+   "chunk_id": "data_orders:0002",
+   "score": 0.3985,
+   "data": {
+    "file_type": "csv",
+    "page": null,
+    "section": "data rows",
+    "filename": "data_orders.csv"
+   },
+   "derived_from": []
+  },
+  "S4": {
+   "id": "S4",
+   "kind": "document",
+   "title": "Data Orders",
+   "text": "row 1: order_id=O001; customer_id=C01; region=North; amount=120; status=paid\nrow 2: order_id=O002; customer_id=C08; region=South; amount=85; status=paid\nrow 3: order_id=O003; customer_id=C03; region=East; amount=240; status=refunded\nrow 4: order_id=O004; customer_id=C10; region=North; amount=60; status=paid\nrow 5: order_id=O005; customer_id=C05; region=South; amount=310; status=pending\nrow 6: order_id=O006; customer_id=C12; region=East; amount=150; status=paid\nrow 7: order_id=O007; customer_id=C07; region=North; amount=95; status=paid\nrow 8: order_id=O008; customer_id=C02; region=South; amount=410; status=refunded",
+   "doc_id": "data_orders",
+   "course_id": "data",
+   "location": "rows 1-8",
+   "chunk_id": "data_orders:0001",
+   "score": 0.3884,
+   "data": {
+    "file_type": "csv",
+    "page": null,
+    "section": "data rows",
+    "filename": "data_orders.csv"
+   },
+   "derived_from": []
+  },
+  "S5": {
+   "id": "S5",
+   "kind": "document",
+   "title": "Data Orders",
+   "text": "row 17: order_id=O017; customer_id=C05; region=South; amount=350; status=paid\nrow 18: order_id=O018; customer_id=C12; region=East; amount=110; status=refunded\nrow 19: order_id=O019; customer_id=C07; region=North; amount=205; status=paid\nrow 20: order_id=O020; customer_id=C02; region=South; amount=70; status=pending\nrow 21: order_id=O021; customer_id=C09; region=East; amount=140; status=paid\nrow 22: order_id=O022; customer_id=C04; region=North; amount=260; status=paid\nrow 23: order_id=O023; customer_id=C11; region=South; amount=100; status=refunded\nrow 24: order_id=O024; customer_id=C06; region=East; amount=190; status=paid",
+   "doc_id": "data_orders",
+   "course_id": "data",
+   "location": "rows 17-24",
+   "chunk_id": "data_orders:0003",
+   "score": 0.382,
+   "data": {
+    "file_type": "csv",
+    "page": null,
+    "section": "data rows",
+    "filename": "data_orders.csv"
+   },
+   "derived_from": []
+  }
+ },
+ "trace": [
+  {
+   "seq": 1,
+   "t_ms": 1,
+   "type": "request_received",
+   "question": "What is the mean order amount for the North region in the data_orders dataset?",
+   "scope": null,
+   "system": "standard_rag"
+  },
+  {
+   "seq": 2,
+   "t_ms": 52,
+   "type": "retrieval",
+   "query": "What is the mean order amount for the North region in the data_orders dataset?",
+   "n": 5,
+   "sources": [
+    "S1",
+    "S2",
+    "S3",
+    "S4",
+    "S5"
+   ],
+   "best_score": 0.607
+  },
+  {
+   "seq": 3,
+   "t_ms": 11981,
+   "type": "answer",
+   "abstained": true,
+   "citations": []
+  }
+ ],
+ "validation": {
+  "n_cited_sentences": 0,
+  "n_supported": 0,
+  "support_rate": 0.0,
+  "invalid_ids": [],
+  "unsupported": [],
+  "uncited_numeric_sentences": []
+ },
+ "metrics": {
+  "latency_s": 11.98,
+  "llm_calls": 2,
+  "prompt_tokens": 2806,
+  "completion_tokens": 148,
+  "tool_calls": 1,
+  "replans": 0,
+  "steps": 1
+ },
+ "system": "standard_rag",
+ "config": {
+  "top_k": 5
+ }
+}

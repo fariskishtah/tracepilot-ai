@@ -1,0 +1,217 @@
+{
+ "request_id": "b31112d60609",
+ "question": "Compare 'precision' as used in classification and as used for measurements.",
+ "answer": "Precision in classification refers to the ratio of true positives to the sum of true positives and false positives, indicating how often the model correctly identifies positive cases. [S1] In contrast, precision in measurements refers to how close repeated measurements are to each other, describing the consistency of a single measurement [S1] [S2] [S3].",
+ "abstained": false,
+ "stop_reason": "answered",
+ "plan": null,
+ "plan_source": "none",
+ "tool_sequence": [
+  "search_knowledge_base"
+ ],
+ "citations": [
+  {
+   "id": "S1",
+   "kind": "document",
+   "title": "Statistics Confusable Terms",
+   "text": "standard deviation vs standard error: the standard deviation describes the spread of individual observations; the standard error describes the spread of a statistic such as the sample mean across repeated samples. confidence level vs confidence interval: the level (for example 95%) is a property of the procedure; the interval is the computed range of values. significance level vs p-value: alpha is chosen before the test; the p-value is computed from the data. covariance vs correlation: covariance carries the units of x times the units of y; correlation is unitless and always between -1 and 1. precision of a measurement: how close repeated measurements are to each other. Precision in classification is a different concept (see the machine learning course). normal: the normal distribution is the bell curve. It does not mean \"typical\" or \"healthy\" values.",
+   "doc_id": "statistics_confusable_terms",
+   "course_id": "statistics",
+   "location": "-",
+   "chunk_id": "statistics_confusable_terms:0001",
+   "score": 0.6145,
+   "data": {
+    "file_type": "txt",
+    "page": null,
+    "section": null,
+    "filename": "statistics_confusable_terms.txt"
+   },
+   "derived_from": []
+  },
+  {
+   "id": "S2",
+   "kind": "document",
+   "title": "Ml Lecture Notes",
+   "text": "4. Evaluation Metrics for Classification A confusion matrix counts true positives (TP), false positives (FP), true negatives (TN) and false negatives (FN). Accuracy is (TP + TN) divided by all examples. Accuracy is misleading on imbalanced data: a model that always predicts the majority class can reach 99% accuracy while detecting nothing. Precision = TP / (TP + FP) answers \"of the examples predicted positive, how many are truly positive?\". Recall (sensitivity) = TP / (TP + FN) answers \"of the truly positive examples, how many did we find?\". The F1 score is the harmonic mean of precision and recall: 2 * precision * recall / (precision + recall). Raising the decision threshold usually increases precision and lowers recall. The ROC curve plots the true positive rate against the false positive rate across thresholds, and AUC summarizes it: 0.5 is random guessing and 1.0 is perfect ranking.",
+   "doc_id": "ml_lecture_notes",
+   "course_id": "ml",
+   "location": "p.5",
+   "chunk_id": "ml_lecture_notes:0006",
+   "score": 0.5458,
+   "data": {
+    "file_type": "pdf",
+    "page": 5,
+    "section": "4. Evaluation Metrics for Classification",
+    "filename": "ml_lecture_notes.pdf"
+   },
+   "derived_from": []
+  },
+  {
+   "id": "S3",
+   "kind": "document",
+   "title": "Ml Notation Abbreviations",
+   "text": "OOB: out-of-bag. In a random forest each tree is trained on a bootstrap sample, and the rows left out of that sample are the out-of-bag rows; about 36.8% (1/e) of the rows are out-of-bag for each tree. They provide a free validation estimate. MAE: mean absolute error. RMSE: root mean squared error. SGD: stochastic gradient descent. k-NN: k-nearest neighbors. PR AUC: area under the precision-recall curve; preferred over ROC AUC for strongly imbalanced classes. i.i.d.: independent and identically distributed. precision: in classification, TP / (TP + FP). It is not the same as measurement precision in statistics. sample: in machine learning a sample usually means one row of data (one example). In statistics a sample is a subset of a population. bias: the error from wrong assumptions of a model. The bias term (intercept) of a linear model is a different thing.",
+   "doc_id": "ml_notation_abbreviations",
+   "course_id": "ml",
+   "location": "-",
+   "chunk_id": "ml_notation_abbreviations:0001",
+   "score": 0.4502,
+   "data": {
+    "file_type": "txt",
+    "page": null,
+    "section": null,
+    "filename": "ml_notation_abbreviations.txt"
+   },
+   "derived_from": []
+  }
+ ],
+ "evidence": {
+  "S1": {
+   "id": "S1",
+   "kind": "document",
+   "title": "Statistics Confusable Terms",
+   "text": "standard deviation vs standard error: the standard deviation describes the spread of individual observations; the standard error describes the spread of a statistic such as the sample mean across repeated samples. confidence level vs confidence interval: the level (for example 95%) is a property of the procedure; the interval is the computed range of values. significance level vs p-value: alpha is chosen before the test; the p-value is computed from the data. covariance vs correlation: covariance carries the units of x times the units of y; correlation is unitless and always between -1 and 1. precision of a measurement: how close repeated measurements are to each other. Precision in classification is a different concept (see the machine learning course). normal: the normal distribution is the bell curve. It does not mean \"typical\" or \"healthy\" values.",
+   "doc_id": "statistics_confusable_terms",
+   "course_id": "statistics",
+   "location": "-",
+   "chunk_id": "statistics_confusable_terms:0001",
+   "score": 0.6145,
+   "data": {
+    "file_type": "txt",
+    "page": null,
+    "section": null,
+    "filename": "statistics_confusable_terms.txt"
+   },
+   "derived_from": []
+  },
+  "S2": {
+   "id": "S2",
+   "kind": "document",
+   "title": "Ml Lecture Notes",
+   "text": "4. Evaluation Metrics for Classification A confusion matrix counts true positives (TP), false positives (FP), true negatives (TN) and false negatives (FN). Accuracy is (TP + TN) divided by all examples. Accuracy is misleading on imbalanced data: a model that always predicts the majority class can reach 99% accuracy while detecting nothing. Precision = TP / (TP + FP) answers \"of the examples predicted positive, how many are truly positive?\". Recall (sensitivity) = TP / (TP + FN) answers \"of the truly positive examples, how many did we find?\". The F1 score is the harmonic mean of precision and recall: 2 * precision * recall / (precision + recall). Raising the decision threshold usually increases precision and lowers recall. The ROC curve plots the true positive rate against the false positive rate across thresholds, and AUC summarizes it: 0.5 is random guessing and 1.0 is perfect ranking.",
+   "doc_id": "ml_lecture_notes",
+   "course_id": "ml",
+   "location": "p.5",
+   "chunk_id": "ml_lecture_notes:0006",
+   "score": 0.5458,
+   "data": {
+    "file_type": "pdf",
+    "page": 5,
+    "section": "4. Evaluation Metrics for Classification",
+    "filename": "ml_lecture_notes.pdf"
+   },
+   "derived_from": []
+  },
+  "S3": {
+   "id": "S3",
+   "kind": "document",
+   "title": "Ml Notation Abbreviations",
+   "text": "OOB: out-of-bag. In a random forest each tree is trained on a bootstrap sample, and the rows left out of that sample are the out-of-bag rows; about 36.8% (1/e) of the rows are out-of-bag for each tree. They provide a free validation estimate. MAE: mean absolute error. RMSE: root mean squared error. SGD: stochastic gradient descent. k-NN: k-nearest neighbors. PR AUC: area under the precision-recall curve; preferred over ROC AUC for strongly imbalanced classes. i.i.d.: independent and identically distributed. precision: in classification, TP / (TP + FP). It is not the same as measurement precision in statistics. sample: in machine learning a sample usually means one row of data (one example). In statistics a sample is a subset of a population. bias: the error from wrong assumptions of a model. The bias term (intercept) of a linear model is a different thing.",
+   "doc_id": "ml_notation_abbreviations",
+   "course_id": "ml",
+   "location": "-",
+   "chunk_id": "ml_notation_abbreviations:0001",
+   "score": 0.4502,
+   "data": {
+    "file_type": "txt",
+    "page": null,
+    "section": null,
+    "filename": "ml_notation_abbreviations.txt"
+   },
+   "derived_from": []
+  },
+  "S4": {
+   "id": "S4",
+   "kind": "document",
+   "title": "Ml Exercise Guide",
+   "text": "Assignment 2: Choosing a Metric\nTask. A fraud detection dataset has 1% fraudulent transactions. A teammate reports 99% accuracy. Decide whether the model is good.\nExpected answer. Accuracy is not informative here because a model that predicts \"not fraud\" for everything also reaches 99%. Evaluate precision, recall, F1 and the precision-recall curve. In fraud detection, missing a fraud (a false negative) is usually costly, so recall is emphasized, while precision controls how many legitimate customers are inconvenienced.",
+   "doc_id": "ml_exercise_guide",
+   "course_id": "ml",
+   "location": "Assignment 2: Choosing a Metric",
+   "chunk_id": "ml_exercise_guide:0002",
+   "score": 0.5163,
+   "data": {
+    "file_type": "docx",
+    "page": null,
+    "section": "Assignment 2: Choosing a Metric",
+    "filename": "ml_exercise_guide.docx"
+   },
+   "derived_from": []
+  },
+  "S5": {
+   "id": "S5",
+   "kind": "document",
+   "title": "Ml Model Evaluation Runs",
+   "text": "Dataset ml_model_evaluation_runs: 10 rows, columns: run_id, model, task, train_accuracy, val_accuracy, precision, recall, f1, notes.",
+   "doc_id": "ml_model_evaluation_runs",
+   "course_id": "ml",
+   "location": "dataset overview",
+   "chunk_id": "ml_model_evaluation_runs:0000",
+   "score": 0.3539,
+   "data": {
+    "file_type": "csv",
+    "page": null,
+    "section": "dataset overview",
+    "filename": "ml_model_evaluation_runs.csv"
+   },
+   "derived_from": []
+  }
+ },
+ "trace": [
+  {
+   "seq": 1,
+   "t_ms": 1,
+   "type": "request_received",
+   "question": "Compare 'precision' as used in classification and as used for measurements.",
+   "scope": null,
+   "system": "standard_rag"
+  },
+  {
+   "seq": 2,
+   "t_ms": 53,
+   "type": "retrieval",
+   "query": "Compare 'precision' as used in classification and as used for measurements.",
+   "n": 5,
+   "sources": [
+    "S1",
+    "S2",
+    "S3",
+    "S4",
+    "S5"
+   ],
+   "best_score": 0.614
+  },
+  {
+   "seq": 3,
+   "t_ms": 7117,
+   "type": "answer",
+   "abstained": false,
+   "citations": [
+    "S1",
+    "S2",
+    "S3"
+   ]
+  }
+ ],
+ "validation": {
+  "n_cited_sentences": 1,
+  "n_supported": 1,
+  "support_rate": 1.0,
+  "invalid_ids": [],
+  "unsupported": [],
+  "uncited_numeric_sentences": []
+ },
+ "metrics": {
+  "latency_s": 7.12,
+  "llm_calls": 2,
+  "prompt_tokens": 2050,
+  "completion_tokens": 144,
+  "tool_calls": 1,
+  "replans": 0,
+  "steps": 1
+ },
+ "system": "standard_rag",
+ "config": {
+  "top_k": 5
+ }
+}

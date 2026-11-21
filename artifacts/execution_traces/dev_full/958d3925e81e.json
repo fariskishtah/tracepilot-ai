@@ -1,0 +1,377 @@
+{
+ "request_id": "958d3925e81e",
+ "question": "What does a 95% confidence level actually mean?",
+ "answer": "A 95% confidence level means that if the procedure were repeated many times, about 95% of the intervals would contain the true parameter [S1].",
+ "abstained": false,
+ "stop_reason": "answered",
+ "plan": {
+  "question_type": "factual",
+  "complexity": "moderate",
+  "requires_retrieval": true,
+  "requires_calculation": false,
+  "requires_data_analysis": false,
+  "requires_comparison": false,
+  "subtasks": [
+   {
+    "id": "t1",
+    "tool": "search_knowledge_base",
+    "goal": "definition of 95% confidence level",
+    "query": "95% confidence level definition",
+    "dataset_id": null,
+    "operation": null,
+    "column": null,
+    "group_by": null,
+    "agg": null,
+    "filters": null,
+    "expression": null,
+    "aspects": null,
+    "depends_on": []
+   }
+  ],
+  "rationale": "LLM plan: 1 step(s)"
+ },
+ "plan_source": "llm",
+ "tool_sequence": [
+  "search_knowledge_base"
+ ],
+ "citations": [
+  {
+   "id": "S1",
+   "kind": "document",
+   "title": "Statistics Lecture Notes",
+   "text": "size grows. A confidence interval gives a range of plausible values for a parameter. A 95% confidence interval for  a mean with known sigma is x-bar plus or minus 1.96 * sigma / sqrt(n). When sigma is unknown and n is small, replace 1.96 with a critical value from the t distribution with n - 1 degrees of freedom. A 95% confidence level means that if the procedure were repeated many times, about 95% of the intervals would contain the true parameter; it does not mean there is a 95% probability that one specific computed interval contains it.",
+   "doc_id": "statistics_lecture_notes",
+   "course_id": "statistics",
+   "location": "p.5",
+   "chunk_id": "statistics_lecture_notes:0008",
+   "score": 0.628,
+   "data": {
+    "file_type": "pdf",
+    "page": 5,
+    "section": "4. Sampling and Confidence Intervals",
+    "filename": "statistics_lecture_notes.pdf"
+   },
+   "derived_from": []
+  }
+ ],
+ "evidence": {
+  "S1": {
+   "id": "S1",
+   "kind": "document",
+   "title": "Statistics Lecture Notes",
+   "text": "size grows. A confidence interval gives a range of plausible values for a parameter. A 95% confidence interval for  a mean with known sigma is x-bar plus or minus 1.96 * sigma / sqrt(n). When sigma is unknown and n is small, replace 1.96 with a critical value from the t distribution with n - 1 degrees of freedom. A 95% confidence level means that if the procedure were repeated many times, about 95% of the intervals would contain the true parameter; it does not mean there is a 95% probability that one specific computed interval contains it.",
+   "doc_id": "statistics_lecture_notes",
+   "course_id": "statistics",
+   "location": "p.5",
+   "chunk_id": "statistics_lecture_notes:0008",
+   "score": 0.628,
+   "data": {
+    "file_type": "pdf",
+    "page": 5,
+    "section": "4. Sampling and Confidence Intervals",
+    "filename": "statistics_lecture_notes.pdf"
+   },
+   "derived_from": []
+  },
+  "S2": {
+   "id": "S2",
+   "kind": "document",
+   "title": "Statistics Confusable Terms",
+   "text": "standard deviation vs standard error: the standard deviation describes the spread of individual observations; the standard error describes the spread of a statistic such as the sample mean across repeated samples. confidence level vs confidence interval: the level (for example 95%) is a property of the procedure; the interval is the computed range of values. significance level vs p-value: alpha is chosen before the test; the p-value is computed from the data. covariance vs correlation: covariance carries the units of x times the units of y; correlation is unitless and always between -1 and 1. precision of a measurement: how close repeated measurements are to each other. Precision in classification is a different concept (see the machine learning course). normal: the normal distribution is the bell curve. It does not mean \"typical\" or \"healthy\" values.",
+   "doc_id": "statistics_confusable_terms",
+   "course_id": "statistics",
+   "location": "-",
+   "chunk_id": "statistics_confusable_terms:0001",
+   "score": 0.4329,
+   "data": {
+    "file_type": "txt",
+    "page": null,
+    "section": null,
+    "filename": "statistics_confusable_terms.txt"
+   },
+   "derived_from": []
+  },
+  "S3": {
+   "id": "S3",
+   "kind": "document",
+   "title": "Statistics Reference Notes",
+   "text": "INFERENCE\n95% confidence interval for a mean (sigma known): x-bar +/- 1.96 * sigma / sqrt(n)\nt statistic: t = (x-bar - mu0) / (s / sqrt(n)), with n - 1 degrees of freedom\nType I error rate = alpha. Power = 1 - beta.\nChi-square statistic: sum((observed - expected)^2 / expected)",
+   "doc_id": "statistics_reference_notes",
+   "course_id": "statistics",
+   "location": "INFERENCE",
+   "chunk_id": "statistics_reference_notes:0004",
+   "score": 0.5285,
+   "data": {
+    "file_type": "txt",
+    "page": null,
+    "section": "INFERENCE",
+    "filename": "statistics_reference_notes.txt"
+   },
+   "derived_from": []
+  },
+  "S4": {
+   "id": "S4",
+   "kind": "document",
+   "title": "Statistics Lab Report Guide",
+   "text": "Sample Size for a Proportion\nTo estimate a proportion with margin of error E at 95% confidence use n = z squared * p * (1 - p) / E squared. When no prior estimate of p exists use p = 0.5, which gives the largest required sample. With z = 1.96, p = 0.5 and E = 0.05 the result is 384.16, so round up to a sample of 385 respondents.",
+   "doc_id": "statistics_lab_report_guide",
+   "course_id": "statistics",
+   "location": "Sample Size for a Proportion",
+   "chunk_id": "statistics_lab_report_guide:0002",
+   "score": 0.4639,
+   "data": {
+    "file_type": "docx",
+    "page": null,
+    "section": "Sample Size for a Proportion",
+    "filename": "statistics_lab_report_guide.docx"
+   },
+   "derived_from": []
+  },
+  "S5": {
+   "id": "S5",
+   "kind": "document",
+   "title": "Statistics Lecture Notes",
+   "text": "4. Sampling and Confidence Intervals A population is the entire group of interest and a sample is a subset used to learn about it. Simple random sampling gives every member an equal chance of selection; stratified sampling samples within subgroups; convenience sampling is easy but prone to bias. Sampling bias occurs when the sample systematically differs from the population. The sampling distribution of the mean describes how sample means vary from sample to sample. The Central Limit Theorem states that for sufficiently large n the distribution of the sample mean is approximately normal with mean mu and standard error sigma / sqrt(n), regardless of the shape of the original population. The standard error shrinks as the sample size grows. A confidence interval gives a range of plausible values for a parameter. A 95% confidence interval for",
+   "doc_id": "statistics_lecture_notes",
+   "course_id": "statistics",
+   "location": "p.5",
+   "chunk_id": "statistics_lecture_notes:0007",
+   "score": 0.428,
+   "data": {
+    "file_type": "pdf",
+    "page": 5,
+    "section": "4. Sampling and Confidence Intervals",
+    "filename": "statistics_lecture_notes.pdf"
+   },
+   "derived_from": []
+  }
+ },
+ "trace": [
+  {
+   "seq": 1,
+   "t_ms": 1,
+   "type": "request_received",
+   "question": "What does a 95% confidence level actually mean?",
+   "scope": null,
+   "tools": [
+    "search_knowledge_base",
+    "retrieve_source_context",
+    "summarize_evidence",
+    "analyze_dataset",
+    "calculate_expression",
+    "compare_evidence",
+    "refine_search_query"
+   ],
+   "planner": "llm",
+   "replanning": true,
+   "llm": "qwen2.5:3b-instruct",
+   "registry_version": "1.0.0"
+  },
+  {
+   "seq": 2,
+   "t_ms": 6,
+   "type": "question_analysis",
+   "calc_cue": true,
+   "data_cue": false,
+   "compare_cue": false,
+   "summary_cue": false,
+   "multi_cue": false,
+   "named_datasets": [],
+   "length_words": 8,
+   "needs_data": false,
+   "concept_cue": true
+  },
+  {
+   "seq": 3,
+   "t_ms": 2901,
+   "type": "plan_created",
+   "source": "llm",
+   "question_type": "factual",
+   "complexity": "moderate",
+   "requires": {
+    "retrieval": true,
+    "calculation": false,
+    "data_analysis": false,
+    "comparison": false
+   },
+   "summary": "LLM plan: 1 step(s)",
+   "adjustments": [],
+   "note": "",
+   "subtasks": [
+    {
+     "id": "t1",
+     "tool": "search_knowledge_base",
+     "goal": "definition of 95% confidence level",
+     "depends_on": []
+    }
+   ]
+  },
+  {
+   "seq": 4,
+   "t_ms": 2901,
+   "type": "tool_selected",
+   "step": "t1",
+   "tool": "search_knowledge_base",
+   "goal": "definition of 95% confidence level",
+   "attempt": 1,
+   "args": {
+    "query": "95% confidence level definition",
+    "course_ids": null,
+    "top_k": 5
+   }
+  },
+  {
+   "seq": 5,
+   "t_ms": 3007,
+   "type": "tool_result",
+   "step": "t1",
+   "tool": "search_knowledge_base",
+   "ok": true,
+   "ms": 105.3,
+   "summary": "5 chunks, best cosine 0.63",
+   "evidence_ids": [
+    "S1",
+    "S2",
+    "S3",
+    "S4",
+    "S5"
+   ],
+   "error": null,
+   "error_type": null,
+   "sufficient": true,
+   "relevance": {
+    "best_score": 0.628,
+    "keyword_coverage": 1.0,
+    "threshold": {
+     "min_best_score": 0.35,
+     "min_keyword_coverage": 0.35
+    }
+   },
+   "sources": [
+    {
+     "id": "S1",
+     "title": "Statistics Lecture Notes",
+     "location": "p.5",
+     "score": 0.628
+    },
+    {
+     "id": "S2",
+     "title": "Statistics Confusable Terms",
+     "location": "-",
+     "score": 0.433
+    },
+    {
+     "id": "S3",
+     "title": "Statistics Reference Notes",
+     "location": "INFERENCE",
+     "score": 0.529
+    },
+    {
+     "id": "S4",
+     "title": "Statistics Lab Report Guide",
+     "location": "Sample Size for a Proportion",
+     "score": 0.464
+    },
+    {
+     "id": "S5",
+     "title": "Statistics Lecture Notes",
+     "location": "p.5",
+     "score": 0.428
+    }
+   ]
+  },
+  {
+   "seq": 6,
+   "t_ms": 3007,
+   "type": "validation",
+   "sufficient": true,
+   "steps": {
+    "t1": {
+     "status": "done",
+     "sufficient": true
+    }
+   },
+   "problems": []
+  },
+  {
+   "seq": 7,
+   "t_ms": 3007,
+   "type": "synthesis_started",
+   "evidence": [
+    "S1",
+    "S3",
+    "S2"
+   ],
+   "computed": [],
+   "gaps": []
+  },
+  {
+   "seq": 8,
+   "t_ms": 7049,
+   "type": "citation_check",
+   "n_cited_sentences": 1,
+   "n_supported": 1,
+   "support_rate": 1.0,
+   "invalid_ids": [],
+   "removed_unsupported": 0,
+   "regenerated": 0,
+   "injection_flags": []
+  },
+  {
+   "seq": 9,
+   "t_ms": 7049,
+   "type": "answer",
+   "abstained": false,
+   "citations": [
+    "S1"
+   ]
+  },
+  {
+   "seq": 10,
+   "t_ms": 7053,
+   "type": "completed",
+   "stop_reason": "answered",
+   "latency_s": 7.05
+  }
+ ],
+ "validation": {
+  "n_cited_sentences": 1,
+  "n_supported": 1,
+  "support_rate": 1.0,
+  "invalid_ids": [],
+  "unsupported": [],
+  "uncited_numeric_sentences": []
+ },
+ "metrics": {
+  "latency_s": 7.05,
+  "llm_calls": 2,
+  "prompt_tokens": 2090,
+  "completion_tokens": 110,
+  "tool_calls": 1,
+  "replans": 0,
+  "steps": 1,
+  "errors": [],
+  "step_status": {
+   "t1": "done"
+  },
+  "removed_unsupported": 0,
+  "injection_flags": []
+ },
+ "system": "agentic",
+ "config": {
+  "name": "full",
+  "planner": "llm",
+  "replan": true,
+  "tools": [
+   "search_knowledge_base",
+   "retrieve_source_context",
+   "summarize_evidence",
+   "analyze_dataset",
+   "calculate_expression",
+   "compare_evidence",
+   "refine_search_query"
+  ],
+  "model": "qwen2.5:3b-instruct",
+  "registry_version": "1.0.0"
+ }
+}

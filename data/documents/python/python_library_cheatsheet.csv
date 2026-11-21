@@ -1,0 +1,17 @@
+entry_id,identifier,module,returns,min_python,note
+LIB001,math.isclose,math,bool,3.5,Compares floats; the default rel_tol is 1e-09
+LIB002,math.prod,math,number,3.8,Multiplies all items of an iterable
+LIB003,math.dist,math,float,3.8,Euclidean distance between two points
+LIB004,statistics.fmean,statistics,float,3.8,Fast floating-point arithmetic mean
+LIB005,statistics.correlation,statistics,float,3.10,Pearson correlation of two inputs
+LIB006,functools.cache,functools,decorator,3.9,Unbounded memoization; shortcut for lru_cache(maxsize=None)
+LIB007,str.removeprefix,builtins,str,3.9,Returns the string without the given prefix if present
+LIB008,str.casefold,builtins,str,3.3,Aggressive lowercase for caseless comparison
+LIB009,itertools.pairwise,itertools,iterator,3.10,"Yields overlapping pairs: (a, b), (b, c), ..."
+LIB010,itertools.batched,itertools,iterator,3.12,Yields tuples of a fixed length n
+LIB011,zip(strict=True),builtins,iterator,3.10,Raises ValueError if the iterables have different lengths
+LIB012,tomllib,tomllib,module,3.11,"Reads TOML files; read-only, no writing"
+LIB013,except*,syntax,n/a,3.11,Handles an ExceptionGroup
+LIB014,match statement,syntax,n/a,3.10,Structural pattern matching
+LIB015,dict | dict,syntax,dict,3.9,Merge operator returning a new dictionary
+LIB016,pathlib.Path.read_text,pathlib,str,3.5,Reads a whole text file in one call

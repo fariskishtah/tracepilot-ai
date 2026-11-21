@@ -1,0 +1,352 @@
+[
+  {
+    "course_id": "data",
+    "filename": "data_glossary.txt",
+    "sha256": "710ea9dcbec7a706859d5764d2c2b29888f95774ca5cad3cce7b3fc942a7605c",
+    "bytes": 747,
+    "origin": "reground-ai independent-evaluation pack",
+    "license": "CC BY 4.0",
+    "attribution": "Faris Mohamed Kishtah, CourseAtlas AI / ReGround AI",
+    "challenge": "overloaded terms (NULL/NaN/None, index, sample)"
+  },
+  {
+    "course_id": "data",
+    "filename": "data_lab_guide.docx",
+    "sha256": "90d5229230874f8c79320dcc62169e95ae7828745402367ca6056ea8e5ed0e59",
+    "bytes": 37331,
+    "origin": "reground-ai independent-evaluation pack",
+    "license": "CC BY 4.0",
+    "attribution": "Faris Mohamed Kishtah, CourseAtlas AI / ReGround AI",
+    "challenge": "contradiction with 2021 notes; multi-document"
+  },
+  {
+    "course_id": "data",
+    "filename": "data_legacy_lab_notes_2021.txt",
+    "sha256": "9005f717a4049570921d63c554617dc60e05fb047f26ca2fc38a06dac9b968d6",
+    "bytes": 194,
+    "origin": "reground-ai independent-evaluation pack",
+    "license": "CC BY 4.0",
+    "attribution": "Faris Mohamed Kishtah, CourseAtlas AI / ReGround AI",
+    "challenge": "contradiction with the 2025 lab guide (no precedence stated)"
+  },
+  {
+    "course_id": "data",
+    "filename": "data_orders.csv",
+    "sha256": "54db25ec2b78ed29dcb2eafbcd1c0b42bda99f9fdb764a526032a48458b9ed8f",
+    "bytes": 817,
+    "origin": "reground-ai independent-evaluation pack",
+    "license": "CC BY 4.0",
+    "attribution": "Faris Mohamed Kishtah, CourseAtlas AI / ReGround AI",
+    "challenge": "structured numerical questions"
+  },
+  {
+    "course_id": "data",
+    "filename": "data_wrangling_handbook.pdf",
+    "sha256": "16a690a5d15a75655b3f4eb2bf0e6432a88f4fba048b40c26d487b376696049b",
+    "bytes": 5280,
+    "origin": "reground-ai independent-evaluation pack",
+    "license": "CC BY 4.0",
+    "attribution": "Faris Mohamed Kishtah, CourseAtlas AI / ReGround AI",
+    "challenge": "similar terminology (index, join/merge); misleading near matches"
+  },
+  {
+    "course_id": "data",
+    "filename": "pandas_function_defaults.csv",
+    "sha256": "493caeed62fd367eaebf1e7e920ff5ddeed76c85c43cfa2c70e3a243e773651d",
+    "bytes": 987,
+    "origin": "reground-ai independent-evaluation pack",
+    "license": "CC BY 4.0",
+    "attribution": "Faris Mohamed Kishtah, CourseAtlas AI / ReGround AI",
+    "challenge": "exact match of defaults; related-but-insufficient"
+  },
+  {
+    "course_id": "data",
+    "filename": "product_prices.csv",
+    "sha256": "6749e0c8affb64942aa4d826780734ce01b208e5530c30d91fa01287b18e93de",
+    "bytes": 1593,
+    "origin": "tracepilot-ai",
+    "license": "CC BY 4.0",
+    "attribution": "Faris Mohamed Kishtah, TracePilot AI",
+    "challenge": "TracePilot multi-step/tool material"
+  },
+  {
+    "course_id": "ml",
+    "filename": "ml_evaluation_protocol_v1.txt",
+    "sha256": "f17a367d64cb62b70f2e76c52f113264e224aae00f34a7018db6512f8b645a13",
+    "bytes": 378,
+    "origin": "reground-ai challenge pack",
+    "license": "CC BY 4.0",
+    "attribution": "Faris Mohamed Kishtah, CourseAtlas AI / ReGround AI",
+    "challenge": "contradiction with protocol v2 (superseded)"
+  },
+  {
+    "course_id": "ml",
+    "filename": "ml_exercise_guide.docx",
+    "sha256": "57e10c5d05b11e1676526806058aff60da58f5c95f055397a3cf020b45da09dc",
+    "bytes": 38081,
+    "origin": "courseatlas-ai",
+    "license": "CC BY 4.0",
+    "attribution": "Faris Mohamed Kishtah, CourseAtlas AI / ReGround AI",
+    "challenge": "baseline course material"
+  },
+  {
+    "course_id": "ml",
+    "filename": "ml_hyperparameter_reference.csv",
+    "sha256": "ffba0966b6fd1a4ce731dff1e21dbb51ad962e09360adca1fdb1cb1105d7852a",
+    "bytes": 1215,
+    "origin": "reground-ai challenge pack",
+    "license": "CC BY 4.0",
+    "attribution": "Faris Mohamed Kishtah, CourseAtlas AI / ReGround AI",
+    "challenge": "exact match (hyperparameter names and default values)"
+  },
+  {
+    "course_id": "ml",
+    "filename": "ml_lecture_notes.pdf",
+    "sha256": "00342cc90e348f3b77073c3380301b3d35961fbb58aa1b3cc06c2b61ca832977",
+    "bytes": 10129,
+    "origin": "courseatlas-ai",
+    "license": "CC BY 4.0",
+    "attribution": "Faris Mohamed Kishtah, CourseAtlas AI / ReGround AI",
+    "challenge": "baseline course material"
+  },
+  {
+    "course_id": "ml",
+    "filename": "ml_model_diagnostics_handbook.pdf",
+    "sha256": "f47500d3a72265e46083edc2f77ea16fee3c8e0c02a6b6ddfe256b654134e960",
+    "bytes": 5666,
+    "origin": "reground-ai challenge pack",
+    "license": "CC BY 4.0",
+    "attribution": "Faris Mohamed Kishtah, CourseAtlas AI / ReGround AI",
+    "challenge": "similar terminology (variance); exact identifiers; related-but-insufficient (calibration)"
+  },
+  {
+    "course_id": "ml",
+    "filename": "ml_model_evaluation_runs.csv",
+    "sha256": "732f1c951f2aeed525d774fb17822c822be89eae58fe84cac8be87611affa4f2",
+    "bytes": 1128,
+    "origin": "courseatlas-ai",
+    "license": "CC BY 4.0",
+    "attribution": "Faris Mohamed Kishtah, CourseAtlas AI / ReGround AI",
+    "challenge": "baseline course material"
+  },
+  {
+    "course_id": "ml",
+    "filename": "ml_notation_abbreviations.txt",
+    "sha256": "c2dbb064465e3fa7dda89ee91007001a7409a6c16d7e9aacccc1ba060f1e1620",
+    "bytes": 1180,
+    "origin": "reground-ai challenge pack",
+    "license": "CC BY 4.0",
+    "attribution": "Faris Mohamed Kishtah, CourseAtlas AI / ReGround AI",
+    "challenge": "abbreviations; cross-course terminology"
+  },
+  {
+    "course_id": "ml",
+    "filename": "ml_overfitting_mitigation_guide.pdf",
+    "sha256": "dcb4e42991942b667df59747699ddd385e934c57b518f1e6babd6880e6ed40df",
+    "bytes": 4326,
+    "origin": "tracepilot-ai",
+    "license": "CC BY 4.0",
+    "attribution": "Faris Mohamed Kishtah, TracePilot AI",
+    "challenge": "TracePilot multi-step/tool material"
+  },
+  {
+    "course_id": "ml",
+    "filename": "ml_project_handbook.docx",
+    "sha256": "b493b4db027eedad77e26a6a209c1867c02202c427c0522e4d6f27834b234319",
+    "bytes": 37272,
+    "origin": "reground-ai challenge pack",
+    "license": "CC BY 4.0",
+    "attribution": "Faris Mohamed Kishtah, CourseAtlas AI / ReGround AI",
+    "challenge": "contradiction with protocol v1 (v2 supersedes)"
+  },
+  {
+    "course_id": "ml",
+    "filename": "ml_reference_notes.txt",
+    "sha256": "75fc444cb6c36ea67499ded38cded27a17d35efb238e9128fbf6ab12637d6aec",
+    "bytes": 2214,
+    "origin": "courseatlas-ai",
+    "license": "CC BY 4.0",
+    "attribution": "Faris Mohamed Kishtah, CourseAtlas AI / ReGround AI",
+    "challenge": "baseline course material"
+  },
+  {
+    "course_id": "ml",
+    "filename": "ml_regularization_experiments.csv",
+    "sha256": "b1f321183e7c050d84aad63d272f9b6a2d55ac289dab7d2f9b683b62a29b3831",
+    "bytes": 1065,
+    "origin": "tracepilot-ai",
+    "license": "CC BY 4.0",
+    "attribution": "Faris Mohamed Kishtah, TracePilot AI",
+    "challenge": "TracePilot multi-step/tool material"
+  },
+  {
+    "course_id": "python",
+    "filename": "python_debugging_playbook.pdf",
+    "sha256": "868ffe3bb0316a2cbea37f6b7ed5644f0485387020c0d71f910834462d4d84e9",
+    "bytes": 5509,
+    "origin": "reground-ai challenge pack",
+    "license": "CC BY 4.0",
+    "attribution": "Faris Mohamed Kishtah, CourseAtlas AI / ReGround AI",
+    "challenge": "similar terminology; rephrasing (symptoms vs error names); exact identifiers"
+  },
+  {
+    "course_id": "python",
+    "filename": "python_exercise_guide.docx",
+    "sha256": "51f31d1fcd7fda06629640d9f4d774a9c776d558194bb85f59be4421db7e26b9",
+    "bytes": 38158,
+    "origin": "courseatlas-ai",
+    "license": "CC BY 4.0",
+    "attribution": "Faris Mohamed Kishtah, CourseAtlas AI / ReGround AI",
+    "challenge": "baseline course material"
+  },
+  {
+    "course_id": "python",
+    "filename": "python_faq_style_addendum.docx",
+    "sha256": "12fe470c794fb19ce4ef686ea55674166a017b8c1765f36288e0bec427f604f6",
+    "bytes": 37491,
+    "origin": "reground-ai challenge pack",
+    "license": "CC BY 4.0",
+    "attribution": "Faris Mohamed Kishtah, CourseAtlas AI / ReGround AI",
+    "challenge": "contradiction (line length 99 vs 79); related-but-insufficient (late policy)"
+  },
+  {
+    "course_id": "python",
+    "filename": "python_glossary_overloaded_terms.txt",
+    "sha256": "fdc5e35370f4db7b919060444303777fd3cec0bec50567896c5cb09c9e3f5732",
+    "bytes": 1438,
+    "origin": "reground-ai challenge pack",
+    "license": "CC BY 4.0",
+    "attribution": "Faris Mohamed Kishtah, CourseAtlas AI / ReGround AI",
+    "challenge": "cross-course terminology (class, sample, mode, normal)"
+  },
+  {
+    "course_id": "python",
+    "filename": "python_lecture_notes.pdf",
+    "sha256": "893498860d676c92c41ddc167ab855c312dda3be95252e66269adaf3d09806df",
+    "bytes": 11115,
+    "origin": "courseatlas-ai",
+    "license": "CC BY 4.0",
+    "attribution": "Faris Mohamed Kishtah, CourseAtlas AI / ReGround AI",
+    "challenge": "baseline course material"
+  },
+  {
+    "course_id": "python",
+    "filename": "python_library_cheatsheet.csv",
+    "sha256": "dfaffc1035ba97c8912f5d27d2729ecf24ef26080796f0d145c33165f81022cd",
+    "bytes": 1385,
+    "origin": "reground-ai challenge pack",
+    "license": "CC BY 4.0",
+    "attribution": "Faris Mohamed Kishtah, CourseAtlas AI / ReGround AI",
+    "challenge": "exact match (identifiers, column names, versions)"
+  },
+  {
+    "course_id": "python",
+    "filename": "python_practice_exercises.csv",
+    "sha256": "89f3e7b10cb9688a130a1d422b69c0d0620cf020cd3abe7a8f9a11abe016f81b",
+    "bytes": 1593,
+    "origin": "courseatlas-ai",
+    "license": "CC BY 4.0",
+    "attribution": "Faris Mohamed Kishtah, CourseAtlas AI / ReGround AI",
+    "challenge": "baseline course material"
+  },
+  {
+    "course_id": "python",
+    "filename": "python_reference_notes.txt",
+    "sha256": "04baa4a07a06ab56608af6c397aaa030d766782ff464ed197a23520d7bb948b2",
+    "bytes": 2133,
+    "origin": "courseatlas-ai",
+    "license": "CC BY 4.0",
+    "attribution": "Faris Mohamed Kishtah, CourseAtlas AI / ReGround AI",
+    "challenge": "baseline course material"
+  },
+  {
+    "course_id": "statistics",
+    "filename": "statistics_confusable_terms.txt",
+    "sha256": "d7e3b25170d071278d1da6facc7c315ea6222a7fbeab3aaac7066e1bec0ef230",
+    "bytes": 1493,
+    "origin": "reground-ai challenge pack",
+    "license": "CC BY 4.0",
+    "attribution": "Faris Mohamed Kishtah, CourseAtlas AI / ReGround AI",
+    "challenge": "similar terminology; cross-course confusion (precision, sample, adjusted R2)"
+  },
+  {
+    "course_id": "statistics",
+    "filename": "statistics_estimators_and_bias.pdf",
+    "sha256": "1d0eb4dcc9817f3b732fac34ec778346ded4c738590343e9f14e847c6698147c",
+    "bytes": 4827,
+    "origin": "reground-ai challenge pack",
+    "license": "CC BY 4.0",
+    "attribution": "Faris Mohamed Kishtah, CourseAtlas AI / ReGround AI",
+    "challenge": "similar terminology (bias, variance of an estimator); misleading near matches"
+  },
+  {
+    "course_id": "statistics",
+    "filename": "statistics_exam_scores.csv",
+    "sha256": "f6cc9cd610fbaa63ce9e64bf635916b47b15314e6bbbe324de2b10ea9bd685bd",
+    "bytes": 290,
+    "origin": "reground-ai challenge pack",
+    "license": "CC BY 4.0",
+    "attribution": "Faris Mohamed Kishtah, CourseAtlas AI / ReGround AI",
+    "challenge": "structured numerical questions; ambiguous variance questions"
+  },
+  {
+    "course_id": "statistics",
+    "filename": "statistics_exercise_guide.docx",
+    "sha256": "66488752086a026a8cb2470028ba0cd0e2ceea645aedaee87d2fd3581895f234",
+    "bytes": 38062,
+    "origin": "courseatlas-ai",
+    "license": "CC BY 4.0",
+    "attribution": "Faris Mohamed Kishtah, CourseAtlas AI / ReGround AI",
+    "challenge": "baseline course material"
+  },
+  {
+    "course_id": "statistics",
+    "filename": "statistics_lab_report_guide.docx",
+    "sha256": "3f75eb4c61de45e703b1076c19e27bbde34f2c874688014c6674080670286975",
+    "bytes": 37471,
+    "origin": "reground-ai challenge pack",
+    "license": "CC BY 4.0",
+    "attribution": "Faris Mohamed Kishtah, CourseAtlas AI / ReGround AI",
+    "challenge": "numerical facts; multi-document questions"
+  },
+  {
+    "course_id": "statistics",
+    "filename": "statistics_lecture_notes.pdf",
+    "sha256": "579f7467d83c288edf6038653aee2830b5153409ace41eb4f3932b3ad2619565",
+    "bytes": 10174,
+    "origin": "courseatlas-ai",
+    "license": "CC BY 4.0",
+    "attribution": "Faris Mohamed Kishtah, CourseAtlas AI / ReGround AI",
+    "challenge": "baseline course material"
+  },
+  {
+    "course_id": "statistics",
+    "filename": "statistics_reference_notes.txt",
+    "sha256": "f504cd8a0d6b2ec3a9f41bd6858f1849f914f1e66158e64bb4c05a658ecd99a5",
+    "bytes": 1683,
+    "origin": "courseatlas-ai",
+    "license": "CC BY 4.0",
+    "attribution": "Faris Mohamed Kishtah, CourseAtlas AI / ReGround AI",
+    "challenge": "baseline course material"
+  },
+  {
+    "course_id": "statistics",
+    "filename": "statistics_robust_summaries.txt",
+    "sha256": "f423d5260ee9f8df7c5e52480d1b5a614389e01b30f736025a692ab80e54baf6",
+    "bytes": 812,
+    "origin": "tracepilot-ai",
+    "license": "CC BY 4.0",
+    "attribution": "Faris Mohamed Kishtah, TracePilot AI",
+    "challenge": "TracePilot multi-step/tool material"
+  },
+  {
+    "course_id": "statistics",
+    "filename": "statistics_worked_examples.csv",
+    "sha256": "be6d4835ddc47b40b438fef9ec5afcd4c7c38d525f843b04c351d5b73119c9ee",
+    "bytes": 2943,
+    "origin": "courseatlas-ai",
+    "license": "CC BY 4.0",
+    "attribution": "Faris Mohamed Kishtah, CourseAtlas AI / ReGround AI",
+    "challenge": "baseline course material"
+  }
+]

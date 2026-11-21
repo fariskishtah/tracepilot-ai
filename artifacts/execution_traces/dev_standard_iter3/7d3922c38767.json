@@ -1,0 +1,158 @@
+{
+ "request_id": "7d3922c38767",
+ "question": "List the standard error of the mean and t statistic formulas given in the statistics formula reference notes.",
+ "answer": "The provided statistics formula reference notes do not contain the standard error of the mean or t statistic formulas.",
+ "abstained": true,
+ "stop_reason": "insufficient_evidence",
+ "plan": null,
+ "plan_source": "none",
+ "tool_sequence": [
+  "search_knowledge_base"
+ ],
+ "citations": [],
+ "evidence": {
+  "S1": {
+   "id": "S1",
+   "kind": "document",
+   "title": "Statistics Reference Notes",
+   "text": "INFERENCE\n95% confidence interval for a mean (sigma known): x-bar +/- 1.96 * sigma / sqrt(n)\nt statistic: t = (x-bar - mu0) / (s / sqrt(n)), with n - 1 degrees of freedom\nType I error rate = alpha. Power = 1 - beta.\nChi-square statistic: sum((observed - expected)^2 / expected)",
+   "doc_id": "statistics_reference_notes",
+   "course_id": "statistics",
+   "location": "INFERENCE",
+   "chunk_id": "statistics_reference_notes:0004",
+   "score": 0.4239,
+   "data": {
+    "file_type": "txt",
+    "page": null,
+    "section": "INFERENCE",
+    "filename": "statistics_reference_notes.txt"
+   },
+   "derived_from": []
+  },
+  "S2": {
+   "id": "S2",
+   "kind": "document",
+   "title": "Statistics Reference Notes",
+   "text": "DESCRIPTIVE FORMULAS\nMean: x-bar = (sum of x) / n\nPopulation variance: sigma^2 = sum((x - mu)^2) / N\nSample variance: s^2 = sum((x - x-bar)^2) / (n - 1)\nStandard deviation: the square root of the variance.\nIQR = Q3 - Q1. Outlier fences: Q1 - 1.5*IQR and Q3 + 1.5*IQR.\nCoefficient of variation: CV = standard deviation / mean.",
+   "doc_id": "statistics_reference_notes",
+   "course_id": "statistics",
+   "location": "DESCRIPTIVE FORMULAS",
+   "chunk_id": "statistics_reference_notes:0001",
+   "score": 0.5254,
+   "data": {
+    "file_type": "txt",
+    "page": null,
+    "section": "DESCRIPTIVE FORMULAS",
+    "filename": "statistics_reference_notes.txt"
+   },
+   "derived_from": []
+  },
+  "S3": {
+   "id": "S3",
+   "kind": "document",
+   "title": "Statistics Reference Notes",
+   "text": "STATISTICS & PROBABILITY FORMULA REFERENCE (original demo material, CC BY 4.0)\n======================================================================================",
+   "doc_id": "statistics_reference_notes",
+   "course_id": "statistics",
+   "location": "-",
+   "chunk_id": "statistics_reference_notes:0000",
+   "score": 0.4182,
+   "data": {
+    "file_type": "txt",
+    "page": null,
+    "section": null,
+    "filename": "statistics_reference_notes.txt"
+   },
+   "derived_from": []
+  },
+  "S4": {
+   "id": "S4",
+   "kind": "document",
+   "title": "Statistics Lecture Notes",
+   "text": "Statistics Theory Notes\nStatistics & Probability - independently written demonstration notes. Not official university material.",
+   "doc_id": "statistics_lecture_notes",
+   "course_id": "statistics",
+   "location": "p.1",
+   "chunk_id": "statistics_lecture_notes:0000",
+   "score": 0.4043,
+   "data": {
+    "file_type": "pdf",
+    "page": 1,
+    "section": null,
+    "filename": "statistics_lecture_notes.pdf"
+   },
+   "derived_from": []
+  },
+  "S5": {
+   "id": "S5",
+   "kind": "document",
+   "title": "Statistics Estimators And Bias",
+   "text": "3. The Bootstrap\nThe bootstrap estimates the uncertainty of a statistic by resampling. Draw n observations with\nreplacement from the original sample of size n, compute the statistic, and repeat this B times, for\nexample B = 1000. The spread of the B statistics approximates the sampling variability.\nA bootstrap percentile interval for 95% confidence uses the 2.5th and the 97.5th percentiles of the\nB bootstrap statistics. The bootstrap needs no formula for the standard error, which makes it useful\nfor medians and other awkward statistics.",
+   "doc_id": "statistics_estimators_and_bias",
+   "course_id": "statistics",
+   "location": "p.3",
+   "chunk_id": "statistics_estimators_and_bias:0002",
+   "score": 0.3594,
+   "data": {
+    "file_type": "pdf",
+    "page": 3,
+    "section": "3. The Bootstrap",
+    "filename": "statistics_estimators_and_bias.pdf"
+   },
+   "derived_from": []
+  }
+ },
+ "trace": [
+  {
+   "seq": 1,
+   "t_ms": 1,
+   "type": "request_received",
+   "question": "List the standard error of the mean and t statistic formulas given in the statistics formula reference notes.",
+   "scope": null,
+   "system": "standard_rag"
+  },
+  {
+   "seq": 2,
+   "t_ms": 165,
+   "type": "retrieval",
+   "query": "List the standard error of the mean and t statistic formulas given in the statistics formula reference notes.",
+   "n": 5,
+   "sources": [
+    "S1",
+    "S2",
+    "S3",
+    "S4",
+    "S5"
+   ],
+   "best_score": 0.525
+  },
+  {
+   "seq": 3,
+   "t_ms": 1739,
+   "type": "answer",
+   "abstained": true,
+   "citations": []
+  }
+ ],
+ "validation": {
+  "n_cited_sentences": 0,
+  "n_supported": 0,
+  "support_rate": 0.0,
+  "invalid_ids": [],
+  "unsupported": [],
+  "uncited_numeric_sentences": []
+ },
+ "metrics": {
+  "latency_s": 1.74,
+  "llm_calls": 1,
+  "prompt_tokens": 726,
+  "completion_tokens": 27,
+  "tool_calls": 1,
+  "replans": 0,
+  "steps": 1
+ },
+ "system": "standard_rag",
+ "config": {
+  "top_k": 5
+ }
+}

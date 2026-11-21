@@ -1,0 +1,236 @@
+{
+ "request_id": "e3bd2ab82e27",
+ "question": "What problem does adjusted R squared fix compared with plain R squared?",
+ "answer": "adjusted R squared fixes the issue that plain R squared can increase when adding predictors, unlike adjusted R squared which does not decrease when a predictor is added to the model, ensuring a fair comparison of models of different sizes [S1] [S3] [S4] [S5].",
+ "abstained": false,
+ "stop_reason": "answered",
+ "plan": null,
+ "plan_source": "none",
+ "tool_sequence": [
+  "search_knowledge_base"
+ ],
+ "citations": [
+  {
+   "id": "S1",
+   "kind": "document",
+   "title": "Statistics Confusable Terms",
+   "text": "learning course). normal: the normal distribution is the bell curve. It does not mean \"typical\" or \"healthy\" values.  standardization: in this course standardization means converting values to z-scores with mean 0 and standard deviation 1. adjusted R squared: adjusted R2 = 1 - (1 - R2) * (n - 1) / (n - p - 1) where p is the number of predictors. Plain R2 never decreases when a predictor is added to the model, so adjusted R2 is used to compare models of different sizes. sample: in statistics a sample is a subset drawn from a population. In machine learning courses a sample often means a single row of data.",
+   "doc_id": "statistics_confusable_terms",
+   "course_id": "statistics",
+   "location": "-",
+   "chunk_id": "statistics_confusable_terms:0002",
+   "score": 0.4654,
+   "data": {
+    "file_type": "txt",
+    "page": null,
+    "section": null,
+    "filename": "statistics_confusable_terms.txt"
+   },
+   "derived_from": []
+  },
+  {
+   "id": "S3",
+   "kind": "document",
+   "title": "Statistics Lecture Notes",
+   "text": "6. Correlation and Regression Correlation measures the strength and direction of a linear relationship between two variables. The Pearson correlation coefficient r ranges from -1 to +1. A value near +1 indicates a strong positive linear relationship, near -1 a strong negative one and near 0 no linear relationship. Correlation does not imply causation: a hidden confounding variable may drive both variables. Simple linear regression fits the line y-hat = b0 + b1 * x by least squares, which minimizes the sum of squared residuals. The slope b1 equals r * (s_y / s_x) and the intercept is b0 = y-bar - b1 * x-bar. The coefficient of determination R squared is the proportion of variance in y explained by the model; in simple regression it equals r squared. Residual plots should show no pattern; curved or funnel-shaped residuals indicate a violated assumption.",
+   "doc_id": "statistics_lecture_notes",
+   "course_id": "statistics",
+   "location": "p.7",
+   "chunk_id": "statistics_lecture_notes:0011",
+   "score": 0.4514,
+   "data": {
+    "file_type": "pdf",
+    "page": 7,
+    "section": "6. Correlation and Regression",
+    "filename": "statistics_lecture_notes.pdf"
+   },
+   "derived_from": []
+  },
+  {
+   "id": "S4",
+   "kind": "document",
+   "title": "Statistics Reference Notes",
+   "text": "REGRESSION\nSlope: b1 = r * s_y / s_x. Intercept: b0 = y-bar - b1 * x-bar.\nR squared = proportion of variance explained = r^2 in simple linear regression.",
+   "doc_id": "statistics_reference_notes",
+   "course_id": "statistics",
+   "location": "REGRESSION",
+   "chunk_id": "statistics_reference_notes:0005",
+   "score": 0.341,
+   "data": {
+    "file_type": "txt",
+    "page": null,
+    "section": "REGRESSION",
+    "filename": "statistics_reference_notes.txt"
+   },
+   "derived_from": []
+  },
+  {
+   "id": "S5",
+   "kind": "document",
+   "title": "Statistics Lecture Notes",
+   "text": "r squared. Residual plots should show no pattern; curved or funnel-shaped residuals indicate a violated assumption.  Extrapolating beyond the observed range of x is risky.",
+   "doc_id": "statistics_lecture_notes",
+   "course_id": "statistics",
+   "location": "p.7",
+   "chunk_id": "statistics_lecture_notes:0012",
+   "score": 0.3585,
+   "data": {
+    "file_type": "pdf",
+    "page": 7,
+    "section": "6. Correlation and Regression",
+    "filename": "statistics_lecture_notes.pdf"
+   },
+   "derived_from": []
+  }
+ ],
+ "evidence": {
+  "S1": {
+   "id": "S1",
+   "kind": "document",
+   "title": "Statistics Confusable Terms",
+   "text": "learning course). normal: the normal distribution is the bell curve. It does not mean \"typical\" or \"healthy\" values.  standardization: in this course standardization means converting values to z-scores with mean 0 and standard deviation 1. adjusted R squared: adjusted R2 = 1 - (1 - R2) * (n - 1) / (n - p - 1) where p is the number of predictors. Plain R2 never decreases when a predictor is added to the model, so adjusted R2 is used to compare models of different sizes. sample: in statistics a sample is a subset drawn from a population. In machine learning courses a sample often means a single row of data.",
+   "doc_id": "statistics_confusable_terms",
+   "course_id": "statistics",
+   "location": "-",
+   "chunk_id": "statistics_confusable_terms:0002",
+   "score": 0.4654,
+   "data": {
+    "file_type": "txt",
+    "page": null,
+    "section": null,
+    "filename": "statistics_confusable_terms.txt"
+   },
+   "derived_from": []
+  },
+  "S2": {
+   "id": "S2",
+   "kind": "document",
+   "title": "Ml Model Diagnostics Handbook",
+   "text": "5. Regression Metrics and Calibration\nRMSE is expressed in the same units as the target, which makes it easy to interpret. R squared\ncan be negative on test data: that happens when the model predicts worse than simply predicting\nthe mean of the target.\nProbability calibration asks whether predicted probabilities match observed frequencies. A\nreliability diagram is the usual plot for inspecting calibration.",
+   "doc_id": "ml_model_diagnostics_handbook",
+   "course_id": "ml",
+   "location": "p.5",
+   "chunk_id": "ml_model_diagnostics_handbook:0004",
+   "score": 0.4653,
+   "data": {
+    "file_type": "pdf",
+    "page": 5,
+    "section": "5. Regression Metrics and Calibration",
+    "filename": "ml_model_diagnostics_handbook.pdf"
+   },
+   "derived_from": []
+  },
+  "S3": {
+   "id": "S3",
+   "kind": "document",
+   "title": "Statistics Lecture Notes",
+   "text": "6. Correlation and Regression Correlation measures the strength and direction of a linear relationship between two variables. The Pearson correlation coefficient r ranges from -1 to +1. A value near +1 indicates a strong positive linear relationship, near -1 a strong negative one and near 0 no linear relationship. Correlation does not imply causation: a hidden confounding variable may drive both variables. Simple linear regression fits the line y-hat = b0 + b1 * x by least squares, which minimizes the sum of squared residuals. The slope b1 equals r * (s_y / s_x) and the intercept is b0 = y-bar - b1 * x-bar. The coefficient of determination R squared is the proportion of variance in y explained by the model; in simple regression it equals r squared. Residual plots should show no pattern; curved or funnel-shaped residuals indicate a violated assumption.",
+   "doc_id": "statistics_lecture_notes",
+   "course_id": "statistics",
+   "location": "p.7",
+   "chunk_id": "statistics_lecture_notes:0011",
+   "score": 0.4514,
+   "data": {
+    "file_type": "pdf",
+    "page": 7,
+    "section": "6. Correlation and Regression",
+    "filename": "statistics_lecture_notes.pdf"
+   },
+   "derived_from": []
+  },
+  "S4": {
+   "id": "S4",
+   "kind": "document",
+   "title": "Statistics Reference Notes",
+   "text": "REGRESSION\nSlope: b1 = r * s_y / s_x. Intercept: b0 = y-bar - b1 * x-bar.\nR squared = proportion of variance explained = r^2 in simple linear regression.",
+   "doc_id": "statistics_reference_notes",
+   "course_id": "statistics",
+   "location": "REGRESSION",
+   "chunk_id": "statistics_reference_notes:0005",
+   "score": 0.341,
+   "data": {
+    "file_type": "txt",
+    "page": null,
+    "section": "REGRESSION",
+    "filename": "statistics_reference_notes.txt"
+   },
+   "derived_from": []
+  },
+  "S5": {
+   "id": "S5",
+   "kind": "document",
+   "title": "Statistics Lecture Notes",
+   "text": "r squared. Residual plots should show no pattern; curved or funnel-shaped residuals indicate a violated assumption.  Extrapolating beyond the observed range of x is risky.",
+   "doc_id": "statistics_lecture_notes",
+   "course_id": "statistics",
+   "location": "p.7",
+   "chunk_id": "statistics_lecture_notes:0012",
+   "score": 0.3585,
+   "data": {
+    "file_type": "pdf",
+    "page": 7,
+    "section": "6. Correlation and Regression",
+    "filename": "statistics_lecture_notes.pdf"
+   },
+   "derived_from": []
+  }
+ },
+ "trace": [
+  {
+   "seq": 1,
+   "t_ms": 0,
+   "type": "request_received",
+   "question": "What problem does adjusted R squared fix compared with plain R squared?",
+   "scope": null,
+   "system": "standard_rag"
+  },
+  {
+   "seq": 2,
+   "t_ms": 13,
+   "type": "retrieval",
+   "query": "What problem does adjusted R squared fix compared with plain R squared?",
+   "n": 5,
+   "sources": [
+    "S1",
+    "S2",
+    "S3",
+    "S4",
+    "S5"
+   ],
+   "best_score": 0.465
+  },
+  {
+   "seq": 3,
+   "t_ms": 3336,
+   "type": "answer",
+   "abstained": false,
+   "citations": [
+    "S1",
+    "S3",
+    "S4",
+    "S5"
+   ]
+  }
+ ],
+ "validation": {
+  "n_cited_sentences": 1,
+  "n_supported": 1,
+  "support_rate": 1.0,
+  "invalid_ids": [],
+  "unsupported": [],
+  "uncited_numeric_sentences": []
+ },
+ "metrics": {
+  "latency_s": 3.34,
+  "llm_calls": 1,
+  "prompt_tokens": 830,
+  "completion_tokens": 56,
+  "tool_calls": 1,
+  "replans": 0,
+  "steps": 1
+ },
+ "system": "standard_rag",
+ "config": {
+  "top_k": 5
+ }
+}

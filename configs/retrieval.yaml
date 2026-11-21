@@ -1,0 +1,11 @@
+chunking:
+  target_chars: 900
+  overlap_chars: 120
+  csv_rows_per_chunk: 8
+retrieval:
+  top_k: 5
+  max_top_k: 8
+  dense_candidates: 20
+  lexical_weight: 0.35      # weight of BM25 rank fusion
+  min_relevance: 0.30       # calibrated on the DEVELOPMENT split only (see docs/EVALUATION.md)
+collection: tracepilot_chunks

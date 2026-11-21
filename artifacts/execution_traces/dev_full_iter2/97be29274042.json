@@ -1,0 +1,645 @@
+{
+ "request_id": "97be29274042",
+ "question": "What is the capital of France?",
+ "answer": "I could not find sufficiently supported evidence in the selected knowledge base to answer this question. Searched for: 'definition and explanation of capital France'. Closest material found: Ml Notation Abbreviations (-, cosine 0.1917170286178589) (not relevant enough to answer).",
+ "abstained": true,
+ "stop_reason": "insufficient_evidence",
+ "plan": {
+  "question_type": "factual",
+  "complexity": "simple",
+  "requires_retrieval": true,
+  "requires_calculation": false,
+  "requires_data_analysis": false,
+  "requires_comparison": false,
+  "subtasks": [
+   {
+    "id": "t1",
+    "tool": "search_knowledge_base",
+    "goal": "find the capital of France",
+    "query": "capital of France",
+    "dataset_id": null,
+    "operation": null,
+    "column": null,
+    "group_by": null,
+    "agg": null,
+    "filters": null,
+    "expression": null,
+    "aspects": null,
+    "depends_on": []
+   }
+  ],
+  "rationale": "LLM plan: 1 step(s)"
+ },
+ "plan_source": "llm",
+ "tool_sequence": [
+  "search_knowledge_base",
+  "search_knowledge_base",
+  "search_knowledge_base"
+ ],
+ "citations": [],
+ "evidence": {
+  "S1": {
+   "id": "S1",
+   "kind": "document",
+   "title": "Statistics Exam Scores",
+   "text": "Dataset statistics_exam_scores: 20 rows, columns: student_id, section, hours_studied, exam_score.",
+   "doc_id": "statistics_exam_scores",
+   "course_id": "statistics",
+   "location": "dataset overview",
+   "chunk_id": "statistics_exam_scores:0000",
+   "score": 0.09607851505279541,
+   "data": {
+    "file_type": "csv",
+    "page": null,
+    "section": "dataset overview",
+    "filename": "statistics_exam_scores.csv"
+   },
+   "derived_from": []
+  },
+  "S2": {
+   "id": "S2",
+   "kind": "document",
+   "title": "Ml Model Diagnostics Handbook",
+   "text": "5. Regression Metrics and Calibration\nRMSE is expressed in the same units as the target, which makes it easy to interpret. R squared\ncan be negative on test data: that happens when the model predicts worse than simply predicting\nthe mean of the target.\nProbability calibration asks whether predicted probabilities match observed frequencies. A\nreliability diagram is the usual plot for inspecting calibration.",
+   "doc_id": "ml_model_diagnostics_handbook",
+   "course_id": "ml",
+   "location": "p.5",
+   "chunk_id": "ml_model_diagnostics_handbook:0004",
+   "score": 0.0876,
+   "data": {
+    "file_type": "pdf",
+    "page": 5,
+    "section": "5. Regression Metrics and Calibration",
+    "filename": "ml_model_diagnostics_handbook.pdf"
+   },
+   "derived_from": []
+  },
+  "S3": {
+   "id": "S3",
+   "kind": "document",
+   "title": "Ml Notation Abbreviations",
+   "text": "bias: the error from wrong assumptions of a model. The bias term (intercept) of a linear model is a different thing.  regression: predicting a continuous number, for example a house price. Linear regression is also used in statistics to describe relationships.",
+   "doc_id": "ml_notation_abbreviations",
+   "course_id": "ml",
+   "location": "-",
+   "chunk_id": "ml_notation_abbreviations:0002",
+   "score": 0.1917170286178589,
+   "data": {
+    "file_type": "txt",
+    "page": null,
+    "section": null,
+    "filename": "ml_notation_abbreviations.txt"
+   },
+   "derived_from": []
+  },
+  "S4": {
+   "id": "S4",
+   "kind": "document",
+   "title": "Statistics Confusable Terms",
+   "text": "learning course). normal: the normal distribution is the bell curve. It does not mean \"typical\" or \"healthy\" values.  standardization: in this course standardization means converting values to z-scores with mean 0 and standard deviation 1. adjusted R squared: adjusted R2 = 1 - (1 - R2) * (n - 1) / (n - p - 1) where p is the number of predictors. Plain R2 never decreases when a predictor is added to the model, so adjusted R2 is used to compare models of different sizes. sample: in statistics a sample is a subset drawn from a population. In machine learning courses a sample often means a single row of data.",
+   "doc_id": "statistics_confusable_terms",
+   "course_id": "statistics",
+   "location": "-",
+   "chunk_id": "statistics_confusable_terms:0002",
+   "score": 0.0762,
+   "data": {
+    "file_type": "txt",
+    "page": null,
+    "section": null,
+    "filename": "statistics_confusable_terms.txt"
+   },
+   "derived_from": []
+  },
+  "S5": {
+   "id": "S5",
+   "kind": "document",
+   "title": "Statistics Confusable Terms",
+   "text": "standard deviation vs standard error: the standard deviation describes the spread of individual observations; the standard error describes the spread of a statistic such as the sample mean across repeated samples. confidence level vs confidence interval: the level (for example 95%) is a property of the procedure; the interval is the computed range of values. significance level vs p-value: alpha is chosen before the test; the p-value is computed from the data. covariance vs correlation: covariance carries the units of x times the units of y; correlation is unitless and always between -1 and 1. precision of a measurement: how close repeated measurements are to each other. Precision in classification is a different concept (see the machine learning course). normal: the normal distribution is the bell curve. It does not mean \"typical\" or \"healthy\" values.",
+   "doc_id": "statistics_confusable_terms",
+   "course_id": "statistics",
+   "location": "-",
+   "chunk_id": "statistics_confusable_terms:0001",
+   "score": 0.14423561096191406,
+   "data": {
+    "file_type": "txt",
+    "page": null,
+    "section": null,
+    "filename": "statistics_confusable_terms.txt"
+   },
+   "derived_from": []
+  },
+  "S6": {
+   "id": "S6",
+   "kind": "document",
+   "title": "Statistics Lab Report Guide",
+   "text": "Sample Size for a Proportion\nTo estimate a proportion with margin of error E at 95% confidence use n = z squared * p * (1 - p) / E squared. When no prior estimate of p exists use p = 0.5, which gives the largest required sample. With z = 1.96, p = 0.5 and E = 0.05 the result is 384.16, so round up to a sample of 385 respondents.",
+   "doc_id": "statistics_lab_report_guide",
+   "course_id": "statistics",
+   "location": "Sample Size for a Proportion",
+   "chunk_id": "statistics_lab_report_guide:0002",
+   "score": 0.0865,
+   "data": {
+    "file_type": "docx",
+    "page": null,
+    "section": "Sample Size for a Proportion",
+    "filename": "statistics_lab_report_guide.docx"
+   },
+   "derived_from": []
+  },
+  "S7": {
+   "id": "S7",
+   "kind": "document",
+   "title": "Python Exercise Guide",
+   "text": "Exercise Set A: Variables and Control Flow\nExercise A1. Write a program that asks for a temperature in Celsius and prints it in Fahrenheit. The formula is F = C * 9 / 5 + 32. Expected result: 100 Celsius becomes 212.0 Fahrenheit.\nExercise A2. Print all even numbers from 1 to 20 using a for loop and the modulo operator. Hint: a number n is even when n % 2 == 0. A common mistake is writing range(1, 20), which stops at 19; use range(1, 21).\nExercise A3. Implement FizzBuzz for numbers 1 to 30. Print \"Fizz\" for multiples of 3, \"Buzz\" for multiples of 5 and \"FizzBuzz\" for multiples of both. The test for multiples of both must come first, otherwise the Fizz branch will catch the number 15 too early.",
+   "doc_id": "python_exercise_guide",
+   "course_id": "python",
+   "location": "Exercise Set A: Variables and Control Flow",
+   "chunk_id": "python_exercise_guide:0001",
+   "score": 0.0762,
+   "data": {
+    "file_type": "docx",
+    "page": null,
+    "section": "Exercise Set A: Variables and Control Flow",
+    "filename": "python_exercise_guide.docx"
+   },
+   "derived_from": []
+  },
+  "S8": {
+   "id": "S8",
+   "kind": "document",
+   "title": "Python Lecture Notes",
+   "text": "6. Object-Oriented Programming A class is a blueprint and an object is an instance of that class. The special method __init__ initializes a new object, and self is the conventional name for the instance. Attributes store data; methods are functions defined inside the class. class Account:  def __init__(self, owner, balance=0):  self.owner = owner  self.balance = balance  def deposit(self, amount):  self.balance += amount Inheritance lets a subclass reuse a parent class: class Savings(Account). The subclass can override methods and call the parent version through super(). Polymorphism means different classes can provide the same method name, so code can call obj.describe() without knowing the exact class. Encapsulation is the idea of keeping internal state controlled. By convention, a leading underscore",
+   "doc_id": "python_lecture_notes",
+   "course_id": "python",
+   "location": "p.7",
+   "chunk_id": "python_lecture_notes:0011",
+   "score": 0.1569,
+   "data": {
+    "file_type": "pdf",
+    "page": 7,
+    "section": "6. Object-Oriented Programming",
+    "filename": "python_lecture_notes.pdf"
+   },
+   "derived_from": []
+  },
+  "S9": {
+   "id": "S9",
+   "kind": "document",
+   "title": "Statistics Lecture Notes",
+   "text": "6. Correlation and Regression Correlation measures the strength and direction of a linear relationship between two variables. The Pearson correlation coefficient r ranges from -1 to +1. A value near +1 indicates a strong positive linear relationship, near -1 a strong negative one and near 0 no linear relationship. Correlation does not imply causation: a hidden confounding variable may drive both variables. Simple linear regression fits the line y-hat = b0 + b1 * x by least squares, which minimizes the sum of squared residuals. The slope b1 equals r * (s_y / s_x) and the intercept is b0 = y-bar - b1 * x-bar. The coefficient of determination R squared is the proportion of variance in y explained by the model; in simple regression it equals r squared. Residual plots should show no pattern; curved or funnel-shaped residuals indicate a violated assumption.",
+   "doc_id": "statistics_lecture_notes",
+   "course_id": "statistics",
+   "location": "p.7",
+   "chunk_id": "statistics_lecture_notes:0011",
+   "score": 0.1488,
+   "data": {
+    "file_type": "pdf",
+    "page": 7,
+    "section": "6. Correlation and Regression",
+    "filename": "statistics_lecture_notes.pdf"
+   },
+   "derived_from": []
+  },
+  "S10": {
+   "id": "S10",
+   "kind": "document",
+   "title": "Python Lecture Notes",
+   "text": "the exact class. Encapsulation is the idea of keeping internal state controlled. By convention, a leading underscore  (_balance) marks an attribute as internal, while a double underscore triggers name mangling. The __str__ method defines the readable text of an object and __repr__ its developer-oriented representation. A @classmethod receives the class as its first argument and a @staticmethod receives neither the instance nor the class. The @property decorator exposes a method as a read-only attribute.",
+   "doc_id": "python_lecture_notes",
+   "course_id": "python",
+   "location": "p.7",
+   "chunk_id": "python_lecture_notes:0012",
+   "score": 0.1381,
+   "data": {
+    "file_type": "pdf",
+    "page": 7,
+    "section": "6. Object-Oriented Programming",
+    "filename": "python_lecture_notes.pdf"
+   },
+   "derived_from": []
+  }
+ },
+ "trace": [
+  {
+   "seq": 1,
+   "t_ms": 0,
+   "type": "request_received",
+   "question": "What is the capital of France?",
+   "scope": null,
+   "tools": [
+    "search_knowledge_base",
+    "retrieve_source_context",
+    "summarize_evidence",
+    "analyze_dataset",
+    "calculate_expression",
+    "compare_evidence",
+    "refine_search_query"
+   ],
+   "planner": "llm",
+   "replanning": true,
+   "llm": "qwen2.5:3b-instruct",
+   "registry_version": "1.0.0"
+  },
+  {
+   "seq": 2,
+   "t_ms": 3,
+   "type": "question_analysis",
+   "calc_cue": false,
+   "data_cue": false,
+   "compare_cue": false,
+   "summary_cue": false,
+   "multi_cue": false,
+   "named_datasets": [],
+   "length_words": 6,
+   "needs_data": false,
+   "explicit_dataset": false,
+   "literal_numbers": [],
+   "needs_calc": false,
+   "concept_cue": true
+  },
+  {
+   "seq": 3,
+   "t_ms": 2736,
+   "type": "plan_created",
+   "source": "llm",
+   "question_type": "factual",
+   "complexity": "simple",
+   "requires": {
+    "retrieval": true,
+    "calculation": false,
+    "data_analysis": false,
+    "comparison": false
+   },
+   "summary": "LLM plan: 1 step(s)",
+   "adjustments": [],
+   "note": "",
+   "subtasks": [
+    {
+     "id": "t1",
+     "tool": "search_knowledge_base",
+     "goal": "find the capital of France",
+     "depends_on": []
+    }
+   ]
+  },
+  {
+   "seq": 4,
+   "t_ms": 2736,
+   "type": "tool_selected",
+   "step": "t1",
+   "tool": "search_knowledge_base",
+   "goal": "find the capital of France",
+   "attempt": 1,
+   "args": {
+    "query": "capital of France",
+    "course_ids": null,
+    "top_k": 5
+   }
+  },
+  {
+   "seq": 5,
+   "t_ms": 2807,
+   "type": "tool_result",
+   "step": "t1",
+   "tool": "search_knowledge_base",
+   "ok": true,
+   "ms": 71.2,
+   "summary": "5 chunks, best cosine 0.09",
+   "evidence_ids": [
+    "S1",
+    "S2",
+    "S3",
+    "S4",
+    "S5"
+   ],
+   "error": null,
+   "error_type": null,
+   "sufficient": false,
+   "relevance": {
+    "best_score": 0.091,
+    "keyword_coverage": 0.0,
+    "threshold": {
+     "min_best_score": 0.35,
+     "min_keyword_coverage": 0.35
+    }
+   },
+   "sources": [
+    {
+     "id": "S1",
+     "title": "Statistics Exam Scores",
+     "location": "dataset overview",
+     "score": 0.091
+    },
+    {
+     "id": "S2",
+     "title": "Ml Model Diagnostics Handbook",
+     "location": "p.5",
+     "score": 0.088
+    },
+    {
+     "id": "S3",
+     "title": "Ml Notation Abbreviations",
+     "location": "-",
+     "score": 0.087
+    },
+    {
+     "id": "S4",
+     "title": "Statistics Confusable Terms",
+     "location": "-",
+     "score": 0.076
+    },
+    {
+     "id": "S5",
+     "title": "Statistics Confusable Terms",
+     "location": "-",
+     "score": 0.076
+    }
+   ]
+  },
+  {
+   "seq": 6,
+   "t_ms": 2807,
+   "type": "validation",
+   "sufficient": false,
+   "steps": {
+    "t1": {
+     "status": "weak",
+     "sufficient": false
+    }
+   },
+   "problems": [
+    {
+     "step": "t1",
+     "kind": "weak_evidence"
+    }
+   ]
+  },
+  {
+   "seq": 7,
+   "t_ms": 2808,
+   "type": "replan",
+   "round": 1,
+   "actions": [
+    {
+     "action": "re_search",
+     "step": "t1",
+     "new_query": "capital France",
+     "method": "expand: synonyms",
+     "reason": "best relevance 0.091 below threshold"
+    }
+   ],
+   "replanned": true
+  },
+  {
+   "seq": 8,
+   "t_ms": 2808,
+   "type": "tool_selected",
+   "step": "t1",
+   "tool": "search_knowledge_base",
+   "goal": "find the capital of France",
+   "attempt": 2,
+   "args": {
+    "query": "capital France",
+    "course_ids": null,
+    "top_k": 5
+   }
+  },
+  {
+   "seq": 9,
+   "t_ms": 2814,
+   "type": "tool_result",
+   "step": "t1",
+   "tool": "search_knowledge_base",
+   "ok": true,
+   "ms": 6.0,
+   "summary": "5 chunks, best cosine 0.10",
+   "evidence_ids": [
+    "S1",
+    "S6",
+    "S3",
+    "S7",
+    "S4"
+   ],
+   "error": null,
+   "error_type": null,
+   "sufficient": false,
+   "relevance": {
+    "best_score": 0.096,
+    "keyword_coverage": 0.0,
+    "threshold": {
+     "min_best_score": 0.35,
+     "min_keyword_coverage": 0.35
+    }
+   },
+   "sources": [
+    {
+     "id": "S1",
+     "title": "Statistics Exam Scores",
+     "location": "dataset overview",
+     "score": 0.096
+    },
+    {
+     "id": "S6",
+     "title": "Statistics Lab Report Guide",
+     "location": "Sample Size for a Proportion",
+     "score": 0.086
+    },
+    {
+     "id": "S3",
+     "title": "Ml Notation Abbreviations",
+     "location": "-",
+     "score": 0.078
+    },
+    {
+     "id": "S7",
+     "title": "Python Exercise Guide",
+     "location": "Exercise Set A: Variables and Control Flow",
+     "score": 0.076
+    },
+    {
+     "id": "S4",
+     "title": "Statistics Confusable Terms",
+     "location": "-",
+     "score": 0.068
+    }
+   ]
+  },
+  {
+   "seq": 10,
+   "t_ms": 2814,
+   "type": "validation",
+   "sufficient": false,
+   "steps": {
+    "t1": {
+     "status": "weak",
+     "sufficient": false
+    }
+   },
+   "problems": [
+    {
+     "step": "t1",
+     "kind": "weak_evidence"
+    }
+   ]
+  },
+  {
+   "seq": 11,
+   "t_ms": 2814,
+   "type": "replan",
+   "round": 2,
+   "actions": [
+    {
+     "action": "re_search",
+     "step": "t1",
+     "new_query": "definition and explanation of capital France",
+     "method": "rephrase as explanation request",
+     "reason": "best relevance 0.096 below threshold"
+    }
+   ],
+   "replanned": true
+  },
+  {
+   "seq": 12,
+   "t_ms": 2814,
+   "type": "tool_selected",
+   "step": "t1",
+   "tool": "search_knowledge_base",
+   "goal": "find the capital of France",
+   "attempt": 3,
+   "args": {
+    "query": "definition and explanation of capital France",
+    "course_ids": null,
+    "top_k": 5
+   }
+  },
+  {
+   "seq": 13,
+   "t_ms": 2824,
+   "type": "tool_result",
+   "step": "t1",
+   "tool": "search_knowledge_base",
+   "ok": true,
+   "ms": 9.5,
+   "summary": "5 chunks, best cosine 0.19",
+   "evidence_ids": [
+    "S3",
+    "S8",
+    "S9",
+    "S5",
+    "S10"
+   ],
+   "error": null,
+   "error_type": null,
+   "sufficient": false,
+   "relevance": {
+    "best_score": 0.192,
+    "keyword_coverage": 0.33,
+    "threshold": {
+     "min_best_score": 0.35,
+     "min_keyword_coverage": 0.35
+    }
+   },
+   "sources": [
+    {
+     "id": "S3",
+     "title": "Ml Notation Abbreviations",
+     "location": "-",
+     "score": 0.192
+    },
+    {
+     "id": "S8",
+     "title": "Python Lecture Notes",
+     "location": "p.7",
+     "score": 0.157
+    },
+    {
+     "id": "S9",
+     "title": "Statistics Lecture Notes",
+     "location": "p.7",
+     "score": 0.149
+    },
+    {
+     "id": "S5",
+     "title": "Statistics Confusable Terms",
+     "location": "-",
+     "score": 0.144
+    },
+    {
+     "id": "S10",
+     "title": "Python Lecture Notes",
+     "location": "p.7",
+     "score": 0.138
+    }
+   ]
+  },
+  {
+   "seq": 14,
+   "t_ms": 2824,
+   "type": "validation",
+   "sufficient": true,
+   "steps": {
+    "t1": {
+     "status": "weak",
+     "sufficient": false
+    }
+   },
+   "problems": []
+  },
+  {
+   "seq": 15,
+   "t_ms": 2824,
+   "type": "abstain",
+   "reason": "no step produced sufficiently relevant evidence",
+   "searched": [
+    "definition and explanation of capital France"
+   ]
+  },
+  {
+   "seq": 16,
+   "t_ms": 2824,
+   "type": "answer",
+   "abstained": true,
+   "citations": []
+  },
+  {
+   "seq": 17,
+   "t_ms": 2824,
+   "type": "completed",
+   "stop_reason": "insufficient_evidence",
+   "latency_s": 2.82
+  }
+ ],
+ "validation": {},
+ "metrics": {
+  "latency_s": 2.82,
+  "llm_calls": 1,
+  "prompt_tokens": 1542,
+  "completion_tokens": 67,
+  "tool_calls": 3,
+  "replans": 2,
+  "steps": 1,
+  "errors": [],
+  "step_status": {
+   "t1": "weak"
+  },
+  "removed_unsupported": 0,
+  "injection_flags": []
+ },
+ "system": "agentic",
+ "config": {
+  "name": "full",
+  "planner": "llm",
+  "replan": true,
+  "tools": [
+   "search_knowledge_base",
+   "retrieve_source_context",
+   "summarize_evidence",
+   "analyze_dataset",
+   "calculate_expression",
+   "compare_evidence",
+   "refine_search_query"
+  ],
+  "model": "qwen2.5:3b-instruct",
+  "registry_version": "1.0.0"
+ }
+}

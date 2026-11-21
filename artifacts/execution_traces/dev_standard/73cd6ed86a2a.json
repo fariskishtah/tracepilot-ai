@@ -1,0 +1,179 @@
+{
+ "request_id": "73cd6ed86a2a",
+ "question": "What train/validation/test split does the current machine learning evaluation protocol use?",
+ "answer": "The current machine learning evaluation protocol uses a 70% training, 15% validation, and 15% test split [S2].",
+ "abstained": false,
+ "stop_reason": "answered",
+ "plan": null,
+ "plan_source": "none",
+ "tool_sequence": [
+  "search_knowledge_base"
+ ],
+ "citations": [
+  {
+   "id": "S2",
+   "kind": "document",
+   "title": "Ml Project Handbook",
+   "text": "Evaluation Protocol v2\nEvaluation protocol v2 supersedes protocol v1 for all projects started in 2025. Split the data 70% training, 15% validation and 15% test. Use k = 5 folds for cross-validation and report the mean and standard deviation of the fold scores. Set random_state=42 everywhere. The test set may be used exactly once. The primary metric is F1 for imbalanced data and accuracy otherwise.",
+   "doc_id": "ml_project_handbook",
+   "course_id": "ml",
+   "location": "Evaluation Protocol v2",
+   "chunk_id": "ml_project_handbook:0001",
+   "score": 0.5659,
+   "data": {
+    "file_type": "docx",
+    "page": null,
+    "section": "Evaluation Protocol v2",
+    "filename": "ml_project_handbook.docx"
+   },
+   "derived_from": []
+  }
+ ],
+ "evidence": {
+  "S1": {
+   "id": "S1",
+   "kind": "document",
+   "title": "Ml Evaluation Protocol V1",
+   "text": "MACHINE LEARNING EVALUATION PROTOCOL v1 (2023 edition, SUPERSEDED)\n==================================================================",
+   "doc_id": "ml_evaluation_protocol_v1",
+   "course_id": "ml",
+   "location": "-",
+   "chunk_id": "ml_evaluation_protocol_v1:0000",
+   "score": 0.6007,
+   "data": {
+    "file_type": "txt",
+    "page": null,
+    "section": null,
+    "filename": "ml_evaluation_protocol_v1.txt"
+   },
+   "derived_from": []
+  },
+  "S2": {
+   "id": "S2",
+   "kind": "document",
+   "title": "Ml Project Handbook",
+   "text": "Evaluation Protocol v2\nEvaluation protocol v2 supersedes protocol v1 for all projects started in 2025. Split the data 70% training, 15% validation and 15% test. Use k = 5 folds for cross-validation and report the mean and standard deviation of the fold scores. Set random_state=42 everywhere. The test set may be used exactly once. The primary metric is F1 for imbalanced data and accuracy otherwise.",
+   "doc_id": "ml_project_handbook",
+   "course_id": "ml",
+   "location": "Evaluation Protocol v2",
+   "chunk_id": "ml_project_handbook:0001",
+   "score": 0.5659,
+   "data": {
+    "file_type": "docx",
+    "page": null,
+    "section": "Evaluation Protocol v2",
+    "filename": "ml_project_handbook.docx"
+   },
+   "derived_from": []
+  },
+  "S3": {
+   "id": "S3",
+   "kind": "document",
+   "title": "Ml Project Handbook",
+   "text": "Machine Learning Project Handbook (v2, current)",
+   "doc_id": "ml_project_handbook",
+   "course_id": "ml",
+   "location": "Machine Learning Project Handbook (v2, current)",
+   "chunk_id": "ml_project_handbook:0000",
+   "score": 0.4207,
+   "data": {
+    "file_type": "docx",
+    "page": null,
+    "section": "Machine Learning Project Handbook (v2, current)",
+    "filename": "ml_project_handbook.docx"
+   },
+   "derived_from": []
+  },
+  "S4": {
+   "id": "S4",
+   "kind": "document",
+   "title": "Ml Lecture Notes",
+   "text": "Machine Learning Concept Guide\nMachine Learning Fundamentals - independently written demonstration notes. Not official university\nmaterial.",
+   "doc_id": "ml_lecture_notes",
+   "course_id": "ml",
+   "location": "p.1",
+   "chunk_id": "ml_lecture_notes:0000",
+   "score": 0.4383,
+   "data": {
+    "file_type": "pdf",
+    "page": 1,
+    "section": null,
+    "filename": "ml_lecture_notes.pdf"
+   },
+   "derived_from": []
+  },
+  "S5": {
+   "id": "S5",
+   "kind": "document",
+   "title": "Ml Model Evaluation Runs",
+   "text": "Dataset ml_model_evaluation_runs: 10 rows, columns: run_id, model, task, train_accuracy, val_accuracy, precision, recall, f1, notes.",
+   "doc_id": "ml_model_evaluation_runs",
+   "course_id": "ml",
+   "location": "dataset overview",
+   "chunk_id": "ml_model_evaluation_runs:0000",
+   "score": 0.3915,
+   "data": {
+    "file_type": "csv",
+    "page": null,
+    "section": "dataset overview",
+    "filename": "ml_model_evaluation_runs.csv"
+   },
+   "derived_from": []
+  }
+ },
+ "trace": [
+  {
+   "seq": 1,
+   "t_ms": 2,
+   "type": "request_received",
+   "question": "What train/validation/test split does the current machine learning evaluation protocol use?",
+   "scope": null,
+   "system": "standard_rag"
+  },
+  {
+   "seq": 2,
+   "t_ms": 822,
+   "type": "retrieval",
+   "query": "What train/validation/test split does the current machine learning evaluation protocol use?",
+   "n": 5,
+   "sources": [
+    "S1",
+    "S2",
+    "S3",
+    "S4",
+    "S5"
+   ],
+   "best_score": 0.601
+  },
+  {
+   "seq": 3,
+   "t_ms": 5329,
+   "type": "answer",
+   "abstained": false,
+   "citations": [
+    "S2"
+   ]
+  }
+ ],
+ "validation": {
+  "n_cited_sentences": 1,
+  "n_supported": 1,
+  "support_rate": 1.0,
+  "invalid_ids": [],
+  "unsupported": [],
+  "uncited_numeric_sentences": []
+ },
+ "metrics": {
+  "latency_s": 5.33,
+  "llm_calls": 1,
+  "prompt_tokens": 554,
+  "completion_tokens": 33,
+  "tool_calls": 1,
+  "replans": 0,
+  "steps": 1
+ },
+ "system": "standard_rag",
+ "config": {
+  "top_k": 5
+ }
+}

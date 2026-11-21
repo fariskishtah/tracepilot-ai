@@ -1,0 +1,54 @@
+{
+  "dataset_version": "1.0",
+  "n_questions": 114,
+  "n_dev": 42,
+  "n_test": 72,
+  "by_category": {
+    "simple_factual": [
+      8,
+      15
+    ],
+    "comparison": [
+      5,
+      9
+    ],
+    "csv_analysis": [
+      6,
+      11
+    ],
+    "calculation": [
+      3,
+      5
+    ],
+    "multi_step": [
+      5,
+      9
+    ],
+    "summarization": [
+      2,
+      4
+    ],
+    "ambiguous": [
+      2,
+      2
+    ],
+    "unanswerable": [
+      4,
+      6
+    ],
+    "conflict": [
+      2,
+      2
+    ],
+    "tool_routing": [
+      3,
+      5
+    ],
+    "injection": [
+      2,
+      4
+    ]
+  },
+  "corpus_text_sha256": "2d371db40d39c20797396cae9c9ea68159011d4236b050fdb236c721a04fb1dd",
+  "questions_sha256": "5775547ed920aeb519402873138d1fd74e1b08bad0cf46e139505b9fc0a469ff"
+}

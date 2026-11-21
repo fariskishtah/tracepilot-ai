@@ -1,0 +1,10 @@
+run_id,model,dataset,technique,train_accuracy,val_accuracy,epochs,notes
+R01,MLP (2 hidden layers),image-tiny,none (baseline),0.998,0.812,60,Memorizes training set; large train-val gap
+R02,MLP (2 hidden layers),image-tiny,L2 weight decay 1e-3,0.951,0.874,60,Gap shrinks; weights shrunk
+R03,MLP (2 hidden layers),image-tiny,dropout p=0.3,0.943,0.881,60,Stochastic unit removal at training time
+R04,MLP (2 hidden layers),image-tiny,early stopping patience=5,0.927,0.866,23,Stopped at epoch 23 of 60 saving compute
+R05,MLP (2 hidden layers),image-tiny,L2 + early stopping,0.935,0.889,27,Best validation accuracy of the image-tiny runs
+R06,MLP (2 hidden layers),image-tiny,data augmentation,0.962,0.893,60,Highest validation accuracy but needs extra preprocessing
+R07,Gradient Boosting,tabular-churn,none (baseline),0.991,0.842,300,Deep trees overfit
+R08,Gradient Boosting,tabular-churn,shrinkage 0.05 + max_depth 3,0.902,0.861,300,Shallower trees reduce variance
+R09,Gradient Boosting,tabular-churn,early stopping rounds=20,0.918,0.867,118,Stopped at 118 of 300 rounds

@@ -1,0 +1,15 @@
+llm:
+  runtime: ollama
+  host: http://127.0.0.1:11434
+  model: qwen2.5:3b-instruct        # Qwen Research License (non-commercial). Apache-2.0 alternative: qwen2.5:1.5b-instruct
+  temperature: 0.0
+  seed: 7
+  num_ctx: 4096
+  num_predict_plan: 1000
+  num_predict_answer: 450
+  timeout_s: 120
+  keep_alive: 10m
+embeddings:
+  model: sentence-transformers/all-MiniLM-L6-v2   # Apache-2.0
+  device: cpu
+  batch_size: 32

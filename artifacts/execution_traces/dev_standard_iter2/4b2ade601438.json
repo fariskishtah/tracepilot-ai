@@ -1,0 +1,158 @@
+{
+ "request_id": "4b2ade601438",
+ "question": "Which GPU model is recommended for training the models in the machine learning course?",
+ "answer": "The provided documents do not specify any recommended GPU models for training models in a machine learning course.",
+ "abstained": true,
+ "stop_reason": "insufficient_evidence",
+ "plan": null,
+ "plan_source": "none",
+ "tool_sequence": [
+  "search_knowledge_base"
+ ],
+ "citations": [],
+ "evidence": {
+  "S1": {
+   "id": "S1",
+   "kind": "document",
+   "title": "Ml Project Handbook",
+   "text": "Machine Learning Project Handbook (v2, current)",
+   "doc_id": "ml_project_handbook",
+   "course_id": "ml",
+   "location": "Machine Learning Project Handbook (v2, current)",
+   "chunk_id": "ml_project_handbook:0000",
+   "score": 0.4095,
+   "data": {
+    "file_type": "docx",
+    "page": null,
+    "section": "Machine Learning Project Handbook (v2, current)",
+    "filename": "ml_project_handbook.docx"
+   },
+   "derived_from": []
+  },
+  "S2": {
+   "id": "S2",
+   "kind": "document",
+   "title": "Ml Lecture Notes",
+   "text": "Machine Learning Concept Guide\nMachine Learning Fundamentals - independently written demonstration notes. Not official university\nmaterial.",
+   "doc_id": "ml_lecture_notes",
+   "course_id": "ml",
+   "location": "p.1",
+   "chunk_id": "ml_lecture_notes:0000",
+   "score": 0.3932,
+   "data": {
+    "file_type": "pdf",
+    "page": 1,
+    "section": null,
+    "filename": "ml_lecture_notes.pdf"
+   },
+   "derived_from": []
+  },
+  "S3": {
+   "id": "S3",
+   "kind": "document",
+   "title": "Ml Reference Notes",
+   "text": "Feature: an input variable used by a model, for example a person's age. Label or target: the value the model should predict. Hyperparameter: a setting chosen before training, such as the learning rate, tree depth or number of neighbors k. Parameter: a value learned during training, such as the weights of linear regression. Epoch: one full pass through the training data. Batch size: the number of examples used for one gradient update. Learning rate: the step size of gradient descent. Regularization: a penalty that discourages overly complex models. L2 (ridge) shrinks weights; L1 (lasso) can set weights to zero. Overfitting: low training error but high validation error because the model memorized noise. Underfitting: high error on both training and validation data because the model is too simple. Bias: error from wrong or overly simple assumptions.",
+   "doc_id": "ml_reference_notes",
+   "course_id": "ml",
+   "location": "-",
+   "chunk_id": "ml_reference_notes:0001",
+   "score": 0.3073,
+   "data": {
+    "file_type": "txt",
+    "page": null,
+    "section": null,
+    "filename": "ml_reference_notes.txt"
+   },
+   "derived_from": []
+  },
+  "S4": {
+   "id": "S4",
+   "kind": "document",
+   "title": "Ml Exercise Guide",
+   "text": "Machine Learning Assignment Notes\nIndependently written demonstration material (CC BY 4.0). Not official university material.",
+   "doc_id": "ml_exercise_guide",
+   "course_id": "ml",
+   "location": "Machine Learning Assignment Notes",
+   "chunk_id": "ml_exercise_guide:0000",
+   "score": 0.3855,
+   "data": {
+    "file_type": "docx",
+    "page": null,
+    "section": "Machine Learning Assignment Notes",
+    "filename": "ml_exercise_guide.docx"
+   },
+   "derived_from": []
+  },
+  "S5": {
+   "id": "S5",
+   "kind": "document",
+   "title": "Ml Evaluation Protocol V1",
+   "text": "MACHINE LEARNING EVALUATION PROTOCOL v1 (2023 edition, SUPERSEDED)\n==================================================================",
+   "doc_id": "ml_evaluation_protocol_v1",
+   "course_id": "ml",
+   "location": "-",
+   "chunk_id": "ml_evaluation_protocol_v1:0000",
+   "score": 0.3222,
+   "data": {
+    "file_type": "txt",
+    "page": null,
+    "section": null,
+    "filename": "ml_evaluation_protocol_v1.txt"
+   },
+   "derived_from": []
+  }
+ },
+ "trace": [
+  {
+   "seq": 1,
+   "t_ms": 0,
+   "type": "request_received",
+   "question": "Which GPU model is recommended for training the models in the machine learning course?",
+   "scope": null,
+   "system": "standard_rag"
+  },
+  {
+   "seq": 2,
+   "t_ms": 42,
+   "type": "retrieval",
+   "query": "Which GPU model is recommended for training the models in the machine learning course?",
+   "n": 5,
+   "sources": [
+    "S1",
+    "S2",
+    "S3",
+    "S4",
+    "S5"
+   ],
+   "best_score": 0.41
+  },
+  {
+   "seq": 3,
+   "t_ms": 2341,
+   "type": "answer",
+   "abstained": true,
+   "citations": []
+  }
+ ],
+ "validation": {
+  "n_cited_sentences": 0,
+  "n_supported": 0,
+  "support_rate": 0.0,
+  "invalid_ids": [],
+  "unsupported": [],
+  "uncited_numeric_sentences": []
+ },
+ "metrics": {
+  "latency_s": 2.34,
+  "llm_calls": 1,
+  "prompt_tokens": 604,
+  "completion_tokens": 27,
+  "tool_calls": 1,
+  "replans": 0,
+  "steps": 1
+ },
+ "system": "standard_rag",
+ "config": {
+  "top_k": 5
+ }
+}

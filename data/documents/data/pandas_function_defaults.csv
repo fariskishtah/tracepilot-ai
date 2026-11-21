@@ -1,0 +1,14 @@
+ref_id,function,parameter,default_value,note
+PD001,pandas.DataFrame.dropna,how,any,drop a row if any value is missing
+PD002,pandas.merge,how,inner,keep only keys present in both tables
+PD003,pandas.read_csv,sep,",",comma separated values
+PD004,pandas.DataFrame.sort_values,ascending,True,sort from small to large
+PD005,pandas.DataFrame.drop_duplicates,keep,first,keep the first occurrence of a duplicated row
+PD006,pandas.DataFrame.head,n,5,number of rows returned
+PD007,pandas.DataFrame.to_csv,index,True,writes the row index as a column
+PD008,pandas.concat,axis,0,stack vertically
+PD009,pandas.pivot_table,aggfunc,mean,aggregation used for each cell
+PD010,pandas.DataFrame.groupby,sort,True,sort the group keys
+PD011,pandas.Series.value_counts,normalize,False,return counts rather than fractions
+PD012,pandas.DataFrame.fillna,inplace,False,returns a new object unless inplace=True
+PD013,pandas.DataFrame.describe,percentiles,None,"shows the 25%, 50% and 75% percentiles"

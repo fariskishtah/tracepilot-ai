@@ -1,0 +1,200 @@
+{
+ "request_id": "8d79623c7526",
+ "question": "What is the mean exam_score of section B in the statistics exam scores dataset?",
+ "answer": "Dataset statistics_exam_scores: 20 rows, columns: student_id, section, hours_studied, exam_score. [S1] row 19: student_id=S19; section=B; hours_studied=12; exam_score=93 [S2]",
+ "abstained": false,
+ "stop_reason": "answered",
+ "plan": null,
+ "plan_source": "none",
+ "tool_sequence": [
+  "search_knowledge_base"
+ ],
+ "citations": [
+  {
+   "id": "S1",
+   "kind": "document",
+   "title": "Statistics Exam Scores",
+   "text": "Dataset statistics_exam_scores: 20 rows, columns: student_id, section, hours_studied, exam_score.",
+   "doc_id": "statistics_exam_scores",
+   "course_id": "statistics",
+   "location": "dataset overview",
+   "chunk_id": "statistics_exam_scores:0000",
+   "score": 0.7068,
+   "data": {
+    "file_type": "csv",
+    "page": null,
+    "section": "dataset overview",
+    "filename": "statistics_exam_scores.csv"
+   },
+   "derived_from": []
+  },
+  {
+   "id": "S2",
+   "kind": "document",
+   "title": "Statistics Exam Scores",
+   "text": "row 17: student_id=S17; section=B; hours_studied=6; exam_score=67\nrow 18: student_id=S18; section=B; hours_studied=8; exam_score=76\nrow 19: student_id=S19; section=B; hours_studied=12; exam_score=93\nrow 20: student_id=S20; section=B; hours_studied=1; exam_score=40",
+   "doc_id": "statistics_exam_scores",
+   "course_id": "statistics",
+   "location": "rows 17-20",
+   "chunk_id": "statistics_exam_scores:0003",
+   "score": 0.5476,
+   "data": {
+    "file_type": "csv",
+    "page": null,
+    "section": "data rows",
+    "filename": "statistics_exam_scores.csv"
+   },
+   "derived_from": []
+  }
+ ],
+ "evidence": {
+  "S1": {
+   "id": "S1",
+   "kind": "document",
+   "title": "Statistics Exam Scores",
+   "text": "Dataset statistics_exam_scores: 20 rows, columns: student_id, section, hours_studied, exam_score.",
+   "doc_id": "statistics_exam_scores",
+   "course_id": "statistics",
+   "location": "dataset overview",
+   "chunk_id": "statistics_exam_scores:0000",
+   "score": 0.7068,
+   "data": {
+    "file_type": "csv",
+    "page": null,
+    "section": "dataset overview",
+    "filename": "statistics_exam_scores.csv"
+   },
+   "derived_from": []
+  },
+  "S2": {
+   "id": "S2",
+   "kind": "document",
+   "title": "Statistics Exam Scores",
+   "text": "row 17: student_id=S17; section=B; hours_studied=6; exam_score=67\nrow 18: student_id=S18; section=B; hours_studied=8; exam_score=76\nrow 19: student_id=S19; section=B; hours_studied=12; exam_score=93\nrow 20: student_id=S20; section=B; hours_studied=1; exam_score=40",
+   "doc_id": "statistics_exam_scores",
+   "course_id": "statistics",
+   "location": "rows 17-20",
+   "chunk_id": "statistics_exam_scores:0003",
+   "score": 0.5476,
+   "data": {
+    "file_type": "csv",
+    "page": null,
+    "section": "data rows",
+    "filename": "statistics_exam_scores.csv"
+   },
+   "derived_from": []
+  },
+  "S3": {
+   "id": "S3",
+   "kind": "document",
+   "title": "Statistics Exam Scores",
+   "text": "row 9: student_id=S09; section=A; hours_studied=5; exam_score=66\nrow 10: student_id=S10; section=A; hours_studied=11; exam_score=88\nrow 11: student_id=S11; section=B; hours_studied=2; exam_score=48\nrow 12: student_id=S12; section=B; hours_studied=5; exam_score=63\nrow 13: student_id=S13; section=B; hours_studied=7; exam_score=70\nrow 14: student_id=S14; section=B; hours_studied=9; exam_score=79\nrow 15: student_id=S15; section=B; hours_studied=4; exam_score=58\nrow 16: student_id=S16; section=B; hours_studied=10; exam_score=84",
+   "doc_id": "statistics_exam_scores",
+   "course_id": "statistics",
+   "location": "rows 9-16",
+   "chunk_id": "statistics_exam_scores:0002",
+   "score": 0.5009,
+   "data": {
+    "file_type": "csv",
+    "page": null,
+    "section": "data rows",
+    "filename": "statistics_exam_scores.csv"
+   },
+   "derived_from": []
+  },
+  "S4": {
+   "id": "S4",
+   "kind": "document",
+   "title": "Statistics Exam Scores",
+   "text": "row 1: student_id=S01; section=A; hours_studied=4; exam_score=62\nrow 2: student_id=S02; section=A; hours_studied=6; exam_score=71\nrow 3: student_id=S03; section=A; hours_studied=8; exam_score=78\nrow 4: student_id=S04; section=A; hours_studied=10; exam_score=85\nrow 5: student_id=S05; section=A; hours_studied=3; exam_score=55\nrow 6: student_id=S06; section=A; hours_studied=12; exam_score=91\nrow 7: student_id=S07; section=A; hours_studied=7; exam_score=74\nrow 8: student_id=S08; section=A; hours_studied=9; exam_score=82",
+   "doc_id": "statistics_exam_scores",
+   "course_id": "statistics",
+   "location": "rows 1-8",
+   "chunk_id": "statistics_exam_scores:0001",
+   "score": 0.4966,
+   "data": {
+    "file_type": "csv",
+    "page": null,
+    "section": "data rows",
+    "filename": "statistics_exam_scores.csv"
+   },
+   "derived_from": []
+  },
+  "S5": {
+   "id": "S5",
+   "kind": "document",
+   "title": "Statistics Lecture Notes",
+   "text": "1. Descriptive Statistics Descriptive statistics summarize a dataset. Measures of central tendency are the mean (the sum of the values divided by the number of values), the median (the middle value of the sorted data) and the mode (the most frequent value). The mean is sensitive to outliers; the median is robust to them. For right-skewed data such as incomes the mean is usually larger than the median. Measures of spread describe variability. The range is maximum minus minimum. The variance averages squared deviations from the mean, and the standard deviation is the square root of the variance, so it has the same units as the data. The interquartile range (IQR) is Q3 minus Q1 and is used to flag outliers: a common rule marks values below Q1 - 1.5 * IQR or above Q3 + 1.5 * IQR. Population variance divides the sum of squared deviations by N, the population size. Sample",
+   "doc_id": "statistics_lecture_notes",
+   "course_id": "statistics",
+   "location": "p.2",
+   "chunk_id": "statistics_lecture_notes:0001",
+   "score": 0.4201,
+   "data": {
+    "file_type": "pdf",
+    "page": 2,
+    "section": "1. Descriptive Statistics",
+    "filename": "statistics_lecture_notes.pdf"
+   },
+   "derived_from": []
+  }
+ },
+ "trace": [
+  {
+   "seq": 1,
+   "t_ms": 1,
+   "type": "request_received",
+   "question": "What is the mean exam_score of section B in the statistics exam scores dataset?",
+   "scope": null,
+   "system": "standard_rag"
+  },
+  {
+   "seq": 2,
+   "t_ms": 43,
+   "type": "retrieval",
+   "query": "What is the mean exam_score of section B in the statistics exam scores dataset?",
+   "n": 5,
+   "sources": [
+    "S1",
+    "S2",
+    "S3",
+    "S4",
+    "S5"
+   ],
+   "best_score": 0.707
+  },
+  {
+   "seq": 3,
+   "t_ms": 10580,
+   "type": "answer",
+   "abstained": false,
+   "citations": [
+    "S1",
+    "S2"
+   ]
+  }
+ ],
+ "validation": {
+  "n_cited_sentences": 1,
+  "n_supported": 1,
+  "support_rate": 1.0,
+  "invalid_ids": [],
+  "unsupported": [],
+  "uncited_numeric_sentences": [
+   "Dataset statistics_exam_scores: 20 rows, columns: student_id, section, hours_studied, exam_score."
+  ]
+ },
+ "metrics": {
+  "latency_s": 10.58,
+  "llm_calls": 2,
+  "prompt_tokens": 2242,
+  "completion_tokens": 211,
+  "tool_calls": 1,
+  "replans": 0,
+  "steps": 1
+ },
+ "system": "standard_rag",
+ "config": {
+  "top_k": 5
+ }
+}
