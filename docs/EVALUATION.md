@@ -78,7 +78,7 @@ Development split (n=42, used for tuning — optimistic): Standard RAG 23/42 (54
 | iteration | change | TracePilot dev correct |
 |---|---|---|
 | 0 | first complete system | 31/42 |
-| 1 | guard + calculation replans + stricter citation check | 31/42 (gains offset by false abstentions from the stricter check) |
+| 1 | guard + calculation replans + stricter citation check | 31/42 (gains offset by more false abstentions, 2 → 7, from the stricter check) |
 | 2 | recalibrated citation check, column-name cue fix | 32/42 |
 | 3 | needs_data fix, calc retry, multi-column split, extractive fallback | 37/42 |
 

@@ -46,7 +46,7 @@ For "What does the ML terminology reference say about regularization?" the draft
 - Weak-search retries re-issued the same query → retry ladder with guaranteed-different queries (caught by a unit test).
 - LLM planner over-used `analyze_dataset` for questions with words like "accuracy" → analysis steps now require an explicit dataset reference.
 - Pure arithmetic and "formula from the notes + numbers" questions were planned without a calculator → `needs_calculation` / `combine_results` replans.
-- Citation-support check initially rejected correct, concise answers (false abstentions rose from 0 to 6 in one iteration) → recalibrated (word recall against the whole cited evidence; question numbers allowed) and an extractive fallback replaced "drop everything".
+- Citation-support check initially rejected correct, concise answers (false abstentions on answerable dev questions: 2 in iteration 0, 7 in iteration 1, 4 in iteration 2, 0 in iteration 3) → recalibrated (word recall against the whole cited evidence; question numbers allowed) and an extractive fallback replaced "drop everything".
 - A planner fallback bug: an empty plan after the guard raised an error → replaced by a single search.
 
 ## Remaining limitations

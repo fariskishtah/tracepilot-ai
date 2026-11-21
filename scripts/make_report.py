@@ -10,7 +10,7 @@ from reportlab.lib.enums import TA_JUSTIFY
 from reportlab.lib.pagesizes import A4
 from reportlab.lib.styles import ParagraphStyle, getSampleStyleSheet
 from reportlab.lib.units import cm
-from reportlab.platypus import (Image, KeepTogether, PageBreak, Paragraph, SimpleDocTemplate, Spacer, Table, TableStyle, Preformatted)
+from reportlab.platypus import (CondPageBreak, Image, KeepTogether, PageBreak, Paragraph, SimpleDocTemplate, Spacer, Table, TableStyle, Preformatted)
 
 ROOT = Path(__file__).resolve().parents[1]
 M, FIG, SHOT, DOCS = ROOT / "artifacts" / "metrics", ROOT / "artifacts" / "figures", ROOT / "artifacts" / "screenshots", ROOT / "docs"
@@ -140,7 +140,7 @@ def build():
 
     def sec(title):
         n[0] += 1
-        return P(f"{n[0]}. {title}", H1)
+        return KeepTogether([CondPageBreak(6 * cm), P(f"{n[0]}. {title}", H1)])
 
     # 1
     story += [sec("Executive Summary")]
